@@ -2,10 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href=" ../../css/estilos.css "/>
+        <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
     
 </head>
 <body>
+        <header class="cabecera">
+                <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                <ul class="menunavegador">
+                    <li><a href="index.html">INICIO</a></li> 
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="contacto.html">CONTACTANOS</a></li>
+                    <li><a href="ubicacion.html">UBICANOS</a></li>                                   
+                    <li><a href="login.html">LOGIN</a></li>                
+                    <li><a href="formulario.html">REGISTRATE</a></li>
+                </ul>
+            </header>
 
     <form id="formulario01" method="POST" action="../controladores/crear_usuario.php" >
           
@@ -33,13 +45,15 @@
         <input type="text" maxlength="10" id="telefono" name="telefono" value=""  placeholder="Ingrese su número telefónico ..." 
         />
         <br>                
+        <label for="ciudad">Ciudad (*)</label>
+        <input type="text" maxlength="10" id="ciudad" name="ciudad" value=""  placeholder="Ingrese su ciudad ..." 
+        />
+        <br>  
 
-        <label for="fecha">Fecha Nacimiento (*)</label>
-        <input type="text" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="dd/mm/yyyy"
-       />
-
-        <spam id="f" style="display: none;">ERROR</spam>
-        <br>	
+        <label for="provincia">Provincia (*)</label>
+        <input type="text" maxlength="10" id="provincia" name="provincia" value=""  placeholder="Ingrese su provincia ..." 
+        />
+        <br>  
 
         <label for="correo">Correo electrónico (*)</label>
         <input type="email" id="correo" name="correo"  placeholder="Ingrese su correo electrónico ..."

@@ -3,15 +3,24 @@
 <head>
  <meta charset="UTF-8">
  <title>Iniciar sesión</title>
- <link type="text/css" rel="stylesheet" href="../../css/estilos.css "/>
+ <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
 </head>
 
 <body>
-    <head>
-        <ul>
-            <li><em><a href="formulario.html">Registrarse</a></em></li>
-        </ul>
-    </head>
+        <header class="cabecera">
+                <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                <ul class="menunavegador">
+                    <li><a href="index.html">INICIO</a></li> 
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="contacto.html">CONTACTANOS</a></li>
+                    <li><a href="ubicacion.html">UBICANOS</a></li>
+                                   
+                    <li><a href="login.html">LOGIN</a></li>                
+                    <li><a href="formulario.html">REGISTRATE</a></li>
+                </ul>
+            </header>
+    
  <form id="formulario02" method="POST" action="../controladores/login.php">
  <label for="correo">Correo electrónico </label>
  <input type="text" id="correo" name="correo" value="" placeholder="Ingrese el correo ..."/>

@@ -18,13 +18,16 @@
  $nombre = isset($_POST["nombre"]) ? mb_strtoupper(trim($_POST["nombre"]), 'UTF-8') : null;
  $apellido = isset($_POST["apellidos"]) ? mb_strtoupper(trim($_POST["apellidos"]), 'UTF-8') : null;
  $direccion = isset($_POST["direccion"]) ? mb_strtoupper(trim($_POST["direccion"]), 'UTF-8') : null;
- $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]): null;
- $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
+ $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]): null; 
+ $ciudad = isset($_POST["ciudad"]) ? mb_strtoupper(trim($_POST["ciudad"]), 'UTF-8') : null;
+ $provincia = isset($_POST["provincia"]) ? mb_strtoupper(trim($_POST["provincia"]), 'UTF-8') : null; 
+ $correo = isset($_POST["correo"]) ? mb_strtoupper(trim($_POST["correo"]), 'UTF-8') : null;
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
- $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null; 
+
+
  
- $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombre', '$apellido', '$direccion', '$telefono',
-'$correo', '$contrasena', '$fechaNacimiento','usuario')";
+ $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombre', '$apellido',
+'$direccion', '$telefono','$ciudad','$provincia','$correo', '$contrasena','usuario','N',null,null)";
  if ($conn->query($sql) === TRUE) {
  echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
  } else {
