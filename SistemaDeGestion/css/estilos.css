@@ -5,6 +5,9 @@ html{
     min-width:500px;
 }
 
+header {
+    background-color: #333745;
+}
 body {
 	margin: 0 auto;
 	width: 100%;
