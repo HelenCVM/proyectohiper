@@ -1,39 +1,105 @@
-html{
-    margin:0 auto ;
-    width: 40%;
-    max-width: 1000px;
-    min-width:500px;
+
+.cabecera {
+    width: 500%;
+    background-color: rgb(250, 250, 250);
+    padding: 2%;
+    width: max-content;
+   
+}
+.menunavegador li a{
+    text-decoration: none;
+    text-align: center ;
+    color: darkslategrey;
+    font-family: Arial;
+    padding: 4%;
+    width: 200%;
+    
+   
 }
 
-header {
-    background-color: #333745;
+.menunavegador li{
+    display: block;
+    list-style: none;
+    margin-top: 2%;
+    width: 150px;
+    display: inline-block;
+    border: 1px  darkslategrey;
+   
 }
-body {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1120px;
+
+.indexcontenido {
+    width: 70%;
+    float: left;
 }
-html {  
-    background-color: rgb(222, 224, 228);
-   }  
-  body { 
-    background-color: #EEF5DB; 
-       }
-       form {   
-        /* Para ver el borde del formulario */
-        padding: 1em;
-        border: 2px solid #333745;
-        border-radius: 2em;
-    }
-    label {
-        /* Para asegurarse que todos los labels tienen el mismo tamaño y están alineados correctamente */
-        display: inline-block;
-        width: 150px;
-        text-align: right;
-        margin-left: .5em;
-        padding-left: 90px;
-    }
-     a{
-      font-family: 'Courier New', Courier, monospace;
-      color: black;
-      }
+.imgcontenido {
+    width: 30%;
+    float: left;
+    position: relative;
+}
+.imgcontenido1 {
+    width: 30%;
+    float: left;
+    margin-left: 935px;
+}
+.seccion {
+    width: 100%;
+    float: left;
+}
+.piepagina{
+    float: left;
+    position: 10px;
+}
+.indexabout{
+    width: 60%;
+    float: left;
+}
+.imgabout{
+    width: 40%;
+    float: left;
+}
+.menuproducto li{
+    color: ppp;
+    margin-left: 30px ;
+    padding: 5  px;
+}
+.menuproducto li a{
+    text-decoration: none;
+}
+.contactoib{
+    margin-left: 200px;
+    border-width: 1px;
+    color: black;
+    border-style: solid;
+}
+
+.social{
+    position:fixed;
+    left: 0;
+    top: 30px;
+    z-index: 2000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social ul li a {
+    display: inline-block;
+    color: #ffff;
+    background: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    
+}
+
+.social ul li .icon-facebook2 { background:#3b5998;}
+.social ul li .icon-mail4 { background:#666666;}
+.social ul li .icon-whatsapp { background:green;}
