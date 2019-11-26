@@ -21,9 +21,19 @@
                 <li><a href="ubicacion.html">UBICANOS</a></li>
                 <li><a href="login.html">LOGIN</a></li>                
                 <li><a href="formulario.html">REGISTRATE</a></li>
+
             </ul>
             
         </header>
+        <section class="buscar">
+            <form onsubmit="return buscarPorCedula()" action="../controladores/buscar.php">
+                <input type="text" id="motivo" name="motivo" value="">
+                <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPorCedula()">
+               </form>
+               <div id="informacion"><b>Datos del resultado</b></div>
+            
+
+        </section>
         
         <section class="seccion">
             <div class="social">
