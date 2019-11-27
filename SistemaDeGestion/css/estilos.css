@@ -98,12 +98,12 @@
 .social ul li .icon-facebook2 { background:#3b5998;}
 .social ul li .icon-mail4 { background:#666666;}
 .social ul li .icon-whatsapp { background:green;}
-
+/*mapa google maps */
 #mapa{
 border-radius: 2px;
 border: black;
 }
-
+/*boton contactos*/
 .enviar{
 background: linear-gradient(rgb(168, 105, 80), rgb(66, 56, 206));
 border: 0;
@@ -113,5 +113,13 @@ opacity: 0.8;
   border-radius: 25px;
   height: 40px;
 width:20%; 
-                                               text-align: center;
+ }
+
+ /*estilso de la paginas de index*/
+ #imgini {
+	 width: 50%;
+    height: 50%;
+    text-align: center;
 }
+
+ /*------------------------------------*/
