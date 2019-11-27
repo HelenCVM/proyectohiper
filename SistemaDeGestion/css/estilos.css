@@ -64,6 +64,7 @@
     border-width: 1px;
     color: black;
     border-style: solid;
+    background-image: url('img/img1.jpg');
 }
 
 .social{
