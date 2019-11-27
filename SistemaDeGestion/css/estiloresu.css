@@ -70,6 +70,12 @@ html {
 
     }
 
+    .misinoso{
+        width: 30%;
+        float: right;
+        padding: 10%;
+    }
+
     .ifnosotros{
         padding: 10%;
         width: 200%;
@@ -77,9 +83,9 @@ html {
         float: left;
     }
     .imanoso{
-      width: 150%;
-      float: right;
-      padding: 10%;
+      width: 170%;
+      float: left;
+      padding: 0%;
     }
     .productos .produ h1{ 
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
