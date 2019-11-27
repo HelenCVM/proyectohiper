@@ -1,0 +1,17 @@
+.productos .produ h1{ 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    align-content:  center;
+}
+.productos .produ img{
+    width: 500px;
+    height: 500px;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+.productos .produ th{
+    text-align: center;
+}
