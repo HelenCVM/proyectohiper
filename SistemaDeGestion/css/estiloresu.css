@@ -47,7 +47,7 @@ html {
   float: left;
   text-align: center;
   top: auto;
-  font-size: 90%;
+  font-size: 100%;
   padding: 1%;
     }
 
@@ -62,10 +62,17 @@ html {
     }
 
     .p1nosotros{
-      color: black;
+      color: rgb(143, 136, 136);
       text-align: center;
       float: left;
       padding: 2%;
       font-size: 150%;
 
+    }
+
+    .ifnosotros{
+        padding: 10%;
+        width: 200%;
+        height: 400%;
+        float: left;
     }
