@@ -66,6 +66,15 @@ html {
 
     }
 
+    .h1servicioss{
+        color: red;
+        text-align: center;
+        size: 500%;
+        float: none;
+        padding: 3%;
+        font-size: 200%;
+    }
+
     .p1nosotros{
       color: rgb(65, 60, 60);
       float: left;
