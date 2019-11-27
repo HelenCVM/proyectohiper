@@ -39,3 +39,30 @@ html {
        
         border-radius: 2em;
     }
+
+    .footernoso {
+  background-color: red;
+  color: black;
+  width: 100%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  top: auto;
+  font-size: 100%;
+    }
+
+    .h1nosotros {
+        color: red;
+        text-align: center;
+        size: 500%;
+        float: right;
+        padding: 3%;
+        font-size: 200%;
+
+    }
+
+    .p1nosotros{
+      color: black;
+      text-align: center;
+      float: left;
+    }
