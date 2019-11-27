@@ -23,8 +23,7 @@ html {
         width: 500px;
         text-align: right;
         margin-left: .5em;
-        padding-left: 10px;
-        border:1px solid black;        
+        padding-left: 10px;     
         border-collapse: separate;
         border-spacing: 30px 20px;
     }

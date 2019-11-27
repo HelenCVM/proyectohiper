@@ -27,11 +27,8 @@
    
 }
 
-.imamangueras3{
-    width: 200%;
-}
 .indexcontenido {
-    width: 50%;
+    width: 70%;
     float: left;
 }
 .imgcontenido {
@@ -60,14 +57,8 @@
     width: 40%;
     float: left;
 }
-.menuproducto li{
-    color: ppp;
-    margin-left: 30px ;
-    padding: 5  px;
-}
-.menuproducto li a{
-    text-decoration: none;
-}
+
+
 .contactoib{
     margin-left: 200px;
     border-width: 1px;
