@@ -99,7 +99,19 @@
 .social ul li .icon-mail4 { background:#666666;}
 .social ul li .icon-whatsapp { background:green;}
 
-.columna1{
+#mapa{
 border-radius: 2px;
 border: black;
+}
+
+.enviar{
+background: linear-gradient(rgb(168, 105, 80), rgb(66, 56, 206));
+border: 0;
+color: white;
+opacity: 0.8;
+ cursor: pointer;
+  border-radius: 25px;
+  height: 40px;
+width:20%; 
+                                               text-align: center;
 }
