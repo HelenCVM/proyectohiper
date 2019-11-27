@@ -62,6 +62,15 @@ html {
 
     }
 
+    .h1servicios {
+    color: red;
+    text-align: center;
+    size: 500%;
+    float: none;
+    padding: 3%;
+    font-size: 200%;
+    }
+
     .p1nosotros{
       color: rgb(143, 136, 136);
       text-align: center;
@@ -81,4 +90,24 @@ html {
       width: 150%;
       float: right;
       padding: 10%;
+    }
+    .productos{
+        background-color: rgb(255, 255, 255);
+    }
+
+    .secserfooter{
+        background-color: rgb(255, 255, 255);
+    }
+    .h1ubicanos{
+        color: red;
+    text-align: center;
+    size: 500%;
+    float: none;
+    padding: 3%;
+    font-size: 200%;
+    background-color: rgb(255, 255, 255);
+    }
+
+    .secubi{
+        background-color: rgb(255, 255, 255);
     }
