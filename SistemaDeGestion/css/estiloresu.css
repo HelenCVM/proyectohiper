@@ -62,15 +62,6 @@ html {
 
     }
 
-    .h1servicios {
-    color: red;
-    text-align: center;
-    size: 500%;
-    float: none;
-    padding: 3%;
-    font-size: 200%;
-    }
-
     .p1nosotros{
       color: rgb(65, 60, 60);
       float: left;
@@ -96,23 +87,25 @@ html {
       float: left;
       padding: 0%;
     }
-    .productos{
-        background-color: rgb(255, 255, 255);
-    }
-
-    .secserfooter{
-        background-color: rgb(255, 255, 255);
-    }
-    .h1ubicanos{
+    .productos .produ h1{ 
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: red;
-    text-align: center;
-    size: 500%;
-    float: none;
-    padding: 3%;
-    font-size: 200%;
-    background-color: rgb(255, 255, 255);
+      text-align:center;
     }
-
-    .secubi{
-        background-color: rgb(255, 255, 255);
+    .productos .produ img{
+        width: 500px;
+        height: 500px;
+        align-content: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .industriales .indus img{
+        width: 300px;
+        height: 300px;   
+    }
+    .industriales .indus h1{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:black;
+      text-align: center;  
     }

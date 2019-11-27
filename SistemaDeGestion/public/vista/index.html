@@ -2,10 +2,15 @@
 <html>
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="css/swiper.min.css">
+
         <meta name="keywords" content="manguera, importación, import"/>
-        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
+        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <title>Inicio</title>
     </head>
     <body>
@@ -19,21 +24,12 @@
                 <li><a href="servicios.html">PRODUCTOS</a></li>
                 <li><a href="contacto.html"> CONTACTOS </a></li>
                 <li><a href="login.html">LOGIN</a></li>                
-                <li><a href="formulario.html">REGISTRATE</a></li>
+                <li><a href="formulario.html">REGISTRATE</a></li>                                         
+                <li><a href="buscar.html">BUSCAR</a></li>
 
             </ul>
             
-        </header>
-       <section class="buscar">
-            <form onsubmit="return buscarPorCedula()" action="../controladores/buscar.php">
-                <input type="text" id="motivo" name="motivo" value="">
-                <button type="submit">Buscar</button>
-                <i class="fa fa-search"></i>
-            </form>
-               
-            
- 
-        </section>
+        </header>    
         
         <section class="seccion">
             <div class="social">
@@ -44,17 +40,46 @@
                         </ul>
             </div>
             <article class="indexcontenido">
-                <img class="imamangueras3" src="../../../imagenes/manguera3.png" alt="manguera3"/>
+               <center> <img id="imgini" src="../../../imagenes/manguera3.png" alt="manguera3"/></center>
             </article>
-            <aside class="imgcontenido">
-                 
-                
-            </aside>
-            <aside class="imgcontenido1">
-              
-            </aside>
+           
         </section>
+        <!--transicion de las imagenes -->
+        <section class="transcicion">
         
+             <!-- Swiper -->
+  <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    
+      <!-- Swiper JS -->
+      <script src="js/swiper.min.js"></script>
+    
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+          },
+        });
+      </script>
+
+        </section>
+
         <section class="seccion">
             <article class="indexcontenido">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia expedita sit quam voluptatum itaque accusamus ipsa optio illo quidem dignissimos, reprehenderit quibusdam vel eius! Culpa asperiores sequi aspernatur maxime?
@@ -66,10 +91,9 @@
             </article> 
             
             <aside class="imgcontenido">
+               
                 <img src="../../../imagenes/ACOPLES_thumb.png" alt="acoples"/>
-                
-              
-                
+             
             </aside>            
         </section>
         <footer class="footernoso">
