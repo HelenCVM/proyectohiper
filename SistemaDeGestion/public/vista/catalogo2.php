@@ -46,7 +46,6 @@
            while($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo " <td>" . $row["pro_nombre"] . "</td>";
-            echo "</br>";
             echo " <td>" . $row['pro_marca'] ."</td>";
             echo " <td>" . $row['pro_stock'] . "</td>";
             echo " <td>" . $row['pro_descripcion'] . "</td>";
