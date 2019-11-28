@@ -39,7 +39,7 @@
             
             <?php
             include '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM producto WHERE id_categoria=3";
+            $sql = "SELECT * FROM producto WHERE id_categoria=5";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
            
@@ -52,7 +52,7 @@
             echo " <td>" . $row['pro_descripcion'] . "</td>";
             echo " <td>" . $row['pro_precio'] . "</td>";             
 
-                echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
+                echo " <td><img class='perfil' src='../../../imagenes/altatemperatura/".$row["imagen"].".jpg' width=' 100px'
                 height=' 100px'></td>";
            
            
