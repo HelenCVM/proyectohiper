@@ -166,6 +166,11 @@ width:20%;
         height: 11%;
     }
 
+    #iconcarrito{
+        width: 15%;
+        height: 16%;
+    }
+
     /*estilos menu*/
     nav > ul > li > a:link, nav > ul > li > a:visited {
         color: rgb(0, 0, 0); 
