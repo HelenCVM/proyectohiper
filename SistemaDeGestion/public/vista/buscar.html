@@ -3,7 +3,7 @@
         <head>
                 <meta charset="utf-8"/>
                 <meta name="keywords" content="manguera, importación, import"/>
-                <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
+                <link type="text/css" rel="stylesheet" href=" ../../../css/estilos.css">
                 <title>Ubicanos</title>
                 <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
                 <link type="text/css" rel="stylesheet" href="style.css">
@@ -27,14 +27,14 @@
             </header>
     
     <form class="formbus" onsubmit="return buscarPorCedula()" action="../controladores/buscar.php">
-        <input type="text" id="motivo" name="motivo" value=""  style="width:1000px;height:25px">
+        <input type="text" id="nombre" name="nombre" value=""  style="width:1000px;height:25px">
         <input type="button" id="buscar" class="buscarbo" name="buscar" value="Buscar" style="width:60px;height:25px" onclick="buscarPorCedula()">
        </form>
        <div id="informacion"><b></b></div>
 <script>
 
 function buscarPorCedula() {
- var motivo = document.getElementById("motivo").value;
+ var motivo = document.getElementById("nombre").value;
  if (motivo == "") {
  document.getElementById("informacion").innerHTML = "";
  } else {
@@ -51,7 +51,7 @@ function buscarPorCedula() {
  
  }
  };
- xmlhttp.open("GET","../controladores/buscar.php?motivo="+motivo,true);
+ xmlhttp.open("GET","../controladores/buscar.php?nombre="+motivo,true);
  xmlhttp.send();
  }
  return false;

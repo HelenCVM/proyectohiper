@@ -4,13 +4,13 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <meta name="keywords" content="manguera, importación, import"/>
-        <link type="text/css" rel="stylesheet" href="style.css">
-        <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
+        <link type="text/css" rel="stylesheet" href="../../../public/vista/style.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estiloresu.css">
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="css/swiper.min.css">
-        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
         <!-- Swiper JS -->
-        <script src="js/swiper.min.js"></script>
+        <script src="../../../public/js/swiper.min.js"></script>
        
         <title>Inicio</title>
   

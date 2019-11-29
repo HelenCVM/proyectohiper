@@ -100,36 +100,11 @@ html {
       float: left;
       padding: 0%;
     }
-    .productos .produ h1{ 
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: red;
-      text-align:center;
-    }
-    .productos .produ img{
-        width: 500px;
-        height: 500px;
-        align-content: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  
     .productos .produ .parrafo{
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       color: black;
       width: 100px;
 
     }
-    .industriales .indus img{
-        width: 100px;
-        height: 100px;   
-    }
-    .industriales .indus h1{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color:black;
-      text-align: center;  
-    }
-    .industriales .indus p{
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      color:black;
-    text-align: justify;  
-  }
+    

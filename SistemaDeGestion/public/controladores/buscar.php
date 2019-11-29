@@ -1,48 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">  
-    <title>Buscar</title>
-</head>
-<body>
 <?php
  //incluir conexión a la base de datos
  include "../../config/conexionBD.php";
  $motivo = $_GET['motivo'];
+ echo "Hola " . $motivo;
 
- $sql = "SELECT * FROM reuniones WHERE  reu_motivo='$motivo'";
+ $sql = "SELECT * FROM producto WHERE pro_nombre ='$motivo' AND id_categoria=4";
 //cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
  echo " <table style='width:100%'>
  <tr>
- <th>Fecha</th>
- <th>Hora</th>
- <th>Lugar</th>
- <th>Latitud</th>
- <th>Longitud</th>
- <th>Remitente</th>
- <th>Motivo</th>
- <th>Observaciones</th>
- <th></th>
+ <th>Nombre</th>
+ <th>Marca</th>
+ <th>Stock</th>
+ <th>Descripcion</th>
+ <th>Precio</th>
  <th></th>
  <th></th>
  </tr>";
  if ($result->num_rows > 0) {
  while($row = $result->fetch_assoc()) {
  echo "<tr>";
- echo " <td>" . $row['reu_fecha'] . "</td>";
- echo " <td>" . $row['reu_hora'] ."</td>";
- echo " <td>" . $row['reu_lugar'] . "</td>";
- echo " <td>" . $row['reu_latitud'] . "</td>";
- echo " <td>" . $row['reu_longitud'] . "</td>";
- echo " <td>" . $row['reu_remitente'] . "</td>";
- echo " <td>" . $row['reu_motivo'] . "</td>"; 
- echo " <td>" . $row['reu_observaciones'] . "</td>";
+ echo " <td>" . $row['pro_nombre'] . "</td>";
+ echo " <td>" . $row['pro_marca'] ."</td>";
+ echo " <td>" . $row['pro_stock'] . "</td>";
+ echo " <td>" . $row['pro_descripcion'] . "</td>";
+ echo " <td>" . $row['pro_precio'] . "</td>";
  echo "</tr>";
  }
  } else {
  echo "<tr>";
- echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+ echo " <td colspan='5'> No existen usuarios registradas en el sistema </td>";
  echo "</tr>";
  }
  echo "</table>";
@@ -50,5 +37,3 @@
 
 ?>
     
-</body>
-</html>
