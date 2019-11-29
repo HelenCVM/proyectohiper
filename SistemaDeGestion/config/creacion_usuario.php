@@ -26,6 +26,7 @@ $rol=isset($_POST["rol"]) ? trim($_POST["rol"]): 'U';
 $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', '$telefono','$ciudad','$provincia',
 '$correo','$contrasena','$rol','N', null, null )";
 if ($conn->query($sql) === TRUE) {
+header("Location:../public/vista/login.html");
 echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
 } else {
 if($conn->errno == 1062){

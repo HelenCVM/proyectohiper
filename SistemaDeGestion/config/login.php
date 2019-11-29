@@ -22,7 +22,7 @@ while($row = $result->fetch_assoc()) {
 if($row['usu_rol']=='A'){
 header("Location:../admin/controladores/admin/GestionUsuario.php");
 }else{
-header("Location:../admin/?correo=".$row['usu_correo']);   
+header("Location:../admin/controladores/usuario/index.php?correo=".$row['usu_correo']); 
 }
 }
 }
