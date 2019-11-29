@@ -10,29 +10,38 @@
         <link rel="stylesheet" href="css/swiper.min.css">
         <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
         <!-- Swiper JS -->
-        <script src="../../../public/js/swiper.min.js"></script>
+        <script src="js/swiper.min.js"></script>
        
         <title>Inicio</title>
   
     </head>
     <body>
+        <?php
+        $correo=$_GET["correo"];
+        $sql = "SELECT * FROM usuario where usu_email='$correo'";
+        include '../../../config/conexionBD.php';
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+        ?>
       
         <header class="cabecera">
            
              
-                <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
-                 
+                <a href="index.html"><img src="../../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                <li><h3><?php echo $row["usu_nombre"].$row["usu_apellido"]; ?></h3></li>
                 <nav class="divmenu">
                 <ul class="menunavegador">
                 <hr color="slategrey" >
-                <li><a href="index.html"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
-                <li><a href="nosotros.html"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
-                <li><a href="servicios.html"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
-                <li><a href="contacto.html"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
-                <li><a href="login.html"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
-                <li><a href="formulario.html"> <img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>                                         
-                <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png"> </a></li> 
-
+                 
+                <li><a href="../../../public/vista/index.html"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                <li><a href="../../../public/vista/nosotros.html"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                <li><a href="../../../public/vista/servicios.html"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
+                <li><a href="../../../public/vista/contacto.html"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
+                <li><a href="../../../public/vista/login.html"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
+                <li><a href="../../../public/vista/formulario.html"> <img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>                                         
+                <li><a href="../../../public/vista/carrito.php"><img id ="iconcarrito" src="img/icon8.png"> </a></li> 
+               
               </ul>
            </nav>
 
@@ -87,26 +96,7 @@
         </section></center>
 
 
-        <section class="seccion">
-            <br>
-            <br>
-            <article class="indexcontenido">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia expedita sit quam voluptatum itaque accusamus ipsa optio illo quidem dignissimos, reprehenderit quibusdam vel eius! Culpa asperiores sequi aspernatur maxime?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, quidem. Excepturi magnam voluptas eaque repellat laboriosam ipsa, illum dolores quis aut voluptatem ad in? Nostrum accusamus excepturi sit quis impedit!
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis quas cumque explicabo impedit et aut eaque quam porro, ea ex quidem suscipit temporibus optio molestiae. Aperiam, adipisci. Sapiente, maxime.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, officia consequatur ipsum quibusdam voluptatibus autem blanditiis reiciendis! Reprehenderit perferendis nam porro esse libero fuga sequi obcaecati iure, commodi officiis consectetur!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut quis rem iste, est, odio minus suscipit praesentium atque veritatis consectetur beatae vero delectus? Suscipit aperiam natus voluptate illum officia?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo inventore, atque tempore harum pariatur magni numquam cum, vero modi, libero deserunt enim quaerat? Quo beatae unde in dolore nulla voluptatibus.
-            </article> 
-            
-            <aside class="imgcontenido">
-               
-                <center><img src="../../../imagenes/ACOPLES_thumb.png" alt="acoples"/></center>
-             
-            </aside>         
-        </section>
-         <br>
-
+        
         <footer class="footernoso">
                 &copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
                 &#8226; Telefono: 074115436 <br/>
@@ -114,5 +104,13 @@
                 &#8226; Whatsapp: +593985633576 <br/>
                 &#8226; Correo: importmanguerasiv@gmail.com 
             </footer>
+            <?php
+        }
+} else {
+echo "<p>Ha ocurrido un error inesperado !</p>";
+echo "<p>" . mysqli_error($conn) . "</p>";
+}
+$conn->close();
+?>
     </body>
 </html>
