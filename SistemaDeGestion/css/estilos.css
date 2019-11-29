@@ -190,4 +190,9 @@ width:20%;
            background-size: 100%;
           
        }
+  /*estilos para el carrito */
+  .pushbar .btn-cerrar.izquierda{
+      text-align: left;
+  }
   
+  /*-----------------------*/
