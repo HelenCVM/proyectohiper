@@ -4,10 +4,11 @@
         <meta charset="utf-8"/>
         <meta name="keywords" content="manguera, importación, import"/>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-        <title>Servicio</title>
-        <link type="text/css" rel="stylesheet" href=" ../css/estiloresu.css">
-        
-        <link type="text/css" rel="stylesheet" href="style.css">
+        <!-- <link type="text/css" rel="stylesheet" href=" ../css/estiloresu.css">-->
+      
+        <link type="text/css" rel="stylesheet" href="style.css">        
+        <title>Productos</title>
+       
     </head>
     <body>
             <header class="cabecera">
@@ -21,13 +22,22 @@
                         <li><a href="formulario.html">REGISTRATE</a></li>                         
                         <li><a href="buscar.html">BUSCAR</a></li>
                     </ul>
-                </header>
-                
+                </header>               
         </header>
-        <h1>Productos</h1> 
-        <section class="industriales">
-            <table class="indus">
-            
+        <section>
+       
+        <form onsubmit="return busqueda()" >
+        <input type="text" id="motivo" name="motivo" value="">
+        <input type="submit" id="buscar" name="buscar" value="Buscar" onclick="busqueda()">
+       </form>
+       <div id="informacion"><b>Datos de la persona</b></div>
+   
+       </section>
+       <script src="../../public/vista/js/funcion.js"> </script>
+
+ <h1>Productos</h1> 
+<section class="industriales">
+<table class="indus">
  <tr>
  <th>Nombre</th>
  <th>Marca</th>
@@ -45,12 +55,15 @@
            
            while($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo " <td>" . $row["pro_nombre"] . "</td>";
-            echo "</br>";
+            echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
+            echo "</br>";            
+            echo " <td>" . $row['pro_nombre'] ."</td>";
             echo " <td>" . $row['pro_marca'] ."</td>";
             echo " <td>" . $row['pro_stock'] . "</td>";
             echo " <td>" . $row['pro_descripcion'] . "</td>";
-            echo " <td>" . $row['pro_precio'] . "</td>";             
+            echo " <td>" . $row['pro_precio'] . "</td>";        
+            
+           // echo "   <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";      
 
                 echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
                 height=' 100px'></td>";
@@ -65,19 +78,10 @@
             $conn->close();
             ?>
 
-            </table>
-
-
-           
-            
+            </table> 
         </section>
-        <div class="ec-stars-wrapper">
-            <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-            <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-            <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-            <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-            <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-        </div>
+
+      
 
         <footer>
             <br>
