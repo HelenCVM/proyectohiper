@@ -8,6 +8,7 @@
         <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
         
         <link type="text/css" rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="js/ajaxC2.js"></script>
     </head>
     <body>
             <header class="cabecera">
@@ -25,9 +26,20 @@
                 
         </header>
         <h1>Productos</h1> 
-        <section class="industriales">
-            <table class="indus">
+        
+        <label for="nombres">Buscar Manguera:</label>
+        <form  onsubmit="return buscarPornombre()">
+                <input type="text" id="nombrep" name="nombrep" value="">
+                <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPornombre()">
+        </form>
+        <br>
+        <div id="informacion"><b></b></div>
+        <br>
             
+        <h1>Productos</h1> 
+<section class="industriales">
+    
+<table class="indus">
  <tr>
  <th>Nombre</th>
  <th>Marca</th>

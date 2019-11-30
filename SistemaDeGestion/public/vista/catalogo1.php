@@ -7,7 +7,7 @@
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css"> 
         <link type="text/css" rel="stylesheet" href="style.css"> 
 
-        <script type="text/javascript" src="js/ajax.js"></script>
+        <script type="text/javascript" src="js/ajaxC1.js"></script>
 
         <title>Productos</title>
        
@@ -34,7 +34,7 @@
                 <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPornombre()">
         </form>
         <br>
-        <div id="informacion"><b>Datos de la persona</b></div>
+        <div id="informacion"><b></b></div>
         <br>
 
       

@@ -4,7 +4,7 @@
  $nombre = $_GET['producto'];
  //echo "Hola " . $cedula;
 
- $sql = "SELECT * FROM producto WHERE pro_nombre='$nombre' and id_categoria='3'";
+ $sql = "SELECT * FROM producto WHERE pro_nombre='$nombre' and id_categoria='4' ";
 //cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
  echo " <table style='width:100%'>
@@ -27,7 +27,7 @@
  echo " <td>" . $row['pro_stock'] . "</td>";
  echo " <td>" . $row['pro_descripcion'] . "</td>";
  echo " <td>" . $row['pro_precio'] . "</td>";  
- echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
+ echo " <td><img class='perfil' src='../../../imagenes/industriales/".$row["imagen"].".jpg' width=' 100px'
      height=' 100px'></td>";
 
  echo "</tr>";
