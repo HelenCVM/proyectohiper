@@ -21,6 +21,7 @@
                         <li><a href="login.html">LOGIN</a></li>                
                         <li><a href="formulario.html">REGISTRATE</a></li>                         
                         <li><a href="buscar.html">BUSCAR</a></li>
+                        <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li> 
                     </ul>
                 </header>
                 

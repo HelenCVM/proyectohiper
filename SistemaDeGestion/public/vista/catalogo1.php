@@ -23,6 +23,8 @@
                         <li><a href="login.html">LOGIN</a></li>                
                         <li><a href="formulario.html">REGISTRATE</a></li>                         
                         <li><a href="buscar.html">BUSCAR</a></li>
+                        <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li>
+
                     </ul>
                 </header>               
         </header>
@@ -87,10 +89,7 @@
 
         <!-- Carrito de compras -->
         <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito" style="background: brown;
-	width: 365px;
-	font-size: 18px;
-    font-weight: 300;
-    ">
+	width: 365px; font-size: 18px;   font-weight: 300;">
 
 				<div class="btn-cerrar izquierda">
 						<button data-pushbar-close><i class="fas fa-times"></i></button>
