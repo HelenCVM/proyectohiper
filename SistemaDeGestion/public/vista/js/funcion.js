@@ -22,3 +22,7 @@ function busqueda() {
     }
     return false;
    }
+   function cluseWindow() {
+    let windowFloat = document.getElementById("floatWindow")
+    windowFloat.style.display = "none"
+}

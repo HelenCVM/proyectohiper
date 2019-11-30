@@ -37,6 +37,7 @@
 
  <h1>Productos</h1> 
 <section class="industriales">
+    
 <table class="indus">
  <tr>
  <th>Nombre</th>
