@@ -5,6 +5,8 @@
         <meta name="keywords" content="manguera, importación, import"/>      
         <link rel="stylesheet" href="css/pushbar.css">
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css"> 
+        
+        <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="style.css"> 
 
         <script type="text/javascript" src="js/ajaxC1.js"></script>
