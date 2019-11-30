@@ -68,8 +68,8 @@
 
                 echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
                 height=' 100px'></td>";
-           
-           
+                echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";
+
             }     
             } else {
             echo "<tr>";
@@ -81,9 +81,22 @@
 
             </table> 
         </section>
+<<<<<<< HEAD
+        <div class="ec-stars-wrapper">
+            <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+            <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+            <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+            <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+            <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+        </div>
+        <!--   ---------- -->
+         
+        
+=======
 
       
 
+>>>>>>> 749b16c7a73ee270983d5dc50c96fd4806a5be5b
         <footer>
             <br>
             &copy; Jorge Vinicio Pizarro Romero &#8226; Universidad Politécnica Salesiana &#8226; <a href=»mailto:jpizarror@est.ups.edu.ec»>jpizarror@est.ups.edu.ec</a>
