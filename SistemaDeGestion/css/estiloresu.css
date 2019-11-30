@@ -17,16 +17,17 @@ html {
     background-color: #EEF5DB; 
        }
     
-    table {
-        /* Para asegurarse que todos los labels tienen el mismo tamaño y están alineados correctamente */
-        display: inline-block;
-        width: 500px;
+    /*table {
+       table {
+          display: inline-block;
+        width: auto;
         text-align: right;
-        margin-left: .5em;
-        padding-left: 10px;     
+        margin-left: .2em;
+        padding-left: inherit;     
         border-collapse: separate;
-        border-spacing: 30px 20px;
-    }
+        border-spacing: 50px 20px;
+    
+    }*/
     
      a{
       font-family: 'Courier New', Courier, monospace;
@@ -107,4 +108,5 @@ html {
       width: 100px;
 
     }
+ 
     

@@ -2,9 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <meta name="keywords" content="manguera, importación, import"/>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-        <!-- <link type="text/css" rel="stylesheet" href=" ../css/estiloresu.css">-->
+       <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
       
         <link type="text/css" rel="stylesheet" href="style.css">        
         <title>Productos</title>
@@ -24,7 +23,7 @@
                     </ul>
                 </header>               
         </header>
-        <section>
+        <section class="buscar">
        
         <form onsubmit="return busqueda()" >
         <input type="text" id="motivo" name="motivo" value="">
@@ -40,13 +39,14 @@
     
 <table class="indus">
  <tr>
+     
+ <th></th>
  <th>Nombre</th>
  <th>Marca</th>
  <th>Stock</th>
  <th>Descripcion</th>
  <th>Precio</th>
- </tr>                </tr>
-
+ </tr>              
             
             <?php
             include '../../config/conexionBD.php';               
@@ -57,12 +57,13 @@
            while($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
-            echo "</br>";            
+            echo "</br>";                 
             echo " <td>" . $row['pro_nombre'] ."</td>";
             echo " <td>" . $row['pro_marca'] ."</td>";
             echo " <td>" . $row['pro_stock'] . "</td>";
             echo " <td>" . $row['pro_descripcion'] . "</td>";
-            echo " <td>" . $row['pro_precio'] . "</td>";        
+            echo " <td>" . $row['pro_precio'] . "</td>";  
+               
             
            // echo "   <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";      
 
