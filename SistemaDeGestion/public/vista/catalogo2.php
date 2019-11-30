@@ -5,7 +5,7 @@
         <meta name="keywords" content="manguera, importación, import"/>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <title>Servicio</title>
-        <link type="text/css" rel="stylesheet" href=" ../css/estiloresu.css">
+        <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
         
         <link type="text/css" rel="stylesheet" href="style.css">
     </head>

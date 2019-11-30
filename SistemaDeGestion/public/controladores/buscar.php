@@ -2,9 +2,9 @@
  //incluir conexión a la base de datos
  include "../../config/conexionBD.php";
  $motivo = $_GET['motivo'];
- echo "Hola " . $motivo;
+ 
 
- $sql = "SELECT * FROM producto WHERE pro_nombre ='$motivo' AND id_categoria=4";
+ $sql = "SELECT * FROM producto WHERE pro_nombre LIKE '" . $_GET['motivo'] . "%' AND id_categoria=3"; 
 //cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
  echo " <table style='width:100%'>

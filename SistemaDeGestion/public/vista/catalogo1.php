@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
+<<<<<<< HEAD
         <meta name="keywords" content="manguera, importación, import"/>
         <!-- <link type="text/css" rel="stylesheet" href=" ../css/estiloresu.css">-->
   
@@ -9,6 +10,12 @@
         <link rel="stylesheet" href="css/pushbar.css">
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css"> 
 
+=======
+        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
+       <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
+      
+        <link type="text/css" rel="stylesheet" href="style.css">        
+>>>>>>> a9d59caf1c7b4326dc178dd13142626632d43fc5
         <title>Productos</title>
        
     </head>
@@ -26,7 +33,7 @@
                     </ul>
                 </header>               
         </header>
-        <section>
+        <section class="buscar">
        
         <form onsubmit="return busqueda()" >
         <input type="text" id="motivo" name="motivo" value="">
@@ -39,15 +46,17 @@
 
  <h1>Productos</h1> 
 <section class="industriales">
+    
 <table class="indus">
  <tr>
+     
+ <th></th>
  <th>Nombre</th>
  <th>Marca</th>
  <th>Stock</th>
  <th>Descripcion</th>
  <th>Precio</th>
- </tr>                </tr>
-
+ </tr>              
             
             <?php
             include '../../config/conexionBD.php';               
@@ -58,12 +67,13 @@
            while($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
-            echo "</br>";            
+            echo "</br>";                 
             echo " <td>" . $row['pro_nombre'] ."</td>";
             echo " <td>" . $row['pro_marca'] ."</td>";
             echo " <td>" . $row['pro_stock'] . "</td>";
             echo " <td>" . $row['pro_descripcion'] . "</td>";
-            echo " <td>" . $row['pro_precio'] . "</td>";        
+            echo " <td>" . $row['pro_precio'] . "</td>";  
+               
             
            // echo "   <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";      
 
@@ -82,6 +92,7 @@
 
             </table> 
         </section>
+<<<<<<< HEAD
 
         <!-- Carrito de compras -->
         <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito">
@@ -116,6 +127,12 @@
       <!-- --->
 
 
+=======
+       
+        <!--   ---------- -->
+         
+        
+>>>>>>> a9d59caf1c7b4326dc178dd13142626632d43fc5
         <footer>
             <br>
             &copy; Jorge Vinicio Pizarro Romero &#8226; Universidad Politécnica Salesiana &#8226; <a href=»mailto:jpizarror@est.ups.edu.ec»>jpizarror@est.ups.edu.ec</a>

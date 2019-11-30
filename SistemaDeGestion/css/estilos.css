@@ -189,6 +189,7 @@ width:20%;
            background-image: url('../public/vista/img/img6.jpg');
            background-size: 100%;
        }
+<<<<<<< HEAD
 
 
 
@@ -243,3 +244,11 @@ font-size : 20p;
 
 
   /*-------------------------*/
+=======
+       .produ img{
+        width: 500px;
+        height: 500px;
+    }
+
+       
+>>>>>>> a9d59caf1c7b4326dc178dd13142626632d43fc5
