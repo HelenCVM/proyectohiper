@@ -190,7 +190,9 @@ width:20%;
            background-size: 100%;
           
        }
-
-
+       .produ img{
+        width: 500px;
+        height: 500px;
+    }
 
        
