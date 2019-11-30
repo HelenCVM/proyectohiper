@@ -188,11 +188,58 @@ width:20%;
        #formularioc{
            background-image: url('../public/vista/img/img6.jpg');
            background-size: 100%;
-          
        }
+
+
+
+       /* ------------------------- */
+/* Pushbars: Estilos Generales */
+/* ------------------------- */
+.pushbar{
+	background: #000;
+	color: #fff;
+	padding: 20px;
+}
+.pushbar .btn-cerrar.derecha{
+	text-align: right;
+}
+
+.pushbar .btn-cerrar.izquierda{
+	text-align: right;
+}
+
+.pushbar .btn-cerrar button{
+background: none;
+color:white;
+border: none;
+cursor:pointer;
+font-size : 20p;
+
+}
+
   /*estilos para el carrito */
   .pushbar .btn-cerrar.izquierda{
       text-align: left;
   }
   
   /*-----------------------*/
+
+  /*Estilos carrito de compras*/
+  .pushbar.pushbar-carrito{
+	background: #000;
+	width: 365px;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.pushbar-carrito .titulo{
+	font-size: 22px;
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(99, 93, 93, 0.16);
+	margin-bottom: 20px;
+}
+
+
+
+
+  /*-------------------------*/

@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="keywords" content="manguera, importación, import"/>
-        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <!-- <link type="text/css" rel="stylesheet" href=" ../css/estiloresu.css">-->
-      
-        <link type="text/css" rel="stylesheet" href="style.css">        
+  
+        <link type="text/css" rel="stylesheet" href="style.css">    
+        <link rel="stylesheet" href="css/pushbar.css">
+        <link type="text/css" rel="stylesheet" href="../../css/estilos.css"> 
+
         <title>Productos</title>
        
     </head>
@@ -80,7 +82,20 @@
 
             </table> 
         </section>
-<<<<<<< HEAD
+
+        <!-- Carrito de compras -->
+        <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito">
+				<div class="btn-cerrar izquierda">
+						<button data-pushbar-close><i class="fas fa-times"></i></button>
+						</div>
+				
+						<p class="titulo">&#x1F6D2; Carrito de compras </p>
+						
+				</div>
+									
+			</div>
+        <!-- ------------- --->
+
         <div class="ec-stars-wrapper">
             <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
             <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
@@ -89,13 +104,18 @@
             <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
         </div>
         <!--   ---------- -->
-         
-        
-=======
 
-      
+      <!---Escript para el carrito de compras -->
+      <script src="js/pushbar.js"></script>
+	<script>
+	var pushbar = new Pushbar({
+		blur: true,
+		overlay: true
+	});
+	</script>
+      <!-- --->
 
->>>>>>> 749b16c7a73ee270983d5dc50c96fd4806a5be5b
+
         <footer>
             <br>
             &copy; Jorge Vinicio Pizarro Romero &#8226; Universidad Politécnica Salesiana &#8226; <a href=»mailto:jpizarror@est.ups.edu.ec»>jpizarror@est.ups.edu.ec</a>
