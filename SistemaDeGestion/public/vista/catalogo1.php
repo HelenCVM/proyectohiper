@@ -2,20 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-<<<<<<< HEAD
-        <meta name="keywords" content="manguera, importación, import"/>
-        <!-- <link type="text/css" rel="stylesheet" href=" ../css/estiloresu.css">-->
-  
-        <link type="text/css" rel="stylesheet" href="style.css">    
+        <meta name="keywords" content="manguera, importación, import"/>      
         <link rel="stylesheet" href="css/pushbar.css">
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css"> 
+        <link type="text/css" rel="stylesheet" href="style.css"> 
 
-=======
-        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-       <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
-      
-        <link type="text/css" rel="stylesheet" href="style.css">        
->>>>>>> a9d59caf1c7b4326dc178dd13142626632d43fc5
+        <script type="text/javascript" src="js/ajax.js"></script>
+
         <title>Productos</title>
        
     </head>
@@ -33,16 +26,18 @@
                     </ul>
                 </header>               
         </header>
-        <section class="buscar">
+    
        
-        <form onsubmit="return busqueda()" >
-        <input type="text" id="motivo" name="motivo" value="">
-        <input type="submit" id="buscar" name="buscar" value="Buscar" onclick="busqueda()">
-       </form>
-       <div id="informacion"><b>Datos de la persona</b></div>
-   
-       </section>
-       <script src="../../public/vista/js/funcion.js"> </script>
+        <label for="nombres">Buscar Manguera:</label>
+        <form  onsubmit="return buscarPornombre()">
+                <input type="text" id="nombrep" name="nombrep" value="">
+                <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPornombre()">
+        </form>
+        <br>
+        <div id="informacion"><b>Datos de la persona</b></div>
+        <br>
+
+      
 
  <h1>Productos</h1> 
 <section class="industriales">
@@ -68,17 +63,14 @@
             echo "<tr>";
             echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
             echo "</br>";                 
-            echo " <td>" . $row['pro_nombre'] ."</td>";
+            echo " <td id='nombreP' >" . $row['pro_nombre'] ."</td>";
             echo " <td>" . $row['pro_marca'] ."</td>";
             echo " <td>" . $row['pro_stock'] . "</td>";
             echo " <td>" . $row['pro_descripcion'] . "</td>";
             echo " <td>" . $row['pro_precio'] . "</td>";  
-               
-            
-           // echo "   <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";      
-
-                echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
+             echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
                 height=' 100px'></td>";
+
                 echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";
 
             }     
@@ -92,15 +84,20 @@
 
             </table> 
         </section>
-<<<<<<< HEAD
 
         <!-- Carrito de compras -->
-        <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito">
+        <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito" style="background: brown;
+	width: 365px;
+	font-size: 18px;
+    font-weight: 300;
+    ">
+
 				<div class="btn-cerrar izquierda">
 						<button data-pushbar-close><i class="fas fa-times"></i></button>
 						</div>
 				
-						<p class="titulo">&#x1F6D2; Carrito de compras </p>
+                        <p class="tituloC">&#x1F6D2; Carrito de compras </p>
+                       
 						
 				</div>
 									
@@ -127,12 +124,6 @@
       <!-- --->
 
 
-=======
-       
-        <!--   ---------- -->
-         
-        
->>>>>>> a9d59caf1c7b4326dc178dd13142626632d43fc5
         <footer>
             <br>
             &copy; Jorge Vinicio Pizarro Romero &#8226; Universidad Politécnica Salesiana &#8226; <a href=»mailto:jpizarror@est.ups.edu.ec»>jpizarror@est.ups.edu.ec</a>
