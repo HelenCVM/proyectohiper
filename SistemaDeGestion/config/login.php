@@ -18,7 +18,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 $_SESSION['isLogged'] = TRUE;
 while($row = $result->fetch_assoc()) {
-if($row['usu_rol']=='A'){
+if($row['usu_rol']=='admin'){
 header("Location:../admin/controladores/admin/GestionUsuario.php");
 }else{
 header("Location:../admin/controladores/usuario/index.php?correo=".$row['usu_email']); 
