@@ -40,12 +40,7 @@
    <br>
    <!--transicion de las imagenes -->
    <center><section class="transcicion">
-<?php     
-session_start();     
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){                 
-    header("Location:../../../public/vista/login.php");             
-    } 
-?>
+
     <?php         
     $codigo = $_GET["codigo"];         
     $sql = "SELECT * FROM Usuario where usu_codigo=$codigo"; 
