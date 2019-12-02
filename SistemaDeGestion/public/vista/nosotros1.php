@@ -11,13 +11,26 @@
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
     </head>
     <body>
+    <?php
+//incluir conexión a la base de datos
+include '../../config/conexionBD.php';
+$usuario = $_GET['correo'];
+echo "$usuario";
+$sql = "SELECT * FROM Usuario WHERE usu_correo = '$usuario'";
+echo $sql;
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+$_SESSION['isLogged'] = TRUE;
+while($row = $result->fetch_assoc()) {
+if($row['usu_correo']==$usuario){
+?>
             <header class="cabecera">
                     
                     <ul class="menunavegador">
-                        <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                        <a href="index1.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                         <hr color="slategrey" >
-                        <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
-                        <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                        <li><a href="index1.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                        <li><a href="nosotros1.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
                         <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
                         <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>
                         <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
@@ -60,6 +73,11 @@
             &#8226; Whatsapp: +593985633576 <br/>
             &#8226; Correo: importmanguerasiv@gmail.com 
         </footer>
-        
+        <?php
+}
+}
+}
+$conn->close();
+?>
     </body>
 </html>
