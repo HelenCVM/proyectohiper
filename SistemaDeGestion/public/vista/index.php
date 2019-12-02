@@ -36,7 +36,9 @@
                 <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
                 <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
                 <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
-                <li><a href="formulario.php"> <img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>     
+                <li><a href="formulario.php"> <img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li> 
+                     
+                <li><a href="../../../adminPanel/vista/login_admin.php"> <img id ="iconmenu" src="img/icon6.png"> ADMINISTRADOR</a></li>     
                 
 
 
