@@ -15,12 +15,12 @@
                 <ul class="menunavegador">
                         <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                         <hr color="slategrey" >
-                    <li><a href="index.html"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
-                    <li><a href="nosotros.html"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
-                    <li><a href="servicios.html"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
-                    <li><a href="contacto.html"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                 
-                    <li><a href="login.html"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
-                    <li><a href="formulario.html"><img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>                                             
+                    <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                    <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                    <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
+                    <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                 
+                    <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
+                    <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>                                             
                   <!--  <li><a href="buscar.html">BUSCAR</a></li> -->
                 </ul>
             </header>
@@ -49,7 +49,10 @@
         <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." 
        />
         <br>
-
+        <label for="fechanaci">Fecha de nacimiento (*)</label>
+        <input type="text" id="fechanaci" name="fechanaci" value="" placeholder="Ingrese su dirección ..." 
+       />
+        <br>
         <label for="direccion">Dirección (*)</label>
         <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..." 
        />
@@ -58,15 +61,7 @@
         <label for="telefono">Teléfono (*)</label>
         <input type="text" maxlength="10" id="telefono" name="telefono" value=""  placeholder="Ingrese su número telefónico ..." 
         />
-        <br>                
-        <label for="ciudad">Ciudad (*)</label>
-        <input type="text" maxlength="10" id="ciudad" name="ciudad" value=""  placeholder="Ingrese su ciudad ..." 
-        />
-        <br>  
-
-        <label for="provincia">Provincia (*)</label>
-        <input type="text" maxlength="10" id="provincia" name="provincia" value=""  placeholder="Ingrese su provincia ..." 
-        />
+        
         <br>  
 
         <label for="correo">Correo electrónico (*)</label>
