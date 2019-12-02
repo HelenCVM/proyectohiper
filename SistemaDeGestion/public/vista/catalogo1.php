@@ -18,12 +18,21 @@
             <header class="cabecera">
                     <a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                     <ul class="menunavegador">
+<<<<<<< HEAD
+                        <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png">INICIO</a></li> 
+                        <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png">NOSOTROS</a></li>
+                        <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png">PRODUCTOS</a></li>
+                        <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png">CONTACTANOS</a></li>                                       
+                        <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png">LOGIN</a></li>                
+                        <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png">REGISTRATE</a></li>                         
+=======
                         <li><a href="index.php">INICIO</a></li> 
                         <li><a href="nosotros.php">NOSOTROS</a></li>
                         <li><a href="servicios.php">PRODUCTOS</a></li>
                         <li><a href="contacto.php">CONTACTANOS</a></li>                                       
                         <li><a href="login.php">LOGIN</a></li>                
                         <li><a href="formulario.php">REGISTRATE</a></li>   
+>>>>>>> 632d390b5b7067bb541fbd5a2bd5af046b6da68a
                         <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li>
 
                     </ul>
@@ -99,9 +108,18 @@
 						</div>
 				
                         <p class="tituloC">&#x1F6D2; Carrito de compras </p>
+<<<<<<< HEAD
+
+
+                      <!--agregamso la parte de los botones --> 
+                      <input type="button" id="regresarA" class="regresarA" name="regresar" value="regresar" onkeypress=" ">
+                      <input type="button" id="comprarP" class="comprarP" name="comprarP" value="Ir a comprar" onkeypress=" ">
+        
+=======
                         
                        
 						
+>>>>>>> 632d390b5b7067bb541fbd5a2bd5af046b6da68a
 				</div>
 									
 			</div>
