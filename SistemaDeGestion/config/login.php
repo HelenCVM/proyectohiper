@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['isLogin'])) {
     header("Location: ../public/vista/login.php");
 } elseif ($_SESSION['usu_rol'] == 'user') {
-   header("Location:../public/vista/index.php");
+   header("Location:../public/vista/index copy.php");
 }
 ?>
 
@@ -25,7 +25,7 @@ while($row = $result->fetch_assoc()) {
 if($row['usu_rol']=='admin'){
 header("Location:../admin/controladores/admin/GestionUsuario.php");
 }else{
-header("Location:../public/vista/index.php?correo=".$row['usu_correo']);
+header("Location:../public/vista/index copy.php?correo=".$row['usu_nombres']);
 }
 }
 }

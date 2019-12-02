@@ -35,18 +35,19 @@ header("Location:login.php");
         ?>
             <header class="cabecera">
                     
-                    <ul class="menunavegador">
-                        <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
-                        <hr color="slategrey" >
-                        <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
-                        <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
-                        <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
-                        <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>
-                        <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
-                        <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li> 
-                        <li><?php include "php/header.php";?>></li>                                                
-                       <!-- <li><a href="buscar.html">BUSCAR</a></li> -->
-                    </ul>
+            <nav class="divmenu">
+                <ul class="menunavegador">
+                <hr color="slategrey" >
+                <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
+                <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
+                <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
+                <li><a href="formulario.php"> <img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>                                         
+              
+
+              </ul>
+           </nav>
                 </header>
                 
         <section>
