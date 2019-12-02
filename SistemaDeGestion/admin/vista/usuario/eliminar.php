@@ -1,42 +1,66 @@
 <!DOCTYPE html> 
 <html> 
     <head>     
-        <meta charset="UTF-8">     
-        <title>Eliminar datos de persona</title>    
-        
- <link type="text/css" rel="stylesheet" href="../../../css/estilos.css "/> 
-        
+    <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta name="keywords" content="manguera, importación, import"/>
+        <link type="text/css" rel="stylesheet" href="../../../public/vista/style.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estiloresu.css">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="../../../public/vista/css/swiper.min.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
+        <!-- Swiper JS -->
+        <script src="../../../public/vista/js/swiper.min.js"></script>
+       
+        <title>Inicio</title>
+        <a class="cerrarindex" href="../../../config/cerrar_sesion.php">Cerrar sesion</a>
     </head> 
  
-<body>     
-<?php     session_start();     
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){                 
-    header("Location: /SistemaDeGestion/public/vista/login.html");             
-    } 
-?>
+<body> 
+<header class="cabecera">   
+           <a href="indexusuario.php"><img src="../../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+            
+   </header>
+   
+   <section>
+       <article class="indexabout">
+               <div class="social">
+                       <ul >
+                       <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
+                                    <li><a href="importmanguerasiv@gmail.com" class="icon-mail4"></a></li>
+                                    <li><a href="api.whatsapp.com/send?phone=+593992726928" class="icon-whatsapp"></a></li>
+                           </ul>
+               </div>
+               
+         
+           
+       </article>
+   </section>
+
+   <br>
+   <!--transicion de las imagenes -->
+   <center><section class="transcicion">
+
     <?php              
     $codigo = $_GET["codigo"];         
-    $sql = "SELECT * FROM usuario where usu_codigo=$codigo";                  
+    $sql = "SELECT * FROM Usuario where usu_codigo='$codigo'";                  
     include '../../../config/conexionBD.php';          
     $result = $conn->query($sql);                  
     if ($result->num_rows > 0) {                          
         while($row = $result->fetch_assoc()) {             
     ?> 
  
-                <form id="formulario01" method="POST" action="../../controladores/usuario/eliminar.php">                     <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" /> 
+                <form class="formulario01" method="POST" action="../../controladores/usuario/eliminar.php">                     <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" /> 
  
                     <label for="cedula">Cedula (*)</label>                     
                     <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" disabled/>                     <br> 
  
                     <label for="nombres">Nombres (*)</label>                     
-                    <input type="text" id="nombre" name="nombre" value="<?php echo $row["usu_nombre"]; ?>" disabled/>                     <br> 
+                    <input type="text" id="nombre" name="nombre" value="<?php echo $row["usu_nombres"]; ?>" disabled/>                     <br> 
  
                     <label for="apellidos">Apelidos (*)</label> 
-                    <input type="text" id="apellido" name="apellido" value="<?php echo $row["usu_apellido"]; ?>" disabled/>                     <br> 
- 
-                    <label for="direccion">Dirección (*)</label>                     
-                    <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"]; ?>" disabled/>                     <br> 
- 
+                    <input type="text" id="apellido" name="apellido" value="<?php echo $row["usu_apellidos"]; ?>" disabled/>                     <br> 
+                        
                     <label for="telefono">Teléfono (*)</label>                     
                     <input type="text" id="telefono" name="telefono" value="<?php echo $row["usu_telefono"]; ?>" disabled/>                     <br>                 
  

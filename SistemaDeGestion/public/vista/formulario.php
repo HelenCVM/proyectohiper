@@ -27,9 +27,9 @@
     <section class="login">
             <div class="social">
                     <ul >
-                            <li><a href="http://www." class="icon-facebook2"></a></li> 
-                            <li><a href="http://www." class="icon-mail4"></a></li>
-                            <li><a href="http://www." class="icon-whatsapp"></a></li>
+                            <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
+                            <li><a href="importmanguerasiv@gmail.com" class="icon-mail4"></a></li>
+                            <li><a href="api.whatsapp.com/send?phone=+593992726928" class="icon-whatsapp"></a></li>
                         </ul>
             </div>
         <div class="login-box">
@@ -52,10 +52,7 @@
         <label for="fechanaci">Fecha de nacimiento (*)</label>
         <input type="text" id="fechanaci" name="fechanaci" value="" placeholder="Ingrese su dirección ..." 
        />
-        <br>
-        <label for="direccion">Dirección (*)</label>
-        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..." 
-       />
+
         <br>
 
         <label for="telefono">Teléfono (*)</label>

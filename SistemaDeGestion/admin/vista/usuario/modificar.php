@@ -7,10 +7,10 @@
         <link type="text/css" rel="stylesheet" href="../../../public/vista/style.css">
         <link type="text/css" rel="stylesheet" href="../../../css/estiloresu.css">
         <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="../../../css/swiper.min.css">
+        <link rel="stylesheet" href="../../../public/vista/css/swiper.min.css">
         <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
         <!-- Swiper JS -->
-        <script src="js/swiper.min.js"></script>
+        <script src="../../../public/vista/js/swiper.min.js"></script>
        
         <title>Inicio</title>
         <a class="cerrarindex" href="../../../config/cerrar_sesion.php">Cerrar sesion</a>
@@ -26,9 +26,9 @@
        <article class="indexabout">
                <div class="social">
                        <ul >
-                               <li><a href="http://www." class="icon-facebook2"></a></li> 
-                               <li><a href="http://www." class="icon-mail4"></a></li>
-                               <li><a href="http://www." class="icon-whatsapp"></a></li>
+                       <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
+                                    <li><a href="importmanguerasiv@gmail.com" class="icon-mail4"></a></li>
+                                    <li><a href="api.whatsapp.com/send?phone=+593992726928" class="icon-whatsapp"></a></li>
                            </ul>
                </div>
                
@@ -51,7 +51,7 @@
             while($row = $result->fetch_assoc()) {             
         ?> 
  
-                <form id="formulario01" method="POST" action="../../controladores/usuario/modificar.php"> 
+                <form class="formulario01" method="POST" action="../../controladores/usuario/modificar.php"> 
                 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" /> 
  
                     <label for="cedula">Cedula (*)</label>                     

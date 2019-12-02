@@ -31,16 +31,16 @@
             <article class="indexabout">
                     <div class="social">
                             <ul >
-                                    <li><a href="http://www." class="icon-facebook2"></a></li> 
-                                    <li><a href="http://www." class="icon-mail4"></a></li>
-                                    <li><a href="http://www." class="icon-whatsapp"></a></li>
+                            <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
+                                    <li><a href="importmanguerasiv@gmail.com" class="icon-mail4"></a></li>
+                                    <li><a href="api.whatsapp.com/send?phone=+593992726928" class="icon-whatsapp"></a></li>
                                 </ul>
                     </div>
                 <h1 class="h1nosotros">
                     QUIENES SOMOS
                 
                 </h1>
-                <iframe width="1170" height="500" src="https://www.youtube.com/embed/z3QVtk1iOM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1170" height="500" src="https://www.youtube.com/embed/Y9RWAVsWOT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <p class="p1nosotros">
                 <img class="imanoso" src="../../../imagenes/Comercializar mangueras y marcas ,con estandar y certificaciones internacionales.png" alt="Import Mangueras"/> 
                 
