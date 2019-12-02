@@ -60,6 +60,8 @@ if(!empty($_POST)){
 
 <head>
     <meta charset="UTF-8">
+    
+    <script type="text/javascript" src="../js/funcionesAdmin.js"></script>
     <?php include "../controladores/scripts.php";?>
     <title>Registro Producto</title>
 </head>
@@ -95,24 +97,50 @@ if ($result->num_rows > 0) {
                     ?>
                 </select>
                 <label for="nombreP">Nombre</label>
-                <input type="text" name="nombreP" id="nombreP" value="" placeholder="Nombre del Producto">
+                <input type="text" name="nombreP" id="nombreP" value="" placeholder="Nombre del Producto"
+                onkeyup="this.value = validarLetras(this.value)"  
+                
+                >
+
+
+
+
                 <label for="marca">Marca</label>
-                <input type="text" name="marca" id="marca" value="" placeholder="marca">
+                <input type="text" name="marca" id="marca" value="" placeholder="marca"
+                onkeyup="this.value = validarLetras(this.value)"  
+                >
+
+
                 <label for="Caracteristicas">Caracteristicas</label>
                 <input type="Caracteristicas" name="Caracteristicas" id="Caracteristicas" value=""
-                    placeholder="Caracteristicas del Producto">
+                    placeholder="Caracteristicas del Producto"
+                    onkeyup="this.value = validarLetras(this.value)"  
+                    
+                    >
                 <label for="diamtreo">Diametro</label>
-                <input type="text" name="diamtreo" id="diamtreo" value="" placeholder="Diamtreo">
+                <input type="text" name="diamtreo" id="diamtreo" value="" placeholder="Diamtreo"
+                onkeypress="return validarNumero(event, this)"
+                >
                 <label for="peso">Peso</label>
-                <input type="text" name="peso" id="peso" value="" placeholder="Peso">
+                <input type="text" name="peso" id="peso" value="" placeholder="Peso"
+                onkeypress="return validarNumero(event, this)"
+                >
                 <label for="presion">Presion</label>
-                <input type="text" name="presion" id="presion" value="" placeholder="Presion">
+                <input type="text" name="presion" id="presion" value="" placeholder="Presion"
+                onkeypress="return validarNumero(event, this)"
+                >
                 <label for="Longitud">Longitud</label>
-                <input type="text" name="Longitud" id="Longitud" value="" placeholder="Longitud">
+                <input type="text" name="Longitud" id="Longitud" value="" placeholder="Longitud"
+                onkeypress="return validarNumero(event, this)"
+                >
                 <label for="Precio">Precio</label>
-                <input type="number" name="Precio" id="Precio" value="" placeholder="Precio">
+                <input type="number" name="Precio" id="Precio" value="" placeholder="Precio"
+                onkeypress="return validarNumero(event, this)"
+                >
                 <label for="Stock">Stock</label>
-                <input type="number" name="Stock" id="Stock" value="" placeholder="Stock">
+                <input type="number" name="Stock" id="Stock" value="" placeholder="Stock"
+                onkeypress="return validarNumero(event, this)"
+                >
 
                 <div class="photo">
                     <label for="foto">Foto</label>

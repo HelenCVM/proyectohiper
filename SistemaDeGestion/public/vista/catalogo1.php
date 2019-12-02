@@ -18,12 +18,25 @@
             <header class="cabecera">
                     <a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                     <ul class="menunavegador">
+<<<<<<< HEAD
+                        <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png">INICIO</a></li> 
+                        <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png">NOSOTROS</a></li>
+                        <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png">PRODUCTOS</a></li>
+                        <li><a href="contacto.php">CONTACTANOS</a></li>                                       
+                        <li><a href="login.php">LOGIN</a></li>                
+                        <li><a href="formulario.php">REGISTRATE</a></li>                         
+
                         <li><a href="index.php">INICIO</a></li> 
                         <li><a href="nosotros.php">NOSOTROS</a></li>
                         <li><a href="servicios.php">PRODUCTOS</a></li>
                         <li><a href="contacto.php">CONTACTANOS</a></li>                                       
                         <li><a href="login.php">LOGIN</a></li>                
+
                         <li><a href="formulario.php">REGISTRATE</a></li>   
+
+                        <li><a href="formulario.php">REGISTRATE</a></li>                         
+                        <li><a href="buscar.php">BUSCAR</a></li>
+
                         <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li>
 
                     </ul>
