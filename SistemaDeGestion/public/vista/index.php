@@ -37,32 +37,9 @@
                 <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
                 <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
                 <li><a href="formulario.php"> <img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>     
-                <?php
-                include '../../config/conexionBD.php';
-                $usuario = $_GET['correo'];
                 
-                $sql = "SELECT * FROM Usuario WHERE usu_correo = '$usuario'";
-               
-                $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                $_SESSION['isLogged'] = TRUE;
-                while($row = $result->fetch_assoc()) {
-                if($row['usu_correo']==$usuario){
-
-?>   
-
-                <li><a href="formulario.php"> <img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>                                         
-              
 
 
-<li><span class="user"><?php echo ($row['usu_nombres'] . ' ' . $row['usu_apellidos']) ?></span></li>    
-              
-<?php
-}
-}
-}
-$conn->close();
-?>
               </ul>
            </nav>
 

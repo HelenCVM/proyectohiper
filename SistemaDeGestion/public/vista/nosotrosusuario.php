@@ -11,33 +11,29 @@
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
     </head>
     <body>
-    <?php
-//incluir conexión a la base de datos
-include '../../config/conexionBD.php';
-$usuario = $_GET['correo'];
-echo "$usuario";
-$sql = "SELECT * FROM Usuario WHERE usu_correo = '$usuario'";
-echo $sql;
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-$_SESSION['isLogged'] = TRUE;
-while($row = $result->fetch_assoc()) {
-if($row['usu_correo']==$usuario){
-?>
+    <?php     
+  session_start();     
+if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){                 
+    header("Location: /SistemaDeGestion/public/vista/login.html");             
+    } 
+?>  
+<?php  
+include '../../config/conexionBD.php';       
+$codigo = $_GET["variable1"];
+?> 
             <header class="cabecera">
-                    
-                    <ul class="menunavegador">
-                        <a href="index1.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
-                        <hr color="slategrey" >
-                        <li><a href="index1.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
-                        <li><a href="nosotros1.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
-                        <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
-                        <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>
-                        <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
-                        <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li> 
-                                                                     
-                       <!-- <li><a href="buscar.html">BUSCAR</a></li> -->
-                    </ul>
+            <a href="indexusuario.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+            <nav class="divmenu">
+                <ul class="menunavegador">
+                <hr color="slategrey" >
+                <li><a href="indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
+                <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
+                
+
+              </ul>
+           </nav>
                 </header>
                 
         <section>
@@ -49,6 +45,8 @@ if($row['usu_correo']==$usuario){
                                     <li><a href="http://www." class="icon-whatsapp"></a></li>
                                 </ul>
                     </div>
+                    <?php echo "BIENVENIDA " ?>
+                    <?php echo $codigo ?>
                 <h1 class="h1nosotros">
                     QUIENES SOMOS
                 
@@ -73,11 +71,6 @@ if($row['usu_correo']==$usuario){
             &#8226; Whatsapp: +593985633576 <br/>
             &#8226; Correo: importmanguerasiv@gmail.com 
         </footer>
-        <?php
-}
-}
-}
-$conn->close();
-?>
+       
     </body>
 </html>
