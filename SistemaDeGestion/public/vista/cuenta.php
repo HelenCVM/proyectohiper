@@ -53,17 +53,9 @@ $codigo = $_GET["variable1"];
 <th>Telefono</th>
 <th>Correo</th>
 </tr>
-<?php
-session_start();
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
-header("Location:login.php");
-}
-?>
+
 <?php
 include '../../config/conexionBD.php';
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
-header("Location:login.php");
-}
 $usuario = $_GET["variable1"];
 $sql = "SELECT * FROM Usuario WHERE usu_nombres = '$usuario'";
 $result = $conn->query($sql);

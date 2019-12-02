@@ -17,12 +17,7 @@
        <!--<a href="../../config/cerrar_sesion.php">Cerrar sesion</a>-->
   </head>
   <body>
-  <?php     
-  session_start();     
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){                 
-    header("Location: /SistemaDeGestion/public/vista/login.html");             
-    } 
-?>  
+ 
 <?php  
 include '../../config/conexionBD.php';       
 $codigo = $_GET["variable1"];
