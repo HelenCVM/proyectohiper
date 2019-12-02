@@ -9,34 +9,26 @@
     </head> 
  
 <body>     
-<?php     session_start();     
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){                 
-    header("Location: /SistemaDeGestion/public/vista/login.html");             
-    } 
-?>
     <?php              
     $codigo = $_GET["codigo"];         
-    $sql = "SELECT * FROM usuario where usu_codigo=$codigo";                  
+    $sql = "SELECT * FROM Usuario where usu_codigo='$codigo'";                  
     include '../../../config/conexionBD.php';          
     $result = $conn->query($sql);                  
     if ($result->num_rows > 0) {                          
         while($row = $result->fetch_assoc()) {             
     ?> 
  
-                <form id="formulario01" method="POST" action="../../controladores/usuario/eliminar.php">                     <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" /> 
+                <form class="formulario01" method="POST" action="../../controladores/usuario/eliminar.php">                     <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" /> 
  
                     <label for="cedula">Cedula (*)</label>                     
                     <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" disabled/>                     <br> 
  
                     <label for="nombres">Nombres (*)</label>                     
-                    <input type="text" id="nombre" name="nombre" value="<?php echo $row["usu_nombre"]; ?>" disabled/>                     <br> 
+                    <input type="text" id="nombre" name="nombre" value="<?php echo $row["usu_nombres"]; ?>" disabled/>                     <br> 
  
                     <label for="apellidos">Apelidos (*)</label> 
-                    <input type="text" id="apellido" name="apellido" value="<?php echo $row["usu_apellido"]; ?>" disabled/>                     <br> 
- 
-                    <label for="direccion">Dirección (*)</label>                     
-                    <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"]; ?>" disabled/>                     <br> 
- 
+                    <input type="text" id="apellido" name="apellido" value="<?php echo $row["usu_apellidos"]; ?>" disabled/>                     <br> 
+                        
                     <label for="telefono">Teléfono (*)</label>                     
                     <input type="text" id="telefono" name="telefono" value="<?php echo $row["usu_telefono"]; ?>" disabled/>                     <br>                 
  
