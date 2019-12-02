@@ -3,7 +3,7 @@
 include 'conexionBD.php';
 $usuario = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
 $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
-$sql = "SELECT * FROM Usuario WHERE usu_correo = '$usuario' and usu_password ='$contrasena'";
+$sql = "SELECT * FROM Usuario WHERE usu_correo = '$usuario' and usu_password ='$contrasena' and usu_eliminado='N'";
 echo $sql;
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -12,7 +12,7 @@ while($row = $result->fetch_assoc()) {
 if($row['usu_rol']=='user'){
     header("Location:../public/vista/indexusuario.php?variable1=".$row['usu_nombres']);
 }else{
-    header("Location:../public/vista/login.php");
+    header("Location:../public/vista/formulario.php");
 }
 }
 }

@@ -12,7 +12,7 @@
     
     date_default_timezone_set("America/Guayaquil");     
     $fecha = date('Y-m-d H:i:s', time());    
-    $sql = "DELETE FROM Usuario WHERE usu_codigo = '$codigo'";  
+    $sql = "UPDATE Usuario SET usu_eliminado = 'S', usu_fecha_modificacion = '$fecha' WHERE usu_codigo = '$codigo'";
     if ($conn->query($sql) === TRUE) {                 
         echo "<p>Se ha eliminado los datos correctamemte!!!</p>";
         header("Location:../../../public/vista/login.php");  
