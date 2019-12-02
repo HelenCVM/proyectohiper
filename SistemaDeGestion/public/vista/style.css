@@ -90,4 +90,12 @@
     height: 40px;
   width:40%;
 }
+
+.pushbar-carrito .tituloC{
+	font-size: 22px;
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(99, 93, 93, 0.16);
+	margin-bottom: 20px;
+}
+
 /*------------*/
