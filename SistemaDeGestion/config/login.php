@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['isLogin'])) {
     header("Location: ../public/vista/login.php");
 } elseif ($_SESSION['usu_rol'] == 'user') {
-   header("Location:../public/vista/index copy.php");
+   header("Location:../public/vista/indexusuario.php");
 }
 ?>
 
