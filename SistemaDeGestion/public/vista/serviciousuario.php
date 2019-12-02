@@ -5,6 +5,7 @@
         <meta name="keywords" content="manguera, importación, import"/>
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <title>Servicio</title>
+        <a href="../../config/cerrar_sesion.php">Cerrar sesion</a>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
    

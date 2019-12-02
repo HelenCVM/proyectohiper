@@ -13,6 +13,7 @@
         <script src="js/swiper.min.js"></script>
        
         <title>Inicio</title>
+        <a href="../../config/cerrar_sesion.php">Cerrar sesion</a>
        <!--<a href="../../config/cerrar_sesion.php">Cerrar sesion</a>-->
   </head>
   <body>

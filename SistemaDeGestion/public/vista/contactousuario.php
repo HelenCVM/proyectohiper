@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="keywords" content="manguera, importación, import"/>
         <title>Contacto</title>
-    
+        <a href="../../config/cerrar_sesion.php">Cerrar sesion</a>
         <link type="text/css" rel="stylesheet" href=" style.css">
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
