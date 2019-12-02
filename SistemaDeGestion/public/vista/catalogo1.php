@@ -16,15 +16,15 @@
     </head>
     <body>
             <header class="cabecera">
-                    <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                    <a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                     <ul class="menunavegador">
-                        <li><a href="index.html">INICIO</a></li> 
-                        <li><a href="nosotros.html">NOSOTROS</a></li>
-                        <li><a href="servicios.html">PRODUCTOS</a></li>
-                        <li><a href="contacto.html">CONTACTANOS</a></li>                                       
-                        <li><a href="login.html">LOGIN</a></li>                
-                        <li><a href="formulario.html">REGISTRATE</a></li>                         
-                        <li><a href="buscar.html">BUSCAR</a></li>
+                        <li><a href="index.php">INICIO</a></li> 
+                        <li><a href="nosotros.php">NOSOTROS</a></li>
+                        <li><a href="servicios.php">PRODUCTOS</a></li>
+                        <li><a href="contacto.php">CONTACTANOS</a></li>                                       
+                        <li><a href="login.php">LOGIN</a></li>                
+                        <li><a href="formulario.php">REGISTRATE</a></li>                         
+                        <li><a href="buscar.php">BUSCAR</a></li>
                         <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li>
 
                     </ul>
