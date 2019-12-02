@@ -5,7 +5,7 @@
         <meta name="keywords" content="manguera, importación, import"/>
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <title>Servicio</title>
-        <a href="../../config/cerrar_sesion.php">Cerrar sesion</a>
+        <a class="cerrarindex" href="../../config/cerrar_sesion.php">Cerrar sesion</a>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
    
@@ -19,13 +19,13 @@ $codigo = $_GET["variable1"];
             <header class="cabecera">
                     
                     <ul class="menunavegador">
-                            <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                            <a href="indexusuario.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                             <hr color="slategrey" >
                         <li><a href="indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
                         <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
                         <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
                         <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                       
-                       
+                        <li><a href="cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li> 
                     </ul>
                 </header>
                 
@@ -33,8 +33,10 @@ $codigo = $_GET["variable1"];
         
 
         <section class="productos">
+        <p class="bienvenida"> 
         <?php echo "BIENVENIDA " ?>
         <?php echo $codigo ?>
+       </p>
                 <h1 class="h1servicioss">PRODUCTOS</h1> 
                 <div class="social">
                         <ul >

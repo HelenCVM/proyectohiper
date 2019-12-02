@@ -5,7 +5,7 @@
         <meta name="keywords" content="manguera, importación, import"/>
         <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
         <title>Nosotros</title>
-        <a href="../../config/cerrar_sesion.php">Cerrar sesion</a>
+        <a class="cerrarindex" href="../../config/cerrar_sesion.php">Cerrar sesion</a>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
@@ -22,7 +22,7 @@ include '../../config/conexionBD.php';
 $codigo = $_GET["variable1"];
 ?> 
             <header class="cabecera">
-            <a href="indexusuario.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+            <a href="indexusuario.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
             <nav class="divmenu">
                 <ul class="menunavegador">
                 <hr color="slategrey" >
@@ -30,7 +30,7 @@ $codigo = $_GET["variable1"];
                 <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
                 <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
                 <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
-                
+                <li><a href="cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li> 
 
               </ul>
            </nav>
@@ -45,8 +45,10 @@ $codigo = $_GET["variable1"];
                                     <li><a href="http://www." class="icon-whatsapp"></a></li>
                                 </ul>
                     </div>
-                    <?php echo "BIENVENIDA " ?>
-                    <?php echo $codigo ?>
+                    <p class="bienvenida"> 
+        <?php echo "BIENVENIDA " ?>
+        <?php echo $codigo ?>
+       </p>
                 <h1 class="h1nosotros">
                     QUIENES SOMOS
                 

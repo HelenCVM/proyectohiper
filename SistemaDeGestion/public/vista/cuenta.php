@@ -19,7 +19,7 @@ $codigo = $_GET["variable1"];
             <header class="cabecera">
                     
                     <ul class="menunavegador">
-                            <a href="indexusuario.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                            <a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                             <hr color="slategrey" >
                         <li><a href="indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
                         <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
@@ -42,31 +42,59 @@ $codigo = $_GET["variable1"];
         <?php echo "BIENVENIDA " ?>
         <?php echo $codigo ?>
        </p>
-                <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.720758876699!2d-78.99957548518545!3d-2.8966001978901956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd1816254c84e9%3A0x5453d59aeec7e540!2sImport%20Mangueras%20Idrovo!5e0!3m2!1ses!2sec!4v1574872033881!5m2!1ses!2sec" width="90%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                
+                <table class="tablecuenta" style="width:100%">
+<tr>
+<th>Cedula</th>
+<th>Rol</th>
+<th>Nombres</th>
+<th>Apellidos</th>
+<th>Fecha de nacimiento</th>
+<th>Telefono</th>
+<th>Correo</th>
+</tr>
+<?php
+session_start();
+if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+header("Location:login.php");
+}
+?>
+<?php
+include '../../config/conexionBD.php';
+if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+header("Location:login.php");
+}
+$usuario = $_GET["variable1"];
+$sql = "SELECT * FROM Usuario WHERE usu_nombres = '$usuario'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo " <tr>";
+        echo " <td>" . $row["usu_cedula"] . "</td>";
+        echo " <td>" . $row["usu_rol"] ."</td>";
+        echo " <td>" . $row["usu_nombres"] . "</td>";
+        echo " <td>" . $row["usu_apellidos"] . "</td>";
+        echo " <td>" . $row["usu_fecha_nacimiento"] . "</td>";
+        echo " <td>" . $row["usu_telefono"] . "</td>";
+        echo " <td>" . $row["usu_correo"] . "</td>";
+        echo " <td> <a href='../../admin/vista/usuario/eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
+        echo " <td> <a href='../../admin/vista/usuario/modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
+        echo " <td> <a href='../../admin/vista/usuario/cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar
+        contraseña</a> </td>";
+        echo "</tr>";
+    
+}
+} else {
+    echo "<tr>";
+    echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+    echo "</tr>";
+    }
+    ?>
+    </table>
            
         </section>
 
-        <section class="columna2"> 
-            <h2> &#128222 Contactanos :</h2>
-                <br>
-                <form id="formularioc" action="#" method="POST" >
-                    <br>
-                    <label for="regis" >Ingrese su nombre:</label>
-                            <input type="text" id="regis" name="regis" value="" placeholder="Ingrese su nombre completo" />
-                            <br>
-                            <br>
-                            <label for="nombres" >Ingrese su correo :</label>
-                            <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese su correo" />
-                            <br>
-
-                            <br>
-                                <textarea name="comentarios" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
-                             <br>
-                            <br>
-                            <center><input type="submit" class="enviar" id="enviar" name="enviar" value="Enviar" /></center>
-                         </form> 
-
-            </section>
+       
 
             <footer class="footernoso">
                     <br>
