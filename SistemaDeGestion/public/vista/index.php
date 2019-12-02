@@ -101,12 +101,7 @@
             <br>
             <br>
             <article class="indexcontenido">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia expedita sit quam voluptatum itaque accusamus ipsa optio illo quidem dignissimos, reprehenderit quibusdam vel eius! Culpa asperiores sequi aspernatur maxime?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, quidem. Excepturi magnam voluptas eaque repellat laboriosam ipsa, illum dolores quis aut voluptatem ad in? Nostrum accusamus excepturi sit quis impedit!
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis quas cumque explicabo impedit et aut eaque quam porro, ea ex quidem suscipit temporibus optio molestiae. Aperiam, adipisci. Sapiente, maxime.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, officia consequatur ipsum quibusdam voluptatibus autem blanditiis reiciendis! Reprehenderit perferendis nam porro esse libero fuga sequi obcaecati iure, commodi officiis consectetur!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut quis rem iste, est, odio minus suscipit praesentium atque veritatis consectetur beatae vero delectus? Suscipit aperiam natus voluptate illum officia?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo inventore, atque tempore harum pariatur magni numquam cum, vero modi, libero deserunt enim quaerat? Quo beatae unde in dolore nulla voluptatibus.
+            La Importadora de Mangueras nació hace 5 años como un almacén distribuidor en la ciudad de Cuenca de mangueras nacionales e importadas. En la actualidad cuenta con un local matriz que tiene todos los servicios para satisfacer las necesidades de los clientes. Está ubicado en Lamar y Huayna-Capac, zona comercial del centro de la ciudad de Cuenca. Dentro de los beneficios que Importadora Mangueras ofrece a sus clientes está la calidad de los productos a un precio justo. Importamos insumos de: USA, Europa, América Latina, India, China, Indonesia. En estos años de trayectoria y establecimiento hemos podido aumentar nuestras habilidades y soporte a los clientes según sus necesidades. Además de que nos hemos posicionado como una empresa líder en el mercado. 
             </article> 
             
             <aside class="imgcontenido">
