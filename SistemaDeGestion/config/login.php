@@ -25,7 +25,7 @@ while($row = $result->fetch_assoc()) {
 if($row['usu_rol']=='admin'){
 header("Location:../admin/controladores/admin/GestionUsuario.php");
 }else{
-header("Location:../public/vista/index copy.php?correo=".$row['usu_nombres']);
+header("Location:../public/vista/indexusuario.php?correo=".$row['usu_nombres']);
 }
 }
 }

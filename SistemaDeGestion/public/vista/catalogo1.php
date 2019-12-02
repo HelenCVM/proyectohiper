@@ -51,14 +51,18 @@
  <th></th>
  <th>Nombre</th>
  <th>Marca</th>
- <th>Stock</th>
  <th>Descripcion</th>
+ <th>Diametro interno</th>
+ <th>Peso Teorico</th> 
+ <th>Presion de Trabajo</th>
+ <th>Longitud</th>
  <th>Precio</th>
+ <th>Stock</th>
  </tr>              
             
             <?php
             include '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM producto WHERE id_categoria=3";
+            $sql = "SELECT * FROM Producto WHERE cate_codigo=1";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
            
@@ -68,10 +72,14 @@
             echo "</br>";                 
             echo " <td id='nombreP' >" . $row['pro_nombre'] ."</td>";
             echo " <td>" . $row['pro_marca'] ."</td>";
-            echo " <td>" . $row['pro_stock'] . "</td>";
-            echo " <td>" . $row['pro_descripcion'] . "</td>";
-            echo " <td>" . $row['pro_precio'] . "</td>";  
-             echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
+            echo " <td>" . $row['pro_descripcion'] . "</td>"; 
+            echo " <td>" . $row['pro_dia_in'] . "</td>";          
+            echo " <td>" . $row['pro_peso_gm'] . "</td>";
+            echo " <td>" . $row['pro_presi_bar'] . "</td>";
+            echo " <td>" . $row['pro_long_m'] . "</td>";
+            echo " <td>" . $row['pro_precio'] . "</td>";
+            echo " <td>" . $row['pro_stock'] . "</td>"; 
+             echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
                 echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";
