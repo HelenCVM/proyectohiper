@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 if (!isset($_SESSION['isLogin'])) {
     header("Location: ../public/vista/login.php");
@@ -8,6 +9,7 @@ if (!isset($_SESSION['isLogin'])) {
 ?>
 
 <?php
+
 //incluir conexión a la base de datos
 include 'conexionBD.php';
 $usuario = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
@@ -30,7 +32,7 @@ header("Location:../public/vista/indexusuario.php?correo=".$row['usu_nombres']);
 }
 }
 else{
-    header("Location: ../public/vista/login.html");
+    header("Location:../public/vista/login.php");
 }
 $conn->close();
 //constraseña encriptada con md5

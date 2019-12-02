@@ -25,7 +25,6 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
 <?php  
 include '../../config/conexionBD.php';       
 $codigo = $_GET["correo"];  
-
 ?> 
  
     
