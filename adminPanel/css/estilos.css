@@ -57,3 +57,7 @@ text-align: center;
     border: 0;
     cursor: pointer;
 }
+.error {
+    color: red;
+    font-size: 8px;
+}

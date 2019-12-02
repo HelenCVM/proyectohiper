@@ -25,7 +25,10 @@ if ($conn->query($sql) == true) {
 
 <head>
     <meta charset="UTF-8">
+    
+    <script type="text/javascript" src="../js/funcionesAdmin.js"></script>
     <?php include "../controladores/scripts.php";?>
+
     <title>Registro Producto</title>
 </head>
 
@@ -41,7 +44,9 @@ if ($conn->query($sql) == true) {
                 <hr>
                 <label for="categoria">Nombre Categoria</label>
                 <br>
-                <input type="text" name="categoria" id="categoria" value="" placeholder="Categoria">
+                <input type="text" name="categoria" id="categoria" value="" placeholder="Categoria"
+                onkeyup="this.value = validarLetras(this.value)"
+                >
                 <button type="submit" class=btn_save><i class="fas fa-plus-square"></i> Agregar</button>
             </form>
         </div>
