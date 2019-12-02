@@ -59,7 +59,7 @@
             
             <?php
             include '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM producto ";
+            $sql = "SELECT * FROM Producto  where cate_codigo='1'";
             $result = $conn->query($sql);
             
             if ($result->num_rows > 0) {
@@ -72,7 +72,7 @@
             echo " <td>" . $row['pro_stock'] . "</td>";
             echo " <td>" . $row['pro_descripcion'] . "</td>";
             echo " <td>" . $row['pro_precio'] . "</td>";  
-             echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
+             echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
                 echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";

@@ -4,16 +4,20 @@
  $nombre = $_GET['producto'];
  //echo "Hola " . $cedula;
 
- $sql = "SELECT * FROM producto WHERE pro_nombre='$nombre' and id_categoria='5'";
+ $sql = "SELECT * FROM Producto WHERE pro_nombre='$nombre' and cate_codigo='9'";
 //cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
  echo " <table style='width:100%'>
  <tr>
  <th>Nombre</th>
  <th>Marca</th>
- <th>Stock</th>
  <th>Descripcion</th>
+ <th>Diametro interno</th>
+ <th>Peso Teorico</th> 
+ <th>Presion de Trabajo</th>
+ <th>Longitud</th>
  <th>Precio</th>
+ <th>Stock</th>
  <th></th>
  <th></th>
  <th></th>
@@ -22,12 +26,15 @@
  while($row = $result->fetch_assoc()) {
 
  echo "<tr>";
- echo " <td>" . $row['pro_nombre'] ."</td>";
  echo " <td>" . $row['pro_marca'] ."</td>";
- echo " <td>" . $row['pro_stock'] . "</td>";
- echo " <td>" . $row['pro_descripcion'] . "</td>";
- echo " <td>" . $row['pro_precio'] . "</td>";  
- echo " <td><img class='perfil' src='../../../imagenes/altatemperatura/".$row["imagen"].".jpg' width=' 100px'
+ echo " <td>" . $row['pro_descripcion'] . "</td>"; 
+ echo " <td>" . $row['pro_dia_in'] . "</td>";          
+ echo " <td>" . $row['pro_peso_gm'] . "</td>";
+ echo " <td>" . $row['pro_presi_bar'] . "</td>";
+ echo " <td>" . $row['pro_long_m'] . "</td>";
+ echo " <td>" . $row['pro_precio'] . "</td>";
+ echo " <td>" . $row['pro_stock'] . "</td>";       
+ echo " <td><img class='perfil' src='../../../imagenes/altatemperatura/".$row["pro_img"].".jpg' width=' 100px'
      height=' 100px'></td>";
 
  echo "</tr>";
