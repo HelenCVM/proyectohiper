@@ -5,11 +5,7 @@
 <title>Modificar datos de persona </title> 
 </head> 
 <body> 
-<?php     session_start();     
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){                 
-    header("Location: /SistemaDeGestion/public/vista/login.html");             
-    } 
-?>
+
 <?php         //incluir conexión a la base de datos     
 include '../../../config/conexionBD.php';  
  
@@ -17,19 +13,20 @@ include '../../../config/conexionBD.php';
     $contrasena1 = isset($_POST["contrasena1"]) ? trim($_POST["contrasena1"]) : null;     
     $contrasena2 = isset($_POST["contrasena2"]) ? trim($_POST["contrasena2"]) : null; 
  
-    $sqlContrasena1 = "SELECT * FROM usuario where usu_codigo=$codigo and usu_password='$contrasena1'";             
+    $sqlContrasena1 = "SELECT * FROM Usuario where usu_codigo=$codigo and usu_password='$contrasena1'";             
     $result1 = $conn->query($sqlContrasena1);              
     if ($result1->num_rows > 0) {                    
  
         date_default_timezone_set("America/Guayaquil");         
         $fecha = date('Y-m-d H:i:s', time()); 
  
-        $sqlContrasena2 = "UPDATE usuario " .             
+        $sqlContrasena2 = "UPDATE Usuario " .             
         "SET usu_password = '$contrasena2' " .             
-        "WHERE usu_codigo = $codigo"; 
+        "WHERE usu_codigo = '$codigo'"; 
  
         if ($conn->query($sqlContrasena2) === TRUE) {             
-            echo "Se ha actualizado la contraseña correctamemte!!!<br>";              
+            echo "Se ha actualizado la contraseña correctamemte!!!<br>"; 
+            header("Location:../../../public/vista/login.php");      
         } else {                     
             echo "<p>Error: " . mysqli_error($conn) . "</p>";                 
         }                     

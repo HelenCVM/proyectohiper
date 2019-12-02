@@ -18,12 +18,21 @@
             <header class="cabecera">
                     <a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                     <ul class="menunavegador">
+<<<<<<< HEAD
                         <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png">INICIO</a></li> 
                         <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png">NOSOTROS</a></li>
                         <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png">PRODUCTOS</a></li>
                         <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png">CONTACTANOS</a></li>                                       
                         <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png">LOGIN</a></li>                
                         <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png">REGISTRATE</a></li>                         
+=======
+                        <li><a href="index.php">INICIO</a></li> 
+                        <li><a href="nosotros.php">NOSOTROS</a></li>
+                        <li><a href="servicios.php">PRODUCTOS</a></li>
+                        <li><a href="contacto.php">CONTACTANOS</a></li>                                       
+                        <li><a href="login.php">LOGIN</a></li>                
+                        <li><a href="formulario.php">REGISTRATE</a></li>   
+>>>>>>> 632d390b5b7067bb541fbd5a2bd5af046b6da68a
                         <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li>
 
                     </ul>
@@ -74,8 +83,8 @@
              echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
-                echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";
-
+               echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";
+              
             }     
             } else {
             echo "<tr>";
@@ -90,31 +99,33 @@
 
         <!-- Carrito de compras -->
         <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito" style="background: brown;
-	width: 365px; font-size: 18px;   font-weight: 300;">
-
+	width: 365px; font-size: 18px;   font-weight: 300;">            
 				<div class="btn-cerrar izquierda">
+           
+
+                    
 						<button data-pushbar-close><i class="fas fa-times"></i></button>
 						</div>
 				
                         <p class="tituloC">&#x1F6D2; Carrito de compras </p>
+<<<<<<< HEAD
 
 
                       <!--agregamso la parte de los botones --> 
                       <input type="button" id="regresarA" class="regresarA" name="regresar" value="regresar" onkeypress=" ">
                       <input type="button" id="comprarP" class="comprarP" name="comprarP" value="Ir a comprar" onkeypress=" ">
         
+=======
+                        
+                       
+						
+>>>>>>> 632d390b5b7067bb541fbd5a2bd5af046b6da68a
 				</div>
 									
 			</div>
-        <!-- ------------- --->
+        <!-- ------Estrellas------ --->
 
-        <div class="ec-stars-wrapper">
-            <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-            <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-            <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-            <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-            <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-        </div>
+        
         <!--   ---------- -->
 
       <!---Escript para el carrito de compras -->

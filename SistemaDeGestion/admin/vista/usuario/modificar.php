@@ -1,21 +1,49 @@
 <!DOCTYPE html> 
 <html> 
     <head>     
-        <meta charset="UTF-8">     
-        <title>Modificar datos de persona</title>     
-        
- <link type="text/css" rel="stylesheet" href="../../../css/estilos.css "/> 
+    <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta name="keywords" content="manguera, importación, import"/>
+        <link type="text/css" rel="stylesheet" href="../../../public/vista/style.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estiloresu.css">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="../../../public/vista/css/swiper.min.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
+        <!-- Swiper JS -->
+        <script src="../../../public/vista/js/swiper.min.js"></script>
+       
+        <title>Inicio</title>
+        <a class="cerrarindex" href="../../../config/cerrar_sesion.php">Cerrar sesion</a>
     </head> 
  
-<body>   
-<?php     session_start();     
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){                 
-    header("Location: /SistemaDeGestion/public/vista/login.html");             
-    } 
-?>
+<body> 
+<header class="cabecera">   
+           <a href="indexusuario.php"><img src="../../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+            
+   </header>
+   
+   <section>
+       <article class="indexabout">
+               <div class="social">
+                       <ul >
+                               <li><a href="http://www." class="icon-facebook2"></a></li> 
+                               <li><a href="http://www." class="icon-mail4"></a></li>
+                               <li><a href="http://www." class="icon-whatsapp"></a></li>
+                           </ul>
+               </div>
+               
+         
+           
+       </article>
+   </section>
+
+   <br>
+   <!--transicion de las imagenes -->
+   <center><section class="transcicion">
+
     <?php         
     $codigo = $_GET["codigo"];         
-    $sql = "SELECT * FROM usuario where usu_codigo=$codigo"; 
+    $sql = "SELECT * FROM Usuario where usu_codigo=$codigo"; 
  
         include '../../../config/conexionBD.php';          
         $result = $conn->query($sql);                  
@@ -23,7 +51,7 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
             while($row = $result->fetch_assoc()) {             
         ?> 
  
-                <form id="formulario01" method="POST" action="../../controladores/usuario/modificar.php"> 
+                <form class="formulario01" method="POST" action="../../controladores/usuario/modificar.php"> 
                 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" /> 
  
                     <label for="cedula">Cedula (*)</label>                     
@@ -31,15 +59,11 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
                     <br> 
  
                     <label for="nombres">Nombres (*)</label>                     
-                    <input type="text" id="nombre" name="nombre" value="<?php echo $row["usu_nombre"]; ?>" required placeholder="Ingrese los dos nombres ..."/>                     
+                    <input type="text" id="nombre" name="nombre" value="<?php echo $row["usu_nombres"]; ?>" required placeholder="Ingrese los dos nombres ..."/>                     
                     <br> 
  
                     <label for="apellidos">Apelidos (*)</label>                     
-                    <input type="text" id="apellido" name="apellido" value="<?php echo $row["usu_apellido"]; ?>" required placeholder="Ingrese los dos apellidos ..."/>                     
-                    <br> 
- 
-                    <label for="direccion">Dirección (*)</label>                     
-                    <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"]; ?>" required placeholder="Ingrese la dirección ..."/>                     
+                    <input type="text" id="apellido" name="apellido" value="<?php echo $row["usu_apellidos"]; ?>" required placeholder="Ingrese los dos apellidos ..."/>                     
                     <br> 
  
                     <label for="telefono">Teléfono (*)</label>                     
