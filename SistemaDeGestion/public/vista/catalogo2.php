@@ -14,13 +14,12 @@
             <header class="cabecera">
                     <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                     <ul class="menunavegador">
-                        <li><a href="index.html">INICIO</a></li> 
-                        <li><a href="nosotros.html">NOSOTROS</a></li>
-                        <li><a href="servicios.html">PRODUCTOS</a></li>
-                        <li><a href="contacto.html">CONTACTANOS</a></li>                                       
-                        <li><a href="login.html">LOGIN</a></li>                
-                        <li><a href="formulario.html">REGISTRATE</a></li>                         
-                        <li><a href="buscar.html">BUSCAR</a></li>
+                        <li><a href="index.php">INICIO</a></li> 
+                        <li><a href="nosotros.php">NOSOTROS</a></li>
+                        <li><a href="servicios.php">PRODUCTOS</a></li>
+                        <li><a href="contacto.php">CONTACTANOS</a></li>                                       
+                        <li><a href="login.php">LOGIN</a></li>                
+                        <li><a href="formulario.php">REGISTRATE</a></li>  
                         <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li> 
                     </ul>
                 </header>
@@ -42,29 +41,41 @@
     
 <table class="indus">
  <tr>
+     
+ <th></th>
  <th>Nombre</th>
  <th>Marca</th>
- <th>Stock</th>
  <th>Descripcion</th>
+ <th>Diametro interno</th>
+ <th>Peso Teorico</th> 
+ <th>Presion de Trabajo</th>
+ <th>Longitud</th>
  <th>Precio</th>
+ <th>Stock</th>
  </tr>                </tr>
 
             
             <?php
             include  '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM producto WHERE id_categoria=4";
+           $sql = "SELECT * FROM Producto WHERE cate_codigo=8";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
            
            while($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo " <td>" . $row["pro_nombre"] . "</td>";
+            echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
+            echo "</br>";                 
+            echo " <td id='nombreP' >" . $row['pro_nombre'] ."</td>";
             echo " <td>" . $row['pro_marca'] ."</td>";
-            echo " <td>" . $row['pro_stock'] . "</td>";
-            echo " <td>" . $row['pro_descripcion'] . "</td>";
-            echo " <td>" . $row['pro_precio'] . "</td>";             
+            echo " <td>" . $row['pro_descripcion'] . "</td>"; 
+            echo " <td>" . $row['pro_dia_in'] . "</td>";          
+            echo " <td>" . $row['pro_peso_gm'] . "</td>";
+            echo " <td>" . $row['pro_presi_bar'] . "</td>";
+            echo " <td>" . $row['pro_long_m'] . "</td>";
+            echo " <td>" . $row['pro_precio'] . "</td>";
+            echo " <td>" . $row['pro_stock'] . "</td>";       
 
-                echo " <td><img class='perfil' src='../../../imagenes/industriales/".$row["imagen"].".jpg'  width=' 100px'
+         echo " <td><img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg'  width=' 100px'
                 height=' 100px' ></td>";
            
            
@@ -79,7 +90,9 @@
 
             </table>
 
-
+           
+          
+            
            
             
         </section>
@@ -91,9 +104,12 @@
             <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
         </div>
 
-        <footer>
-            <br>
-            &copy; Jorge Vinicio Pizarro Romero &#8226; Universidad Politécnica Salesiana &#8226; <a href=»mailto:jpizarror@est.ups.edu.ec»>jpizarror@est.ups.edu.ec</a>
-        </footer>
+        <footer class="footernoso">
+                &copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
+                &#8226; Telefono: 074115436 <br/>
+                &#8226; Celular: +593985633576 <br/>
+                &#8226; Whatsapp: +593985633576 <br/>
+                &#8226; Correo: importmanguerasiv@gmail.com 
+            </footer>
     </body>
 </html>

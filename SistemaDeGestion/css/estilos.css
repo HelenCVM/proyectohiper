@@ -18,7 +18,7 @@
 }
 
 .header{
-	color: #FFF;
+	color: #000;
 	background: #0a4661;
 	height: 35px;
 	display: -webkit-flex;
@@ -203,3 +203,4 @@ width:20%;
            background-image: url('../public/vista/img/img6.jpg');
            background-size: 100%;
        }
+     

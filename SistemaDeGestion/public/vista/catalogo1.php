@@ -125,9 +125,12 @@
       <!-- --->
 
 
-        <footer>
-            <br>
-            &copy; Jorge Vinicio Pizarro Romero &#8226; Universidad Politécnica Salesiana &#8226; <a href=»mailto:jpizarror@est.ups.edu.ec»>jpizarror@est.ups.edu.ec</a>
-        </footer>
+      <footer class="footernoso">
+                &copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
+                &#8226; Telefono: 074115436 <br/>
+                &#8226; Celular: +593985633576 <br/>
+                &#8226; Whatsapp: +593985633576 <br/>
+                &#8226; Correo: importmanguerasiv@gmail.com 
+            </footer>
     </body>
 </html>

@@ -13,50 +13,58 @@
         <script src="js/swiper.min.js"></script>
        
         <title>Inicio</title>
-
+        <a href="../../config/cerrar_sesion.php">Cerrar sesion</a>
+       <!--<a href="../../config/cerrar_sesion.php">Cerrar sesion</a>-->
   </head>
   <body>
+  <?php     
+  session_start();     
+if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){                 
+    header("Location: /SistemaDeGestion/public/vista/login.html");             
+    } 
+?>  
+<?php  
+include '../../config/conexionBD.php';       
+$codigo = $_GET["variable1"];
+
+?> 
  
-
+    
   
-    </head>
-    <body>
-      
-
         <header class="cabecera">
            
              
-                <a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                <a href="indexusuario.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                  
                 <nav class="divmenu">
                 <ul class="menunavegador">
                 <hr color="slategrey" >
-                <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
-                <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
-                <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
-                <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
-                <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
-                <li><a href="formulario.php"> <img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>     
-                
-
+                <li><a href="indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
+                <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>    
+                                                  
+              
 
               </ul>
            </nav>
 
-
-        </header> 
-
-        </header>    
-        
-        <section class="seccion">
-            <div class="social">
-                    <ul >
-                            <li><a href="http://www." class="icon-facebook2"></a></li> 
-                            <li><a href="http://www." class="icon-mail4"></a></li>
-                            <li><a href="http://www." class="icon-whatsapp"></a></li>
-                        </ul>
-                        
-            </div>
+        </header>  
+        <?php echo "BIENVENIDA " ?>
+        <?php echo $codigo ?>
+        <section>
+            <article class="indexabout">
+                    <div class="social">
+                            <ul >
+                                    <li><a href="http://www." class="icon-facebook2"></a></li> 
+                                    <li><a href="http://www." class="icon-mail4"></a></li>
+                                    <li><a href="http://www." class="icon-whatsapp"></a></li>
+                                </ul>
+                    </div>
+                    
+              
+                
+            </article>
         </section>
 
         <br>
@@ -96,7 +104,6 @@
               </script>
         </section></center>
 
-
         <section class="seccion">
             <br>
             <br>
@@ -117,12 +124,7 @@
         </section>
          <br>
 
-        <footer class="footernoso">
-                &copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
-                &#8226; Telefono: 074115436 <br/>
-                &#8226; Celular: +593985633576 <br/>
-                &#8226; Whatsapp: +593985633576 <br/>
-                &#8226; Correo: importmanguerasiv@gmail.com 
-            </footer>
-    </body>
+
+       
+</body>
 </html>

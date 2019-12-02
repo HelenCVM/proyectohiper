@@ -1,13 +1,15 @@
 <?php
+
 session_start();
 if (!isset($_SESSION['isLogin'])) {
     header("Location: ../public/vista/login.php");
 } elseif ($_SESSION['usu_rol'] == 'user') {
-   header("Location:../public/vista/index.php");
+   header("Location:../public/vista/index copy.php");
 }
 ?>
 
 <?php
+
 //incluir conexión a la base de datos
 include 'conexionBD.php';
 $usuario = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
@@ -25,12 +27,12 @@ while($row = $result->fetch_assoc()) {
 if($row['usu_rol']=='admin'){
 header("Location:../admin/controladores/admin/GestionUsuario.php");
 }else{
-header("Location:../public/vista/index.php?correo=".$row['usu_correo']);
+header("Location:../public/vista/indexusuario.php?variable1=".$row['usu_nombres']);
 }
 }
 }
 else{
-    header("Location: ../public/vista/login.html");
+    header("Location:../public/vista/login.php");
 }
 $conn->close();
 //constraseña encriptada con md5
