@@ -16,15 +16,24 @@
     </head>
     <body>
             <header class="cabecera">
-                    <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                    <a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                     <ul class="menunavegador">
-                        <li><a href="index.html">INICIO</a></li> 
-                        <li><a href="nosotros.html">NOSOTROS</a></li>
-                        <li><a href="servicios.html">PRODUCTOS</a></li>
-                        <li><a href="contacto.html">CONTACTANOS</a></li>                                       
-                        <li><a href="login.html">LOGIN</a></li>                
-                        <li><a href="formulario.html">REGISTRATE</a></li>                         
-                        <li><a href="buscar.html">BUSCAR</a></li>
+<<<<<<< HEAD
+                        <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png">INICIO</a></li> 
+                        <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png">NOSOTROS</a></li>
+                        <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png">PRODUCTOS</a></li>
+                        <li><a href="contacto.php">CONTACTANOS</a></li>                                       
+                        <li><a href="login.php">LOGIN</a></li>                
+                        <li><a href="formulario.php">REGISTRATE</a></li>                         
+=======
+                        <li><a href="index.php">INICIO</a></li> 
+                        <li><a href="nosotros.php">NOSOTROS</a></li>
+                        <li><a href="servicios.php">PRODUCTOS</a></li>
+                        <li><a href="contacto.php">CONTACTANOS</a></li>                                       
+                        <li><a href="login.php">LOGIN</a></li>                
+                        <li><a href="formulario.php">REGISTRATE</a></li>                         
+                        <li><a href="buscar.php">BUSCAR</a></li>
+>>>>>>> 08648ea71837eb0b1318beabd7733dc33e924f33
                         <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li>
 
                     </ul>
@@ -59,7 +68,7 @@
             
             <?php
             include '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM producto ";
+            $sql = "SELECT * FROM Producto  where cate_codigo='1'";
             $result = $conn->query($sql);
             
             if ($result->num_rows > 0) {
@@ -72,7 +81,7 @@
             echo " <td>" . $row['pro_stock'] . "</td>";
             echo " <td>" . $row['pro_descripcion'] . "</td>";
             echo " <td>" . $row['pro_precio'] . "</td>";  
-             echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
+             echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
                 echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";

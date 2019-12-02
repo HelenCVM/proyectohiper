@@ -11,7 +11,6 @@ $_SESSION['isLogged'] = TRUE;
 while($row = $result->fetch_assoc()) {
     echo"cb";
 if($row['usu_rol']=='admin'){
-header("Location:../admin/controladores/admin/GestionUsuario.php");
 echo "hola";
 }else{
 header("Location:../public/vista/indexusuario.php?variable1=".$row['usu_nombres']);
