@@ -57,7 +57,7 @@
             
             <?php
             include '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM Producto WHERE id_categoria=9";
+            $sql = "SELECT * FROM Producto WHERE cate_codigo=9";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
            
@@ -74,7 +74,7 @@
             echo " <td>" . $row['pro_long_m'] . "</td>";
             echo " <td>" . $row['pro_precio'] . "</td>";
             echo " <td>" . $row['pro_stock'] . "</td>";    
-             echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
+             echo " <td><img class='perfil' src='../../../imagenes/altatemperatura/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
             }     
