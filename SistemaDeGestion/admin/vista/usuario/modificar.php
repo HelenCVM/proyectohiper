@@ -26,9 +26,9 @@
        <article class="indexabout">
                <div class="social">
                        <ul >
-                               <li><a href="http://www." class="icon-facebook2"></a></li> 
-                               <li><a href="http://www." class="icon-mail4"></a></li>
-                               <li><a href="http://www." class="icon-whatsapp"></a></li>
+                       <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
+                                    <li><a href="importmanguerasiv@gmail.com" class="icon-mail4"></a></li>
+                                    <li><a href="api.whatsapp.com/send?phone=+593992726928" class="icon-whatsapp"></a></li>
                            </ul>
                </div>
                

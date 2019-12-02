@@ -31,9 +31,9 @@
         <section class="columna1">
                 <div class="social">
                         <ul >
-                                <li><a href="http://www." class="icon-facebook2"></a></li> 
-                                <li><a href="http://www." class="icon-mail4"></a></li>
-                                <li><a href="http://www." class="icon-whatsapp"></a></li>
+                                <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
+                                <li><a href="importmanguerasiv@gmail.com" class="icon-mail4"></a></li>
+                                <li><a href="api.whatsapp.com/send?phone=+593992726928" class="icon-whatsapp"></a></li>
                             </ul>
                 </div>
                 <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.720758876699!2d-78.99957548518545!3d-2.8966001978901956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd1816254c84e9%3A0x5453d59aeec7e540!2sImport%20Mangueras%20Idrovo!5e0!3m2!1ses!2sec!4v1574872033881!5m2!1ses!2sec" width="90%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
