@@ -23,8 +23,7 @@
                         <li><a href="servicios.php">PRODUCTOS</a></li>
                         <li><a href="contacto.php">CONTACTANOS</a></li>                                       
                         <li><a href="login.php">LOGIN</a></li>                
-                        <li><a href="formulario.php">REGISTRATE</a></li>                         
-                        <li><a href="buscar.php">BUSCAR</a></li>
+                        <li><a href="formulario.php">REGISTRATE</a></li>   
                         <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li>
 
                     </ul>
@@ -75,8 +74,8 @@
              echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
-                echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";
-
+               echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";
+              
             }     
             } else {
             echo "<tr>";
@@ -91,27 +90,24 @@
 
         <!-- Carrito de compras -->
         <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito" style="background: brown;
-	width: 365px; font-size: 18px;   font-weight: 300;">
-
+	width: 365px; font-size: 18px;   font-weight: 300;">            
 				<div class="btn-cerrar izquierda">
+           
+
+                    
 						<button data-pushbar-close><i class="fas fa-times"></i></button>
 						</div>
 				
                         <p class="tituloC">&#x1F6D2; Carrito de compras </p>
+                        
                        
 						
 				</div>
 									
 			</div>
-        <!-- ------------- --->
+        <!-- ------Estrellas------ --->
 
-        <div class="ec-stars-wrapper">
-            <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-            <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-            <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-            <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-            <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-        </div>
+        
         <!--   ---------- -->
 
       <!---Escript para el carrito de compras -->
