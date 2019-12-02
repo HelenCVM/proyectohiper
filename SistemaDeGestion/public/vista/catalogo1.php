@@ -59,11 +59,11 @@
             
             <?php
             include '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM producto WHERE id_categoria=3";
+            $sql = "SELECT * FROM producto ";
             $result = $conn->query($sql);
+            
             if ($result->num_rows > 0) {
-           
-           while($row = $result->fetch_assoc()) {
+            while($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
             echo "</br>";                 
@@ -80,7 +80,7 @@
             }     
             } else {
             echo "<tr>";
-            echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+            echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
             echo "</tr>";
             }
             $conn->close();
