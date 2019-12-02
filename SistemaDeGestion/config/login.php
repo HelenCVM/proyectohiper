@@ -9,12 +9,10 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 $_SESSION['isLogged'] = TRUE;
 while($row = $result->fetch_assoc()) {
-    echo"cb";
-if($row['usu_rol']=='admin'){
-echo "hola";
+if($row['usu_rol']=='user'){
+    header("Location:../public/vista/indexusuario.php?variable1=".$row['usu_nombres']);
 }else{
-header("Location:../public/vista/indexusuario.php?variable1=".$row['usu_nombres']);
-echo "hola";
+    header("Location:../public/vista/login.php");
 }
 }
 }
