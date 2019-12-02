@@ -7,6 +7,7 @@
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="../../css/registrar.css">
+        <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
  
 </head>
 
@@ -41,13 +42,15 @@
 <div class="login-box">
     <img src="../../../imagenes/manguera1.png" class="avatar" alt="">
     <h1>Login</h1>
-    <form id="formulario02" method="POST" action="../../config/login.php">
+    <form id="formulario02" method="POST" action="../../config/login.php" onsubmit="return validarCamposObligatorios()">
     <label for="correo">Correo electrónico(*) </label>
     <input type="text" id="correo" name="correo" value="" placeholder="Ingrese el correo ..."/>
+    <span id="mensajeCorreo" class="error"></span>      
     <br>
     <label for="nombres">Constraseña (*)</label>
     <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su
    contraseña ..."/>
+   <span id="mensajeContra" class="error"></span>      
     <br>
     <input type="submit" id="login" name="login" value="Iniciar Sesión" />
     

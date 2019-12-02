@@ -7,6 +7,7 @@
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="../../css/formulario.css ">
+        <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
     
 </head>
 <body>
@@ -32,7 +33,7 @@
                         </ul>
             </div>
         <div class="login-box">
-    <form id="formulario01" method="POST" action="../../config/creacion_usuario.php" >
+    <form id="formulario01" method="POST" action="../../config/creacion_usuario.php" onsubmit="return validarCamposObligatorios()">
           
         <label for="cedula">Cedula (*)</label>
         <input type="text" maxlength="10" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..." />
