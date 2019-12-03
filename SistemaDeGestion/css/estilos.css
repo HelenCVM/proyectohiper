@@ -31,8 +31,19 @@
 .tablecuenta{
     padding: 3%;
     text-align: center;
+    width: 200%;
+    border-bottom:solid 10px;
+    float:left;
+}
+.ave {
+    padding: 3%;
+}
+.iteme{
+    background-color: #0a4661;
+    border-bottom:solid 5px;
+    color: #CCC;
     width: 100%;
-    
+    padding: 5%;
 }
 
 .formulario01{
@@ -70,8 +81,6 @@
  text-align: center;
  
 }
-
-
 .header{
 	color: #000;
 	background: #0a4661;

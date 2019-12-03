@@ -42,15 +42,18 @@ $codigo = $_GET["variable1"];
         <?php echo $codigo ?>
        </p>
                 
-                <table class="tablecuenta" style="width:100%">
-<tr>
-<th>Cedula</th>
-<th>Rol</th>
-<th>Nombres</th>
-<th>Apellidos</th>
-<th>Fecha de nacimiento</th>
-<th>Telefono</th>
-<th>Correo</th>
+                <center><table class="tablecuenta" style="width:200%">
+<tr class="iteme">
+<th class="item">Cedula</th></br>
+<th class="item">Rol</th>
+<th class="item">Nombres</th>
+<th class="item">Apellidos</th>
+<th class="item">Fecha de nacimiento</th>
+<th class="item">Telefono</th>
+<th class="item">Correo</th>
+<th class="item">Elimina</th>
+<th class="item">Modificar</th>
+<th class="item">Cambiar contraseña</th>
 </tr>
 
 <?php
@@ -68,10 +71,9 @@ if ($result->num_rows > 0) {
         echo " <td>" . $row["usu_fecha_nacimiento"] . "</td>";
         echo " <td>" . $row["usu_telefono"] . "</td>";
         echo " <td>" . $row["usu_correo"] . "</td>";
-        echo " <td> <a href='../../admin/vista/usuario/eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
-        echo " <td> <a href='../../admin/vista/usuario/modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-        echo " <td> <a href='../../admin/vista/usuario/cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar
-        contraseña</a> </td>";
+        echo " <td> <a href='../../admin/vista/usuario/eliminar.php?codigo=" . $row['usu_codigo'] . "'> E </a> </td>";
+        echo " <td> <a href='../../admin/vista/usuario/modificar.php?codigo=" . $row['usu_codigo'] . "'> M </a> </td>";
+        echo " <td> <a href='../../admin/sssvista/usuario/cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'> CC</a> </td>";
         echo "</tr>";
     
 }
@@ -81,7 +83,7 @@ if ($result->num_rows > 0) {
     echo "</tr>";
     }
     ?>
-    </table>
+    </table></center>
            
         </section>
 
