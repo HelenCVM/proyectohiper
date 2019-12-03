@@ -96,9 +96,11 @@
 				</div>
 				
                         <p class="tituloC">&#x1F384;&#x1F6D2; Carrito de compras </p>
-
-
-
+                        <!-- Aqui van los productos seleccionados -->
+                        <div class="procarrito">
+                        
+                        </div>
+                        <!--     ------------- -->
                       <!--agregamso la parte de los botones --> 
                       <input type="button" id="regresarA" class="regresarA" name="regresar" value="Seguir comprando" data-pushbar-close>
                       <input type="button" id="comprarP" class="comprarP" name="comprarP" value="Ir a comprar" onkeypress=" ">

@@ -76,6 +76,12 @@
 	margin-bottom: 20px;
 }
 
+.pushbar-carrito .procarrito{
+	
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(119, 114, 114, 0.16);
+	margin-bottom: 20px;
+}
 /*css botones carrito de compras*/
 .pushbar-carrito .comprarP{
   background: linear-gradient(rgb(204, 124, 59), rgb(224, 236, 57));
