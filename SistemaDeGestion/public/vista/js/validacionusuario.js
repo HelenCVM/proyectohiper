@@ -137,4 +137,13 @@ function comprobarClave(){
     else
        alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo")
 }
+function mostrarDetalle(){
+    var elemento=document.getElementsByName("radio1").value;
+    console.log(elemento);
+    if(elemento[i].checked){
+        var ele=elemento[i].value;
+        alert(ele);
+    }
+
+}
 
