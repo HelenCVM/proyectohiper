@@ -27,7 +27,7 @@
                         <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png">LOGIN</a></li>                
                         <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png">REGISTRATE</a></li>                         
               
-                        <li><a href="carrito.php"><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'> </a></li>
+                        <li><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'></li>
                 </header>               
         </header>
     
@@ -75,7 +75,7 @@
              echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
-               echo " <td> <a href='#' data-pushbar-target='pushbar-carrito'> Comprar </a> </td>";
+               echo " <td> <a href='insertarC.php?codigo=" . $row['pro_codigo'] . "' data-pushbar-target='pushbar-carrito' > Comprar </a> </td>";
               
             }     
             } else {
@@ -90,21 +90,17 @@
         </section>
 
         <!-- Carrito de compras -->
-        <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito" style="background: brown;
-	width: 365px; font-size: 18px;   font-weight: 300;">            
+        <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito">            
 				<div class="btn-cerrar izquierda">
-           
-
-                    
-						<button data-pushbar-close><i class="fas fa-times"></i></button>
-						</div>
+			        <button data-pushbar-close><i class="fas fa-times"></i></button>
+				</div>
 				
                         <p class="tituloC">&#x1F6D2; Carrito de compras </p>
 
 
 
                       <!--agregamso la parte de los botones --> 
-                      <input type="button" id="regresarA" class="regresarA" name="regresar" value="regresar" onkeypress=" ">
+                      <input type="button" id="regresarA" class="regresarA" name="regresar" value="Seguir comprando" data-pushbar-close>
                       <input type="button" id="comprarP" class="comprarP" name="comprarP" value="Ir a comprar" onkeypress=" ">
         	</div>
 									

@@ -4,7 +4,7 @@
  $nombre = $_GET['producto'];
  //echo "Hola " . $cedula;
 
- $sql = "SELECT * FROM producto WHERE pro_nombre  LIKE '" . $_GET['producto'] . "%' AND id_categoria=3";
+ $sql = "SELECT * FROM Producto WHERE pro_nombre  LIKE '" . $_GET['producto'] . "%' AND id_categoria=3";
 //cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
  echo " <table style='width:100%'>

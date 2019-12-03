@@ -52,10 +52,18 @@
 	text-align: right;
 }
 
+.pushbar .btn-cerrar button{
+  background: none;
+  color:white;
+  border: none;
+  cursor:pointer;
+  font-size : 20p;
+  }
+
 /* ----- ----- Pushbar: Carrito de Compras ----- ----- */
 
 .pushbar.pushbar-carrito{
-	background: #000;
+	background: rgb(95, 28, 28);
 	width: 365px;
 	font-size: 18px;
 	font-weight: 300;
@@ -90,12 +98,4 @@
     height: 40px;
   width:40%;
 }
-
-.pushbar-carrito .tituloC{
-	font-size: 22px;
-	padding: 20px 0;
-	border-bottom: 1px solid rgba(99, 93, 93, 0.16);
-	margin-bottom: 20px;
-}
-
 /*------------*/
