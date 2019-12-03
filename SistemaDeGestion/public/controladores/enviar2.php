@@ -1,22 +1,20 @@
+
 <?php
-$nombre = $_POST['nombre'];
-$mail = $_POST['email'];
-$empresa = $_POST['mensaje'];
+if(isset($_POST['enviar'])){
+    if(!empty($_POST['name']) && !empty($_POST['msg'])
+     && !empty($_POST['email'])){
+     $name = $_POST['name'];
+     $asunto = 'Mensaje de mi sitio web';
+     $msg = $_POST['msg']; 
+     $email= $_POST['email'] ;
+     $header = "From: admin@importmanguerasiv.com" . "\r\n";
+     $header.= "Reply-To: admin@importmanguerasiv.com" . "\r\n";
+     $header.= "X-Mailer: PHP/".phpversion();
+     $mail= mail($email,$asunto,$msg,$header);
+     if($mail){
+         echo"<h4>Mail enviado</h4>";
+     }
+    }
+}
 
-$header = 'From: ' . $mail . " \r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
-
-$mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
-$mensaje .= "Su e-mail es: " . $mail . " \r\n";
-$mensaje .= "Mensaje: " . $_POST['mensaje'] . " \r\n";
-$mensaje .= "Enviado el " . date('d/m/Y', time());
-
-$para = 'emarquezl@est.ups.edu.ec';
-$asunto = 'Mensaje de mi sitio web';
-
-mail($para, $asunto, utf8_decode($mensaje), $header);
-
-header("Location: ../vista/index.php");
 ?>

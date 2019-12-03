@@ -45,15 +45,14 @@
                 <form id="formularioc" action="../controladores/enviar2.php" method="POST" >
                     <br>
                     <label for="nomrbes" >Ingrese su nombre:</label>
-                            <input type="text" id="regis" name="nombre" required="required" placeholder="Ingrese su nombre completo" />
+                            <input type="text" id="regis" name="name" required="required" placeholder="Ingrese su nombre completo" />
                             <br>
                             <br>
                             <label for="correo" >Ingrese su correo :</label>
                             <input type="email" id="nombres" name="email" required="required" placeholder="Ingrese su correo" />
                             <br>
-
                             <br>
-                                <textarea name="mensaje" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
+                                <textarea type="text" name="msg" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
                              <br>
                             <br>
                             <center><input type="submit" class="enviar" id="enviar" name="enviar" value="Enviar" /></center>
