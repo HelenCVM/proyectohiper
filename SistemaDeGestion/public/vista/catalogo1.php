@@ -95,7 +95,7 @@
 			        <button data-pushbar-close><i class="fas fa-times"></i></button>
 				</div>
 				
-                        <p class="tituloC">&#x1F6D2; Carrito de compras </p>
+                        <p class="tituloC">&#x1F384;&#x1F6D2; Carrito de compras </p>
 
 
 
