@@ -42,18 +42,18 @@
         <section class="columna2"> 
             <h2> &#128222 Contactanos :</h2>
                 <br>
-                <form id="formularioc" action="#" method="POST" >
+                <form id="formularioc" action="../controladores/enviar2.php" method="POST" >
                     <br>
-                    <label for="regis" >Ingrese su nombre:</label>
-                            <input type="text" id="regis" name="regis" value="" placeholder="Ingrese su nombre completo" />
+                    <label for="nomrbes" >Ingrese su nombre:</label>
+                            <input type="text" id="regis" name="nombre" required="required" placeholder="Ingrese su nombre completo" />
                             <br>
                             <br>
-                            <label for="nombres" >Ingrese su correo :</label>
-                            <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese su correo" />
+                            <label for="correo" >Ingrese su correo :</label>
+                            <input type="email" id="nombres" name="email" required="required" placeholder="Ingrese su correo" />
                             <br>
 
                             <br>
-                                <textarea name="comentarios" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
+                                <textarea name="mensaje" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
                              <br>
                             <br>
                             <center><input type="submit" class="enviar" id="enviar" name="enviar" value="Enviar" /></center>
