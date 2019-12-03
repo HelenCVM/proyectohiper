@@ -231,8 +231,10 @@ width:20%;
           width: 97%; 
         }
         .swiper-container{
-            background-color: rgb(15, 75, 134);
+           /* background-color: rgb(15, 75, 134);*/
+           background-image: url("../../imagenes/formularioimg.jpg");
             background-size: 60%;
+            background-size: 100%;
         }
       /*--------------*/
       /*iconos menu */
