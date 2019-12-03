@@ -33,37 +33,51 @@
                         </ul>
             </div>
         <div class="login-box">
-    <form id="formulario01" method="POST" action="../../config/creacion_usuario.php" onsubmit="return validarCamposObligatorios()">
+    <form id="formulario01" method="POST" action="../../config/creacion_usuario.php" onsubmit="return validarCamposObligatorioss()">
           
         <label for="cedula">Cedula (*)</label>
-        <input type="text" maxlength="10" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..." />
+        <input type="text" maxlength="10" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."
+        onkeypress="return validarNumero(event, this)"
+                onkeyup="validarCedula(this)"
+         />
         <span id="mensajeCedula" class="error"></span>        
         <br>
 
         <label for="nombres">Nombres (*)</label>
         <input type="text" id="nombre" name="nombre" value="" placeholder="Ingrese sus dos nombres ..."
        />
+       <span id="mensajeNombre" class="error"></span>        
+     
         <br>
 
         <label for="apellidos">Apelidos (*)</label>
         <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." 
-       />
+        />
+        <span id="mensajeApellido" class="error"></span>        
+     
+
         <br>
         <label for="fechanaci">Fecha de nacimiento (*)</label>
         <input type="text" id="fechanaci" name="fechanaci" value="" placeholder="Ingrese su dirección ..." 
+        
        />
+       <span id="mensajeFecha" class="error"></span>        
+     
 
         <br>
 
         <label for="telefono">Teléfono (*)</label>
         <input type="text" maxlength="10" id="telefono" name="telefono" value=""  placeholder="Ingrese su número telefónico ..." 
         />
-        
+        <span id="mensajeTelefono" class="error"></span>        
+     
         <br>  
 
         <label for="correo">Correo electrónico (*)</label>
         <input type="email" id="correo" name="correo"  placeholder="Ingrese su correo electrónico ..."
        />
+       <span id="mensajeCorreo" class="error"></span>        
+     
         <br>
 
         <label for="correo">Contraseña (*)</label>

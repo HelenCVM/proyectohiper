@@ -42,13 +42,13 @@ function validarCamposObligatorioss()
             if(elemento.id == 'cedula'){
                 document.getElementById('mensajeCedula').innerHTML = 'La cedula esta vacia'
             } 
-            if(elemento.id == 'nombres'){
+            if(elemento.id == 'nombre'){
                 document.getElementById('mensajeNombre').innerHTML = 'El nombre esta vacio'
             } 
             if(elemento.id == 'apellidos'){
                 document.getElementById('mensajeApellido').innerHTML = 'El apellido esta vacio'
             } 
-            if(elemento.id == 'fechaNacimiento'){
+            if(elemento.id == 'fechanaci'){
                 document.getElementById('mensajeFecha').innerHTML = 'El fecha esta vacio'
             } 
             if(elemento.id == 'telefono'){
@@ -62,7 +62,7 @@ function validarCamposObligatorioss()
             bandera = false
         }else{
             if(elemento.id == 'cedula'){
-                document.getElementById('msjCedula').innerHTML= ''
+                document.getElementById('mensajeCedula').innerHTML= ''
             }
             elemento.style.border = '1px black solid'
             
@@ -75,5 +75,66 @@ function validarCamposObligatorioss()
     return bandera
 }
 
+
+
 function validarNumero(e, fono){
-    var key = window
+    var key = window.event ? e.keyCode : e.which;
+    if(((48 <= key && key <= 57) || (key == 0) || (key == 8)) && fono.value.length < 10){       
+        return true; 
+    }else{ 
+        return false; 
+       
+    } 
+}
+function validarLetras(string){
+    var out = '';
+    var filtro = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ ';
+        for (var i = 0; i < string.length; i++)
+        if (filtro.indexOf(string.charAt(i)) != -1) 
+        out += string.charAt(i);
+    return out;
+
+   
+} 
+
+
+function validarCedula(cedul){
+    var x=document.getElementById("cedula").value;
+    var total=0;
+    var longitud=x.length;
+    var longcheck =longitud-1;
+    if (longitud ==10){
+        for(i=0;i<longcheck;i++){
+            if(i % 2 ===0){
+                var aux=x.charAt(i) *2;
+                if (aux >=10) aux-=9;
+                total +=aux;
+
+            }else {
+                total +=parseInt(x.charAt(i))
+            }
+        }
+        total =total %10 != 0 ? 10 - total % 10 : 0;
+
+        if(x.charAt(longitud -1 ) == total){
+            return false;
+        } else {
+           
+            alert('su cedula esta mal')
+            return true;
+        }
+    }else {
+        return false;
+    }
+}
+
+function comprobarClave(){
+    clave1 = document.getElementById("nuevaContrasena").value;
+    clave2 = document.getElementById("confirmarContrasena").value;
+
+    if (clave1 == clave2)
+       alert("Las dos claves son iguales...\nRealizaríamos las acciones del caso positivo")
+    else
+       alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo")
+}
+
