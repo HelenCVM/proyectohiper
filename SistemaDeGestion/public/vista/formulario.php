@@ -45,13 +45,15 @@
 
         <label for="nombres">Nombres (*)</label>
         <input type="text" id="nombre" name="nombre" value="" placeholder="Ingrese sus dos nombres ..."
-       />
+        onkeyup="this.value = validarLetras(this.value)"
+        />
        <span id="mensajeNombre" class="error"></span>        
      
         <br>
 
         <label for="apellidos">Apelidos (*)</label>
         <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." 
+        onkeyup="this.value = validarLetras(this.value)"
         />
         <span id="mensajeApellido" class="error"></span>        
      
@@ -68,6 +70,7 @@
 
         <label for="telefono">Teléfono (*)</label>
         <input type="text" maxlength="10" id="telefono" name="telefono" value=""  placeholder="Ingrese su número telefónico ..." 
+        onkeypress="return validarNumero(event, this)"
         />
         <span id="mensajeTelefono" class="error"></span>        
      

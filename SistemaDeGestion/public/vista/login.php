@@ -44,7 +44,7 @@
     <h1>Login</h1>
     <form id="formulario02" method="POST" action="../../config/login.php" onsubmit="return validarCamposObligatorios()">
     <label for="correo">Correo electrónico(*) </label>
-    <input type="text" id="correo" name="correo" value="" placeholder="Ingrese el correo ..."/>
+    <input type="text" id="correo" name="correo" value="" placeholder="Ingrese el correo ..."   onkeyup="validarCorreo('errorEmail',this)"/>
     <span id="mensajeCorreo" class="error"></span>      
     <br>
     <label for="nombres">Constraseña (*)</label>

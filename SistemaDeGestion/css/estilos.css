@@ -71,12 +71,6 @@
  
 }
 
-th, td {
-    width: 25%;
-    text-align: left;
-    vertical-align: top;
-    border: 2px solid #0a4661;
- }
 
 .header{
 	color: #000;
@@ -266,5 +260,25 @@ width:20%;
            background-image: url('../public/vista/img/img6.jpg');
            background-size: 100%;
        }
-     
-     
+       
+    
+    
+       .produ  th{
+        width: 600px;
+        height: 380px;
+        padding: 5px;
+        background-color: #fcc;
+        font-size: 0.8em;
+        text-align: justify;
+        
+       }
+       .produ h1{
+        font-family: cursive;
+       text-align:center;
+        
+       }
+       .produ .imagenproductos img{
+           width: 200px;
+           height: 200px;
+           display: block;
+       }
