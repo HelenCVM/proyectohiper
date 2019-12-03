@@ -75,7 +75,9 @@
              echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
-               echo " <td> <a href='insertarC.php?codigo=" . $row['pro_codigo'] . "' data-pushbar-target='pushbar-carrito' > Comprar </a> </td>";
+               echo " <td> <a href='insertarC.php?codigo=" . $row['pro_codigo'] . "' data-pushbar-target='pushbar-carrito' >
+               <input type='button' class='comprarCarr' value='Comprar' />
+               </a> </td>";
               
             }     
             } else {

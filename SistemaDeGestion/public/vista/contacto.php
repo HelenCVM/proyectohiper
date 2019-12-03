@@ -52,7 +52,7 @@
                             <input type="email" id="nombres" name="email" required="required" placeholder="Ingrese su correo" />
                             <br>
                             <br>
-                                <textarea type="text" name="msg" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
+                                <textarea type="text" name="message" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
                              <br>
                             <br>
                             <center><input type="submit" class="enviar" id="enviar" name="enviar" value="Enviar" /></center>

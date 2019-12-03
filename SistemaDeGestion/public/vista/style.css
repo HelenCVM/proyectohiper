@@ -104,4 +104,15 @@
     height: 40px;
   width:40%;
 }
+
+.comprarCarr{
+  background: linear-gradient(rgb(156, 57, 57), rgb(81, 146, 50));
+  border: 0;
+  color: white;
+  opacity: 0.8;
+   cursor: pointer;
+    border-radius: 25px;
+    height: 40px;
+  width:100%;
+}
 /*------------*/
