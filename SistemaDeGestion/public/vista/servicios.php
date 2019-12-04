@@ -7,14 +7,10 @@
         <title>Servicio</title>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
-<<<<<<< HEAD
         
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
    
 
-=======
-      
->>>>>>> a406986c571b8a64252cc49f80bee1005df86780
 
     </head>
     <body>

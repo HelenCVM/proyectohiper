@@ -33,7 +33,13 @@
                 <ul class="menunavegador">
                 <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
                 <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
-                <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
+                <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
+                <ul>
+                                    <li> <a href="catalogo1.php">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="catalogo2.php">Catalogo Industriales</a></li>
+                                    <li> <a href="catalogo3.php">Catalogo de Alta Temperatura</a></li>
+                        </ul>
+              </li>
                 <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
                 <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
                 <li><a href="formulario.php"> <img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>     
@@ -47,11 +53,20 @@
         <section class="seccion">
             <div class="social">
                     <ul >
-                    <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
+                    <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
                     </ul>       
             </div>
         </section>
-
+        <br>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <!--transicion de las imagenes -->
         <center><section class="transcicion">
