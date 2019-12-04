@@ -6,9 +6,11 @@
         <title>Servicio</title>
        <!-- <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-        <link type="text/css" rel="stylesheet" href="style.css">-->
+        <link type="text/css" rel="stylesheet" href="style.css">
+    
+        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">-->
         
-
+        
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
       <link rel="stylesheet" href="css/bootstrap.min.css">
        <script src="js/bootstrap.min.js"></script>
@@ -101,24 +103,26 @@
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' >";
                     echo  "  </td>";
                 echo "  </tr>";
+                echo "</table>";
+                
                 echo " <form action=''>";
 
                echo" <div class='valoracion'>";
-                echo "</table>";
+            
                echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
                echo " <label for='radio1'>&#9733</label>";
             
                echo" <input id='radio2' type='radio' name='estrellas' value='4'>";
-                /*<label for="radio2">&#9733</label>
+                echo "<label for='radio2'>&#9733</label>";
             
-                <input id="radio3" type="radio" name="estrellas" value="3">
-                <label for="radio3">&#9733</label>
+               echo" <input id='radio3' type='radio' name='estrellas' value='3'>";
+                echo"<label for='radio3'>&#9733</label>";
             
-                <input id="radio4" type="radio" name="estrellas" value="2">
-                <label for="radio4">&#9733</label>
+                echo"<input id='radio4' type='radio' name='estrellas' value='2'>";
+                echo"<label for='radio4'>&#9733</label>";
             
-                <input id="radio5" type="radio" name="estrellas" value="1">
-                <label for="radio5">&#9733</label>*/
+                echo"<input id='radio5' type='radio' name='estrellas' value='1'>";
+               echo" <label for='radio5'>&#9733</label>";
                 echo"</div>";
                 echo"</form>";
                 
