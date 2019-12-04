@@ -6,9 +6,11 @@
         <title>Servicio</title>
        <!-- <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-        <link type="text/css" rel="stylesheet" href="style.css">-->
+        <link type="text/css" rel="stylesheet" href="style.css">
+    
+        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">-->
         
-
+        
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
       <link rel="stylesheet" href="css/bootstrap.min.css">
        <script src="js/bootstrap.min.js"></script>
@@ -17,6 +19,7 @@
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
+       
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
 
     </head>
@@ -70,7 +73,7 @@
                 echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
                  echo "<tr>" ;
                 echo  "<td>";
-                echo "<h1>". $row['pro_nombre'] ."</h1>"; 
+                echo "<h1 class='tituloTab'>". $row['pro_nombre'] ."</h1>"; 
                 echo "Marca:";
                 echo "" . $row['pro_marca'] ."";
                 echo "</br>";   
@@ -100,19 +103,47 @@
                 echo  "  </td>";
               
                 echo  "  <td class ='imagenproductos'>";
-                    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' >";
+                    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
+<<<<<<< HEAD
+                    
+                    echo "  </tr>";
+                
+                echo "</table>";
+            }     
+=======
                 echo "  </tr>";
+                echo "</table>";
+                
                 echo " <form action=''>";
                echo" <div class='valoracion'>";
+<<<<<<< HEAD
                 echo "</table>";
                echo " <label for='Estrellas'></label>";
                echo" <input name='Estrellas' type='text' value='Estrellas'>";
+=======
+            
+               echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
+               echo " <label for='radio1'>&#9733</label>";
+            
+               echo" <input id='radio2' type='radio' name='estrellas' value='4'>";
+                echo "<label for='radio2'>&#9733</label>";
+            
+               echo" <input id='radio3' type='radio' name='estrellas' value='3'>";
+                echo"<label for='radio3'>&#9733</label>";
+            
+                echo"<input id='radio4' type='radio' name='estrellas' value='2'>";
+                echo"<label for='radio4'>&#9733</label>";
+            
+                echo"<input id='radio5' type='radio' name='estrellas' value='1'>";
+               echo" <label for='radio5'>&#9733</label>";
+>>>>>>> ea59d8b0b561d0703ccbac378b7d24d329850388
                 echo"</div>";
                 echo"</form>";
                 
                
                 }     
+>>>>>>> 6e7e93d5f2f213c7a72e8bc5e96a0426613f9e6c
                 } else {
               
                 echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
