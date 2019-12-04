@@ -137,7 +137,7 @@ function comprobarClave(){
     else
        alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo")
 }
-<<<<<<< HEAD
+
 
 function mostrarDetalle(){
     var elemento=document.getElementById("radio1").value;
@@ -145,6 +145,7 @@ function mostrarDetalle(){
     var elemento2=document.getElementById("radio3").value;
     var elemento3=document.getElementById("radio4").value;
     var elemento4=document.getElementById("radio5").value;
+    
             if(elemento.value == 'radio1'){
                 document.getElementById('valor').innerHTML = '<br><h2>5</h2>'
             }
@@ -161,11 +162,5 @@ function mostrarDetalle(){
                 document.getElementById('valor').innerHTML = '<br><h2>1</h2>'
             }
         }
-=======
-function mostrarDetalle(){
-    var seleccion = document.querySelector('input[name=estrellas:checked').value;
-    alert(seleccion);
-    
->>>>>>> a406986c571b8a64252cc49f80bee1005df86780
-}
-}
+
+
