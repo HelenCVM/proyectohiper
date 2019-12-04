@@ -1,4 +1,4 @@
-function buscarPornombre2(input) {
+function buscarPornombre(input) {
     let text = input.value.trim();
     console.log(text);
     if (window.XMLHttpRequest) {

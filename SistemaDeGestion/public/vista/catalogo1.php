@@ -70,9 +70,7 @@
             
             if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
-            echo "</br>";                 
+            echo "<tr>";         
             echo " <td>" . $row['pro_nombre'] ."</td>";
             echo "</br>"; 
             echo " <td>" . $row['pro_marca'] ."</td>";
