@@ -1,0 +1,211 @@
+body {
+    width: 95%;
+   
+    max-width: 1500px;
+    padding-left: 0.9%;
+    padding-right: 0.9%;
+    margin: 0px auto auto auto;
+    clear: none;
+    float: none;
+    background-color: white;
+    -moz-box-shadow: rgba(136, 147, 209, 0.9) 20px 0px 25px,  rgba(136, 147, 209, 0.9) -20px 0px 25px;
+    -webkit-box-shadow: rgba(136, 147, 209, 0.9) 20px 0px 25px,  rgba(136, 147, 209, 0.9) -20px 0px 25px;
+    box-shadow: rgba(136, 147, 209, 0.9) 20px 0px 25px,  rgba(136, 147, 209, 0.9) -20px 0px 25px;
+}
+html{
+background-color: white;}
+
+
+/**/
+.cabecera {
+    width: 500%;
+    background-color:  rgb(15, 75, 134);
+    padding: 0.1%;
+    width: max-content;
+   
+}
+
+/* menu css*/
+
+.menunavegador{
+    background-color:rgb(15, 75, 134);
+
+}
+
+.menunavegador li{
+    display: block;
+    list-style: none;
+    margin-top: 2%;
+    width: 174px;
+    display: inline-block;
+    border: 1px  darkslategrey;
+}
+
+
+.menunavegador li ul{
+ position: absolute;
+ min-width: 200px;
+}
+
+.menunavegador li:hover >ul {
+    display:block;
+}
+
+.menunavegador ul li ul li {
+    right: 14px;
+    top:0px;
+    float: left;
+    position: absolute;
+}
+
+.menunavegador ul ul li {
+    float: left;
+    width:150px;
+}
+
+.menunavegador ul li:hover > ul {
+    display: block;
+   }
+
+.menunavegador ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+
+.menunavegador ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#eee;
+    padding:0;
+   }
+   
+   
+.menunavegador li a {
+    /*color de las letras */
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: contents;
+}
+
+/*iconos menu */
+#iconmenu{
+    width: 10%;
+    height: 11%;
+}
+
+#iconcarrito{
+    width: 13%;
+    height: 12%;
+}
+
+/*flotante facebook*/
+.seccion {
+    width: 50%;
+    float: left;
+}
+
+.social{
+    position:fixed;
+    left: 0;
+    top: 30px;
+    z-index: 2000;
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social ul li a {
+    display: inline-block;
+    color: #ffff;
+    background: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    
+}
+
+.social ul li .icon-facebook2 { background:#3b5998;}
+.social ul li .icon-mail4 { background:#666666;}
+.social ul li .icon-whatsapp { background:green;}
+
+ /*index transcicion*/
+
+     
+ .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+
+    border-radius:10px;
+    
+  }
+  .transcicion{
+      /*background-color: rgb(15, 75, 134);*/
+      width: 97%; 
+    }
+    .swiper-container{
+       /* background-color: rgb(15, 75, 134);*/
+       background-image: url("../../../../imagenes/formularioimg.jpg");
+        background-size: 60%;
+        background-size: 100%;
+    }
+
+    /*contenido del index*/
+    .indexcontenido{
+        text-align: justify;
+     padding: 0px 20px;
+          }
+
+          .indexcontenido {
+            width: 60%;
+            float: left;
+        }
+
+        .imgcontenido {
+            width: 30%;
+            float: left;
+            position: relative;
+        }
+        .imgcontenido1 {
+            width: 30%;
+            float: left;
+            margin-left: 935px;
+        }
+        
+        /*pie de pagina*/
+        /*.footernoso {
+            background-color: rgb(15, 75, 134);
+            color: black;
+            width: 100%;
+            height: 20%;
+            float: left;
+            text-align: center;
+            top: auto;
+            font-size: 100%;
+            padding: 1%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              }*/
+
+              .footernos {
+                      
+                    text-align: center;
+                    font-size: 1em;
+                    margin-top: 4%;
+                    background-color: rgb(15, 75, 134); 
+                    color:black;
+                    clear: both;
+                    padding-bottom: 20px;
+                }
+                
+                
+
+           
