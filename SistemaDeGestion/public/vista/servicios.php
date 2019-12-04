@@ -57,7 +57,9 @@
         <br>
         <section class="productos">
                 <h1 class="h1servicioss">PRODUCTOS</h1> 
-     
+                <hr/>
+            Calificar: <span id="Estrellas"></span>
+            <hr/>
                 <?php
                 include  '../../config/conexionBD.php';               
                $sql = "SELECT * FROM Producto";
@@ -102,23 +104,10 @@
                     echo  "  </td>";
                 echo "  </tr>";
                 echo " <form action=''>";
-
                echo" <div class='valoracion'>";
                 echo "</table>";
-               echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
-               echo " <label for='radio1'>&#9733</label>";
-            
-               echo" <input id='radio2' type='radio' name='estrellas' value='4'>";
-                /*<label for="radio2">&#9733</label>
-            
-                <input id="radio3" type="radio" name="estrellas" value="3">
-                <label for="radio3">&#9733</label>
-            
-                <input id="radio4" type="radio" name="estrellas" value="2">
-                <label for="radio4">&#9733</label>
-            
-                <input id="radio5" type="radio" name="estrellas" value="1">
-                <label for="radio5">&#9733</label>*/
+               echo " <label for='Estrellas'></label>";
+               echo" <input name='Estrellas' type='text' value='Estrellas'>";
                 echo"</div>";
                 echo"</form>";
                 
@@ -133,10 +122,8 @@
                 ?>
         </section>
         
-            </p>
-            <hr/>
-            Calificar: <span id="Estrellas"></span>
-            <hr/>
+           
+           
     </div>
 	<script>
    $('#Estrellas').starrr({

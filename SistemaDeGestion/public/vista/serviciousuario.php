@@ -54,6 +54,10 @@ $codigo = $_GET["variable1"];
                     <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
                     </ul>       
             </div>
+            <p class="bienvenida"> 
+        <?php echo "BIENVENIDA " ?>
+        <?php echo $codigo ?>
+       </p>
         </section>
     <!-- ------- -->
         <br>
