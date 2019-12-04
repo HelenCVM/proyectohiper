@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta charset="utf-8"/>
         <meta name="keywords" content="manguera, importación, import"/>
-        <link type="text/css" rel="stylesheet" href="../../../public/vista/style.css">
         <link type="text/css" rel="stylesheet" href="../../../css/estiloresu.css">
-        <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="../../../public/vista/css/swiper.min.css">
+        <title>Servicio</title>
         <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
-        <!-- Swiper JS -->
-        <script src="../../../public/vista/js/swiper.min.js"></script>
-       
-        <title>Inicio</title>
-        <a class="cerrarindex" href="../../../config/cerrar_sesion.php">Cerrar sesion</a>
-   
+        <link type="text/css" rel="stylesheet" href="../../../public/vista/style.css">
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <link rel="stylesheet" href="../../../public/vista/css/bootstrap.min.css">
+       <script src="../../../public/vista/js/bootstrap.min.js"></script>
+       <link href="../../../public/vista/css/starrr.css" rel=stylesheet/>
+    <script src="../../../public/vista/js/starrr.js"></script>
+       <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    
+        <script type="text/javascript" src="../../../public/vista/js/validacionusuario.js"></script>
+
 
     </head>
     <body>
             <header class="cabecera">
                     
-                   <ul class="menunavegador">
-                    <a href="indexusuario.php"><img src="../../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                    <ul class="menunavegador">
+                        <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                         <hr color="slategrey" >
                         <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
                         <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>                                            
                         <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
                         <ul>
-                            <li><a href="catalogo1.php">Catalogo Hidraulicas</a></li>
-                            <li><a href="catalogo2.php">Catalogo Industriales</a></li>
-                            <li><a href="catalogo3.php">Catalogo de Alta Temperatura</a></li>
+                                    <li> <a href="catalogo1.php">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="catalogo2.php">Catalogo Industriales</a></li>
+                                    <li> <a href="catalogo3.php">Catalogo de Alta Temperatura</a></li>
                         </ul>
                         </li>
                         <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                                                     
@@ -84,6 +87,7 @@
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
                 echo "</br>"; 
+                
                 echo  "  </td>";
               
                 echo  "  <td class ='imagenproductos'>";
@@ -92,7 +96,6 @@
                 echo "  </tr>";
                 
                 echo "</table>";
-               
                 }     
                 } else {
               
@@ -101,15 +104,30 @@
                 }
                 $conn->close();
                 ?>
-            
-
-
         </section>
-
-
+        
+            </p>
+            <hr/>
+            Calificar: <span id="Estrellas"></span>
+            <hr/>
+    </div>
+	<script>
+   $('#Estrellas').starrr({
+       rating:3,
+       change:function(e,valor){
+           alert(valor);
+           var valora=valor.value;
+           console.log(valora);
+           
+       }
+       
+   });
+    
+    </script>
+    
 
         <section class="video">
-                <iframe width="1000" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
         <footer class="footernoso">
                 <br>

@@ -135,9 +135,6 @@
                 }
                 $conn->close();
                 ?>
-            
-
-
         </section>
         
             </p>
