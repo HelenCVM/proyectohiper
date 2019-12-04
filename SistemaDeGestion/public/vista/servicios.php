@@ -103,13 +103,6 @@
                 echo  "  <td class ='imagenproductos'>";
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
-<<<<<<< HEAD
-                    
-                    echo "  </tr>";
-                
-                echo "</table>";
-            }     
-=======
                 echo "  </tr>";
                 echo "</table>";
                 
@@ -136,7 +129,6 @@
                 
                
                 }     
->>>>>>> 6e7e93d5f2f213c7a72e8bc5e96a0426613f9e6c
                 } else {
               
                 echo " <td colspan='7'> No existen productos registradas en el sistema </td>";

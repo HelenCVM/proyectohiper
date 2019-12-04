@@ -45,7 +45,6 @@
                 </div>
 
                 <section class="columna1">
-
                 <br>
                 <br>
                 <br>
