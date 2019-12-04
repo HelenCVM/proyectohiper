@@ -128,6 +128,18 @@ background-color: white;}
     list-style: none;
     padding: 1px 20px;
 }
+/*es para la publicodad de servicios*/
+.social1{
+    position:fixed;
+    left: 0;
+    top: 8px;
+    text-align: left;
+    
+}
+.social1 ul {
+    list-style: none;
+    padding: 15px 32px;
+}
 
 .social ul li .icon-mail4 { background:#666666;}
 .social ul li .icon-whatsapp { background:green;}
@@ -201,7 +213,82 @@ background-color: white;}
                     clear: both;
                     padding-bottom: 20px;
                 }
-                
-                
 
+/*--------------------- fin index css-------------------*/                
+/*estilos de la pagina nosotros */
+
+.h1nosotros {
+    color: red;
+   
+   text-align: center;
+    padding: 5%;
+    font-size: 200%;
+
+}
+
+.p1nosotros{
+    color: rgb(65, 60, 60);
+    float: left;
+    padding: 2%;
+    font-size: 150%;
+
+  }
+
+  .imanoso{
+    width: 100%;
+    float: left;
+    padding: 0%;
+  }
+
+  .imgabout{
+    width: 40%;
+    float: left;
+}
+ #videoYT{
+     text-align: center;
+     padding: 50px;
+ }
+/*-----------------------------------------*/
+/* servicios css */
+/*titulo */
+.h1servicioss{
+    color: red;
+    text-align: center;
+    size: 500%;
+    float: none;
+    padding: 3%;
+    font-size: 200%;
+}
+
+
+.productos .produ .parrafo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    width: 100px;
+
+  }
+
+  /*productos */
+  .produ  th{
+    width: 600px;
+    height: 380px;
+    padding: 5px;
+    background-color: #fcc;
+    font-size: 0.8em;
+    text-align: justify;
+    
+   }
+   .produ h1{
+    font-family: cursive;
+   text-align:center;
+    
+   }
+   .produ .imagenproductos img{
+       width: 200px;
+       height: 200px;
+       display: block;
+   }
+
+
+/*-----------------*/
            

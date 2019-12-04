@@ -3,13 +3,11 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="keywords" content="manguera, importación, import"/>
-        <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <title>Servicio</title>
+       <!-- <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-        <link type="text/css" rel="stylesheet" href="style.css">
-<<<<<<< HEAD
+        <link type="text/css" rel="stylesheet" href="style.css">-->
         
-=======
 
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
       <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -18,17 +16,17 @@
     <script src="js/starrr.js"></script>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
->>>>>>> 78da143b8028d15cf2dd21baeba9e622343004ba
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
-
+        <link type="text/css" rel="stylesheet" href="css/pagina.css">
 
     </head>
     <body>
+    <center><a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a><center>
+
             <header class="cabecera">
-                    
+                <nav class="divmenu">
                     <ul class="menunavegador">
-                        <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
-                        <hr color="slategrey" >
+                        
                         <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
                         <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>                                            
                         <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
@@ -40,19 +38,23 @@
                         </li>
                         <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                                                     
                         <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
-                        <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li>                             
-                      <!-- <li><a href="buscar.html">BUSCAR</a></li> -->
+                        <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li> 
+                        <li><a><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'>CARRITO</a></li>                            
+                     
                     </ul>
+                    </nav>
                 </header>
-                <section>
-                <div class="social">
-                        <ul >
-                        <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
-                                    
-                            </ul>
-                </div>
-                </section>
-        
+
+              <!-- públicidad-->
+    <section class="seccion">
+            <div class="social1">
+                    <ul >
+                    <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
+                    </ul>       
+            </div>
+        </section>
+    <!-- ------- -->
+        <br>
         <section class="productos">
                 <h1 class="h1servicioss">PRODUCTOS</h1> 
      
@@ -134,7 +136,7 @@
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
-        <footer class="footernoso">
+        <footer class="footernos">
                 <br>
                 &copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
                 &#8226; Telefono: 074115436 <br/>
