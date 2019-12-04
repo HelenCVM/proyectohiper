@@ -6,6 +6,7 @@
     width: max-content;
    
 }
+/*
 .menunavegador li a{
     text-decoration: none;
     text-align: center ;
@@ -13,10 +14,8 @@
     font-family: Arial;
     padding: 4%;
     width: 200%;
-    
-   
 }
-
+*/
 .cerrarindex{
    background-color: #0a4661; 
    color: #ffffff;
@@ -92,7 +91,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px;
+	padding: 15px;
 }
 
 .menunavegador li{
@@ -102,8 +101,54 @@
     width: 150px;
     display: inline-block;
     border: 1px  darkslategrey;
-   
 }
+
+
+.menunavegador li ul{
+ position: absolute;
+ min-width: 200px;
+}
+
+.menunavegador li:hover >ul {
+    display:block;
+}
+
+.menunavegador ul li ul li {
+    right: 14px;
+    top:0px;
+    float: left;
+    position: absolute;
+}
+
+.menunavegador ul ul li {
+    float: left;
+    width:150px;
+}
+
+.menunavegador ul li:hover > ul {
+    display: block;
+   }
+
+.menunavegador ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+
+.menunavegador ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#eee;
+    padding:0;
+   }
+   
+   
+.menunavegador li a {
+    text-decoration: none;
+    padding: 10px 12px;
+    display: contents;
+} 
 
 .indexcontenido {
     width: 70%;

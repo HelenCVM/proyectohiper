@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <meta name="keywords" content="manguera, importación, import"/>
-        <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
-        <title>Servicio</title>
-        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-        <link type="text/css" rel="stylesheet" href="style.css">
-<<<<<<< HEAD
-      
-=======
-        
-        <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
+        <link type="text/css" rel="stylesheet" href="../../../public/vista/style.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estiloresu.css">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="../../../public/vista/css/swiper.min.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
+        <!-- Swiper JS -->
+        <script src="../../../public/vista/js/swiper.min.js"></script>
+       
+        <title>Inicio</title>
+        <a class="cerrarindex" href="../../../config/cerrar_sesion.php">Cerrar sesion</a>
    
->>>>>>> 81fa8df2d1b7a964b2194af67fab29439c4db081
 
     </head>
     <body>
             <header class="cabecera">
                     
-                    <ul class="menunavegador">
-                        <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                   <ul class="menunavegador">
+                    <a href="indexusuario.php"><img src="../../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                         <hr color="slategrey" >
                         <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
                         <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>                                            
                         <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
                         <ul>
-                                    <li> <a href="catalogo1.php">Catalogo Hidraulicas</a></li>
-                                    <li> <a href="catalogo2.php">Catalogo Industriales</a></li>
-                                    <li> <a href="catalogo3.php">Catalogo de Alta Temperatura</a></li>
+                            <li><a href="catalogo1.php">Catalogo Hidraulicas</a></li>
+                            <li><a href="catalogo2.php">Catalogo Industriales</a></li>
+                            <li><a href="catalogo3.php">Catalogo de Alta Temperatura</a></li>
                         </ul>
                         </li>
                         <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                                                     
@@ -84,7 +84,6 @@
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
                 echo "</br>"; 
-                
                 echo  "  </td>";
               
                 echo  "  <td class ='imagenproductos'>";
@@ -106,30 +105,8 @@
 
 
         </section>
-       
-        <p>EStrellas</p>
-        <form action="">
 
-  <div class="valoracion">
 
-  
-    <input id="radio1" type="radio" name="estrellas" value="5" onclick="mostrarDetalle()">
-    <label for="radio1">&#9733</label>
-
-    <input id="radio2" type="radio" name="estrellas" value="4">
-    <label for="radio2">&#9733</label>
-
-    <input id="radio3" type="radio" name="estrellas" value="3">
-    <label for="radio3">&#9733</label>
-
-    <input id="radio4" type="radio" name="estrellas" value="2">
-    <label for="radio4">&#9733</label>
-
-    <input id="radio5" type="radio" name="estrellas" value="1">
-    <label for="radio5">&#9733</label>
-    </div>
-    </form>
-    
 
         <section class="video">
                 <iframe width="1000" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
