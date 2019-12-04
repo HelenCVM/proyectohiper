@@ -78,6 +78,7 @@
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
                 echo "</br>"; 
+
                 
                 echo  "  </td>";
               
@@ -85,13 +86,32 @@
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' >";
                     echo  "  </td>";
                 echo "  </tr>";
-                
+                echo " <form action=''>";
+
+               echo" <div class='valoracion'>";
                 echo "</table>";
+               echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
+               echo " <label for='radio1'>&#9733</label>";
+            
+               echo" <input id='radio2' type='radio' name='estrellas' value='4'>";
+                /*<label for="radio2">&#9733</label>
+            
+                <input id="radio3" type="radio" name="estrellas" value="3">
+                <label for="radio3">&#9733</label>
+            
+                <input id="radio4" type="radio" name="estrellas" value="2">
+                <label for="radio4">&#9733</label>
+            
+                <input id="radio5" type="radio" name="estrellas" value="1">
+                <label for="radio5">&#9733</label>*/
+                echo"</div>";
+                echo"</form>";
+                
                
                 }     
                 } else {
               
-                echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+                echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
                 
                 }
                 $conn->close();
