@@ -146,7 +146,7 @@ background-color: white;}
     height: 300px;
 
     border-radius:10px;
-    
+    border: white 3px inset;
   }
   .transcicion{
       /*background-color: rgb(15, 75, 134);*/
