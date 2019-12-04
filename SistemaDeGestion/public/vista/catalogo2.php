@@ -8,7 +8,7 @@
         <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
         
         <link type="text/css" rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="../../public/vista/js/ajaxC2.js"></script>
+        <script type="text/javascript" src="js/ajaxC2.js"></script>
     </head>
     <body>
             <header class="cabecera">
@@ -29,7 +29,7 @@
         
         <label for="nombres">Buscar Manguera:</label>
         <form action="" method="GET" class="form_search">
-        <input type="search" id="busqueda" placeholder="Buscar por cedula" onkeyup="buscarPornombre2(this)">
+        <input type="search" id="busqueda" placeholder="Buscar por cedula" onkeyup="buscarPornombre(this)">
         </form>
 
 
@@ -61,8 +61,7 @@
             if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo " <td> <a href='../controladores/buscarC2.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
-            echo "</br>";                 
+                  
             echo " <td>" . $row['pro_nombre'] ."</td>";
             echo "</br>"; 
             echo " <td>" . $row['pro_marca'] ."</td>";
@@ -73,7 +72,7 @@
             echo " <td>" . $row['pro_presi_bar'] . "</td>";
             echo " <td>" . $row['pro_long_m'] . "</td>";
             echo " <td>" . $row['pro_precio'] . "</td>";
-            echo " <td>" . $row['pro_stock'] . "</td>";       
+            echo " <td>" . $row['pro_stock'] . "</td>";            
              echo " <td><img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 

@@ -1,27 +1,16 @@
-function buscarPornombre() {
-    var producto = document.getElementById("nombrep").value;
-
-    if (producto == "") {
-    document.getElementById("informacion").innerHTML = "";
-    } else {
+function buscarPornombre3(input) {
+    let text = input.value.trim();
+    console.log(text);
     if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp = new XMLHttpRequest();
+        xmlhttp = new XMLHttpRequest();
     } else {
-    // code for IE6, IE5
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-
-        document.getElementById("informacion").innerHTML = this.responseText;
-    }
+            document.getElementById("data").innerHTML = this.responseText;
+        }
     };
-
-    xmlhttp.open("GET","phpajax/buscarC3.php?producto="+producto,true);
+    xmlhttp.open("GET","phpajax/buscarC3.php?key="+text,true);
     xmlhttp.send();
     }
-
-    return false;
-}
