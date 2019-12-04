@@ -7,14 +7,15 @@
         <title>Servicio</title>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
-<<<<<<< HEAD
-        
-        <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
-   
 
-=======
-      
->>>>>>> a406986c571b8a64252cc49f80bee1005df86780
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+       <script src="js/bootstrap.min.js"></script>
+   
+       <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    
+        <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
+
 
     </head>
     <body>
@@ -112,26 +113,25 @@
         <form action="">
 
  
-
-  <form id="formulario1" action="creacion.php" method="post">
-  <div class="valoracion">
-    <input id="radio1" type="radio" name="estrella1" value="5" onclick="mostrarDetalle()">
-    <label for="radio1">&#9733  </label>
-
-    <input id="radio2" type="radio" name="estrella2" value="4" onclick="mostrarDetalle()">
-    <label for="radio2">&#9733</label>
-
-    <input id="radio3" type="radio" name="estrella3" value="3" onclick="mostrarDetalle()">
-    <label for="radio3">&#9733</label>
-
-    <input id="radio4" type="radio" name="estrella4" value="2" onclick="mostrarDetalle()">
-    <label for="radio4">&#9733</label>
-
-    <input id="radio5" type="radio" name="estrella5" value="1" onclick="mostrarDetalle()">
-    <label for="radio5">&#9733</label>
-    <span id="valor"> </span>
+        
+        <link href="css/starrr.css" rel=stylesheet/>
+    <script src="js/starrr.js"></script>
+            </p>
+            <hr/>
+            Calificar: <span id="Estrellas"></span>
+            <hr/>
     </div>
-    </form>
+	<script>
+   $('#Estrellas').starrr({
+       rating:3,
+       change:function(e,valor){
+           alert(valor);
+           
+       }
+       
+   });
+    
+    </script>
     
 
         <section class="video">
