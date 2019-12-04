@@ -19,11 +19,13 @@
       <link rel="stylesheet" href="css/bootstrap.min.css">
        <script src="js/bootstrap.min.js"></script>
        <link href="css/starrr.css" rel=stylesheet/>
+       <script src="carrito.js"></script>
     <script src="js/starrr.js"></script>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
+
 
     </head>
 
@@ -58,7 +60,7 @@
     <div class="content">
         <?php
         include  '../../config/conexionBD.php'; 
-        $sql="SELECT c.cate_codigo, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_stock, p.pro_img
+        $sql="SELECT c.cate_codigo, p.pro_codigo, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_stock, p.pro_img
         FROM Producto p, Categoria c
         WHERE p.pro_codigo=". $_GET['producto'] ." AND c.cate_codigo=p.cate_codigo;";
        /* $sql = "SELECT c.cat_id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_descuento
@@ -68,9 +70,11 @@
         $result = $conn->query($sql);
         if (isset($_GET['producto']) && $result->num_rows > 0) {
             $row = $result->fetch_assoc();
+            $codigo=$row['pro_codigo'];
             $nombre = $row['pro_nombre'];
             $descripcion = $row['pro_descripcion'];
             $precio = $row['pro_precio'];
+
             //$descuento = $row['pro_descuento'];
             $categoria = $row['cate_codigo'];
             $stock=$row['pro_stock'];
@@ -135,7 +139,8 @@
                 </div>
             
                     <div class="btns">
-                        <button onclick="cartAdd(<?php echo $_GET['producto']; ?>)">
+                        
+                        <button onclick="cartAdd('<?php echo $imagen; ?>',<?php echo $codigo; ?>,'<?php echo $nombre; ?>',<?php echo $precio; ?>,1)">
                             <i class="fas fa-cart-plus"></i>
                             Agregar al carrito
                         </button>
