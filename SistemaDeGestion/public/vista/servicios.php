@@ -7,7 +7,13 @@
         <title>Servicio</title>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
+<<<<<<< HEAD
       
+=======
+        
+        <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
+   
+>>>>>>> 81fa8df2d1b7a964b2194af67fab29439c4db081
 
     </head>
     <body>
@@ -78,6 +84,7 @@
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
                 echo "</br>"; 
+                echo "&#9733";
                 echo  "  </td>";
               
                 echo  "  <td class ='imagenproductos'>";
@@ -99,6 +106,30 @@
 
 
         </section>
+       
+        <p>EStrellas</p>
+        <form action="">
+
+  <div class="valoracion">
+
+  
+    <input id="radio1" type="radio" name="estrellas" value="5" onclick="mostrarDetalle()">
+    <label for="radio1">&#9733</label>
+
+    <input id="radio2" type="radio" name="estrellas" value="4">
+    <label for="radio2">&#9733</label>
+
+    <input id="radio3" type="radio" name="estrellas" value="3">
+    <label for="radio3">&#9733</label>
+
+    <input id="radio4" type="radio" name="estrellas" value="2">
+    <label for="radio4">&#9733</label>
+
+    <input id="radio5" type="radio" name="estrellas" value="1">
+    <label for="radio5">&#9733</label>
+    </div>
+    </form>
+    
 
 
 
