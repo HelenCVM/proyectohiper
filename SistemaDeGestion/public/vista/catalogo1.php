@@ -33,10 +33,10 @@
     
        
         <label for="nombres">Buscar Manguera:</label>
-        <form  onsubmit="return buscarPornombre()">
-                <input type="text" id="nombrep" name="nombrep" value="">
-                <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPornombre()">
+        <form action="" method="GET" class="form_search">
+        <input type="search" id="busqueda" placeholder="Buscar por cedula" onkeyup="buscarPornombre(this)">
         </form>
+
         <br>
         <div id="informacion"><b></b></div>
         <br>
@@ -44,19 +44,25 @@
       
 
  <h1>Productos</h1> 
-<section class="industriales">
+<section class="industriales" >
+
     
-<table class="indus">
+<table class="indus" >
  <tr>
      
  <th></th>
  <th>Nombre</th>
  <th>Marca</th>
- <th>Stock</th>
  <th>Descripcion</th>
+ <th>Diametro interno</th>
+ <th>Peso Teorico</th> 
+ <th>Presion de Trabajo</th>
+ <th>Longitud</th>
  <th>Precio</th>
- </tr>              
-            
+ <th>Stock</th>
+
+ </tr>                </tr>
+ <tbody id="data">
             <?php
             include '../../config/conexionBD.php';               
             $sql = "SELECT * FROM Producto  where cate_codigo='1'";
@@ -67,11 +73,17 @@
             echo "<tr>";
             echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
             echo "</br>";                 
-            echo " <td id='nombreP' >" . $row['pro_nombre'] ."</td>";
+            echo " <td>" . $row['pro_nombre'] ."</td>";
+            echo "</br>"; 
             echo " <td>" . $row['pro_marca'] ."</td>";
-            echo " <td>" . $row['pro_stock'] . "</td>";
-            echo " <td>" . $row['pro_descripcion'] . "</td>";
-            echo " <td>" . $row['pro_precio'] . "</td>";  
+            echo "</br>"; 
+            echo " <td>" . $row['pro_descripcion'] . "</td>"; 
+            echo " <td>" . $row['pro_dia_in'] . "</td>";          
+            echo " <td>" . $row['pro_peso_gm'] . "</td>";
+            echo " <td>" . $row['pro_presi_bar'] . "</td>";
+            echo " <td>" . $row['pro_long_m'] . "</td>";
+            echo " <td>" . $row['pro_precio'] . "</td>";
+            echo " <td>" . $row['pro_stock'] . "</td>";       
              echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
@@ -87,6 +99,8 @@
             }
             $conn->close();
             ?>
+            
+            </tbody>
 
             </table> 
         </section>

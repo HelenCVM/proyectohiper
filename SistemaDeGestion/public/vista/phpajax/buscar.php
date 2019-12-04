@@ -1,43 +1,36 @@
+
+
 <?php
  //incluir conexión a la base de datos
- include '../../../config/conexionBD.php';      
- $nombre = $_GET['producto'];
- //echo "Hola " . $cedula;
+ include '../../../config/conexionBD.php';     
 
- $sql = "SELECT * FROM Producto WHERE pro_nombre  LIKE '" . $_GET['producto'] . "%' AND id_categoria=3";
-//cambiar la consulta para puede buscar por ocurrencias de letras
- $result = $conn->query($sql);
- echo " <table style='width:100%'>
- <tr>
- <th>Nombre</th>
- <th>Marca</th>
- <th>Stock</th>
- <th>Descripcion</th>
- <th>Precio</th>
- <th></th>
- <th></th>
- <th></th>
- </tr>";
- if ($result->num_rows > 0) {
- while($row = $result->fetch_assoc()) {
-
- echo "<tr>";
- echo " <td>" . $row['pro_nombre'] ."</td>";
- echo " <td>" . $row['pro_marca'] ."</td>";
- echo " <td>" . $row['pro_stock'] . "</td>";
- echo " <td>" . $row['pro_descripcion'] . "</td>";
- echo " <td>" . $row['pro_precio'] . "</td>";  
- echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["imagen"].".jpg' width=' 100px'
-     height=' 100px'></td>";
-
- echo "</tr>";
- }
- } else {
- echo "<tr>";
- echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
- echo "</tr>";
- }
- echo "</table>";
- $conn->close();
+if ($_GET != '') {
+    $sql = "SELECT * FROM Producto  WHERE pro_nombre LIKE '" . $_GET['key'] . "%' AND cate_codigo='1'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+           
+            echo "<tr>";            
+            echo " <td>" . $row['pro_nombre'] ."</td>";
+            echo " <td>" . $row['pro_marca'] ."</td>";            
+            echo " <td>" . $row['pro_descripcion'] . "</td>"; 
+            echo " <td>" . $row['pro_dia_in'] . "</td>";          
+            echo " <td>" . $row['pro_peso_gm'] . "</td>";
+            echo " <td>" . $row['pro_presi_bar'] . "</td>";
+            echo " <td>" . $row['pro_long_m'] . "</td>";
+            echo " <td>" . $row['pro_precio'] . "</td>";
+            echo " <td>" . $row['pro_stock'] . "</td>";       
+            echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
+                height=' 100px'></td>";
+          
+            echo "</tr>";
+        }
+    } else {
+        echo "<tr>";
+        echo '<td colspan="8" class="db_null"><p>No existen productos registrados con ese nombre</p><i class="fas fa-exclamation-circle"></i></td>';
+        echo "</tr>";
+    }
+    $conn->close();
+}
 
 ?>
