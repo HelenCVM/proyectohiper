@@ -8,7 +8,7 @@
         <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
         
         <link type="text/css" rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="js/ajaxC2.js"></script>
+        <script type="text/javascript" src="../../public/vista/js/ajaxC2.js"></script>
     </head>
     <body>
             <header class="cabecera">
@@ -29,14 +29,9 @@
         
         <label for="nombres">Buscar Manguera:</label>
         <form action="" method="GET" class="form_search">
-        <input type="search" id="busqueda" placeholder="Buscar por cedula" onkeyup="buscarPornombre(this)">
+        <input type="search" id="busqueda" placeholder="Buscar por cedula" onkeyup="buscarPornombre2(this)">
         </form>
 
-        <br>
-        <div id="informacion"><b></b></div>
-        <br>
-
-      
 
  <h1>Productos</h1> 
 <section class="industriales" >
@@ -66,7 +61,7 @@
             if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
+            echo " <td> <a href='../controladores/buscarC2.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
             echo "</br>";                 
             echo " <td>" . $row['pro_nombre'] ."</td>";
             echo "</br>"; 
