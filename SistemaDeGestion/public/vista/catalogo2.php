@@ -11,6 +11,12 @@
         <script type="text/javascript" src="js/ajaxC2.js"></script>
     </head>
     <body>
+    <?php  
+include '../../config/conexionBD.php';       
+$codigo = $_GET["variable1"];
+
+?> 
+ 
             <header class="cabecera">
                     <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                     <ul class="menunavegador">

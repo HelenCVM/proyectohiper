@@ -8,26 +8,39 @@
         
         <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="style.css"> 
-
+        <link type="text/css" rel="stylesheet" href="css/pagina.css"> 
         <script type="text/javascript" src="js/ajaxC1.js"></script>
 
         <title>Productos</title>
        
     </head>
     <body>
+    <?php  
+include '../../config/conexionBD.php';       
+$codigo = $_GET["variable1"];
+
+?> 
+ 
             <header class="cabecera">
                     <a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                     <ul class="menunavegador">
 
 
-                        <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png">INICIO</a></li> 
-                        <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png">NOSOTROS</a></li>
-                        <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png">PRODUCTOS</a></li>
-                        <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png">CONTACTANOS</a></li>                                       
-                        <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png">LOGIN</a></li>                
-                        <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png">REGISTRATE</a></li>                         
+                        <li><a href="indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
+                <ul>
+                                    <li> <a href="catalogo1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="catalogo2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
+                                    <li> <a href="catalogo3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
+                        </ul>
+                        </li>
+                <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
+                <li><a href="cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li> 
+                <li><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'></li>        
+            </ul>                       
               
-                        <li><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'></li>
+                       
                 </header>               
         </header>
     
