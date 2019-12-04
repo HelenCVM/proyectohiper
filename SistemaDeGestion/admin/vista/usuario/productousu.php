@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <meta name="keywords" content="manguera, importación, import"/>
-        <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
-        <title>Servicio</title>
-        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-        <link type="text/css" rel="stylesheet" href="style.css">
-      
+        <link type="text/css" rel="stylesheet" href="../../../public/vista/style.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estiloresu.css">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="../../../public/vista/css/swiper.min.css">
+        <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
+        <!-- Swiper JS -->
+        <script src="../../../public/vista/js/swiper.min.js"></script>
+       
+        <title>Inicio</title>
+        <a class="cerrarindex" href="../../../config/cerrar_sesion.php">Cerrar sesion</a>
+   
 
     </head>
     <body>
             <header class="cabecera">
                     
-                    <ul class="menunavegador">
-                        <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
+                   <ul class="menunavegador">
+                    <a href="indexusuario.php"><img src="../../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
                         <hr color="slategrey" >
                         <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
                         <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>                                            
                         <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
                         <ul>
-                                    <li> <a href="catalogo1.php">Catalogo Hidraulicas</a></li>
-                                    <li> <a href="catalogo2.php">Catalogo Industriales</a></li>
-                                    <li> <a href="catalogo3.php">Catalogo de Alta Temperatura</a></li>
+                            <li><a href="catalogo1.php">Catalogo Hidraulicas</a></li>
+                            <li><a href="catalogo2.php">Catalogo Industriales</a></li>
+                            <li><a href="catalogo3.php">Catalogo de Alta Temperatura</a></li>
                         </ul>
                         </li>
                         <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                                                     
