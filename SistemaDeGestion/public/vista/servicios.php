@@ -7,10 +7,14 @@
         <title>Servicio</title>
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
+<<<<<<< HEAD
         
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
    
 
+=======
+      
+>>>>>>> a406986c571b8a64252cc49f80bee1005df86780
 
     </head>
     <body>
@@ -81,7 +85,7 @@
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
                 echo "</br>"; 
-                echo "&#9733";
+                
                 echo  "  </td>";
               
                 echo  "  <td class ='imagenproductos'>";
@@ -129,8 +133,6 @@
     </div>
     </form>
     
-
-
 
         <section class="video">
                 <iframe width="1000" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

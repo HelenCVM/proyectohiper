@@ -137,6 +137,7 @@ function comprobarClave(){
     else
        alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo")
 }
+<<<<<<< HEAD
 
 function mostrarDetalle(){
     var elemento=document.getElementById("radio1").value;
@@ -160,5 +161,11 @@ function mostrarDetalle(){
                 document.getElementById('valor').innerHTML = '<br><h2>1</h2>'
             }
         }
+=======
+function mostrarDetalle(){
+    var seleccion = document.querySelector('input[name=estrellas:checked').value;
+    alert(seleccion);
+    
+>>>>>>> a406986c571b8a64252cc49f80bee1005df86780
 }
 }

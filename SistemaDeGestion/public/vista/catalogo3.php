@@ -26,11 +26,12 @@
                 
         </header>
 
+        
         <label for="nombres">Buscar Manguera:</label>
-        <form  onsubmit="return buscarPornombre()">
-                <input type="text" id="nombrep" name="nombrep" value="">
-                <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPornombre()">
+        <form action="" method="GET" class="form_search">
+        <input type="search" id="busqueda" placeholder="Buscar por cedula" onkeyup="buscarPornombre3(this)">
         </form>
+
         <br>
         <div id="informacion"><b></b></div>
         <br>
@@ -53,7 +54,7 @@
  <th>Precio</th>
  <th>Stock</th>
  </tr>                </tr>
-
+ <tbody id="data">
             
             <?php
             include '../../config/conexionBD.php';               
@@ -62,18 +63,18 @@
             if ($result->num_rows > 0) {
            
            while($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo " <td> <a href='../controladores/buscar.php?codigo=" . $row["pro_nombre"] ."'></a></td>";
-            echo "</br>";                 
-            echo " <td id='nombreP' >" . $row['pro_nombre'] ."</td>";
+            echo "<tr>";         
+            echo " <td>" . $row['pro_nombre'] ."</td>";
+            echo "</br>"; 
             echo " <td>" . $row['pro_marca'] ."</td>";
+            echo "</br>"; 
             echo " <td>" . $row['pro_descripcion'] . "</td>"; 
             echo " <td>" . $row['pro_dia_in'] . "</td>";          
             echo " <td>" . $row['pro_peso_gm'] . "</td>";
             echo " <td>" . $row['pro_presi_bar'] . "</td>";
             echo " <td>" . $row['pro_long_m'] . "</td>";
             echo " <td>" . $row['pro_precio'] . "</td>";
-            echo " <td>" . $row['pro_stock'] . "</td>";    
+            echo " <td>" . $row['pro_stock'] . "</td>";          
              echo " <td><img class='perfil' src='../../../imagenes/altatemperatura/".$row["pro_img"].".jpg' width=' 100px'
                 height=' 100px'></td>";
 
@@ -85,6 +86,7 @@
             }
             $conn->close();
             ?>
+  </tbody>
 
             </table>
 
