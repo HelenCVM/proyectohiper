@@ -11,7 +11,8 @@
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
       <link rel="stylesheet" href="css/bootstrap.min.css">
        <script src="js/bootstrap.min.js"></script>
-   
+       <link href="css/starrr.css" rel=stylesheet/>
+    <script src="js/starrr.js"></script>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
@@ -108,14 +109,7 @@
 
 
         </section>
-       
-        <p>EStrellas</p>
-        <form action="">
-
- 
         
-        <link href="css/starrr.css" rel=stylesheet/>
-    <script src="js/starrr.js"></script>
             </p>
             <hr/>
             Calificar: <span id="Estrellas"></span>
