@@ -184,8 +184,10 @@ background-color: white;}
         /*css para cuando el cursor pase por las opciones del maenu */           
         nav > ul :hover, nav > ul :active { 
             text-decoration: none; 
-            background-color: #ce726c;
-            border-radius: 9px;
+           /* background-color: #ce726c;*/
+            /*border-radius: 9px;*/
+            border-bottom: 3px solid #ce726c;
+        	
             }
 
               .footernos {
