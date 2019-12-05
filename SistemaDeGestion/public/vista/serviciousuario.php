@@ -85,7 +85,7 @@ $codigo = $_GET["variable1"];
                 <article>
                     <div class="contentImg">
                         <div class="cardImg">
-                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
+                            <a href="producto.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
                      
                         </div>
                     </div>

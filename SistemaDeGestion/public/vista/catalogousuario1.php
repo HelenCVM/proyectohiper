@@ -9,6 +9,7 @@
         <link type="text/css" rel="stylesheet" href="style.css"> -->
 
         <script type="text/javascript" src="js/ajaxC1.js"></script>
+
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
         <title>Productos</title>
        
@@ -38,16 +39,20 @@ $codigo = $_GET["variable1"];
               </ul>     
             </nav>   
         </header>
-
           <!-- públicidad-->
-         <!-- públicidad-->
-         <section class="seccion">
+    <section class="seccion">
             <div class="social1">
                     <ul >
                     <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
                     </ul>       
             </div>
+            <p class="bienvenida"> 
+        <?php echo "BIENVENIDA " ?>
+        <?php echo $codigo ?>
+       </p>
+
         </section>
+        
     <!-- ------- -->
     
         <br>
@@ -63,58 +68,56 @@ $codigo = $_GET["variable1"];
         <div id="informacion"><b></b></div>
         <br>
 
-      
-
- <h1>Productos</h1> 
-<section class="industriales" >
-<table class="indus" >
- <tr>
- <th></th>
- <th>Nombre</th>
- <th>Marca</th>
- <th>Descripcion</th>
- <th>Diametro interno</th>
- <th>Peso Teorico</th> 
- <th>Presion de Trabajo</th>
- <th>Longitud</th>
- <th>Precio</th>
- <th>Stock</th>
-<th>Imagen</th>
- </tr>                </tr>
+    
  <tbody id="data">
-           <div class="contentCards">
+ <div class="content">
+        <section>
+            <a href="#">
+                <h2>HINDUSTRIALES</h2>
+            </a>
+            <div class="contentCards">
 
-           <?php
-                   include  '../../config/conexionBD.php';  
-           $sql="SELECT * FROM Producto WHERE cate_codigo=10";
+                <?php
+                        include  '../../config/conexionBD.php';  
+                $sql="SELECT * FROM Producto where cate_codigo=11";
 
-           $result = $conn->query($sql);
-           if ($result->num_rows > 0) {
-               while ($row = $result->fetch_assoc()) {
-                   ?>
-           <article>
-               <div class="contentImg">
-                   <div class="cardImg">
-                       <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
-                
-                   </div>
-               </div>
-               <div class="contentDescription">
-                   <div class="descripProduct">
-                      
-                           <h2><?php echo $row['pro_nombre']; ?></h2>
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                <article>
+                    <div class="contentImg">
+                        <div class="cardImg">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
                      
-                       <p><?php echo $row['pro_descripcion']; ?></p>
-                  
-                  <?php echo $row['pro_precio']; ?>
-                  
-               </div>
-           </article>
-           <?php
-           }
-       }
-       $conn->close();
-       ?>
+                        </div>
+                    </div>
+                    <div class="contentDescription">
+                        <div class="descripProduct">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>">
+                                <h2><?php echo $row['pro_nombre']; ?></h2>
+                            </a>
+                            <p><?php echo $row['pro_descripcion']; ?></p>
+                        </div>
+                        <span>$<?php echo $row['pro_precio']; ?></span>
+                       
+                    </div>
+                </article>
+                <?php
+                }
+            }
+            $conn->close();
+            ?>
+
+            </div>
+        </section>
+
+    </div>
+        
+            </tbody>
+
+           
+        </section>
 
         <!-- Carrito de compras -->
         <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito">            
@@ -148,7 +151,6 @@ $codigo = $_GET["variable1"];
 	});
 	</script>
       <!-- --->
-
 
 
       <footer class="footernos">
