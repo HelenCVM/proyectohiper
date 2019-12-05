@@ -72,7 +72,7 @@
 
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
-<<<<<<< HEAD
+
                     while ($row = $result->fetch_assoc()) {
                         ?>
                 <article>
@@ -93,7 +93,7 @@
                     </div>
                 </article>
                 <?php
-=======
+
                
                while($row = $result->fetch_assoc()) {
                 echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
@@ -150,8 +150,7 @@
                 } else {
               
                 echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
-                
->>>>>>> 9696c67d636c91da1425572a3b3ddb8dbabdd442
+
                 }
             }
             $conn->close();
@@ -160,29 +159,9 @@
             </div>
         </section>
 
-<<<<<<< HEAD
     </div>
 
 
-=======
-        
-           
-           
-    </div>
-	<script>
-   $('#Estrellas').starrr({
-       rating:3,
-       change:function(e,valor){
-           alert(valor);
-           
-       }
-       
-   });
-    
-    </script>
-    
-        
->>>>>>> 9696c67d636c91da1425572a3b3ddb8dbabdd442
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
