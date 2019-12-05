@@ -128,12 +128,12 @@
             
                 echo"<input id='radio' type='radio' name='radio' value='5'>";
                 echo" <label for='radio5'>&#9733</label>";
-<<<<<<< HEAD
+
                 echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
                
                 echo "<p><input type='submit' value='Enviar datos'></p>";
-=======
->>>>>>> b71cd91916dec3edc05419e94ec494183df1fc7e
+
+
                 echo"</div>";
                 echo "<p><input type='submit' value='Enviar datos'></p>";
                 
