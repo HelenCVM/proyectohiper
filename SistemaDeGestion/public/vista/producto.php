@@ -36,30 +36,25 @@
 
 <header class="cabecera">
     <nav class="divmenu">
-        <ul class="menunavegador">
-            
-            <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
-            <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>                                            
-            <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
-            <ul>
-                        <li> <a href="catalogo1.php">Catalogo Hidraulicas</a></li>
-                        <li> <a href="catalogo2.php">Catalogo Industriales</a></li>
-                        <li> <a href="catalogo3.php">Catalogo de Alta Temperatura</a></li>
-            </ul>
-            </li>
-            <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                                                     
-            <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
-            <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li> 
-            <li><a><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'>CARRITO</a></li>                            
-         
-        </ul>
-        </nav>
-    </header>
-    <form action="">
+    <header class="cabecera">
+                    <nav class="divmenu">
+                    <ul class="menunavegador">
+                <li><a href="indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
+                <ul>
+                                    <li> <a href="catalogousuario1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="catalogousuario2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
+                                    <li> <a href="catalogousuario3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
+                        </ul>
+              </li>
+                <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
+                <li><a href="cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li> 
+               
 
-
-    <span></span>
-    </form>
+              </ul>     
+            </nav>   
+        </header>
 
 
     <div class="content">
@@ -92,12 +87,8 @@
             $categoria = $row['cate_codigo'];
             $stock=$row['pro_stock'];
             $imagen=$row['pro_img'];
-<<<<<<< HEAD
             
-            
-=======
-          
->>>>>>> 0ec7c1ccd861cefd7b7e44b40841ef3f1b1e420d
+           
         }
         //Stock
       /*  $sqlStock = "SELECT ps.pro_suc_stock FROM producto p, producto_sucursal ps, sucursal s
@@ -132,6 +123,7 @@
                             $i = $i + 1;
                         }
                     }*/
+                    
                    
                     ?>
 
@@ -187,6 +179,29 @@
                             <i class="fas fa-cart-plus"></i>
                             Agregar al carrito
                         </button>
+                        <?php                         
+                      echo " <form id='formulario0' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
+                      echo" <div class='valoracio'>";
+                      echo" <input id='radio' type='radio' name='radio' value='1'>";
+                      echo " <label for='radio1'>&#9733</label>";
+                      
+                      echo" <input id='radio' type='radio' name='radio' value='2'>";
+                      echo "<label for='radio2'>&#9733</label>";
+                      
+                      echo" <input id='radio' type='radio' name='radio' value='3'>";
+                      echo"<label for='radio3'>&#9733</label>";
+                      
+                      echo"<input id='radio' type='radio' name='radio' value='4'>";
+                      echo"<label for='radio4'>&#9733</label>";
+                      
+                      echo"<input id='radio' type='radio' name='radio' value='5'>";
+                      echo" <label for='radio5'>&#9733</label>";
+                      echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
+                      
+                      echo "<p><input type='submit' value='Enviar datos'></p>";
+                      echo"</div>";
+                      echo"</form>";
+                        ?>
                     </div>
                 </div>
             </div>
