@@ -76,9 +76,8 @@
                
                while($row = $result->fetch_assoc()) {
                 echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
-                
+                 echo "<tr>" ;
                 echo  "<td>";
-                echo "<tr>" ;
                 echo "<h1 class='tituloTab'>". $row['pro_nombre'] ."</h1>"; 
                 echo "Marca:";
                 echo "" . $row['pro_marca'] ."";
@@ -103,10 +102,8 @@
                 echo "</br>";   
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
-                echo "</br>";                           
-                echo "  </tr>";                
-                echo  "  </td>";        
-            
+                echo "</br>";                 
+                echo  "  </td>";              
                 echo  "  <td class ='imagenproductos'>";
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
@@ -115,30 +112,13 @@
 
                 echo "</table>";
                 
-                echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
-               echo" <div class='valoracio'>";
                
-               echo " <label for='radio1'>&#9733</label>";
-               echo" <input id='radio' type='radio' name='radio1' value='1'>";
-            
-               echo "<label for='radio2'>&#9733</label>";
-               echo" <input id='radio' type='radio' name='radio' value='2'>";
-            
-               echo"<label for='radio3'>&#9733</label>";
-               echo" <input id='radio' type='radio' name='radio' value='3'>";
+               
 
+
+               
                 
-               echo"<label for='radio4'>&#9733</label>";
-                echo"<input id='radio' type='radio' name='radio' value='4'>";
-            
                 
-                echo" <label for='radio5'>&#9733</label>";
-                echo"<input id='radio' type='radio' name='radio' value='5'>";
-                echo"</div>";
-                echo"<div class='mensajes'>";
-                echo"<input type='text' id='mensaje'  name='mensaje' value=' ' placeholder='Ingrese su comentario'>";            
-                echo "<p><input type='submit' value='Enviar datos'></p>";
-                echo"</div>";
                 echo"</form>";
                 echo "</table>";  
 
@@ -154,17 +134,24 @@
                 $conn->close();
                 ?>
         </section>
-<<<<<<< HEAD
 
-
-
-=======
         
            
            
-
+    </div>
+	<script>
+   $('#Estrellas').starrr({
+       rating:3,
+       change:function(e,valor){
+           alert(valor);
+           
+       }
+       
+   });
+    
+    </script>
+    
         
->>>>>>> 74f553ff87528820c68b4df52127d6eba244948f
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
