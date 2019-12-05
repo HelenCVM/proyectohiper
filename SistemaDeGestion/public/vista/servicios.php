@@ -63,9 +63,7 @@
                 <h1 class="h1servicioss">PRODUCTOS</h1>      
 
                 <h1 class="h1servicioss">PRODUCTOS</h1> 
-                <hr/>
-            Calificar: <span id="Estrellas"></span>
-            <hr/>
+                
                 <?php
                 include  '../../config/conexionBD.php';               
                $sql = "SELECT * FROM Producto";
@@ -120,37 +118,11 @@
 <form  action="" method="GET" class="form_search"   >
 
 <div class='valoracion'>
-<input id='radio5' type='radio' name='estrellas' onclick="ShowHideDiv(5)" >
-<label for='radio5'>&#9733</label>
-<input id='radio4' type='radio' name='estrellas' onclick="ShowHideDiv(4)" >
-<label for='radio4'>&#9733</label>
-<input id='radio3' type='radio' name='estrellas' onclick="ShowHideDiv(3)" >
-<label for='radio3'>&#9733</label>
-<input id='radio2' type='radio' name='estrellass' onclick="ShowHideDiv(2)"/>
- <label for='radio2'>&#9733</label>
-<input id='radio1' type='radio' name='estrellas' onclick="ShowHideDiv(1)" >
-<label for='radio1'>&#9733</label>
+
 
 </div>
 
 </form>
-
-
-<!--Script para las estrellas-->
-     
-
-	<script>
-   $('#Estrellas').starrr({
-       rating:3,
-       change:function(e,valor){
-           alert(valor);
-           
-       }
-       
-   });
-    
-    </script>
-    
 
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
