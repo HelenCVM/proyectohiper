@@ -90,26 +90,7 @@
                             <p><?php echo $row['pro_descripcion']; ?></p>
                         </div>
                         <span>$<?php echo $row['pro_precio']; ?></span>
-                        <form id='formulario0' method='POST' action='../../config/insertacalifica.php?codigo=' $row['pro_codigo']''>
- <div class='valoracio'>
-<input id='radio' type='radio' name='radio' value='1'>
-<label for='radio1'>&#9733</label>
-
-<input id='radio' type='radio' name='radio' value='2'>
-<label for='radio2'>&#9733</label>
-
-<input id='radio' type='radio' name='radio' value='3'>
-<label for='radio3'>&#9733</label>
-
-<input id='radio' type='radio' name='radio' value='4'>
-<label for='radio4'>&#9733</label>
-
-<input id='radio' type='radio' name='radio' value='5'>
-<label for='radio5'>&#9733</label>
-<input id='mensaje' type='mensaje' name='mensaje' value=''>
-
-<p><input type='submit' value='Enviar datos'></p>
-</form>
+                       
                     </div>
                 </article>
                 <?php
