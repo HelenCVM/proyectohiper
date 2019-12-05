@@ -6,15 +6,18 @@
         <title>Servicio</title>
        <!-- <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-        <link type="text/css" rel="stylesheet" href="style.css">-->
+        <link type="text/css" rel="stylesheet" href="style.css">
+    
+        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">-->
         
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
       <link rel="stylesheet" href="css/bootstrap.min.css">
        <script src="js/bootstrap.min.js"></script>
-       <link href="css/starrr.css" rel=stylesheet/>
+       <link href="css/pagina.css" rel=stylesheet/>
     <script src="js/starrr.js"></script>
-    <a class="cerrarindex" href="../../config/cerrar_sesion.php">Cerrar sesion</a>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
@@ -22,27 +25,26 @@
 
     </head>
     <body>
-        <?php  
-include '../../config/conexionBD.php';       
-$codigo = $_GET["variable1"];
-?> 
     <center><a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a><center>
 
             <header class="cabecera">
                 <nav class="divmenu">
                     <ul class="menunavegador">
                         
-                <li><a href="indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
-                <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
-                <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
-                <ul>
-                                    <li> <a href="catalogousuario1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
-                                    <li> <a href="catalogousuario2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
-                                    <li> <a href="catalogousuario3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
+                        <li><a href="index.php"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                        <li><a href="nosotros.php"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>                                            
+                        <li><a href="servicios.php"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
+                        <ul>
+                                    <li> <a href="catalogo1.php">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="catalogo2.php">Catalogo Industriales</a></li>
+                                    <li> <a href="catalogo3.php">Catalogo de Alta Temperatura</a></li>
                         </ul>
                         </li>
-                <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
-                <li><a href="cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li>
+                        <li><a href="contacto.php"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                                                     
+                        <li><a href="login.php"><img id ="iconmenu" src="img/icon5.png"> LOGIN</a></li>                
+                        <li><a href="formulario.php"><img id ="iconmenu" src="img/icon6.png"> REGISTRATE</a></li> 
+                        <li><a><img id ="iconcarrito" src="img/icon8.png" data-pushbar-target='pushbar-carrito'>CARRITO</a></li>                            
+                     
                     </ul>
                     </nav>
                 </header>
@@ -54,142 +56,80 @@ $codigo = $_GET["variable1"];
                     <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
                     </ul>       
             </div>
-            <p class="bienvenida"> 
-        <?php echo "BIENVENIDA " ?>
-        <?php echo $codigo ?>
-       </p>
         </section>
     <!-- ------- -->
-        <br>
-        <section class="productos">   
+        <br> 
+    
+        <div class="content">
+        <section>
+            <a href="#">
+                <h2>PRODUCTOS</h2>
+            </a>
+            <div class="contentCards">
 
+                <?php
+                        include  '../../config/conexionBD.php';  
+                $sql="SELECT pro.pro_nombre,pro.pro_codigo,pro.pro_descripcion, pro.pro_precio, pro.pro_img FROM Producto pro WHERE pro.pro_eliminado='N'  GROUP BY pro.pro_codigo;";
 
-               
-<hr/>
-<hr/>
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                <article>
+                    <div class="contentImg">
+                        <div class="cardImg">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
+                     
+                        </div>
+                    </div>
+                    <div class="contentDescription">
+                        <div class="descripProduct">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>">
+                                <h2><?php echo $row['pro_nombre']; ?></h2>
+                            </a>
+                            <p><?php echo $row['pro_descripcion']; ?></p>
+                        </div>
+                        <span>$<?php echo $row['pro_precio']; ?></span>
+                       
+                    </div>
+                </article>
+                <?php
+                }
+            }
+            $conn->close();
+            ?>
 
-<h1 class="h1servicioss">PRODUCTOS</h1> 
+            </div>
+        </section>
 
-<?php
-include  '../../config/conexionBD.php';               
-$sql = "SELECT * FROM Producto";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
+    </div>
+        
+            </p>
+            
+    </div>
+	<script>
+   $('#Estrellas').starrr({
+       rating:3,
+       change:function(e,valor){
+           alert(valor);
+           
+       }
+       
+   });
+    
+    </script>
+    
 
-while($row = $result->fetch_assoc()) {
-echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
- echo "<tr>" ;
-echo  "<td>";
-echo "<h1 class='tituloTab'>". $row['pro_nombre'] ."</h1>"; 
-echo "Marca:";
-echo "" . $row['pro_marca'] ."";
-echo "</br>";   
-echo "Descripcion:";
-echo "" . $row['pro_descripcion'] . ""; 
-echo "</br>"; 
-echo "Diametro Interno:";  
-echo " " . $row['pro_dia_in'] . "";  
-echo "</br>"; 
-echo "Peso Teorico:";          
-echo " " . $row['pro_peso_gm'] . "";
-echo "</br>";   
-echo "Presion de Trabajo:";
-echo " " . $row['pro_presi_bar'] . "";
-echo "</br>";   
-echo "Longitud:";
-echo " " . $row['pro_long_m'] . "";
-echo "</br>";  
-echo "Precio:"; 
-echo " " . $row['pro_precio'] . "";
-echo "</br>";   
-echo "Stock:";
-echo " " . $row['pro_stock'] . "</br>";  
-echo "</br>";                 
-echo  "  </td>";              
-echo  "  <td class ='imagenproductos'>";
-    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
-    echo  "  </td>";
-  echo "  </tr>";
-
-
-echo "</table>";
-
-echo " <form id='formulario0' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
-echo" <div class='valoracio'>";
-echo" <input id='radio' type='radio' name='radio' value='1'>";
-echo " <label for='radio1'>&#9733</label>";
-
-echo" <input id='radio' type='radio' name='radio' value='2'>";
-echo "<label for='radio2'>&#9733</label>";
-
-echo" <input id='radio' type='radio' name='radio' value='3'>";
-echo"<label for='radio3'>&#9733</label>";
-
-echo"<input id='radio' type='radio' name='radio' value='4'>";
-echo"<label for='radio4'>&#9733</label>";
-
-echo"<input id='radio' type='radio' name='radio' value='5'>";
-echo" <label for='radio5'>&#9733</label>";
-echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
-
-echo "<p><input type='submit' value='Enviar datos'></p>";
-echo"</div>";
-echo"</form>";
-echo "</table>";  
-
-
-echo "</table>";  
-
-}     
-} else {
-
-echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
-
-}
-$conn->close();
-?>
-</section>
-
-
-<!--Script para las estrellas-->
-
-<!--Script para las estrellas-->
-<form  action="" method="GET" class="form_search"   >
-
-<div class='valoracion'>
-
-
-
-
-<!--Script para las estrellas-->
-
-
-<script>
-$('#Estrellas').starrr({
-rating:3,
-change:function(e,valor){
-alert(valor);
-
-}
-
-});
-
-</script>
-
-
-</form>
-
-
-<section class="video">
-<iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</section>
-<footer class="footernos">
-<br>
-&copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
-&#8226; Telefono: 074115436 <br/>
-&#8226; Celular: +593985633576 <br/>
-&#8226; Whatsapp: +593985633576 <br/>
-&#8226; Correo: importmanguerasiv@gmail.com 
-</footer>
-</body>
+        <section class="video">
+                <iframe width="1000" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <footer class="footernos">
+                <br>
+                &copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
+                &#8226; Telefono: 074115436 <br/>
+                &#8226; Celular: +593985633576 <br/>
+                &#8226; Whatsapp: +593985633576 <br/>
+                &#8226; Correo: importmanguerasiv@gmail.com 
+            </footer>
+    </body>
 </html>
