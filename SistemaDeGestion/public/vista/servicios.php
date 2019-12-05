@@ -10,16 +10,8 @@
     
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">-->
         
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-       <script src="js/bootstrap.min.js"></script>
-       <link href="css/pagina.css" rel=stylesheet/>
-    <script src="js/carrito.js"></script>
-       <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
-    
+      
+    <script src="js/carrito.js"></script>    
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
 

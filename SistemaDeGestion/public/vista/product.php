@@ -87,8 +87,12 @@
             $categoria = $row['cate_codigo'];
             $stock=$row['pro_stock'];
             $imagen=$row['pro_img'];
+<<<<<<< HEAD
             
             
+=======
+          
+>>>>>>> 0ec7c1ccd861cefd7b7e44b40841ef3f1b1e420d
         }
         //Stock
       /*  $sqlStock = "SELECT ps.pro_suc_stock FROM producto p, producto_sucursal ps, sucursal s
