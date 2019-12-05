@@ -7,12 +7,17 @@
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="../../css/formulario.css ">-->
+        <link type="text/css" rel="stylesheet" href="../../css/formulario.css ">
+        <link type="text/css" rel="stylesheet" href="../../css/registrar.css ">
+        
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
 
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
     
 </head>
 <body>
+
+
     <center> <a href="index.html"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a></center>
         <header class="cabecera">
                 <nav class="divmenu">
@@ -35,6 +40,7 @@
                 </nav>
             </header>
 <!-- públicidad-->
+
 <section class="seccion">
             <div class="social1">
                     <ul >
@@ -43,15 +49,9 @@
             </div>
         </section>
     <!-- ------- -->
-    
-    <section class="login">
- <br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br><br>    
-        <div class="loginboxe">
-    <form id="formulario011" method="POST" action="../../config/creacion_usuario.php" onsubmit="return validarCamposObligatorioss()">
+<br>
+        <div class="login-box">
+    <form id="formulario01" method="POST" action="../../config/creacion_usuario.php" onsubmit="return validarCamposObligatorioss()">
           
         <label for="cedula">Cedula (*)</label>
         <input type="text" maxlength="10" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."

@@ -18,6 +18,7 @@
     <script src="js/starrr.js"></script>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
+        <script type="text/javascript" src="../../public/vista/js/validacionusuario.js"></script>
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
        
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
@@ -58,11 +59,15 @@
         </section>
     <!-- ------- -->
         <br>
-        <section class="productos">
-                <h1 class="h1servicioss">PRODUCTOS</h1> 
+        <section class="productos">   
+
+
+               
                 <hr/>
-            Calificar: <span id="Estrellas"></span>
             <hr/>
+
+                <h1 class="h1servicioss">PRODUCTOS</h1> 
+                
                 <?php
                 include  '../../config/conexionBD.php';               
                $sql = "SELECT * FROM Producto";
@@ -97,38 +102,47 @@
                 echo "</br>";   
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
-                echo "</br>"; 
-
-                
-                echo  "  </td>";
-              
+                echo "</br>";                 
+                echo  "  </td>";              
                 echo  "  <td class ='imagenproductos'>";
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
                   echo "  </tr>";
+
+
                 echo "</table>";
                 
-                echo " <form action=''>";
+                echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
                echo" <div class='valoracion'>";
-            
-               echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
+               echo" <input id='radio' type='radio' name='radio' value='1'>";
                echo " <label for='radio1'>&#9733</label>";
             
-               echo" <input id='radio2' type='radio' name='estrellas' value='4'>";
+               echo" <input id='radio' type='radio' name='radio' value='2'>";
                 echo "<label for='radio2'>&#9733</label>";
             
-               echo" <input id='radio3' type='radio' name='estrellas' value='3'>";
+               echo" <input id='radio' type='radio' name='radio' value='3'>";
                 echo"<label for='radio3'>&#9733</label>";
             
-                echo"<input id='radio4' type='radio' name='estrellas' value='2'>";
+                echo"<input id='radio' type='radio' name='radio' value='4'>";
                 echo"<label for='radio4'>&#9733</label>";
             
-                echo"<input id='radio5' type='radio' name='estrellas' value='1'>";
-               echo" <label for='radio5'>&#9733</label>";
-                echo"</div>";
-                echo"</form>";
-                
+                echo"<input id='radio' type='radio' name='radio' value='5'>";
+                echo" <label for='radio5'>&#9733</label>";
+
+                echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
                
+                echo "<p><input type='submit' value='Enviar datos'></p>";
+
+
+                echo"</div>";
+                echo "<p><input type='submit' value='Enviar datos'></p>";
+                
+                echo"</form>";
+                echo "</table>";  
+
+
+                echo "</table>";  
+
                 }     
                 } else {
               
@@ -138,6 +152,7 @@
                 $conn->close();
                 ?>
         </section>
+<<<<<<< HEAD
         
            
            
@@ -155,6 +170,11 @@
     </script>
     
         
+=======
+
+
+
+>>>>>>> 3282982d532d84f62025876680f5384376b440e8
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>

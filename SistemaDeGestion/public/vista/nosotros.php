@@ -58,7 +58,7 @@
                     QUIENES SOMOS
                 
                 </h1>
-                <iframe id="videoYT" width="1170" height="500" src="https://www.youtube.com/embed/Y9RWAVsWOT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="videoYT" width="1000" height="500" src="https://www.youtube.com/embed/Y9RWAVsWOT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <p class="p1nosotros">
                 <img class="imanoso" src="../../../imagenes/Comercializar mangueras y marcas ,con estandar y certificaciones internacionales.png" alt="Import Mangueras"/> 
                 

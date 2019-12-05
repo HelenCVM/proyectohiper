@@ -3,10 +3,10 @@
 <head>
  <meta charset="UTF-8">
  <title>Iniciar sesión</title>
-        <!--<link type="text/css" rel="stylesheet" href="../../css/estilos.css">
+        <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
-        <link type="text/css" rel="stylesheet" href="../../css/registrar.css">-->
+        <link type="text/css" rel="stylesheet" href="../../css/registrar.css">
 
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
