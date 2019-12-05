@@ -112,7 +112,7 @@
 
                 echo "</table>";
                 
-                echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
+                echo " <form id='formulario0' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
                echo" <div class='valoracio'>";
                echo" <input id='radio' type='radio' name='radio' value='1'>";
                echo " <label for='radio1'>&#9733</label>";
@@ -128,7 +128,7 @@
             
                 echo"<input id='radio' type='radio' name='radio' value='5'>";
                 echo" <label for='radio5'>&#9733</label>";
-               
+                echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
                 echo "<p><input type='submit' value='Enviar datos'></p>";
                 echo"</div>";
                 echo"</form>";
