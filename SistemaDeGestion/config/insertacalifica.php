@@ -28,7 +28,7 @@ echo "<p class='error'> </p>";
 }
 //cerrar la base de datos
 $conn->close();
-echo "<a href='../public/login.html'>Regresar</a>";
+echo "<a href='../public/login.php'>Regresar</a>";
 ?>
 </body>
 </html>

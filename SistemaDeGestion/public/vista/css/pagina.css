@@ -264,9 +264,8 @@ background-size: 100%;
     float: none;
     padding: 3%;
     font-size: 200%;
-}
-
-
+}  
+/*-------------------*/
 .productos .produ .parrafo{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
@@ -296,9 +295,10 @@ background-size: 100%;
    }
 
  .imagenproductos{
-    padding: 1px 5px;
+    padding: 1px 15px;
 }
-/*-----------------*/
+
+/*----------------------------*/
 .produ .imagenproductos img{
     width: 200px;
     height: 200px;
@@ -324,9 +324,35 @@ background-size: 100%;
 .valoracion input:checked ~ label {
 color: #ffff00;
 text-shadow: 5px 5px 15px #AAA;
+cursor: pointer;
 
 }
+.mensajes input {
+    border: 0;
+}
 
+.produ{
+ background-image: url("../img/img8.jpg");
+ background-size: 100%;
+border-radius: 10px;
+}
+
+.productos{
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px ;
+    border: rgb(114, 56, 56) 3px inset;
+    
+}
+
+.video{
+    padding: 20px 0px;
+    border-bottom: 3px solid #5c5f96;
+}
+
+.perfil{
+    border-radius: 20px;
+ 
+}
 /*---------- login css estilos ----------*/
 
 .login-box{

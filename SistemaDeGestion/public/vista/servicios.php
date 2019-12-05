@@ -72,6 +72,7 @@
 
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
+<<<<<<< HEAD
                     while ($row = $result->fetch_assoc()) {
                         ?>
                 <article>
@@ -92,6 +93,65 @@
                     </div>
                 </article>
                 <?php
+=======
+               
+               while($row = $result->fetch_assoc()) {
+                echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
+                 echo "<tr>" ;
+                echo  "<td>";
+                echo "<h1 class='tituloTab'>". $row['pro_nombre'] ."</h1>"; 
+                echo "Marca:";
+                echo "" . $row['pro_marca'] ."";
+                echo "</br>";   
+                echo "Descripcion:";
+                echo "" . $row['pro_descripcion'] . ""; 
+                echo "</br>"; 
+                echo "Diametro Interno:";  
+                echo " " . $row['pro_dia_in'] . "";  
+                echo "</br>"; 
+                echo "Peso Teorico:";          
+                echo " " . $row['pro_peso_gm'] . "";
+                echo "</br>";   
+                echo "Presion de Trabajo:";
+                echo " " . $row['pro_presi_bar'] . "";
+                echo "</br>";   
+                echo "Longitud:";
+                echo " " . $row['pro_long_m'] . "";
+                echo "</br>";  
+                echo "Precio:"; 
+                echo " " . $row['pro_precio'] . "";
+                echo "</br>";   
+                echo "Stock:";
+                echo " " . $row['pro_stock'] . "</br>";  
+                echo "</br>";                 
+                echo  "  </td>";              
+                echo  "  <td class ='imagenproductos'>";
+                    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
+                    echo  "  </td>";
+                  echo "  </tr>";
+
+
+                echo "</table>";
+                
+               
+               
+
+
+               
+                
+                
+                echo"</form>";
+                echo "</table>";  
+
+
+                echo "</table>";  
+
+                }     
+                } else {
+              
+                echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
+                
+>>>>>>> 9696c67d636c91da1425572a3b3ddb8dbabdd442
                 }
             }
             $conn->close();
@@ -100,9 +160,29 @@
             </div>
         </section>
 
+<<<<<<< HEAD
     </div>
 
 
+=======
+        
+           
+           
+    </div>
+	<script>
+   $('#Estrellas').starrr({
+       rating:3,
+       change:function(e,valor){
+           alert(valor);
+           
+       }
+       
+   });
+    
+    </script>
+    
+        
+>>>>>>> 9696c67d636c91da1425572a3b3ddb8dbabdd442
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
