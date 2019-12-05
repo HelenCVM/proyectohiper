@@ -65,7 +65,8 @@ background-size: 100%;
    
    .divmenu ul li:hover {
     background:#5b78a7;
-   }
+ 
+}
 
 /* menu desplegable */
 
@@ -80,14 +81,15 @@ background-size: 100%;
    
    .divmenu ul ul li {
     float:none;
-    width:192px
+    width:190px;
    }
+
    
    /* enlaces de los items del menu desplegable */
    
    .divmenu ul ul a {
-    line-height:120%;
-    padding:10px 15px;
+    line-height:100%;
+    padding:5px 5px;
    }
    
    /* items del menu desplegable al pasar el ratón */
@@ -191,14 +193,21 @@ background-size: 100%;
         }
         
         /*css para cuando el cursor pase por las opciones del maenu */           
-        nav > ul :hover, nav > ul :active { 
+        nav > ul > li > ul > :hover, nav > ul > li> ul >  :active { 
             text-decoration: none; 
            /* background-color: #ce726c;*/
             /*border-radius: 9px;*/
             border-bottom: 3px solid #ce726c;
         	
             }
-
+            nav > ul >  :hover, nav > ul >    :active { 
+                text-decoration: none; 
+               /* background-color: #ce726c;*/
+                /*border-radius: 9px;*/
+                border-bottom: 3px solid #ce726c;
+                
+                }
+            /*-------------------------------------------------------*/
               .footernos {
                       
                     text-align: center;
