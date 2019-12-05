@@ -19,7 +19,7 @@
       <link rel="stylesheet" href="css/bootstrap.min.css">
        <script src="js/bootstrap.min.js"></script>
        <link href="css/starrr.css" rel=stylesheet/>
-       <script src="carrito.js"></script>
+       <script src="js/carrito.js"></script>
     <script src="js/starrr.js"></script>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
@@ -140,7 +140,7 @@
             
                     <div class="btns">
                         
-                        <button onclick="cartAdd('<?php echo $imagen; ?>',<?php echo $codigo; ?>,'<?php echo $nombre; ?>',<?php echo $precio; ?>,1)">
+                        <button onclick="cartAdd(<?php echo $codigo; ?>)">
                             <i class="fas fa-cart-plus"></i>
                             Agregar al carrito
                         </button>
