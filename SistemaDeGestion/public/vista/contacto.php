@@ -37,12 +37,15 @@
                     </nav>
                 </header>
                 
-                <div class="social">
-                        <ul >
-                                <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
-                               
-                            </ul>
-                </div>
+                  <!-- públicidad-->
+    <section class="seccion">
+            <div class="social1">
+                    <ul >
+                    <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
+                    </ul>       
+            </div>
+        </section>
+    <!-- ------- -->
 
                 <br>
                 <br>

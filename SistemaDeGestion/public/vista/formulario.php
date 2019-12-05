@@ -34,19 +34,22 @@
                     </ul>
                 </nav>
             </header>
-    <section class="login">
-            <div class="social">
+<!-- públicidad-->
+<section class="seccion">
+            <div class="social1">
                     <ul >
-                            <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
-                            
-                        </ul>
+                    <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
+                    </ul>       
             </div>
-
-            <br><br><br>
+        </section>
+    <!-- ------- -->
+    
+    <section class="login">
+ <br><br><br>
 <br><br><br>
 <br><br><br>
 <br><br><br>
-<br><br>    
+<br><br><br><br>    
         <div class="loginboxe">
     <form id="formulario011" method="POST" action="../../config/creacion_usuario.php" onsubmit="return validarCamposObligatorioss()">
           
