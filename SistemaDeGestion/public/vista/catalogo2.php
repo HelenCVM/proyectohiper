@@ -58,75 +58,54 @@
         </form>
 
 
- <h1>Productos</h1> 
-<section class="industriales" >
-
-    
-<table class="indus" >
- <tr>
-     
- <th></th>
- <th>Nombre</th>
- <th>Marca</th>
- <th>Descripcion</th>
- <th>Diametro interno</th>
- <th>Peso Teorico</th> 
- <th>Presion de Trabajo</th>
- <th>Longitud</th>
- <th>Precio</th>
- <th>Stock</th>
-
- </tr>                </tr>
  <tbody id="data">
-            <?php
-            include '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM Producto  where cate_codigo='8'";
-            $result = $conn->query($sql);
-            
-            if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-            echo "<tr>";
-                  
-            echo " <td>" . $row['pro_nombre'] ."</td>";
-            echo "</br>"; 
-            echo " <td>" . $row['pro_marca'] ."</td>";
-            echo "</br>"; 
-            echo " <td>" . $row['pro_descripcion'] . "</td>"; 
-            echo " <td>" . $row['pro_dia_in'] . "</td>";          
-            echo " <td>" . $row['pro_peso_gm'] . "</td>";
-            echo " <td>" . $row['pro_presi_bar'] . "</td>";
-            echo " <td>" . $row['pro_long_m'] . "</td>";
-            echo " <td>" . $row['pro_precio'] . "</td>";
-            echo " <td>" . $row['pro_stock'] . "</td>";            
-             echo " <td><img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' width=' 100px'
-                height=' 100px'></td>";
+ <div class="content">
+        <section>
+            <a href="#">
+                <h2>INDUSTRIALES</h2>
+            </a>
+            <div class="contentCards">
 
-               echo " <td> <a href='insertarC.php?codigo=" . $row['pro_codigo'] . "' data-pushbar-target='pushbar-carrito' >
-               <input type='button' class='comprarCarr' value='Comprar' />
-               </a> </td>";
-              
-            }     
-            } else {
-            echo "<tr>";
-            echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
-            echo "</tr>";
+                <?php
+                        include  '../../config/conexionBD.php';  
+                $sql="SELECT * FROM Producto where cate_codigo=10";
+
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                <article>
+                    <div class="contentImg">
+                        <div class="cardImg">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
+                     
+                        </div>
+                    </div>
+                    <div class="contentDescription">
+                        <div class="descripProduct">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>">
+                                <h2><?php echo $row['pro_nombre']; ?></h2>
+                            </a>
+                            <p><?php echo $row['pro_descripcion']; ?></p>
+                        </div>
+                        <span>$<?php echo $row['pro_precio']; ?></span>
+                       
+                    </div>
+                </article>
+                <?php
+                }
             }
             $conn->close();
             ?>
-            
+
+            </div>
+        </section>
+
+    </div>
             </tbody>
 
-            </table> 
-        </section>
-        <div class="ec-stars-wrapper">
-            <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-            <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-            <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-            <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-            <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-        </div>
-
-        <footer class="footernoso">
+           
+            <footer class="footernos">
                 &copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
                 &#8226; Telefono: 074115436 <br/>
                 &#8226; Celular: +593985633576 <br/>

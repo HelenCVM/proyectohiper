@@ -60,7 +60,9 @@
     <div class="content">
         <?php
         include  '../../config/conexionBD.php'; 
-        $sql="SELECT c.cate_codigo, p.pro_codigo, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_stock, p.pro_img
+        $sql="SELECT c.cate_codigo, p.pro_codigo, p.pro_nombre, p.pro_descripcion,p.pro_dia_in,p.pro_peso_gm,p.pro_presi_bar,p.pro_long_m,
+        p.pro_precio,
+         p.pro_stock, p.pro_img
         FROM Producto p, Categoria c
         WHERE p.pro_codigo=". $_GET['producto'] ." AND c.cate_codigo=p.cate_codigo;";
        /* $sql = "SELECT c.cat_id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_descuento
@@ -74,6 +76,12 @@
             $nombre = $row['pro_nombre'];
             $descripcion = $row['pro_descripcion'];
             $precio = $row['pro_precio'];
+
+            $diametro=$row['pro_dia_in'];
+            $peso=$row['pro_peso_gm'];
+            $presion=$row['pro_presi_bar'];
+            $longitud =$row['pro_long_m'];
+
 
             //$descuento = $row['pro_descuento'];
             $categoria = $row['cate_codigo'];
@@ -148,6 +156,29 @@ echo"</form>";
                 <h2><?php echo $nombre; ?></h2>
                 <h3>Descripcion</h3>
                 <p><?php echo $descripcion; ?></p>
+                    <div class ="restante">
+                    <table class="tablapro">      
+                        <tr>
+                        <td><h6>Diametro Interno:    </h6></td>
+                        <td><?php echo $diametro; ?></td>
+                        </tr>              
+                        <tr>
+                        <td><h6>Peso Teorico:     </h6>  </td>
+                        <td> <?php echo $peso; ?></td>
+                        </tr>
+                        <tr>
+                        <td><h6>Presion de Trabajo:     </h6></td>
+                        <td><?php echo $presion; ?> </td>
+                        </tr>
+                        <tr>
+                        <td><h6>Longitud:   </h6> </td>
+                        <td> <?php echo $longitud; ?></td>
+                        </tr>
+                        
+                    </table>
+                    </div>
+                    <br>
+
                 <span>$<?php echo $precio; ?></span>
                 <div class="dataStore">
 
