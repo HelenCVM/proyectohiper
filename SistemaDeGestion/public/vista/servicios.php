@@ -59,8 +59,7 @@
         </section>
     <!-- ------- -->
         <br>
-        <section class="productos">
-                <h1 class="h1servicioss">PRODUCTOS</h1>      
+        <section class="productos">   
 
                 <h1 class="h1servicioss">PRODUCTOS</h1> 
                 
