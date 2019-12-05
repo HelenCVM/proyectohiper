@@ -100,20 +100,13 @@
                 echo "</br>";   
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
-                echo "</br>"; 
-
-                
-                echo  "  </td>";
-              
+                echo "</br>";                 
+                echo  "  </td>";              
                 echo  "  <td class ='imagenproductos'>";
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
                   echo "  </tr>";
-                echo "</table>";
-                
-               
-                
-               
+                echo "</table>";  
                 }     
                 } else {
               
@@ -123,6 +116,7 @@
                 $conn->close();
                 ?>
         </section>
+<!--Script para las estrellas-->
 <form  action="" method="GET" class="form_search"   >
 
 <div class='valoracion'>
@@ -142,55 +136,9 @@
 </form>
 
 
+<!--Script para las estrellas-->
+     
 
-<script>
-    function ShowHideDiv(x){
-    var chkYes = document.getElementById ( "radio1" );
-    console.log("ya");
-    if (window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest();
-    } else {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-        }
-    };
-    if(x==1){
-        x=1;
-        
-        console.log("pakajsn");
-        console.log(x);
-    xmlhttp.open("GET", "../vista/phpajax/insertarestrellas.php?keyy=" +x, true);
-        xmlhttp.send();
-    }else if( x==2)
-    {
-        x=2;
-        console.log(x);
-        xmlhttp.open("GET", "../vista/phpajax/insertarestrellas.php?keyy=" +x, true);
-        xmlhttp.send();    
-    console.log("2")
-    } else if( x==3){
-        
-    console.log("3")
-    } else if (x==4)
-    {
-        
-    console.log("4")
-    }
-    else if (x==5){
-
-        console.log("5")
-    }
-
-        
-    }
-</script>
-
-        
-           
-           
-    </div>
 	<script>
    $('#Estrellas').starrr({
        rating:3,
