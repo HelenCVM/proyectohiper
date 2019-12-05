@@ -438,12 +438,12 @@ border-radius: 20px;
 }
 
 .columna1{
-    padding: 200px 30px;
-    position: static;
+    padding: 0px 30px;
+    
 }
 
 .columna2{
-    padding: 100px 20px;
+    padding: 50px 20px;
 }
 
  .enviar{
