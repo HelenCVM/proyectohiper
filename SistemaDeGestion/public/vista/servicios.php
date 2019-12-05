@@ -114,29 +114,28 @@
                 
                 echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
                echo" <div class='valoracion'>";
-               echo" <input id='radio' type='radio' name='radio' value='1'>";
-               echo " <label for='radio1'>&#9733</label>";
-            
-               echo" <input id='radio' type='radio' name='radio' value='2'>";
-                echo "<label for='radio2'>&#9733</label>";
-            
-               echo" <input id='radio' type='radio' name='radio' value='3'>";
-                echo"<label for='radio3'>&#9733</label>";
-            
-                echo"<input id='radio' type='radio' name='radio' value='4'>";
-                echo"<label for='radio4'>&#9733</label>";
-            
-                echo"<input id='radio' type='radio' name='radio' value='5'>";
-                echo" <label for='radio5'>&#9733</label>";
-
-                echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
                
-                echo "<p><input type='submit' value='Enviar datos'></p>";
+               echo " <label for='radio1'>&#9733</label>";
+               echo" <input id='radio' type='radio' name='radio1' value='1'>";
+            
+               echo "<label for='radio2'>&#9733</label>";
+               echo" <input id='radio' type='radio' name='radio' value='2'>";
+            
+               echo"<label for='radio3'>&#9733</label>";
+               echo" <input id='radio' type='radio' name='radio' value='3'>";
 
-
-                echo"</div>";
-                echo "<p><input type='submit' value='Enviar datos'></p>";
                 
+               echo"<label for='radio4'>&#9733</label>";
+                echo"<input id='radio' type='radio' name='radio' value='4'>";
+            
+                
+                echo" <label for='radio5'>&#9733</label>";
+                echo"<input id='radio' type='radio' name='radio' value='5'>";
+                echo"</div>";
+                echo"<div class='mensajes'>";
+                echo"<input type='text' id='mensaje'  name='mensaje' value=' ' placeholder='Ingrese su comentario'>";            
+                echo "<p><input type='submit' value='Enviar datos'></p>";
+                echo"</div>";
                 echo"</form>";
                 echo "</table>";  
 
