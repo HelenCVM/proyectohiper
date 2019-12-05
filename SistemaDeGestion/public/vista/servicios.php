@@ -59,26 +59,46 @@
         </section>
     <!-- ------- -->
         <br>
-        <section class="productos">   
+        <div class="content">
+        <section>
+            <a href="#">
+                <h2>Ultimos productos</h2>
+            </a>
+            <div class="contentCards">
 
-
-               
-                <hr/>
-            <hr/>
-
-                <h1 class="h1servicioss">PRODUCTOS</h1> 
-                
                 <?php
-                include  '../../config/conexionBD.php';               
-               $sql = "SELECT * FROM Producto";
+                        include  '../../config/conexionBD.php';  
+                $sql="SELECT pro.pro_nombre,pro.pro_codigo,pro.pro_descripcion, pro.pro_precio, pro.pro_img FROM Producto pro WHERE pro.pro_eliminado='N'  GROUP BY pro.pro_codigo ORDER BY 1 DESC limit 8;";
+
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
+
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                <article>
+                    <div class="contentImg">
+                        <div class="cardImg">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
+                     
+                        </div>
+                    </div>
+                    <div class="contentDescription">
+                        <div class="descripProduct">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>">
+                                <h2><?php echo $row['pro_nombre']; ?></h2>
+                            </a>
+                            <p><?php echo $row['pro_descripcion']; ?></p>
+                        </div>
+                        <span>$<?php echo $row['pro_precio']; ?></span>
+                    </div>
+                </article>
+                <?php
+
                
                while($row = $result->fetch_assoc()) {
                 echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
-                
+                 echo "<tr>" ;
                 echo  "<td>";
-                echo "<tr>" ;
                 echo "<h1 class='tituloTab'>". $row['pro_nombre'] ."</h1>"; 
                 echo "Marca:";
                 echo "" . $row['pro_marca'] ."";
@@ -112,32 +132,7 @@
                   echo "  </tr>";
 
 
-                echo "</table>";
-                
-                echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
-               echo" <div class='valoracio'>";
-               
-               echo " <label for='radio1'>&#9733</label>";
-               echo" <input id='radio' type='radio' name='radio1' value='1'>";
-            
-               echo "<label for='radio2'>&#9733</label>";
-               echo" <input id='radio' type='radio' name='radio' value='2'>";
-            
-               echo"<label for='radio3'>&#9733</label>";
-               echo" <input id='radio' type='radio' name='radio' value='3'>";
-
-                
-               echo"<label for='radio4'>&#9733</label>";
-                echo"<input id='radio' type='radio' name='radio' value='4'>";
-            
-                
-                echo" <label for='radio5'>&#9733</label>";
-                echo"<input id='radio' type='radio' name='radio' value='5'>";
-                echo"</div>";
-                echo"<div class='mensajes'>";
-                echo"<input type='text' id='mensaje'  name='mensaje' value=' ' placeholder='Ingrese su comentario'>";            
-                echo "<p><input type='submit' value='Enviar datos'></p>";
-                echo"</div>";
+                echo "</table>";        
                 echo"</form>";
                 echo "</table>";  
 
@@ -149,21 +144,18 @@
               
                 echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
                 
+
                 }
-                $conn->close();
-                ?>
+            }
+            $conn->close();
+            ?>
+
+            </div>
         </section>
-<<<<<<< HEAD
+
+    </div>
 
 
-
-=======
-        
-           
-           
-
-        
->>>>>>> 74f553ff87528820c68b4df52127d6eba244948f
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
