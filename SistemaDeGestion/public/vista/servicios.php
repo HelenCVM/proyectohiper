@@ -64,6 +64,10 @@
 
                
                 <hr/>
+<<<<<<< HEAD
+=======
+            Calificar: <span id="Estrellas"></span>
+>>>>>>> 2934e00a6b69ff87a39ec8b408f11acadc230793
             <hr/>
                 <?php
                 include  '../../config/conexionBD.php';               
@@ -99,14 +103,13 @@
                 echo "</br>";   
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
-                echo "</br>"; 
-                
-                echo  "  </td>";
-              
+                echo "</br>";                 
+                echo  "  </td>";              
                 echo  "  <td class ='imagenproductos'>";
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
                   echo "  </tr>";
+<<<<<<< HEAD
                 echo "</table>";
                 
                 echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
@@ -133,6 +136,9 @@
                 
                 
                
+=======
+                echo "</table>";  
+>>>>>>> 2934e00a6b69ff87a39ec8b408f11acadc230793
                 }     
                 } else {
               
@@ -142,57 +148,32 @@
                 $conn->close();
                 ?>
         </section>
+<<<<<<< HEAD
+=======
+<!--Script para las estrellas-->
+<form  action="" method="GET" class="form_search"   >
+
+<div class='valoracion'>
+<input id='radio5' type='radio' name='estrellas' onclick="ShowHideDiv(5)" >
+<label for='radio5'>&#9733</label>
+<input id='radio4' type='radio' name='estrellas' onclick="ShowHideDiv(4)" >
+<label for='radio4'>&#9733</label>
+<input id='radio3' type='radio' name='estrellas' onclick="ShowHideDiv(3)" >
+<label for='radio3'>&#9733</label>
+<input id='radio2' type='radio' name='estrellass' onclick="ShowHideDiv(2)"/>
+ <label for='radio2'>&#9733</label>
+<input id='radio1' type='radio' name='estrellas' onclick="ShowHideDiv(1)" >
+<label for='radio1'>&#9733</label>
+
+</div>
+
+</form>
+>>>>>>> 2934e00a6b69ff87a39ec8b408f11acadc230793
 
 
+<!--Script para las estrellas-->
+     
 
-<script>
-    function ShowHideDiv(x){
-    var chkYes = document.getElementById ( "radio1" );
-    console.log("ya");
-    if (window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest();
-    } else {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-        }
-    };
-    if(x==1){
-        x=1;
-        
-        console.log("pakajsn");
-        console.log(x);
-    xmlhttp.open("GET", "../vista/phpajax/insertarestrellas.php?keyy=" +x, true);
-        xmlhttp.send();
-    }else if( x==2)
-    {
-        x=2;
-        console.log(x);
-        xmlhttp.open("GET", "../vista/phpajax/insertarestrellas.php?keyy=" +x, true);
-        xmlhttp.send();    
-    console.log("2")
-    } else if( x==3){
-        
-    console.log("3")
-    } else if (x==4)
-    {
-        
-    console.log("4")
-    }
-    else if (x==5){
-
-        console.log("5")
-    }
-
-        
-    }
-</script>
-
-        
-           
-           
-    </div>
 	<script>
    $('#Estrellas').starrr({
        rating:3,
