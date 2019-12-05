@@ -9,8 +9,12 @@
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">-->
         <a class="cerrarindex" href="../../config/cerrar_sesion.php">Cerrar sesion</a>
-        <script type="text/javascript" src="js/ajaxC2.js"></script>
-        
+        <link rel="stylesheet" href="css/pushbar.css">
+        <!--<link type="text/css" rel="stylesheet" href="../../css/estilos.css"> 
+        <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
+        <link type="text/css" rel="stylesheet" href="style.css"> -->
+
+        <script type="text/javascript" src="js/ajaxC1.js"></script>
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
 
     </head>
@@ -28,9 +32,9 @@ $codigo = $_GET["variable1"];
                 <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
                 <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
                 <ul>
-                                    <li> <a href="catalogo1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
-                                    <li> <a href="catalogo2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
-                                    <li> <a href="catalogo3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
+                                    <li> <a href="catalogousuario1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="catalogousuario2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
+                                    <li> <a href="catalogousuario3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
                         </ul>
               </li>
                 <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
@@ -88,7 +92,7 @@ $codigo = $_GET["variable1"];
  <tbody id="data">
             <?php
             include '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM Producto  where cate_codigo='8'";
+            $sql = "SELECT * FROM Producto  where cate_codigo=8";
             $result = $conn->query($sql);
             
             if ($result->num_rows > 0) {
@@ -126,13 +130,7 @@ $codigo = $_GET["variable1"];
 
             </table> 
         </section>
-        <div class="ec-stars-wrapper">
-            <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-            <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-            <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-            <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-            <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-        </div>
+       
 
         <footer class="footernoso">
                 &copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
