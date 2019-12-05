@@ -18,7 +18,7 @@
     <script src="js/starrr.js"></script>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
-        <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
+        <script type="text/javascript" src="../../public/vista/js/validacionusuario.js"></script>
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
 
     </head>
@@ -58,8 +58,7 @@
     <!-- ------- -->
         <br>
         <section class="productos">
-                <h1 class="h1servicioss">PRODUCTOS</h1> 
-     
+                <h1 class="h1servicioss">PRODUCTOS</h1>      
                 <?php
                 include  '../../config/conexionBD.php';               
                $sql = "SELECT * FROM Producto";
@@ -105,26 +104,7 @@
                 echo "  </tr>";
                 echo "</table>";
                 
-                echo " <form action=''>";
-
-               echo" <div class='valoracion'>";
-            
-               echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
-               echo " <label for='radio1'>&#9733</label>";
-            
-               echo" <input id='radio2' type='radio' name='estrellas' value='4'>";
-                echo "<label for='radio2'>&#9733</label>";
-            
-               echo" <input id='radio3' type='radio' name='estrellas' value='3'>";
-                echo"<label for='radio3'>&#9733</label>";
-            
-                echo"<input id='radio4' type='radio' name='estrellas' value='2'>";
-                echo"<label for='radio4'>&#9733</label>";
-            
-                echo"<input id='radio5' type='radio' name='estrellas' value='1'>";
-               echo" <label for='radio5'>&#9733</label>";
-                echo"</div>";
-                echo"</form>";
+               
                 
                
                 }     
@@ -136,6 +116,70 @@
                 $conn->close();
                 ?>
         </section>
+<form  action="" method="GET" class="form_search"   >
+
+<div class='valoracion'>
+<input id='radio5' type='radio' name='estrellas' onclick="ShowHideDiv(5)" >
+<label for='radio5'>&#9733</label>
+<input id='radio4' type='radio' name='estrellas' onclick="ShowHideDiv(4)" >
+<label for='radio4'>&#9733</label>
+<input id='radio3' type='radio' name='estrellas' onclick="ShowHideDiv(3)" >
+<label for='radio3'>&#9733</label>
+<input id='radio2' type='radio' name='estrellass' onclick="ShowHideDiv(2)"/>
+ <label for='radio2'>&#9733</label>
+<input id='radio1' type='radio' name='estrellas' onclick="ShowHideDiv(1)" >
+<label for='radio1'>&#9733</label>
+
+</div>
+
+</form>
+
+
+
+<script>
+    function ShowHideDiv(x){
+    var chkYes = document.getElementById ( "radio1" );
+    console.log("ya");
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        }
+    };
+    if(x==1){
+        x=1;
+        
+        console.log("pakajsn");
+        console.log(x);
+    xmlhttp.open("GET", "../vista/phpajax/insertarestrellas.php?keyy=" +x, true);
+        xmlhttp.send();
+    }else if( x==2)
+    {
+        x=2;
+        console.log(x);
+        xmlhttp.open("GET", "../vista/phpajax/insertarestrellas.php?keyy=" +x, true);
+        xmlhttp.send();    
+    console.log("2")
+    } else if( x==3){
+        
+    console.log("3")
+    } else if (x==4)
+    {
+        
+    console.log("4")
+    }
+    else if (x==5){
+
+        console.log("5")
+    }
+
+        
+    }
+</script>
+
         
             </p>
             <hr/>
