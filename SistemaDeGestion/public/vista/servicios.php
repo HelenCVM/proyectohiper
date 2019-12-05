@@ -17,7 +17,7 @@
       <link rel="stylesheet" href="css/bootstrap.min.css">
        <script src="js/bootstrap.min.js"></script>
        <link href="css/pagina.css" rel=stylesheet/>
-    <script src="js/starrr.js"></script>
+    <script src="js/carrito.js"></script>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
