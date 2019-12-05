@@ -112,8 +112,8 @@
 
                 echo "</table>";
                 
-                echo " <form id='formulario0' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
-               echo" <div class='valoracio'>";
+                echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
+               echo" <div class='valoracion'>";
                echo" <input id='radio' type='radio' name='radio' value='1'>";
                echo " <label for='radio1'>&#9733</label>";
             
@@ -128,10 +128,15 @@
             
                 echo"<input id='radio' type='radio' name='radio' value='5'>";
                 echo" <label for='radio5'>&#9733</label>";
+<<<<<<< HEAD
                 echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
                
                 echo "<p><input type='submit' value='Enviar datos'></p>";
+=======
+>>>>>>> b71cd91916dec3edc05419e94ec494183df1fc7e
                 echo"</div>";
+                echo "<p><input type='submit' value='Enviar datos'></p>";
+                
                 echo"</form>";
                 echo "</table>";  
 
@@ -148,34 +153,6 @@
                 ?>
         </section>
 
-
-<!--Script para las estrellas-->
-
-<!--Script para las estrellas-->
-<form  action="" method="GET" class="form_search"   >
-
-<div class='valoracion'>
-
-
-
-
-<!--Script para las estrellas-->
-     
-
-	<script>
-   $('#Estrellas').starrr({
-       rating:3,
-       change:function(e,valor){
-           alert(valor);
-           
-       }
-       
-   });
-    
-    </script>
-    
-
-</form>
 
 
         <section class="video">
