@@ -438,12 +438,12 @@ border-radius: 20px;
 }
 
 .columna1{
-    padding: 200px 30px;
-    position: static;
+    padding: 0px 30px;
+    
 }
 
 .columna2{
-    padding: 100px 20px;
+    padding: 50px 20px;
 }
 
  .enviar{
@@ -519,3 +519,105 @@ border-radius: 20px;
 }
 
 /*-----------------------------------------*/
+
+/*-----CARDS-------*/
+.content section {
+    margin-top: 2em;
+}
+.content section>a{
+    text-decoration: none;
+    
+}
+.content section>a>h2{
+    margin: 1.5em 0;
+    color: var(--colorDark);
+    font-size: 2em;  
+}.content section>h2{
+    margin: 1.5em 0;
+    color: var(--colorDark);
+    font-size: 2em;  
+}
+.content .contentCards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 15px;
+}
+.content section article{
+    background-color: var(--colorBlanco); 
+}
+.content .contentCards article{
+    margin-top: 20px;
+}
+article .contentImg{
+    width: 100%;
+    position: relative;
+}
+article .contentImg img{
+    width: 100%;
+}
+article .contentImg img:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+article .contentImg>span{
+    background: var(--colorRojo);
+    width: 5em;
+    font-size: .6em;
+    text-align: center;
+    border-radius: 20px;
+    padding: .5em 0;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+article .contentImg>span:hover{
+    color: var(--colorBlanco)
+}
+article .contentImg .ranking{
+    position: absolute;
+    top: .5em;
+    right: 1em;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+    padding: 0px 5px;
+    border-radius: 20px;
+}
+article .contentImg .ranking i{
+    color: #FFCA83;
+    font-size: 1.3em;
+}
+article .contentImg .ranking span{
+    color: var(--colorBlanco);
+    font-size: 1.1em;
+}
+article .contentImg .rankingi:hover{
+    cursor: pointer;
+}
+article .contentDescription{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 1em;
+    
+}
+article .contentDescription .descripProduct{
+    margin: 0 1em;
+}
+article .contentDescription .descripProduct a{
+    text-decoration: none;
+    color: var(--colorDark);
+}
+article .contentDescription .descripProduct a h2{
+    font-size: 1.3em;
+}
+article .contentDescription .descripProduct p{
+    overflow: hidden;
+    height: 1.5em;
+    font-size: .7em;
+    color: var(--color1);
+    opacity: .5;
+}
+article .contentDescription span{
+    color: var(--colorAzul);
+    font-size: 1.4em;
+}
