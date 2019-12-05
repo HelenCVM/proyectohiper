@@ -39,7 +39,7 @@
   <section class="seccion">
             <div class="social1">
                     <ul >
-                    <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
+                    <img id="iconmenu"src="img/img10.png"></a></li> 
                     </ul>       
             </div>
         </section>
