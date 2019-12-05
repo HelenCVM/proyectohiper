@@ -80,15 +80,33 @@
         />
         <span id="mensajeApellido" class="error"></span>        
      
+        <?php
+     include '../../config/conexionBD.php';
+     $sql = "SELECT pro_codigo,pro_nombre FROM Provincia";
+     $result = $conn->query($sql);
+     ?>
+      <div> Seleccione una provincia:<select id="cbx_provincia" name="cbx_provincia">
+         <option id ="codigopro" value="0">Seleccionar provincia</option>
+         <?php while($row =$result->fetch_assoc()) { ?>
+          <option value="<?php echo $row['pro_codigo']; ?>"><?php echo $row['pro_nombre']; ?></option>
+         <?php } ?>
+         <br>
+
+         <?php
+     include '../../config/conexionBD.php';
+     $sql = "SELECT pro_codigo,pro_nombre FROM Provincia";
+     $result = $conn->query($sql);
+     ?>
+      <div> Seleccione una provincia:<select id="cbx_provincia" name="cbx_provincia">
+         <option id ="codigopro" value="0">Seleccionar provincia</option>
+         <?php while($row =$result->fetch_assoc()) { ?>
+          <option value="<?php echo $row['pro_codigo']; ?>"><?php echo $row['pro_nombre']; ?></option>
+         <?php } ?>
 
         <br>
         <label for="fechanaci">Fecha de nacimiento (*)</label>
-        <input type="text" id="fechanaci" name="fechanaci" value="" placeholder="Ingrese su dirección ..." 
-        
-       />
-       <span id="mensajeFecha" class="error"></span>        
-     
-
+        <input type="text" id="fechanaci" name="fechanaci" value="" placeholder="Ingrese su dirección ..." />
+        <span id="mensajeFecha" class="error"></span>        
         <br>
 
         <label for="telefono">Teléfono (*)</label>
