@@ -4,22 +4,41 @@
 <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <meta name="keywords" content="manguera, importación, import"/>
-        <link type="text/css" rel="stylesheet" href="../../../public/vista/style.css">
-        <link type="text/css" rel="stylesheet" href="../../../css/estiloresu.css">
+        
         <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="../../../public/vista/css/swiper.min.css">
-        <link type="text/css" rel="stylesheet" href="../../../css/estilos.css">
+       
         <!-- Swiper JS -->
-        <script src="../../../public/vista/js/swiper.min.js"></script>
+        <link rel="stylesheet" href="../../../public/vista/css/pagina.css">
+       
        
         <title>Inicio</title>
         <a class="cerrarindex" href="../../../config/cerrar_sesion.php">Cerrar sesion</a>
     </head> 
  
 <body> 
+<?php  
+include '../../../config/conexionBD.php';       
+$codigo = $_GET["variable1"];
+?> 
 <header class="cabecera">   
            <a href="indexusuario.php"><img src="../../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
-            
+           <nav class="divmenu">
+                    <ul class="menunavegador">
+                <li><a href="../../../public/vista/indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                <li><a href="../../../public/vista/nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                <li><a href="../../../public/vista/serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
+                <ul>
+                                    <li> <a href="../../../public/vista/catalogousuario1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="../../../public/vista/catalogousuario2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
+                                    <li> <a href="../../../public/vista/catalogousuario3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
+                        </ul>
+              </li>
+                <li><a href="../../../public/vista/contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
+                <li><a href="../../../public/vista/cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li> 
+               
+
+              </ul>
+                    </nav>
    </header>
    <section>
        <article class="indexabout">
@@ -30,7 +49,7 @@
                            </ul>
                </div>
                
-         
+               
            
        </article>
    </section>
@@ -39,9 +58,12 @@
    <!--transicion de las imagenes -->
    <center><section class="transcicion">
 
- 
+   <p class="bienvenida"> 
+        <?php echo "BIENVENIDA " ?>
+        <?php echo $codigo ?>
+       </p>
 <?php         
-$codigo = $_GET["codigo"];             
+$codigo = $_GET["variable1"];             
 ?> 
  
     <form class="formulario01" method="POST" action="../../controladores/usuario/cambiar_contrasena.php">                  

@@ -8,7 +8,7 @@
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css"> -->
         <!-- Link Swiper's CSS -->
         <a class="cerrarindex" href="../../config/cerrar_sesion.php">Cerrar sesion</a>
-        <link rel="stylesheet" href="css/swiper.min.css">
+    
         <link rel="stylesheet" href="css/pagina.css">
          <!--<link type="text/css" rel="stylesheet" href="../../css/estilos.css">-->
 
@@ -97,9 +97,9 @@ if ($result->num_rows > 0) {
         echo " <td>" . $row["usu_fecha_nacimiento"] . "</td>";
         echo " <td>" . $row["usu_telefono"] . "</td>";
         echo " <td>" . $row["usu_correo"] . "</td>";
-        echo " <td> <a href='../../admin/vista/usuario/eliminar.php?codigo=" . $row['usu_codigo'] . "'> E </a> </td>";
-        echo " <td> <a href='../../admin/vista/usuario/modificar.php?codigo=" . $row['usu_codigo'] . "'> M </a> </td>";
-        echo " <td> <a href='../../admin/sssvista/usuario/cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'> CC</a> </td>";
+        echo " <td> <a href='../../admin/vista/usuario/eliminar.php?variable1=" . $row['usu_nombres'] . "'> E </a> </td>";
+        echo " <td> <a href='../../admin/vista/usuario/modificar.php?variable1=" . $row['usu_nombres'] . "'> M </a> </td>";
+        echo " <td> <a href='../../admin/vista/usuario/cambiar_contrasena.php?variable1=" . $row['usu_nombres'] . "'> CC</a> </td>";
         echo "</tr>";
     
 }

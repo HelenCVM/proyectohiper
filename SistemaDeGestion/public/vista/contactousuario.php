@@ -14,7 +14,10 @@
         
     </head>
     <body>
-
+    <?php  
+include '../../config/conexionBD.php';       
+$codigo = $_GET["variable1"];
+?> 
     <center><a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a></center>
             <header class="cabecera">
                     <nav class="divmenu">
@@ -43,6 +46,10 @@
                     <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
                     </ul>       
             </div>
+            <p class="bienvenida"> 
+        <?php echo "BIENVENIDA " ?>
+        <?php echo $codigo ?>
+       </p>
         </section>
     <!-- ------- -->
 
