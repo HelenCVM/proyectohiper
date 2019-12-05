@@ -87,28 +87,7 @@
             $categoria = $row['cate_codigo'];
             $stock=$row['pro_stock'];
             $imagen=$row['pro_img'];
-            
-            echo " <form id='formulario0' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
-echo" <div class='valoracio'>";
-echo" <input id='radio' type='radio' name='radio' value='1'>";
-echo " <label for='radio1'>&#9733</label>";
-
-echo" <input id='radio' type='radio' name='radio' value='2'>";
-echo "<label for='radio2'>&#9733</label>";
-
-echo" <input id='radio' type='radio' name='radio' value='3'>";
-echo"<label for='radio3'>&#9733</label>";
-
-echo"<input id='radio' type='radio' name='radio' value='4'>";
-echo"<label for='radio4'>&#9733</label>";
-
-echo"<input id='radio' type='radio' name='radio' value='5'>";
-echo" <label for='radio5'>&#9733</label>";
-echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
-
-echo "<p><input type='submit' value='Enviar datos'></p>";
-echo"</div>";
-echo"</form>";
+          
         }
         //Stock
       /*  $sqlStock = "SELECT ps.pro_suc_stock FROM producto p, producto_sucursal ps, sucursal s
