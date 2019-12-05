@@ -1,6 +1,6 @@
 <?php
 $servername = "34.70.4.57:3389";
-$database = "importmanguerasiv";
+$database = "mangueras";
 $username = "root";
 $password = "importamangueras2019@";
 // Create connection
