@@ -3,98 +3,143 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="keywords" content="manguera, importación, import"/>
-        <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <title>Servicio</title>
-        <a class="cerrarindex" href="../../config/cerrar_sesion.php">Cerrar sesion</a>
+       <!-- <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">
-        <link type="text/css" rel="stylesheet" href="style.css">
-   
+        <link type="text/css" rel="stylesheet" href="style.css">-->
+        
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+       <script src="js/bootstrap.min.js"></script>
+       <link href="css/starrr.css" rel=stylesheet/>
+    <script src="js/starrr.js"></script>
+       <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    
+        <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/pagina.css">
 
     </head>
     <body>
-    <?php  
+        <?php  
 include '../../config/conexionBD.php';       
 $codigo = $_GET["variable1"];
-?> 
-            <header class="cabecera">
-                    
-                    <ul class="menunavegador">
-                            <a href="indexusuario.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a>
-                            <hr color="slategrey" >
-                        <li><a href="indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
-                        <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
-                        <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a></li>
-                        <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS</a></li>                                       
-                        <li><a href="cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li> 
-                    </ul>
-                </header>
-                
-        </header>
-        
 
-        <section class="productos">
-        <p class="bienvenida"> 
+?> 
+    <center><a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a><center>
+
+            <header class="cabecera">
+                <nav class="divmenu">
+                    <ul class="menunavegador">
+                        
+                <li><a href="indexusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon1.png"> INICIO</a></li> 
+                <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
+                <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
+                <ul>
+                                    <li> <a href="catalogo1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="catalogo2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
+                                    <li> <a href="catalogo3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
+                        </ul>
+                        </li>
+                <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
+                <li><a href="cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li> 
+                    </ul>
+                    </nav>
+                </header>
+
+              <!-- públicidad-->
+    <section class="seccion">
+            <div class="social1">
+                    <ul >
+                    <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"><img id="iconmenu"src="img/img10.png"></a></li> 
+                    </ul>       
+            </div>
+            <p class="bienvenida"> 
         <?php echo "BIENVENIDA " ?>
         <?php echo $codigo ?>
        </p>
+        </section>
+    <!-- ------- -->
+        <br>
+        <section class="productos">
                 <h1 class="h1servicioss">PRODUCTOS</h1> 
-                <div class="social">
-                        <ul >
-                        <li><a href="https://www.facebook.com/importIdrovo/" class="icon-facebook2"></a></li> 
-                                    
-                            </ul>
-                </div>
+     
+                <?php
+                include  '../../config/conexionBD.php';               
+               $sql = "SELECT * FROM Producto";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
                
-            <table class="produ">
-                <tr>
-                    <th> <a href="../../public/vista/catalogo1.php"> <img src="../../../imagenes/catalogo1.jpg"  alt=""></a></th>
-                    <th class="parrafo"><h1>MANGUERAS HIDRAULICAS</h1>
-                        <p>
-                                Mangueras para alta presión de 2000 
-                                psi a 10000 psi  con alma en acero.
-                        </p>
-                    </th>
-                </tr>
-                <br>
-                <tr>
-                    <th> <a href="../../public/vista/catalogo2.php"> <img src="../../../imagenes/catalogo2.png" alt=""></a></th>
-                    <th><h1>MANGERAS INDUSTRIALES</h1>
-                            <p>
-                                    Estamos comprometidos en aumentar la vida útil de sus activos productivos, 
-                                    reducir sus consumos de energía en los procesos y mejorar la disponibilidad
-                                    de su maquinaria. Para esto contamos con productos de las
-                                     mejores marcas del mercado, personal certificado y servicios de confiabilidad.
-                            </p>
-                    </th>
-                </tr>
-                <br>
-                <tr> 
-                    <th><a href="../../public/vista/catalogo3.php"> <img src="../../../imagenes/catalogo3.jpg"    alt=""></a></th> 
-                    <th><h1>MANGUERAS PARA ALTA TEMPERATURA</h1>
-                    <p> La manguera de alta temperatura de Ecoosi está hecha de manguera de 
-                        tela de fibra de vidrio recubierta de silicona de doble capa que se 
-                        fricciona mecánicamente en un proceso continuo. El uso de herramientas
-                         duraderas y resistentes al calor es esencial cuando se manejan aplicaciones
-                          que requieren ventilación y aire caliente. El uso de una manguera de alta 
-                        temperatura adecuada es rentable, mejora la productividad y maximiza la seguridad.</p>
-                    </th>
-                </tr>
+               while($row = $result->fetch_assoc()) {
+                echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
+                 echo "<tr>" ;
+                echo  "<td>";
+                echo "<h1>". $row['pro_nombre'] ."</h1>"; 
+                echo "Marca:";
+                echo "" . $row['pro_marca'] ."";
+                echo "</br>";   
+                echo "Descripcion:";
+                echo "" . $row['pro_descripcion'] . ""; 
+                echo "</br>"; 
+                echo "Diametro Interno:";  
+                echo " " . $row['pro_dia_in'] . "";  
+                echo "</br>"; 
+                echo "Peso Teorico:";          
+                echo " " . $row['pro_peso_gm'] . "";
+                echo "</br>";   
+                echo "Presion de Trabajo:";
+                echo " " . $row['pro_presi_bar'] . "";
+                echo "</br>";   
+                echo "Longitud:";
+                echo " " . $row['pro_long_m'] . "";
+                echo "</br>";  
+                echo "Precio:"; 
+                echo " " . $row['pro_precio'] . "";
+                echo "</br>";   
+                echo "Stock:";
+                echo " " . $row['pro_stock'] . "</br>";  
+                echo "</br>"; 
 
-            </table>
+                
+                echo  "  </td>";
+              
+                echo  "  <td class ='imagenproductos'>";
+                    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' >";
+                    echo  "  </td>";
+                echo "  </tr>";
+                echo " <form action=''>";
 
-
-
+               echo" <div class='valoracion'>";
+                echo "</table>";
+               echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
+               echo " <label for='radio1'>&#9733</label>";
+            
+               echo" <input id='radio2' type='radio' name='estrellas' value='4'>";
+                /*<label for="radio2">&#9733</label>
+            
+                <input id="radio3" type="radio" name="estrellas" value="3">
+                <label for="radio3">&#9733</label>
+            
+                <input id="radio4" type="radio" name="estrellas" value="2">
+                <label for="radio4">&#9733</label>
+            
+                <input id="radio5" type="radio" name="estrellas" value="1">
+                <label for="radio5">&#9733</label>*/
+                echo"</div>";
+                echo"</form>";
+                
+               
+                }     
+                } else {
+              
+                echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
+                
+                }
+                $conn->close();
+                ?>
         </section>
-        <section class="video">
-                <iframe width="1000" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
-        <footer class="footernoso">
-                <br>
-                &copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
-                &#8226; Telefono: 074115436 <br/>
-                &#8226; Celular: +593985633576 <br/>
-                &#8226; Whatsapp: +593985633576 <br/>
-                &#8226; Correo: importmanguerasiv@gmail.com 
-            </footer>
-    </body>
-</html>
+        
+            </p>
+            <hr/>
+            Calificar: <span id="Estrellas"></span>
+       

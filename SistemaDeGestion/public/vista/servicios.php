@@ -19,6 +19,8 @@
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
         <script type="text/javascript" src="../../public/vista/js/validacionusuario.js"></script>
+        <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
+       
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
 
     </head>
@@ -59,6 +61,11 @@
         <br>
         <section class="productos">
                 <h1 class="h1servicioss">PRODUCTOS</h1>      
+
+                <h1 class="h1servicioss">PRODUCTOS</h1> 
+                <hr/>
+            Calificar: <span id="Estrellas"></span>
+            <hr/>
                 <?php
                 include  '../../config/conexionBD.php';               
                $sql = "SELECT * FROM Producto";
@@ -69,7 +76,7 @@
                 echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
                  echo "<tr>" ;
                 echo  "<td>";
-                echo "<h1>". $row['pro_nombre'] ."</h1>"; 
+                echo "<h1 class='tituloTab'>". $row['pro_nombre'] ."</h1>"; 
                 echo "Marca:";
                 echo "" . $row['pro_marca'] ."";
                 echo "</br>";   
@@ -99,9 +106,9 @@
                 echo  "  </td>";
               
                 echo  "  <td class ='imagenproductos'>";
-                    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' >";
+                    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
-                echo "  </tr>";
+                  echo "  </tr>";
                 echo "</table>";
                 
                
@@ -181,10 +188,8 @@
 </script>
 
         
-            </p>
-            <hr/>
-            Calificar: <span id="Estrellas"></span>
-            <hr/>
+           
+           
     </div>
 	<script>
    $('#Estrellas').starrr({
