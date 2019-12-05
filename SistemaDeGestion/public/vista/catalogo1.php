@@ -75,7 +75,7 @@
  <th>Longitud</th>
  <th>Precio</th>
  <th>Stock</th>
-
+<th>Imagen</th>
  </tr>                </tr>
  <tbody id="data">
             <?php
