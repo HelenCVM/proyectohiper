@@ -151,29 +151,11 @@
                 $conn->close();
                 ?>
         </section>
-<<<<<<< HEAD
         
            
            
-    </div>
-	<script>
-   $('#Estrellas').starrr({
-       rating:3,
-       change:function(e,valor){
-           alert(valor);
-           
-       }
-       
-   });
-    
-    </script>
-    
+
         
-=======
-
-
-
->>>>>>> 3282982d532d84f62025876680f5384376b440e8
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
