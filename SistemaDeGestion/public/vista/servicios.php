@@ -76,8 +76,9 @@
                
                while($row = $result->fetch_assoc()) {
                 echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
-                 echo "<tr>" ;
+                
                 echo  "<td>";
+                echo "<tr>" ;
                 echo "<h1 class='tituloTab'>". $row['pro_nombre'] ."</h1>"; 
                 echo "Marca:";
                 echo "" . $row['pro_marca'] ."";
@@ -102,8 +103,10 @@
                 echo "</br>";   
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
-                echo "</br>";                 
-                echo  "  </td>";              
+                echo "</br>";                           
+                echo "  </tr>";                
+                echo  "  </td>";        
+            
                 echo  "  <td class ='imagenproductos'>";
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
@@ -113,7 +116,7 @@
                 echo "</table>";
                 
                 echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
-               echo" <div class='valoracion'>";
+               echo" <div class='valoracio'>";
                
                echo " <label for='radio1'>&#9733</label>";
                echo" <input id='radio' type='radio' name='radio1' value='1'>";
