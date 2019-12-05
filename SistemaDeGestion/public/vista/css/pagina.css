@@ -324,7 +324,11 @@ background-size: 100%;
 .valoracion input:checked ~ label {
 color: #ffff00;
 text-shadow: 5px 5px 15px #AAA;
+cursor: pointer;
 
+}
+.mensajes input {
+    border: 0;
 }
 
 .produ{
