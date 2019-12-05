@@ -90,6 +90,7 @@
                             <p><?php echo $row['pro_descripcion']; ?></p>
                         </div>
                         <span>$<?php echo $row['pro_precio']; ?></span>
+                       
                     </div>
                 </article>
                 <?php
@@ -104,9 +105,7 @@
     </div>
         
             </p>
-            <hr/>
-            Calificar: <span id="Estrellas"></span>
-            <hr/>
+            
     </div>
 	<script>
    $('#Estrellas').starrr({
@@ -122,7 +121,7 @@
     
 
         <section class="video">
-                <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1000" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
         <footer class="footernos">
                 <br>
