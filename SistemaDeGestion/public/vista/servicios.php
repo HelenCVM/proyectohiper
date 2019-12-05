@@ -105,16 +105,11 @@
                 echo  "  <td class ='imagenproductos'>";
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
-                echo "  </tr>";
+                  echo "  </tr>";
                 echo "</table>";
                 
                 echo " <form action=''>";
                echo" <div class='valoracion'>";
-<<<<<<< HEAD
-                echo "</table>";
-               echo " <label for='Estrellas'></label>";
-               echo" <input name='Estrellas' type='text' value='Estrellas'>";
-=======
             
                echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
                echo " <label for='radio1'>&#9733</label>";
@@ -130,7 +125,6 @@
             
                 echo"<input id='radio5' type='radio' name='estrellas' value='1'>";
                echo" <label for='radio5'>&#9733</label>";
->>>>>>> ea59d8b0b561d0703ccbac378b7d24d329850388
                 echo"</div>";
                 echo"</form>";
                 
