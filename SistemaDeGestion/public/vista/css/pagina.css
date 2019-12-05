@@ -399,16 +399,35 @@ border-radius: 20px;
 #Contactanos{
     text-align: center;
 }
+
 #formularioc{
     text-align: center;
     background-image: url("../img/img6.jpg");
 }
+
 .columna1{
-    padding: 1px 13px;
+    padding: 200px 30px;
+    position: static;
 }
+
 .columna2{
-    padding: 1px 10px;
+    padding: 100px 20px;
 }
+
+ .enviar{
+    background: linear-gradient(rgb(63, 49, 138), rgb(161, 84, 78));
+    border: 0;
+    color: white;
+    opacity: 0.8;
+     cursor: pointer;
+      border-radius: 25px;
+      height: 40px;
+    width:20%;
+  }
+
+  #nombreslabel{
+    
+  }
 /*---------------------------------------------------*/
 /*------- formulario estilos --------------*/
 
