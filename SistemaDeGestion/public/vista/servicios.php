@@ -69,7 +69,7 @@
 
                 <?php
                         include  '../../config/conexionBD.php';  
-                $sql="SELECT pro.pro_nombre,pro.pro_codigo,pro.pro_descripcion, pro.pro_precio, pro.pro_img FROM Producto pro WHERE pro.pro_eliminado='N'  GROUP BY pro.pro_codigo ORDER BY 1 DESC limit 8;";
+                $sql="SELECT pro.pro_nombre,pro.pro_codigo,pro.pro_descripcion, pro.pro_precio, pro.pro_img FROM Producto pro WHERE pro.pro_eliminado='N'  GROUP BY pro.pro_codigo ORDER BY 1 DESC limit 15;";
 
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
