@@ -24,11 +24,8 @@ background-size: 100%;
 
 /**/
 .cabecera {
-    width: 500%;
     background-color:  rgb(15, 75, 134);
     padding: 0.1%;
-    width: max-content;
-   
 }
 
 /* menu css*/
@@ -53,11 +50,10 @@ background-size: 100%;
     color:#fff;
     text-decoration:none;
     width: 162px;
-    font-size:15px;
     padding:10px;
     font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform:uppercase;
-    letter-spacing:0.5px;
+    
    }
    
    /* items del menu */
@@ -80,8 +76,6 @@ background-size: 100%;
 .divmenu ul ul {
     display:none;
     position:absolute;
-    top:100%;
-    left:0;
     background:#eee;
     padding:0;
    }
@@ -435,10 +429,11 @@ border-radius: 20px;
 #formularioc{
     text-align: center;
     background-image: url("../img/img6.jpg");
+    padding: 1px 5px;
 }
 
 .columna1{
-    padding: 0px 30px;
+    padding: 0px 90px;
     
 }
 
