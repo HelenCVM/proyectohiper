@@ -15,7 +15,8 @@ color: red;
 include 'conexionBD.php';
 $radio = isset($_POST["radio"]) ? trim($_POST["radio"]) : null;
 $codigo = $_GET["codigo"];
-$sql = "INSERT INTO Calificaciones VALUES (0, '$codigo','$radio','hhhhhhh')";
+$mensaje = isset($_POST["mensaje"]) ? trim($_POST["mensaje"]) : null;
+$sql = "INSERT INTO Calificaciones VALUES (0, '$codigo','$radio','$mensaje')";
 if ($conn->query($sql) === TRUE) {
 header("Location:../public/vista/servicios.php");
 echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
