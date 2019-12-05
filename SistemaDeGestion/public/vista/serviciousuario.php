@@ -14,6 +14,7 @@
        <script src="js/bootstrap.min.js"></script>
        <link href="css/starrr.css" rel=stylesheet/>
     <script src="js/starrr.js"></script>
+    <a class="cerrarindex" href="../../config/cerrar_sesion.php">Cerrar sesion</a>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
@@ -24,7 +25,6 @@
         <?php  
 include '../../config/conexionBD.php';       
 $codigo = $_GET["variable1"];
-
 ?> 
     <center><a href="index.php"><img src="../../../imagenes/banner-imi.png" alt="Import Mangueras"/></a><center>
 
@@ -36,13 +36,13 @@ $codigo = $_GET["variable1"];
                 <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
                 <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
                 <ul>
-                                    <li> <a href="catalogo1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
-                                    <li> <a href="catalogo2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
-                                    <li> <a href="catalogo3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
+                                    <li> <a href="catalogousuario1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="catalogousuario2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
+                                    <li> <a href="catalogousuario3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
                         </ul>
                         </li>
                 <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
-                <li><a href="cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li> 
+                <li><a href="cuenta.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CUENTA </a></li>
                     </ul>
                     </nav>
                 </header>
@@ -61,85 +61,135 @@ $codigo = $_GET["variable1"];
         </section>
     <!-- ------- -->
         <br>
-        <section class="productos">
-                <h1 class="h1servicioss">PRODUCTOS</h1> 
-     
-                <?php
-                include  '../../config/conexionBD.php';               
-               $sql = "SELECT * FROM Producto";
-                $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-               
-               while($row = $result->fetch_assoc()) {
-                echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
-                 echo "<tr>" ;
-                echo  "<td>";
-                echo "<h1>". $row['pro_nombre'] ."</h1>"; 
-                echo "Marca:";
-                echo "" . $row['pro_marca'] ."";
-                echo "</br>";   
-                echo "Descripcion:";
-                echo "" . $row['pro_descripcion'] . ""; 
-                echo "</br>"; 
-                echo "Diametro Interno:";  
-                echo " " . $row['pro_dia_in'] . "";  
-                echo "</br>"; 
-                echo "Peso Teorico:";          
-                echo " " . $row['pro_peso_gm'] . "";
-                echo "</br>";   
-                echo "Presion de Trabajo:";
-                echo " " . $row['pro_presi_bar'] . "";
-                echo "</br>";   
-                echo "Longitud:";
-                echo " " . $row['pro_long_m'] . "";
-                echo "</br>";  
-                echo "Precio:"; 
-                echo " " . $row['pro_precio'] . "";
-                echo "</br>";   
-                echo "Stock:";
-                echo " " . $row['pro_stock'] . "</br>";  
-                echo "</br>"; 
+        <section class="productos">   
 
-                
-                echo  "  </td>";
-              
-                echo  "  <td class ='imagenproductos'>";
-                    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' >";
-                    echo  "  </td>";
-                echo "  </tr>";
-                echo " <form action=''>";
 
-               echo" <div class='valoracion'>";
-                echo "</table>";
-               echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
-               echo " <label for='radio1'>&#9733</label>";
-            
-               echo" <input id='radio2' type='radio' name='estrellas' value='4'>";
-                /*<label for="radio2">&#9733</label>
-            
-                <input id="radio3" type="radio" name="estrellas" value="3">
-                <label for="radio3">&#9733</label>
-            
-                <input id="radio4" type="radio" name="estrellas" value="2">
-                <label for="radio4">&#9733</label>
-            
-                <input id="radio5" type="radio" name="estrellas" value="1">
-                <label for="radio5">&#9733</label>*/
-                echo"</div>";
-                echo"</form>";
-                
                
-                }     
-                } else {
-              
-                echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
-                
-                }
-                $conn->close();
-                ?>
-        </section>
-        
-            </p>
-            <hr/>
-            Calificar: <span id="Estrellas"></span>
-       
+<hr/>
+<hr/>
+
+<h1 class="h1servicioss">PRODUCTOS</h1> 
+
+<?php
+include  '../../config/conexionBD.php';               
+$sql = "SELECT * FROM Producto";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+
+while($row = $result->fetch_assoc()) {
+echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
+ echo "<tr>" ;
+echo  "<td>";
+echo "<h1 class='tituloTab'>". $row['pro_nombre'] ."</h1>"; 
+echo "Marca:";
+echo "" . $row['pro_marca'] ."";
+echo "</br>";   
+echo "Descripcion:";
+echo "" . $row['pro_descripcion'] . ""; 
+echo "</br>"; 
+echo "Diametro Interno:";  
+echo " " . $row['pro_dia_in'] . "";  
+echo "</br>"; 
+echo "Peso Teorico:";          
+echo " " . $row['pro_peso_gm'] . "";
+echo "</br>";   
+echo "Presion de Trabajo:";
+echo " " . $row['pro_presi_bar'] . "";
+echo "</br>";   
+echo "Longitud:";
+echo " " . $row['pro_long_m'] . "";
+echo "</br>";  
+echo "Precio:"; 
+echo " " . $row['pro_precio'] . "";
+echo "</br>";   
+echo "Stock:";
+echo " " . $row['pro_stock'] . "</br>";  
+echo "</br>";                 
+echo  "  </td>";              
+echo  "  <td class ='imagenproductos'>";
+    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
+    echo  "  </td>";
+  echo "  </tr>";
+
+
+echo "</table>";
+
+echo " <form id='formulario0' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
+echo" <div class='valoracio'>";
+echo" <input id='radio' type='radio' name='radio' value='1'>";
+echo " <label for='radio1'>&#9733</label>";
+
+echo" <input id='radio' type='radio' name='radio' value='2'>";
+echo "<label for='radio2'>&#9733</label>";
+
+echo" <input id='radio' type='radio' name='radio' value='3'>";
+echo"<label for='radio3'>&#9733</label>";
+
+echo"<input id='radio' type='radio' name='radio' value='4'>";
+echo"<label for='radio4'>&#9733</label>";
+
+echo"<input id='radio' type='radio' name='radio' value='5'>";
+echo" <label for='radio5'>&#9733</label>";
+echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
+
+echo "<p><input type='submit' value='Enviar datos'></p>";
+echo"</div>";
+echo"</form>";
+echo "</table>";  
+
+
+echo "</table>";  
+
+}     
+} else {
+
+echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
+
+}
+$conn->close();
+?>
+</section>
+
+
+<!--Script para las estrellas-->
+
+<!--Script para las estrellas-->
+<form  action="" method="GET" class="form_search"   >
+
+<div class='valoracion'>
+
+
+
+
+<!--Script para las estrellas-->
+
+
+<script>
+$('#Estrellas').starrr({
+rating:3,
+change:function(e,valor){
+alert(valor);
+
+}
+
+});
+
+</script>
+
+
+</form>
+
+
+<section class="video">
+<iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<footer class="footernos">
+<br>
+&copy;  &#8226; Dirección: Mariscal Lamar 1-67 y Manuel Vega <br/>
+&#8226; Telefono: 074115436 <br/>
+&#8226; Celular: +593985633576 <br/>
+&#8226; Whatsapp: +593985633576 <br/>
+&#8226; Correo: importmanguerasiv@gmail.com 
+</footer>
+</body>
+</html>
