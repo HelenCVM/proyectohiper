@@ -79,6 +79,7 @@
             $categoria = $row['cate_codigo'];
             $stock=$row['pro_stock'];
             $imagen=$row['pro_img'];
+            
             echo " <form id='formulario0' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
 echo" <div class='valoracio'>";
 echo" <input id='radio' type='radio' name='radio' value='1'>";
