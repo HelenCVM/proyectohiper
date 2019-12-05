@@ -10,7 +10,9 @@
     
         <link type="text/css" rel="stylesheet" href="../../css/estilos.css">-->
         
-        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
       <link rel="stylesheet" href="css/bootstrap.min.css">
        <script src="js/bootstrap.min.js"></script>
@@ -18,9 +20,7 @@
     <script src="js/starrr.js"></script>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
-        <script type="text/javascript" src="../../public/vista/js/validacionusuario.js"></script>
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
-       
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
 
     </head>
@@ -58,107 +58,69 @@
             </div>
         </section>
     <!-- ------- -->
-        <br>
-        <section class="productos">   
+        <br> 
+    
+        <div class="content">
+        <section>
+            <a href="#">
+                <h2>Ultimos productos</h2>
+            </a>
+            <div class="contentCards">
 
-
-               
-                <hr/>
-            <hr/>
-
-                <h1 class="h1servicioss">PRODUCTOS</h1> 
-                
                 <?php
-                include  '../../config/conexionBD.php';               
-               $sql = "SELECT * FROM Producto";
+                        include  '../../config/conexionBD.php';  
+                $sql="SELECT pro.pro_nombre,pro.pro_codigo,pro.pro_descripcion, pro.pro_precio, pro.pro_img FROM Producto pro WHERE pro.pro_eliminado='N'  GROUP BY pro.pro_codigo ORDER BY 1 DESC limit 8;";
+
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
-               
-               while($row = $result->fetch_assoc()) {
-                echo "<table class='produ'   CELLSPACING='50' CELLPADDING='2'>"  ;
-                
-                echo  "<td>";
-                echo "<tr>" ;
-                echo "<h1 class='tituloTab'>". $row['pro_nombre'] ."</h1>"; 
-                echo "Marca:";
-                echo "" . $row['pro_marca'] ."";
-                echo "</br>";   
-                echo "Descripcion:";
-                echo "" . $row['pro_descripcion'] . ""; 
-                echo "</br>"; 
-                echo "Diametro Interno:";  
-                echo " " . $row['pro_dia_in'] . "";  
-                echo "</br>"; 
-                echo "Peso Teorico:";          
-                echo " " . $row['pro_peso_gm'] . "";
-                echo "</br>";   
-                echo "Presion de Trabajo:";
-                echo " " . $row['pro_presi_bar'] . "";
-                echo "</br>";   
-                echo "Longitud:";
-                echo " " . $row['pro_long_m'] . "";
-                echo "</br>";  
-                echo "Precio:"; 
-                echo " " . $row['pro_precio'] . "";
-                echo "</br>";   
-                echo "Stock:";
-                echo " " . $row['pro_stock'] . "</br>";  
-                echo "</br>";                           
-                echo "  </tr>";                
-                echo  "  </td>";        
-            
-                echo  "  <td class ='imagenproductos'>";
-                    echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
-                    echo  "  </td>";
-                  echo "  </tr>";
-
-
-                echo "</table>";
-                
-                echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
-               echo" <div class='valoracio'>";
-               
-               echo " <label for='radio1'>&#9733</label>";
-               echo" <input id='radio' type='radio' name='radio1' value='1'>";
-            
-               echo "<label for='radio2'>&#9733</label>";
-               echo" <input id='radio' type='radio' name='radio' value='2'>";
-            
-               echo"<label for='radio3'>&#9733</label>";
-               echo" <input id='radio' type='radio' name='radio' value='3'>";
-
-                
-               echo"<label for='radio4'>&#9733</label>";
-                echo"<input id='radio' type='radio' name='radio' value='4'>";
-            
-                
-                echo" <label for='radio5'>&#9733</label>";
-                echo"<input id='radio' type='radio' name='radio' value='5'>";
-                echo"</div>";
-                echo"<div class='mensajes'>";
-                echo"<input type='text' id='mensaje'  name='mensaje' value=' ' placeholder='Ingrese su comentario'>";            
-                echo "<p><input type='submit' value='Enviar datos'></p>";
-                echo"</div>";
-                echo"</form>";
-                echo "</table>";  
-
-
-                echo "</table>";  
-
-                }     
-                } else {
-              
-                echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
-                
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                <article>
+                    <div class="contentImg">
+                        <div class="cardImg">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
+                     
+                        </div>
+                    </div>
+                    <div class="contentDescription">
+                        <div class="descripProduct">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>">
+                                <h2><?php echo $row['pro_nombre']; ?></h2>
+                            </a>
+                            <p><?php echo $row['pro_descripcion']; ?></p>
+                        </div>
+                        <span>$<?php echo $row['pro_precio']; ?></span>
+                    </div>
+                </article>
+                <?php
                 }
-                $conn->close();
-                ?>
-        </section>
-        
-           
-           
+            }
+            $conn->close();
+            ?>
 
+            </div>
+        </section>
+
+    </div>
         
+            </p>
+            <hr/>
+            Calificar: <span id="Estrellas"></span>
+            <hr/>
+    </div>
+	<script>
+   $('#Estrellas').starrr({
+       rating:3,
+       change:function(e,valor){
+           alert(valor);
+           
+       }
+       
+   });
+    
+    </script>
+    
+
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
