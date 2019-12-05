@@ -103,10 +103,9 @@
                 echo "</br>";   
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
-                echo "</br>";                           
-                echo "  </tr>";                
+                echo "</br>";                 
                 echo  "  </td>";        
-            
+                echo  "  <td>";
                 echo  "  <td class ='imagenproductos'>";
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
