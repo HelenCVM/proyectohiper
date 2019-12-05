@@ -62,6 +62,7 @@
                 <h1 class="h1servicioss">PRODUCTOS</h1> 
                 <hr/>
             Calificar: <span id="Estrellas"></span>
+           
             <hr/>
                 <?php
                 include  '../../config/conexionBD.php';               
@@ -98,7 +99,6 @@
                 echo "Stock:";
                 echo " " . $row['pro_stock'] . "</br>";  
                 echo "</br>"; 
-
                 
                 echo  "  </td>";
               
@@ -108,25 +108,27 @@
                   echo "  </tr>";
                 echo "</table>";
                 
-                echo " <form action=''>";
-               echo" <div class='valoracion'>";
-            
-               echo" <input id='radio1' type='radio' name='estrellas' value='5'>";
+                echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
+               echo" <div class='valoracio'>";
+               echo" <input id='radio' type='radio' name='radio' value='1'>";
                echo " <label for='radio1'>&#9733</label>";
             
-               echo" <input id='radio2' type='radio' name='estrellas' value='4'>";
+               echo" <input id='radio' type='radio' name='radio' value='2'>";
                 echo "<label for='radio2'>&#9733</label>";
             
-               echo" <input id='radio3' type='radio' name='estrellas' value='3'>";
+               echo" <input id='radio' type='radio' name='radio' value='3'>";
                 echo"<label for='radio3'>&#9733</label>";
             
-                echo"<input id='radio4' type='radio' name='estrellas' value='2'>";
+                echo"<input id='radio' type='radio' name='radio' value='4'>";
                 echo"<label for='radio4'>&#9733</label>";
             
-                echo"<input id='radio5' type='radio' name='estrellas' value='1'>";
-               echo" <label for='radio5'>&#9733</label>";
+                echo"<input id='radio' type='radio' name='radio' value='5'>";
+                echo" <label for='radio5'>&#9733</label>";
+               
+                echo "<p><input type='submit' value='Enviar datos'></p>";
                 echo"</div>";
                 echo"</form>";
+                
                 
                
                 }     
