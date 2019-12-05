@@ -49,8 +49,13 @@
             </div>
         </section>
     <!-- ------- -->
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
 <br>
-        <div class="login-box">
+        <div class="loginboxe">
     <form id="formulario01" method="POST" action="../../config/creacion_usuario.php" onsubmit="return validarCamposObligatorioss()">
           
         <label for="cedula">Cedula (*)</label>
