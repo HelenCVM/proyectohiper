@@ -163,4 +163,9 @@ function mostrarDetalle(){
             }
         }
 
+///<input type = "radio" id = "onclickyes" name = "yesno" onclick = "AnEventHasOccurred ()"> Sí 
+//<input type = "radio" id = "onclickno" name = "yesno" onclick = "AnEventHasOccurred ()"> No
+
+
+
 

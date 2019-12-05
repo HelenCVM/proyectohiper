@@ -18,6 +18,7 @@
     <script src="js/starrr.js"></script>
        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     
+        <script type="text/javascript" src="../../public/vista/js/validacionusuario.js"></script>
         <script type="text/javascript" src="../vista/js/validacionusuario.js"></script>
        
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
@@ -59,6 +60,8 @@
     <!-- ------- -->
         <br>
         <section class="productos">
+                <h1 class="h1servicioss">PRODUCTOS</h1>      
+
                 <h1 class="h1servicioss">PRODUCTOS</h1> 
                 <hr/>
             Calificar: <span id="Estrellas"></span>
@@ -108,6 +111,7 @@
                   echo "  </tr>";
                 echo "</table>";
                 
+<<<<<<< HEAD
                 echo " <form id='formulario011' method='POST' action='../../config/insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
                echo" <div class='valoracio'>";
                echo" <input id='radio' type='radio' name='radio' value='1'>";
@@ -128,6 +132,9 @@
                 echo "<p><input type='submit' value='Enviar datos'></p>";
                 echo"</div>";
                 echo"</form>";
+=======
+               
+>>>>>>> 4f2e6b6a0c25ddb73d16c9cc3721dd91743ce83d
                 
                 
                
@@ -140,6 +147,70 @@
                 $conn->close();
                 ?>
         </section>
+<form  action="" method="GET" class="form_search"   >
+
+<div class='valoracion'>
+<input id='radio5' type='radio' name='estrellas' onclick="ShowHideDiv(5)" >
+<label for='radio5'>&#9733</label>
+<input id='radio4' type='radio' name='estrellas' onclick="ShowHideDiv(4)" >
+<label for='radio4'>&#9733</label>
+<input id='radio3' type='radio' name='estrellas' onclick="ShowHideDiv(3)" >
+<label for='radio3'>&#9733</label>
+<input id='radio2' type='radio' name='estrellass' onclick="ShowHideDiv(2)"/>
+ <label for='radio2'>&#9733</label>
+<input id='radio1' type='radio' name='estrellas' onclick="ShowHideDiv(1)" >
+<label for='radio1'>&#9733</label>
+
+</div>
+
+</form>
+
+
+
+<script>
+    function ShowHideDiv(x){
+    var chkYes = document.getElementById ( "radio1" );
+    console.log("ya");
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        }
+    };
+    if(x==1){
+        x=1;
+        
+        console.log("pakajsn");
+        console.log(x);
+    xmlhttp.open("GET", "../vista/phpajax/insertarestrellas.php?keyy=" +x, true);
+        xmlhttp.send();
+    }else if( x==2)
+    {
+        x=2;
+        console.log(x);
+        xmlhttp.open("GET", "../vista/phpajax/insertarestrellas.php?keyy=" +x, true);
+        xmlhttp.send();    
+    console.log("2")
+    } else if( x==3){
+        
+    console.log("3")
+    } else if (x==4)
+    {
+        
+    console.log("4")
+    }
+    else if (x==5){
+
+        console.log("5")
+    }
+
+        
+    }
+</script>
+
         
            
            
