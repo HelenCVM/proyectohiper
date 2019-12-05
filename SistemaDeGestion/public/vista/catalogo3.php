@@ -64,7 +64,7 @@
             <a href="#">
                 <h2>ALTA TEMPERATURA</h2>
             </a>
-            <div class="contentCards">
+            <div class="contentCards" id="data">
 
                 <?php
                         include  '../../config/conexionBD.php';  

@@ -8,7 +8,7 @@
         <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="style.css"> -->
 
-        <script type="text/javascript" src="js/ajaxC1.js"></script>
+        <script type="text/javascript" src="../vista/js/ajaxC1.js"></script>
 
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
         <title>Productos</title>
@@ -45,28 +45,19 @@
             </div>
         </section>
     <!-- ------- -->
-    
-        <br>
-        <br>
-        <br>
-        <br>
+       <br>
         <label for="nombres" class="nombresC1">Buscar Manguera:</label>
         <form action="" method="GET" class="form_search">
         <input type="search" id="busqueda" placeholder="Buscar por nombre" onkeyup="buscarPornombre(this)">
         </form>
-
-        <br>
-        <div id="informacion"><b></b></div>
-        <br>
-
     
- <tbody id="data">
+ 
  <div class="content">
         <section>
             <a href="#">
                 <h2>HINDUSTRIALES</h2>
             </a>
-            <div class="contentCards">
+            <div class="contentCards" id="data">
 
                 <?php
                         include  '../../config/conexionBD.php';  
@@ -76,7 +67,7 @@
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         ?>
-                <article>
+                <article >
                     <div class="contentImg">
                         <div class="cardImg">
                             <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
@@ -103,12 +94,8 @@
             </div>
         </section>
 
-    </div>
-        
-            </tbody>
+             </div>
 
-           
-        </section>
 
         <!-- Carrito de compras -->
         <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito">            

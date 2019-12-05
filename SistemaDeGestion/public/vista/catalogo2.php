@@ -64,7 +64,7 @@
             <a href="#">
                 <h2>INDUSTRIALES</h2>
             </a>
-            <div class="contentCards">
+            <div class="contentCards" id="data">
 
                 <?php
                         include  '../../config/conexionBD.php';  
@@ -75,7 +75,7 @@
                     while ($row = $result->fetch_assoc()) {
                         ?>
                 <article>
-                    <div class="contentImg">
+                    <div class="contentImg" >
                         <div class="cardImg">
                             <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
                      

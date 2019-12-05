@@ -9,7 +9,9 @@ if (!isset($_SESSION['isLogin'])) {
 include '../config/conexionDB.php';
 
 if ($_GET != '') {
-    $sql = "SELECT p.pro_codigo,c.cate_nombre, p.pro_nombre , p.pro_img,p.pro_eliminado FROM Producto p INNER JOIN Categoria c ON p.cate_codigo = c.cate_codigo WHERE p.pro_nombre LIKE '" . $_GET['key'] . "%' AND p.pro_eliminado='N'";
+    $sql = "SELECT p.pro_codigo,c.cate_nombre, p.pro_nombre , p.pro_img,p.pro_eliminado 
+    FROM Producto p INNER JOIN Categoria c ON p.cate_codigo = c.cate_codigo WHERE p.pro_nombre LIKE '" 
+    . $_GET['key'] . "%' AND p.pro_eliminado='N'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
