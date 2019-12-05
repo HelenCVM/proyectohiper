@@ -61,14 +61,13 @@
         <br>
         <section class="productos">   
 
-<<<<<<< HEAD
+
                
                 <hr/>
             <hr/>
-=======
+
                 <h1 class="h1servicioss">PRODUCTOS</h1> 
                 
->>>>>>> b97b3f24411a1af47665ab8129133ea4be7c303a
                 <?php
                 include  '../../config/conexionBD.php';               
                $sql = "SELECT * FROM Producto";
@@ -109,7 +108,7 @@
                     echo " <img class='perfil' src='../../../imagenes/industriales/".$row["pro_img"].".jpg' ><br>";
                     echo  "  </td>";
                   echo "  </tr>";
-<<<<<<< HEAD
+
 
                 echo "</table>";
                 
@@ -135,9 +134,9 @@
                 echo"</form>";
                 echo "</table>";  
 
-=======
+
                 echo "</table>";  
->>>>>>> b97b3f24411a1af47665ab8129133ea4be7c303a
+
                 }     
                 } else {
               
@@ -147,19 +146,16 @@
                 $conn->close();
                 ?>
         </section>
-<<<<<<< HEAD
+
 
 <!--Script para las estrellas-->
-=======
+
 <!--Script para las estrellas-->
 <form  action="" method="GET" class="form_search"   >
 
 <div class='valoracion'>
 
->>>>>>> b97b3f24411a1af47665ab8129133ea4be7c303a
 
-
-<<<<<<< HEAD
 
 
 <!--Script para las estrellas-->
@@ -177,9 +173,9 @@
     
     </script>
     
-=======
+
 </form>
->>>>>>> b97b3f24411a1af47665ab8129133ea4be7c303a
+
 
         <section class="video">
                 <iframe width="1150" height="315" src="https://www.youtube.com/embed/lR4MaqQWvaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
