@@ -8,7 +8,7 @@
         <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="style.css"> -->
 
-        <script type="text/javascript" src="js/ajaxC1.js"></script>
+        <script type="text/javascript" src="../vista/js/ajaxC1.js"></script>
 
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
         <title>Productos</title>
@@ -45,72 +45,57 @@
             </div>
         </section>
     <!-- ------- -->
-    
-        <br>
-        <br>
-        <br>
-        <br>
+       <br>
         <label for="nombres" class="nombresC1">Buscar Manguera:</label>
         <form action="" method="GET" class="form_search">
         <input type="search" id="busqueda" placeholder="Buscar por nombre" onkeyup="buscarPornombre(this)">
         </form>
+    
+ 
+ <div class="content">
+        <section>
+            <a href="#">
+                <h2>HINDUSTRIALES</h2>
+            </a>
+            <div class="contentCards" id="data">
 
-        <br>
-        <div id="informacion"><b></b></div>
-        <br>
+                <?php
+                        include  '../../config/conexionBD.php';  
+                $sql="SELECT * FROM Producto where cate_codigo=11";
 
-      
-
- <h1>Productos</h1> 
-<section class="industriales" >
-<table class="indus" >
- <tr>
- <th></th>
- <th>Nombre</th>
- <th>Marca</th>
- <th>Descripcion</th>
- <th>Diametro interno</th>
- <th>Peso Teorico</th> 
- <th>Presion de Trabajo</th>
- <th>Longitud</th>
- <th>Precio</th>
- <th>Stock</th>
-<th>Imagen</th>
- </tr>                </tr>
- <tbody id="data">
-           <div class="contentCards">
-
-           <?php
-                   include  '../../config/conexionBD.php';  
-           $sql="SELECT * FROM Producto WHERE cate_codigo=10";
-
-           $result = $conn->query($sql);
-           if ($result->num_rows > 0) {
-               while ($row = $result->fetch_assoc()) {
-                   ?>
-           <article>
-               <div class="contentImg">
-                   <div class="cardImg">
-                       <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
-                
-                   </div>
-               </div>
-               <div class="contentDescription">
-                   <div class="descripProduct">
-                      
-                           <h2><?php echo $row['pro_nombre']; ?></h2>
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                <article >
+                    <div class="contentImg">
+                        <div class="cardImg">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
                      
-                       <p><?php echo $row['pro_descripcion']; ?></p>
-                  
-                  <?php echo $row['pro_precio']; ?>
-                  
-               </div>
-           </article>
-           <?php
-           }
-       }
-       $conn->close();
-       ?>
+                        </div>
+                    </div>
+                    <div class="contentDescription">
+                        <div class="descripProduct">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>">
+                                <h2><?php echo $row['pro_nombre']; ?></h2>
+                            </a>
+                            <p><?php echo $row['pro_descripcion']; ?></p>
+                        </div>
+                        <span>$<?php echo $row['pro_precio']; ?></span>
+                       
+                    </div>
+                </article>
+                <?php
+                }
+            }
+            $conn->close();
+            ?>
+
+            </div>
+        </section>
+
+             </div>
+
 
         <!-- Carrito de compras -->
         <div data-pushbar-id="pushbar-carrito" class="pushbar from_right pushbar-carrito">            

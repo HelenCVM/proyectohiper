@@ -621,3 +621,21 @@ article .contentDescription span{
     color: var(--colorAzul);
     font-size: 1.4em;
 }
+
+/****Tabla descripcion productos**/
+.restante table{
+    
+border-collapse: separate;
+text-align: left;
+caption-side: top;
+letter-spacing: 2px;
+}
+.restante .tablapro h6{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-content: center;
+}
+
+.restante th,td{
+    border:1px solid rgb(226, 194, 147);
+
+}

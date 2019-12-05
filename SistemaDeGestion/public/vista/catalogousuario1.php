@@ -7,7 +7,7 @@
         <!--<link type="text/css" rel="stylesheet" href="../../css/estilos.css"> 
         <link type="text/css" rel="stylesheet" href=" ../../css/estiloresu.css">
         <link type="text/css" rel="stylesheet" href="style.css"> -->
-        <a class="cerrarindex" href="../../config/cerrar_sesion.php">Cerrar sesion</a>
+
         <script type="text/javascript" src="js/ajaxC1.js"></script>
 
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
@@ -27,9 +27,9 @@ $codigo = $_GET["variable1"];
                 <li><a href="nosotrosusuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon2.png"> NOSOTROS</a></li>
                 <li><a href="serviciousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon3.png"> PRODUCTOS</a>
                 <ul>
-                                    <li> <a href="catalogo1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
-                                    <li> <a href="catalogo2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
-                                    <li> <a href="catalogo3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
+                                    <li> <a href="catalogousuario1.php?variable1=<?php echo $codigo?>">Catalogo Hidraulicas</a></li>
+                                    <li> <a href="catalogousuario2.php?variable1=<?php echo $codigo?>">Catalogo Industriales</a></li>
+                                    <li> <a href="catalogousuario3.php?variable1=<?php echo $codigo?>">Catalogo de Alta Temperatura</a></li>
                         </ul>
               </li>
                 <li><a href="contactousuario.php?variable1=<?php echo $codigo?>"><img id ="iconmenu" src="img/icon4.png"> CONTACTOS </a></li>
@@ -39,7 +39,6 @@ $codigo = $_GET["variable1"];
               </ul>     
             </nav>   
         </header>
-
           <!-- públicidad-->
     <section class="seccion">
             <div class="social1">
@@ -51,7 +50,9 @@ $codigo = $_GET["variable1"];
         <?php echo "BIENVENIDA " ?>
         <?php echo $codigo ?>
        </p>
+
         </section>
+        
     <!-- ------- -->
     
         <br>
@@ -67,64 +68,55 @@ $codigo = $_GET["variable1"];
         <div id="informacion"><b></b></div>
         <br>
 
-      
-
- <h1>Productos</h1> 
-<section class="industriales" >
-<table class="indus" >
- <tr>
- <th></th>
- <th>Nombre</th>
- <th>Marca</th>
- <th>Descripcion</th>
- <th>Diametro interno</th>
- <th>Peso Teorico</th> 
- <th>Presion de Trabajo</th>
- <th>Longitud</th>
- <th>Precio</th>
- <th>Stock</th>
-
- </tr>                </tr>
+    
  <tbody id="data">
-            <?php
-            include '../../config/conexionBD.php';               
-            $sql = "SELECT * FROM Producto  where cate_codigo='1'";
-            $result = $conn->query($sql);
-            
-            if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-            echo "<tr>";         
-            echo " <td>" . $row['pro_nombre'] ."</td>";
-            echo "</br>"; 
-            echo " <td>" . $row['pro_marca'] ."</td>";
-            echo "</br>"; 
-            echo " <td>" . $row['pro_descripcion'] . "</td>"; 
-            echo " <td>" . $row['pro_dia_in'] . "</td>";          
-            echo " <td>" . $row['pro_peso_gm'] . "</td>";
-            echo " <td>" . $row['pro_presi_bar'] . "</td>";
-            echo " <td>" . $row['pro_long_m'] . "</td>";
-            echo " <td>" . $row['pro_precio'] . "</td>";
-            echo " <td>" . $row['pro_stock'] . "</td>";       
-             echo " <td><img class='perfil' src='../../../imagenes/hidraulicaa/".$row["pro_img"].".jpg' width=' 100px'
-                height=' 100px'></td>";
+ <div class="content">
+        <section>
+            <a href="#">
+                <h2>HINDUSTRIALES</h2>
+            </a>
+            <div class="contentCards">
 
-               echo " <td> <a href='insertarC.php?codigo=" . $row['pro_codigo'] . "' data-pushbar-target='pushbar-carrito' >
-               <input type='button' class='comprarCarr' value='Comprar' />
-               </a> </td>";
-               
-              
-            }     
-            } else {
-            echo "<tr>";
-            echo " <td colspan='7'> No existen productos registradas en el sistema </td>";
-            echo "</tr>";
+                <?php
+                        include  '../../config/conexionBD.php';  
+                $sql="SELECT * FROM Producto where cate_codigo=11";
+
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                <article>
+                    <div class="contentImg">
+                        <div class="cardImg">
+                            <a href="producto.php?producto=<?php echo $row['pro_codigo']; ?>"><img src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>" alt="<?php echo $row['pro_nombre']; ?>"></a>
+                     
+                        </div>
+                    </div>
+                    <div class="contentDescription">
+                        <div class="descripProduct">
+                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>">
+                                <h2><?php echo $row['pro_nombre']; ?></h2>
+                            </a>
+                            <p><?php echo $row['pro_descripcion']; ?></p>
+                        </div>
+                        <span>$<?php echo $row['pro_precio']; ?></span>
+                       
+                    </div>
+                </article>
+                <?php
+                }
             }
             $conn->close();
             ?>
-            
+
+            </div>
+        </section>
+
+    </div>
+        
             </tbody>
 
-            </table> 
+           
         </section>
 
         <!-- Carrito de compras -->
