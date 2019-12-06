@@ -631,3 +631,9 @@ body .pageSuccess .contentSucce i.fa-check-circle{
 body .pageSuccess .contentSucce i.fa-times-circle{
     color: var(--colorRojo);
 }
+
+
+#iconmenu{
+    width: 10%;
+    height: 11%;
+}
