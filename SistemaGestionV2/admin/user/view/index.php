@@ -1,10 +1,6 @@
 <?php
 session_start();
 if (isset($_SESSION['isLogin'])) {
-    if ($_SESSION['rol'] == 'admin') {
-        header("Location: ../../admin/view/index.php");
-    }
-} else {
     header("Location: ../../../index.php");
 }
 ?>

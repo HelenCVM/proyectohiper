@@ -1,6 +1,5 @@
 <div class="perfil">
     <div class="img">
-        <img src="../../../img/user/<?php echo ($_SESSION['codigo']) ?>/<?php echo ($_SESSION['img']) ?>" alt="">
     </div>
     <h2><?php echo ($_SESSION['nombre'] . ' ' . $_SESSION['apellido']) ?></h2>
 </div>

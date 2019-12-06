@@ -12,9 +12,9 @@
                     
                 </ul>
             </li>
-<li><span>Mision y Vision </span></li>
-<li><span>¿Quienes somo?</span></li>
-<li><span>Contactanos</span></li>
+<li><a href=""></a><span>Mision y Vision </span></li>
+<li><a href="nosotro.php"></a><span>¿Quienes somos?</span></li>
+<li><a href="contac.php"></a><span>Contactanos</span></li>
 
         </ul>
     </nav>
@@ -25,9 +25,6 @@
         </div>
         <a onclick="searchBtn('../../../public/view/search.php')">Buscar</a>
     </div>
-    <!-- <div class="buyCar itemsUser">
-        <a href="../../../public/view/shoppingcart.php"><i class="fas fa-shopping-cart"></i></a>
-    </div> -->
     <div class="sessionItems">
         <?php
         if (isset($_SESSION['isLogin'])) {
