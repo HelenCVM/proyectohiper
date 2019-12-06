@@ -20,10 +20,9 @@
     </nav>
     <div class="search">
         <div class="barSearch">
-            <input type="search" name="search" id="search" placeholder="Buscar">
-            <i class="fas fa-search"></i>
+            
         </div>
-        <a onclick="searchBtn('../../../public/view/search.php')">Buscar</a>
+      
     </div>
     <div class="sessionItems">
         <?php
@@ -54,8 +53,7 @@
 
         <?php
     } else {
-        echo '<a href="login.php">Iniciar Sesión</a>';
-        echo '<a href="signup.php">Registrarse</a>';
+
     }
     ?>
     </div>
