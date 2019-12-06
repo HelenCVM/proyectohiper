@@ -4,50 +4,29 @@ if (isset($_SESSION['isLogin'])) {
     if ($_SESSION['rol'] == 'admin') {
         header("Location: ../../admin/admin/view/index.php");
     } else {
-        header("Location: ../../index.php");
+        //header("Location: ../../index.php");
     }
 }
 include '../../config/configDB.php';
 
-$foto = $_FILES['foto']['name'];
-$temp = $_FILES['foto']['tmp_name'];
-$type = $_FILES['foto']['type'];
-
-$sql = "SELECT MAX(usu_id) AS codigo  FROM usuario;";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$codigoNewUser = ($row['codigo'] + 1);
-echo $codigoNewUser;
-
-$directorio = "../../img/user/" . $codigoNewUser . "/";
-mkdir($directorio, 0777, true);
-
-move_uploaded_file($temp, "../../img/user/" . $codigoNewUser . "/$foto");
-
 $nombre = isset($_POST["nombre"]) ? mb_strtolower(trim($_POST["nombre"]), 'UTF-8') : null;
 $apellido = isset($_POST["apellido"]) ? mb_strtolower(trim($_POST["apellido"]), 'UTF-8') : null;
+$cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
+$telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]) : null;
+$fecha = $_POST["fechaNac"];
 $email = isset($_POST["email"]) ? trim($_POST["email"]) : null;
-$pass = isset($_POST["pass"]) ? $_POST["pass"] : null;
+$date = date(date("Y-m-d H:i:s"));
+$pass=isset($_POST["pass"]);
 
-$sql = "INSERT INTO usuario (
-    usu_nombres, 
-    usu_apellidos,  
-    usu_correo, 
-    usu_password) VALUES (  
+$sql = "INSERT INTO Usuario  VALUES ( 0,'$cedula','user'
     '$nombre', 
-    '$apellido', 
+    '$apellido','$fecha','$telefono', 
     '$email', 
-    MD5('$pass')
+    MD5('$pass'),'N','$date',null
 );";
+echo "$sql";
 
-$sqlImg = "INSERT INTO imagen (
-    img_nombre, 
-    USUARIO_usu_id) VALUES (
-    '$foto',
-    '$codigoNewUser'
-);";
-
-if ($conn->query($sql) == true && $conn->query($sqlImg) == true) {
+if ($conn->query($sql) == true) {
     header("Location: ../view/successful.php?register=true");
 } else {
     if ($conn->errno == 1062) {

@@ -33,16 +33,19 @@ if (isset($_SESSION['isLogin'])) {
 
     <div class="content">
         <div class="form">
-            <form enctype="multipart/form-data" action="../controller/signup.php"
-                onsubmit="return validarCamposObligatorios()" method="post">
+            <form action="../controller/signup.php"
+                onsubmit="return validarCamposObligatorios()" method="POST">
                 <h2>IMPORTMANGUERASIV</h2>
                 <p>Bienvenido! Por favor, ingrese sus datos.</p>
+                <input type="text" name="cedula" id="cedula" placeholder="Cedula" required>
                 <div class="nombres">
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre"
                         onkeyup="validarLetras(event,this)" required>
                     <input type="text" name="apellido" id="apellido" placeholder="Apellido"
                         onkeyup="validarLetras(event,this)" required>
                 </div>
+                <input type="date" name="fechaNac" id="fechaNac" placeholder="Fecha de Nacimiento" required>
+                <input type="text" name="telefono" id="telefono" placeholder="Telefono o Celular" required>
                 <input type="email" name="email" id="email" placeholder="Correo" required>
                 <input type="password" name="pass" id="pass" placeholder="Contraseña" required>
                 <input type="password" name="epass" id="epass" placeholder="Confirmar contraseña"
