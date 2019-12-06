@@ -18,6 +18,8 @@ if (isset($_SESSION['isLogin'])) {
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="../css/globalStyle.css">
     <link rel="stylesheet" href="../css/generalStyle.css">
+    
+    <script type="text/javascript" src="../js/ajaxC1.js"></script>
     <title>ImportManguerasIV</title>
 </head>
 
@@ -28,12 +30,19 @@ if (isset($_SESSION['isLogin'])) {
         ?>
     </header>
     </div>
+    <section>
+    <label for="nombres" class="nombresC1">Buscar Manguera:</label>
+        <form action="" method="GET" class="form_search">
+        <input type="search" id="busqueda" placeholder="Buscar por nombre" onkeyup="buscarPornombre(this)">
+        </form>
+    </section>
     <div class="content">
         <section>
             <a href="#">
                 <h2>Productos Disponibles</h2>
             </a>
-            <div class="contentCards">
+          
+            <div class="contentCards" id="data">
 
                 <?php
                 include '../../config/configDB.php';
