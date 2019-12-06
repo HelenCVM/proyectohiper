@@ -1,0 +1,662 @@
+body {
+    width: 80%;
+   
+    max-width: 1500px;
+    padding-left: 0.9%;
+    padding-right: 0.9%;
+    margin: 0px auto auto auto;
+    clear: none;
+    float: none;
+    background-color: white;
+    -moz-box-shadow: rgba(136, 147, 209, 0.9) 20px 0px 25px,  rgba(136, 147, 209, 0.9) -20px 0px 25px;
+    -webkit-box-shadow: rgba(136, 147, 209, 0.9) 20px 0px 25px,  rgba(136, 147, 209, 0.9) -20px 0px 25px;
+    box-shadow: rgba(136, 147, 209, 0.9) 20px 0px 25px,  rgba(136, 147, 209, 0.9) -20px 0px 25px;
+}
+html{
+background-image: url("../img/img7.jpg");
+background-size: 100%;
+}
+
+.formulario0 input{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* menu css*/
+/* menu */
+
+.divmenu ul {
+    list-style:none;
+    margin:0;
+    padding: 1px 1px;
+   }
+   
+   /* items del menu */
+   
+   .divmenu ul li {
+    background-color:#2e518b;
+    width: 14.28%;
+   }
+   
+   /* enlaces del menu */
+   
+   .divmenu ul li a {
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    width: 100%;
+    padding:10px;
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    
+   }
+   
+   /* items del menu */
+   
+   .divmenu ul li {
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+   }
+   
+   /* efecto al pasar el ratón por los items del menu */
+   
+   .divmenu ul li:hover {
+    background:#5b78a7;
+ 
+}
+
+/* menu desplegable */
+
+.divmenu ul ul {
+    display:none;
+    position:absolute;
+    background:#eee;
+    padding:0;
+   }
+   
+   /* items del menu desplegable */
+   
+   .divmenu ul ul li {
+    float:none;
+    width:190px;
+   }
+
+   
+   /* enlaces de los items del menu desplegable */
+   
+   .divmenu ul ul a {
+    line-height:100%;
+    padding:5px 5px;
+   }
+   
+   /* items del menu desplegable al pasar el ratón */
+   
+   .divmenu ul li:hover > ul {
+    display:block;
+   }
+
+/*iconos menu */
+#iconmenu{
+    width: 10%;
+    height: 11%;
+}
+
+#iconcarrito{
+    width: 10%;
+    height: 12%;
+}
+
+/*flotante facebook*/
+.seccion {
+    width: 50%;
+    float: left;
+}
+
+.social{
+    position:fixed;
+    left: 0;
+    top: 5px;
+    
+}
+
+.social ul {
+    list-style: none;
+    padding: 1px 20px;
+}
+/*es para la publicodad de servicios*/
+.social1{
+    position:fixed;
+    left: 0;
+    top: 8px;
+    text-align: left;
+    
+}
+.social1 ul {
+    list-style: none;
+    padding: 15px 32px;
+}
+
+.social ul li .icon-mail4 { background:#666666;}
+.social ul li .icon-whatsapp { background:green;}
+
+ /*index transcicion*/
+
+     
+ .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+
+    border-radius:10px;
+    border: white 3px inset;
+  }
+  .transcicion{
+      /*background-color: rgb(15, 75, 134);*/
+      width: 97%; 
+    }
+    .swiper-container{
+       /* background-color: rgb(15, 75, 134);*/
+       background-image: url("../../../../imagenes/formularioimg.jpg");
+        background-size: 60%;
+        background-size: 100%;
+    }
+
+    /*contenido del index*/
+    .indexcontenido{
+        text-align: justify;
+     padding: 0px 20px;
+          }
+
+          .indexcontenido {
+            width: 60%;
+            float: left;
+        }
+
+        .imgcontenido {
+            width: 30%;
+            float: left;
+            position: relative;
+        }
+        .imgcontenido1 {
+            width: 30%;
+            float: left;
+            margin-left: 935px;
+        }
+        
+        /*css para cuando el cursor pase por las opciones del maenu */           
+        nav > ul > li > ul > :hover, nav > ul > li> ul >  :active { 
+            text-decoration: none; 
+           /* background-color: #ce726c;*/
+            /*border-radius: 9px;*/
+            border-bottom: 3px solid #ce726c;
+        	
+            }
+            nav > ul >  :hover, nav > ul >    :active { 
+                text-decoration: none; 
+               /* background-color: #ce726c;*/
+                /*border-radius: 9px;*/
+                border-bottom: 3px solid #ce726c;
+                
+                }
+            /*-------------------------------------------------------*/
+              .footernos {
+                      
+                    text-align: center;
+                    font-size: 1em;
+                    margin-top: 4%;
+                    background-color: rgb(15, 75, 134); 
+                    color:black;
+                    clear: both;
+                    padding-bottom: 20px;
+                }
+
+/*--------------------- fin index css-------------------*/                
+/*estilos de la pagina nosotros */
+
+.h1nosotros {
+    color: red;
+   
+   text-align: center;
+    padding: 5%;
+    font-size: 200%;
+
+}
+
+.p1nosotros{
+    color: rgb(65, 60, 60);
+    float: left;
+    padding: 2%;
+    font-size: 150%;
+
+  }
+
+  .imanoso{
+    width: 100%;
+    float: left;
+    padding: 0%;
+  }
+
+  .imgabout{
+    width: 40%;
+    float: left;
+}
+ #videoYT{
+     text-align: center;
+     padding: 50px;
+ }
+/*-----------------------------------------*/
+/* servicios css */
+/*titulo */
+.h1servicioss{
+    color: red;
+    text-align: center;
+    size: 500%;
+    float: none;
+    padding: 3%;
+    font-size: 200%;
+}  
+/*-------------------*/
+.productos .produ .parrafo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    width: 100px;
+
+  }
+
+  /*productos */
+  .produ  th{
+    width: 600px;
+    height: 380px;
+    padding: 5px;
+    background-color: #fcc;
+    font-size: 0.8em;
+    text-align: justify;
+    
+   }
+   .produ h1{
+    font-family: cursive;
+   text-align:center;
+    
+   }
+   .produ .imagenproductos img{
+       width: 200px;
+       height: 200px;
+       display: block;
+   }
+
+ .imagenproductos{
+    padding: 1px 15px;
+}
+
+/*----------------------------*/
+.produ .imagenproductos img{
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.valoracion {
+ position: relative;
+ overflow: hidden;
+ display: inline-block;
+}
+.valoracion input {
+ position: absolute;
+ top: -100px;
+}
+.valoracion label {
+ float: right;
+ color: #c1b8b8;
+ font-size: 30px; 
+}
+.valoracion label:hover,
+.valoracion label:hover ~ label,
+.valoracion input:checked ~ label {
+color: #ffff00;
+text-shadow: 5px 5px 15px #AAA;
+cursor: pointer;
+
+}
+.mensajes input {
+    border: 0;
+}
+
+.produ{
+ background-image: url("../img/img8.jpg");
+ background-size: 100%;
+border-radius: 10px;
+}
+
+.productos{
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px ;
+    border: rgb(114, 56, 56) 3px inset;
+    
+}
+
+.video{
+    padding: 20px 0px;
+    border-bottom: 3px solid #5c5f96;
+}
+
+.perfil{
+    border-radius: 20px;
+ 
+}
+/*---------- login css estilos ----------*/
+
+.login-box{
+    width:320px;
+    height:360px ;
+    background: rgb(235, 232, 197);
+    color: #ffffffff;
+    top: 45%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%,-10%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.login-box .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    top: -50px;
+    left:calc(50% - 50px);
+}
+.login-box h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    color: black;
+
+}
+.login-box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    color: black;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-box input [type="text"],
+.login-box input [type="password"]{
+    border: none;
+    border-bottom: 1px solid #ffffffff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-box input[type="submit"]{
+    border:none;
+    outline: none;
+    height: 40px;
+    background: rgb(107, 129, 224);
+    color: #fff;
+font-size: 18px;
+border-radius: 20px;
+}
+.login-box input[type="reset"]{
+    border:none;
+    outline: none;
+    height: 40px;
+    background: rgb(107, 129, 224);
+    color: #fff;
+font-size: 18px;
+border-radius: 20px;
+}
+
+/*---------------------------------------*/
+
+/*------------------Pagina de contactos---------------*/
+#Contactanos{
+    text-align: center;
+}
+
+#formularioc{
+    text-align: center;
+    background-image: url("../img/img6.jpg");
+    padding: 1px 5px;
+}
+
+.columna1{
+    padding: 0px 90px;
+    
+}
+
+.columna2{
+    padding: 50px 20px;
+}
+
+ .enviar{
+    background: linear-gradient(rgb(63, 49, 138), rgb(161, 84, 78));
+    border: 0;
+    color: white;
+    opacity: 0.8;
+     cursor: pointer;
+      border-radius: 25px;
+      height: 40px;
+    width:20%;
+  }
+
+/*---------------------------------------------------*/
+/*------- formulario estilos --------------*/
+
+.loginboxe{
+
+    width:320px;
+    height:750px ;
+    background: rgb(235, 232, 197);
+    color: rgb(0, 0, 0);
+    top: 45%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%,-10%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.loginboxe label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    color: black;
+}
+.loginboxe input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginboxe input [type="text"],
+.loginboxe input [type="password"]{
+    border: none;
+    border-bottom: 1px solid #ffffffff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.loginboxe input[type="submit"]{
+    border:none;
+    outline: none;
+    height: 40px;
+    background: rgb(107, 129, 224);
+    color: #fff;
+font-size: 18px;
+border-radius: 20px;
+}
+.loginboxe input[type="reset"]{
+    border:none;
+    outline: none;
+    height: 40px;
+    background: rgb(107, 129, 224);
+    color: #fff;
+font-size: 18px;
+border-radius: 20px;
+}
+
+/*-----------------------------------------*/
+
+/*-----CARDS-------*/
+.content section {
+    margin-top: 2em;
+}
+.content section>a{
+    text-decoration: none;
+    
+}
+.content section>a>h2{
+    margin: 1.5em 0;
+    color: var(--colorDark);
+    font-size: 2em;  
+}.content section>h2{
+    margin: 1.5em 0;
+    color: var(--colorDark);
+    font-size: 2em;  
+}
+.content .contentCards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 15px;
+}
+.content section article{
+    background-color: var(--colorBlanco); 
+}
+.content .contentCards article{
+    margin-top: 20px;
+}
+article .contentImg{
+    width: 100%;
+    position: relative;
+}
+article .contentImg img{
+    width: 100%;
+}
+article .contentImg img:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+article .contentImg>span{
+    background: var(--colorRojo);
+    width: 5em;
+    font-size: .6em;
+    text-align: center;
+    border-radius: 20px;
+    padding: .5em 0;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+article .contentImg>span:hover{
+    color: var(--colorBlanco)
+}
+article .contentImg .ranking{
+    position: absolute;
+    top: .5em;
+    right: 1em;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+    padding: 0px 5px;
+    border-radius: 20px;
+}
+article .contentImg .ranking i{
+    color: #FFCA83;
+    font-size: 1.3em;
+}
+article .contentImg .ranking span{
+    color: var(--colorBlanco);
+    font-size: 1.1em;
+}
+article .contentImg .rankingi:hover{
+    cursor: pointer;
+}
+article .contentDescription{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 1em;
+    
+}
+article .contentDescription .descripProduct{
+    margin: 0 1em;
+}
+article .contentDescription .descripProduct a{
+    text-decoration: none;
+    color: var(--colorDark);
+}
+article .contentDescription .descripProduct a h2{
+    font-size: 1.3em;
+}
+article .contentDescription .descripProduct p{
+    overflow: hidden;
+    height: 1.5em;
+    font-size: .7em;
+    color: var(--color1);
+    opacity: .5;
+}
+article .contentDescription span{
+    color: var(--colorAzul);
+    font-size: 1.4em;
+}
+
+/****Tabla descripcion productos**/
+.restante table{
+    
+border-collapse: separate;
+text-align: left;
+caption-side: top;
+letter-spacing: 2px;
+}
+.restante .tablapro h6{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-content: center;
+}
+
+.promedio table{
+    
+    border-collapse: separate;
+    text-align: center;
+    caption-side: top;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: gray;
+}
+
+.promedio label:hover,
+.promedio label:hover ~ label{
+
+    color: #ffff00;
+    text-shadow: 5px 5px 15px #AAA;
+    cursor: pointer;
+}
+
+.columna1{
+    float: left;
+    width: 30%;
+    }
+    
+    .columna2{
+    float: left;
+    width: 45%;}
+    
+    

@@ -8,10 +8,15 @@
         <!--<link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">-->
+<<<<<<< HEAD
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
         <link rel="stylesheet" href="../css/globalStyle.css">
     <link rel="stylesheet" href="../css/generalStyle.css">
   
+=======
+        <link type="text/css" rel="stylesheet" href="../css/pagina.css">
+
+>>>>>>> 97ec136566e599f2d440f02de8e19422430f8c84
     </head>
     <body>
     
