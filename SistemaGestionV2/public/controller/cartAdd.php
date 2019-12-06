@@ -39,16 +39,6 @@ if (isset($_GET['codProd'])) {
 <?php
     }
 } else {
-   /* $sql = "INSERT INTO carrito (
-        car_cantidad, 
-        USUARIO_usu_id,  
-        PRODUCTO_PRO_ID,
-        SUCURSAL_suc_id) VALUES (  
-        1, 
-        " . $_SESSION['codigo'] . ", 
-        " . $_GET['codProd'] . ",
-        " . $_GET['storeID'] . "
-    );";*/
     $sql = "INSERT INTO carrito VALUES (0," . $_GET['codProd'] . "," . $_SESSION['codigo'] . ",1 );";
 
     if ($conn->query($sql)) {
