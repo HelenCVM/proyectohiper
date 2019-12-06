@@ -130,6 +130,10 @@ body header .content .menu ul ul a:hover{
 body header .content .menu ul li:hover>ul{
     display: block;
 }
+
+body header{
+    background-color:#2e518b;;
+}
 /*-------------SEARCH BAR--------------------*/
 header .content .search{
     display: flex;
@@ -300,7 +304,7 @@ article .contentDescription span{
 footer{
     margin-top: 2em;
     width: 100%;
-    background-color: var(--color1);
+    background-color: #2e518b;;
 }
 footer .content{
     display: grid;
@@ -637,3 +641,4 @@ body .pageSuccess .contentSucce i.fa-times-circle{
     width: 10%;
     height: 11%;
 }
+

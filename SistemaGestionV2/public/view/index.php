@@ -23,9 +23,11 @@ if (isset($_SESSION['isLogin'])) {
 
 <body>
     <header>
+        
         <?php
         include_once("../../global/php/headerPublic.php");
         ?>
+
     </header>
     </div>
     <div class="content">
