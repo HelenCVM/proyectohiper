@@ -120,7 +120,7 @@ if (isset($_SESSION['isLogin'])) {
                     </div>
                     <span>$<?php echo $rowP['pro_precio'] ?></span>
                     <!--Parametro para eliminar -->
-                    <i class="fas fa-times" onclick="cartDelete(<?php echo $row['car_id'] ?>)"></i>
+                    <i class="fas fa-times" onclick="cartDelete(<?php echo $row['car_codigo'] ?>)"></i>
                 </article>
 
                 <?php
