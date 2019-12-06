@@ -5,7 +5,7 @@ if (isset($_SESSION['isLogin'])) {
         header("Location: ../../admin/admin/view/index.php");
     }
 }
-if (isset($_GET['codProd'])) {
+if (isset($_GET['codProd'])&&isset($_SESSION['isLogin'])) {
 
     include '../../config/configDB.php';
     /*$sql = "SELECT * FROM carrito WHERE 
