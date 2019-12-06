@@ -148,25 +148,31 @@ if (!isset($_GET['producto'])) {
                 </div>
                 <div class="productBtns">
                     <div class="valoration" id="valoration" onmousemove="elemento(event)">
-                        <p class="clasificacion">
-                            <input id="radio1" type="radio" name="estrellas" value="5"
-                                onclick="prodValoration(this, <?php echo $_GET['producto'] ?>) ">
-                            <label for="radio1">★</label>
-                            <input id="radio2" type="radio" name="estrellas" value="4"
-                                onclick="prodValoration(this, <?php echo $_GET['producto'] ?>) ">
-                            <label for="radio2">★</label>
-                            <input id="radio3" type="radio" name="estrellas" value="3"
-                                onclick="prodValoration(this, <?php echo $_GET['producto'] ?>) ">
-                            <label for="radio3">★</label>
-                            <input id="radio4" type="radio" name="estrellas" value="2"
-                                onclick="prodValoration(this, <?php echo $_GET['producto'] ?>) ">
-                            <label for="radio4">★</label>
-                            <input id="radio5" type="radio" name="estrellas" value="1"
-                                onclick="prodValoration(this, <?php echo $_GET['producto'] ?>) ">
-                            <label for="radio5">★</label>
-                        </p>
+                    <?php                         
+                      echo " <form id='formulario0' method='POST' action='insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
+                      echo" <div class='valoracio'>";
+                      echo" <input id='radio' type='radio' name='radio' value='1'>";
+                      echo " <label for='radio1'></label>";
+                      
+                      echo" <input id='radio' type='radio' name='radio' value='2'>";
+                      echo "<label for='radio2'></label>";
+                      
+                      echo" <input id='radio' type='radio' name='radio' value='3'>";
+                      echo"<label for='radio3'></label>";
+                      
+                      echo"<input id='radio' type='radio' name='radio' value='4'>";
+                      echo"<label for='radio4'></label>";
+                      
+                      echo"<input id='radio' type='radio' name='radio' value='5'>";
+                      echo" <label for='radio5'></label>";
+                      echo"<input id='mensaje' type='mensaje' name='mensaje' value=''>";
+                      
+                      echo "<p><input type='submit' value='Enviar datos'></p>";
+                      echo"</div>";
+                      echo"</form>";
+                     
                         
-                        <?php
+                       
                        /* if (isset($_SESSION['codigo'])) {
                             $sqlRatP = "SELECT rat.rat_calificacion
                                     FROM producto pro, rating rat, usuario usu
