@@ -9,12 +9,6 @@ if (isset($_SESSION['isLogin'])) {
 }
 include '../../../config/configDB.php';
 
-$foto = $_FILES['foto']['name'];
-$temp = $_FILES['foto']['tmp_name'];
-
-move_uploaded_file($temp, "../../../img/user/" . $_POST["codigo"] . "/$foto");
-
-
 $codigo = isset($_POST["codigo"]) ? trim($_POST["codigo"]) : null;
 $nombre = isset($_POST["nombre"]) ? mb_strtolower(trim($_POST["nombre"]), 'UTF-8') : null;
 $apellido = isset($_POST["apellido"]) ? mb_strtolower(trim($_POST["apellido"]), 'UTF-8') : null;
