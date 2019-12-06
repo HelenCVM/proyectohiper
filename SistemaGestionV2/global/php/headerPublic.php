@@ -1,6 +1,5 @@
 <script src="../js/funciones.js"></script>
 <a href="index.php" ><img src="../../img/banner-imi.png"  id="imagenPri" alt="Import Mangueras"/></a>
-
 <div class="content">
     <a href="../../index.php"></a>   
     <nav class="menu">
