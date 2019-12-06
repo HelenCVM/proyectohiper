@@ -65,7 +65,6 @@
                 <h2>INDUSTRIALES</h2>
             </a>
             <div class="contentCards" id="data">
-
                 <?php
                         include  '../../config/conexionBD.php';  
                 $sql="SELECT * FROM Producto where cate_codigo=10";

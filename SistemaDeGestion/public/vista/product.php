@@ -65,6 +65,8 @@
     <div class="content">
         <?php
         include  '../../config/conexionBD.php'; 
+    
+
         $sql="SELECT c.cate_codigo, p.pro_codigo, p.pro_nombre, p.pro_descripcion,p.pro_dia_in,p.pro_peso_gm,p.pro_presi_bar,p.pro_long_m,
         p.pro_precio,
          p.pro_stock, p.pro_img
@@ -92,12 +94,8 @@
             $categoria = $row['cate_codigo'];
             $stock=$row['pro_stock'];
             $imagen=$row['pro_img'];
-<<<<<<< HEAD
             
             
-=======
-          
->>>>>>> 0ec7c1ccd861cefd7b7e44b40841ef3f1b1e420d
         }
         //Stock
       /*  $sqlStock = "SELECT ps.pro_suc_stock FROM producto p, producto_sucursal ps, sucursal s
@@ -189,11 +187,69 @@
                         </button>
                     </div>
                 </div>
+                   
             </div>
         </section>
 
         
     </div>
+
+    <section>
+    
+    <?php
+                        //incluir conexión a la base de datos
+                        include "../../config/conexionBD.php";
+
+                        $sql = "SELECT p.pro_nombre,p.pro_codigo ,sum(cali_valor) as total,COUNT(cali_valor) as
+                        cantidas,AVG(cali_valor) as promedio FROM Calificaciones c ,Producto p WHERE p.pro_codigo=c.pro_codigo  and p.pro_codigo=$codigo
+                        group by p.pro_codigo;"; 
+                        //cambiar la consulta para puede buscar por ocurrencias de letras
+                        $result = $conn->query($sql);
+                        echo " <table style='width:100%'>
+                        <tr>
+                        <th>estrella</th>
+                        </tr>";
+                        if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>"."★"."</td>";
+                            echo " <td>" . $row['pro_nombre'] . "</td>";
+                            echo " <td>" . $row['promedio'] ."</td>";
+                            echo "</tr>";
+
+                            echo "<tr>";
+                            echo "<td>"."★★"."</td>";
+                            echo " <td>" . $row['pro_nombre'] . "</td>";
+                            echo " <td>" . $row['promedio'] ."</td>";
+                            echo "</tr>";
+
+                            echo "<tr>";
+                            echo "<td>"."★★★"."</td>";
+                            echo " <td>" . $row['pro_nombre'] . "</td>";
+                            echo " <td>" . $row['promedio'] ."</td>";
+                            echo "</tr>";
+
+                            echo "<tr>";
+                            echo "<td>"."★★★★"."</td>";
+                            echo " <td>" . $row['pro_nombre'] . "</td>";
+                            echo " <td>" . $row['promedio'] ."</td>";
+                            echo "</tr>";
+
+                            echo "<tr>";
+                            echo "<td>"."★★★★★"."</td>";
+                            echo " <td>" . $row['pro_nombre'] . "</td>";
+                            echo " <td>" . $row['promedio'] ."</td>";
+                            echo "</tr>";
+                            
+
+                                                                }
+                        } 
+                        $conn->close();
+
+                ?>
+    
+    </section>
+    <section>
 
     <footer class="footernos">
                 <br>
@@ -202,8 +258,9 @@
                 &#8226; Celular: +593985633576 <br/>
                 &#8226; Whatsapp: +593985633576 <br/>
                 &#8226; Correo: importmanguerasiv@gmail.com 
-            </footer>
+    </footer>
 
+    </section>
 </body>
 
 </html>
