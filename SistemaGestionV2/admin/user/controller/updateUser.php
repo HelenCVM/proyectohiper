@@ -33,9 +33,9 @@ $sql = "UPDATE Usuario SET
             usu_fecha_modificacion='$date'
             WHERE usu_codigo='$codigo';";
 
-$sqlDireccion = "SELECT *  FROM Usuario, Direccion WHERE
-                    usuario.usu_codigo=direccion.usu_codigo AND
-                    usu_codigo='$codigo';";
+$sqlDireccion = "SELECT *  FROM Usuario u , Direccion d WHERE
+                    u.usu_codigo=d.usu_codigo AND
+                    u.usu_codigo='$codigo';";
 $result = $conn->query($sqlDireccion);
 
 if ($result->num_rows > 0) {
@@ -48,7 +48,7 @@ if ($result->num_rows > 0) {
 
     //echo 'si hay datos';
 } else {
-    $sqlDir = "INSERT INTO Direccion  VALUES (0,$codigo,'$ciudad','$provincia','$dirCP','$dirCS','');";
+    $sqlDir = "INSERT INTO Direccion  VALUES (0,$codigo,'$ciudad','$provincia','$dirCP','$dirCS');";
     //echo 'No hay datos';
 }
 
