@@ -165,8 +165,8 @@
                     </table>
                     </div>
                     <br>
-
-                <span>$<?php echo $precio; ?></span>
+                    
+                <span><h5>Precio:  </h5>$<?php echo $precio; ?></span>
                 <div class="dataStore">
 
 
@@ -178,25 +178,30 @@
                     <p><span id="shopTotal">Total: </span>$<?php 
                                                             echo $precio; ?></p>
                 </div>
-            
+
+ 
+
                     <div class="btns">
                         
                         <button onclick="cartAdd(<?php echo $codigo; ?>)">
                             <i class="fas fa-cart-plus"></i>
                             Agregar al carrito
                         </button>
+
+                        <br>
+                        <br>
                     </div>
+                    
+
                 </div>
                    
             </div>
         </section>
-
-        
-    </div>
+    </div>         
+   
 
     <section>
-    
-    <?php
+<?php
                         //incluir conexión a la base de datos
                         include "../../config/conexionBD.php";
 
@@ -205,51 +210,26 @@
                         group by p.pro_codigo;"; 
                         //cambiar la consulta para puede buscar por ocurrencias de letras
                         $result = $conn->query($sql);
-                        echo " <table style='width:100%'>
-                        <tr>
-                        <th>estrella</th>
-                        </tr>";
                         if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
+                            echo"<div class='promedio'>";               
+                            echo " <table style='width:27%'>";    
                             echo "<tr>";
-                            echo "<td>"."★"."</td>";
-                            echo " <td>" . $row['pro_nombre'] . "</td>";
+                            echo" <td><label for='radio'> ★★★★★</label> </td>";                            
                             echo " <td>" . $row['promedio'] ."</td>";
                             echo "</tr>";
-
-                            echo "<tr>";
-                            echo "<td>"."★★"."</td>";
-                            echo " <td>" . $row['pro_nombre'] . "</td>";
-                            echo " <td>" . $row['promedio'] ."</td>";
-                            echo "</tr>";
-
-                            echo "<tr>";
-                            echo "<td>"."★★★"."</td>";
-                            echo " <td>" . $row['pro_nombre'] . "</td>";
-                            echo " <td>" . $row['promedio'] ."</td>";
-                            echo "</tr>";
-
-                            echo "<tr>";
-                            echo "<td>"."★★★★"."</td>";
-                            echo " <td>" . $row['pro_nombre'] . "</td>";
-                            echo " <td>" . $row['promedio'] ."</td>";
-                            echo "</tr>";
-
-                            echo "<tr>";
-                            echo "<td>"."★★★★★"."</td>";
-                            echo " <td>" . $row['pro_nombre'] . "</td>";
-                            echo " <td>" . $row['promedio'] ."</td>";
-                            echo "</tr>";
-                            
-
+                            echo " </table>";
+                            echo" </div>";
                                                                 }
                         } 
                         $conn->close();
 
                 ?>
+
+</section>
+
+
     
-    </section>
-    <section>
 
     <footer class="footernos">
                 <br>
@@ -260,7 +240,6 @@
                 &#8226; Correo: importmanguerasiv@gmail.com 
     </footer>
 
-    </section>
 </body>
 
 </html>

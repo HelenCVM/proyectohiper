@@ -457,9 +457,6 @@ border-radius: 20px;
     width:20%;
   }
 
-  #nombreslabel{
-    
-  }
 /*---------------------------------------------------*/
 /*------- formulario estilos --------------*/
 
@@ -635,7 +632,20 @@ letter-spacing: 2px;
     align-content: center;
 }
 
-.restante th,td{
-    border:1px solid rgb(226, 194, 147);
+.promedio table{
+    
+    border-collapse: separate;
+    text-align: center;
+    caption-side: top;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: gray;
+}
 
+.promedio label:hover,
+.promedio label:hover ~ label{
+
+    color: #ffff00;
+    text-shadow: 5px 5px 15px #AAA;
+    cursor: pointer;
 }
