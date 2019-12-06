@@ -15,7 +15,7 @@
                 </ul>
             </li>
             <li><a href="../../public/view/contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
-                <li><a href="login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
+                <li><a href="../../public/view/login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
                 <li><a href="signup.php"> <img id ="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>     
                 
         </ul>
