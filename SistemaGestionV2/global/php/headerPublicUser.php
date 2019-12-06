@@ -44,12 +44,12 @@
                 <li><span><?php echo $_SESSION['nombre'] . ' ' . $_SESSION['apellido']; ?></span> <i
                         class="fas fa-sort-down"></i>
                     <ul>
-                        <li><a href="index.php">Perfil</a>
+                        <li><a href="index.php">MI CUENTA</a>
                         </li>
-                        <li><a href="shoppinghistory.php">Historial</a>
+                        <li><a href="shoppinghistory.php">PEDIDOS</a>
                         </li>
-                        <li><a href="settings.php">Opciones</a></li>
-                        <li><a href="../../../config/signout.php">Salir</a></li>
+                        <li><a href="settings.php">CONFIGURACIONES</a></li>
+                        <li><a href="../../../config/signout.php">SALIR</a></li>
                     </ul>
                 </li>
             </ul>
