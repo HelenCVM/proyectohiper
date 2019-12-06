@@ -37,7 +37,12 @@ if(!empty($_POST)){
     }
     
     include '../config/conexionDB.php';
+<<<<<<< HEAD
     $sql="INSERT INTO Producto VALUES (0,$categoria_codigo,'$pro_nombre','$img_producto','$pro_marca','$pro_caracteristicas','$pro_descripcion','$pro_aplicaciones',$pro_diametro,$pro_peso,$pro_presion,$pro_longitud,$pro_precio,$pro_stock,'N')";
+=======
+    $sql="INSERT INTO Producto VALUES (0,$categoria_codigo,'$pro_nombre','$img_producto',
+    '$pro_marca','$pro_descripcion',$pro_diametro,$pro_peso,$pro_presion,$pro_longitud,$pro_precio,$pro_stock,'N')";
+>>>>>>> 16a11c8f1a796846202b83e0f232f3ccec703a3a
 
     if ($conn->query($sql) == true) {
         if($nombre_foto!=''){
