@@ -13,7 +13,7 @@
                 </ul>
             </li>
             <li><a href="../../public/view/contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
-                <li><a href="login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
+                <li><a href="../../public/view/login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
                 <li><a href="signup.php"> <img id ="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>     
                 
         </ul>
@@ -44,7 +44,7 @@
                         </li>
                         <li><a href="shoppinghistory.php">PEDIDOS</a>
                         </li>
-                        <li><a href="settings.php">CONFIGURACIONES</a></li>
+                        <li><a href="settings.php">CONFIGURACIONESSS</a></li>
                         <li><a href="../../../config/signout.php">SALIR</a></li>
                     </ul>
                 </li>

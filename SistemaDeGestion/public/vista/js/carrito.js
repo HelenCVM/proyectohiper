@@ -20,7 +20,7 @@ function cartAdd(cod) {
             //document.getElementById('body').innerHTML = this.responseText
         }
     };
-    xmlhttp.open("GET", "../controladores/cartAdd.php?codProd=" + cod , true)
+    xmlhttp.open("GET", "../cardAdd.php=" + cod , true)
     xmlhttp.send()
 }
 
