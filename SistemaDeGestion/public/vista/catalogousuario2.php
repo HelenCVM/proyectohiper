@@ -90,7 +90,7 @@ $codigo = $_GET["variable1"];
                     </div>
                     <div class="contentDescription">
                         <div class="descripProduct">
-                            <a href="product.php?producto=<?php echo $row['pro_codigo']; ?>">
+                            <a href="producto.php?producto=<?php echo $row['pro_codigo']; ?>">
                                 <h2><?php echo $row['pro_nombre']; ?></h2>
                             </a>
                             <p><?php echo $row['pro_descripcion']; ?></p>

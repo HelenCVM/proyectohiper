@@ -4,12 +4,10 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <meta name="keywords" content="manguera, importación, import"/>
-        <!--<link type="text/css" rel="stylesheet" href="style.css">
-        <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css"> -->
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="css/swiper.min.css">
         <link rel="stylesheet" href="css/pagina.css">
-         <!--<link type="text/css" rel="stylesheet" href="../../css/estilos.css">-->
+       
 
         <!-- Swiper JS -->
         <script src="js/swiper.min.js"></script>
@@ -57,18 +55,11 @@
                     </ul>       
             </div>
         </section>
-        <br>
-         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!--transicion de las imagenes -->
+        
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+         <!--transicion de las imagenes -->
         <center><section class="transcicion">
           
               <!-- Swiper -->

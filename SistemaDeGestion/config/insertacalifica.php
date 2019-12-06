@@ -18,7 +18,7 @@ $codigo = $_GET["codigo"];
 $mensaje = isset($_POST["mensaje"]) ? trim($_POST["mensaje"]) : null;
 $sql = "INSERT INTO Calificaciones VALUES (0, '$codigo','$radio','$mensaje')";
 if ($conn->query($sql) === TRUE) {
-header("Location:../public/vista/servicios.php");
+header("Location:../public/vista/serviciousuario.php");
 echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
 } else {
 if($conn->errno == 1062){

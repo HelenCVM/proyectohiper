@@ -52,12 +52,12 @@
     <h1>Login</h1>
     <form id="formulario02" method="POST" action="../../config/login.php" onsubmit="return validarCamposObligatorios()">
     <label for="correo">Correo electrónico(*) </label>
-    <input type="text" id="correo" name="correo" value="" placeholder="Ingrese el correo ..."   onkeyup="validarCorreo('errorEmail',this)"/>
+    <input type="text" id="correo" name="correo" value="" placeholder="&#9993;Ingrese su correo"   onkeyup="validarCorreo('errorEmail',this)"/>
     <span id="mensajeCorreo" class="error"></span>      
     <br>
     <label for="nombres">Constraseña (*)</label>
-    <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su
-   contraseña ..."/>
+    <input type="password" id="contrasena" name="contrasena" value="" placeholder="&#128272;Ingrese su
+   contraseña"/>
    <span id="mensajeContra" class="error"></span>      
     <br>
     <input type="submit" id="login" name="login" value="Iniciar Sesión" />
