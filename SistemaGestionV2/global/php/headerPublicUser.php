@@ -3,31 +3,27 @@
     <a href="../../../index.php"></a>
     <nav class="menu">
         <ul>
-            <li><a href="../../../index.php">Inicio</a></li>
-            <li> <span>Categorias</span> <i class="fas fa-sort-down"></i>
+            <li><a href="../../index.php"><img id ="iconmenu" src="../../img/icon1.png">INICIO</a></li>
+            <li><a href="nosotros.php"><img id ="iconmenu" src="../../img/icon2.png"> NOSOTROS</a></li>
+            <li> <span><img id ="iconmenu" src="../../img/icon3.png"> PRODUCTOS</span> <i class="fas fa-sort-down"></i>
                 <ul>
-                <li><a href="categoria.php?categoria=10">Industriales</a></li>
+                    <li><a href="categoria.php?categoria=10">Industriales</a></li>
                     <li><a href="categoria.php?categoria=11">Hidraulicas</a></li>
                     <li><a href="categoria.php?categoria=12">Alta Temperatura</a></li>
-                    
                 </ul>
             </li>
-<li><span>Mision y Vision </span></li>
-<li><span>¿Quienes somo?</span></li>
-<li><span>Contactanos</span></li>
-
+            <li><a href="../../public/view/contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
+                <li><a href="../../public/view/login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
+                <li><a href="signup.php"> <img id ="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>     
+                
         </ul>
     </nav>
     <div class="search">
         <div class="barSearch">
-            <input type="search" name="search" id="search" placeholder="Buscar">
-            <i class="fas fa-search"></i>
+            
         </div>
-        <a onclick="searchBtn('../../../public/view/search.php')">Buscar</a>
+      
     </div>
-    <!-- <div class="buyCar itemsUser">
-        <a href="../../../public/view/shoppingcart.php"><i class="fas fa-shopping-cart"></i></a>
-    </div> -->
     <div class="sessionItems">
         <?php
         if (isset($_SESSION['isLogin'])) {
@@ -44,12 +40,12 @@
                 <li><span><?php echo $_SESSION['nombre'] . ' ' . $_SESSION['apellido']; ?></span> <i
                         class="fas fa-sort-down"></i>
                     <ul>
-                        <li><a href="index.php">Perfil</a>
+                        <li><a href="index.php">MI CUENTA</a>
                         </li>
-                        <li><a href="shoppinghistory.php">Historial</a>
+                        <li><a href="shoppinghistory.php">PEDIDOS</a>
                         </li>
-                        <li><a href="settings.php">Opciones</a></li>
-                        <li><a href="../../../config/signout.php">Salir</a></li>
+                        <li><a href="settings.php">CONFIGURACIONES</a></li>
+                        <li><a href="../../../config/signout.php">SALIR</a></li>
                     </ul>
                 </li>
             </ul>
@@ -57,8 +53,7 @@
 
         <?php
     } else {
-        echo '<a href="login.php">Iniciar Sesión</a>';
-        echo '<a href="signup.php">Registrarse</a>';
+
     }
     ?>
     </div>

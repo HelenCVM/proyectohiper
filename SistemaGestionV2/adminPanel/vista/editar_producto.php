@@ -2,9 +2,7 @@
 session_start();
 if (!isset($_SESSION['isLogin'])) {
     header("Location: ../vista/index.php");
-} elseif ($_SESSION['rol'] == 'user') {
-   // header("Location: ../usuario/index.php");
-}
+} 
 include '../config/conexionDB.php';
 ?>
 

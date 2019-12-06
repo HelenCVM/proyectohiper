@@ -1,9 +1,6 @@
 <?php
 session_start();
 if (isset($_SESSION['isLogin'])) {
-    if ($_SESSION['rol'] == 'admin') {
-        header("Location: ../../admin/admin/view/index.php");
-    }
 }
 ?>
 <!DOCTYPE html>
@@ -23,9 +20,11 @@ if (isset($_SESSION['isLogin'])) {
 
 <body>
     <header>
+        
         <?php
         include_once("../../global/php/headerPublic.php");
         ?>
+
     </header>
     </div>
     <div class="content">

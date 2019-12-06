@@ -1,31 +1,33 @@
 <script src="../js/funciones.js"></script>
+<a href="index.php" ><img src="../../img/banner-imi.png"  id="imagenPri" alt="Import Mangueras"/></a>
+
 <div class="content">
-    <a href="../../index.php"></a>
+    <a href="../../index.php"></a>   
     <nav class="menu">
         <ul>
-            <li><a href="../../index.php">Inicio</a></li>
-            <li> <span>Categorias</span> <i class="fas fa-sort-down"></i>
+            <li><a href="../../index.php"><img id ="iconmenu" src="../../img/icon1.png">INICIO</a></li>
+            <li><a href="nosotros.php"><img id ="iconmenu" src="../../img/icon2.png"> NOSOTROS</a></li>
+            <li> <span><img id ="iconmenu" src="../../img/icon3.png"> PRODUCTOS</span> <i class="fas fa-sort-down"></i>
                 <ul>
                     <li><a href="categoria.php?categoria=10">Industriales</a></li>
                     <li><a href="categoria.php?categoria=11">Hidraulicas</a></li>
                     <li><a href="categoria.php?categoria=12">Alta Temperatura</a></li>
                 </ul>
             </li>
-            <li><span>Mision y Vision </span></li>
-<li><span>¿Quienes somo?</span></li>
-<li><span>Contactanos</span></li>
+
+            <li><a href="contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
+
+            <li><a href="../../public/view/contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
+
+                <li><a href="../../public/view/login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
+
+                <li><a href="login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
+
+                <li><a href="signup.php"> <img id ="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>     
+                
         </ul>
     </nav>
-    <div class="search">
-        <div class="barSearch">
-            <input type="search" name="search" id="search" placeholder="Buscar" onkeyup="searchBox(this)">
-            <i class="fas fa-search"></i>
-        </div>
-        <a onclick="searchBtn('search.php')">Buscar</a>
-    </div>
-    <!-- <div class="buyCar itemsUser">
-        <a href="../../public/view/shoppingcart.php"><i class="fas fa-shopping-cart"></i></a>
-    </div> -->
+   
     <div class="sessionItems">
         <?php
         if (isset($_SESSION['isLogin'])) {
@@ -54,8 +56,6 @@
 
         <?php
     } else {
-        echo '<a href="login.php">Iniciar Sesión</a>';
-        echo '<a href="signup.php">Registrarse</a>';
     }
     ?>
 

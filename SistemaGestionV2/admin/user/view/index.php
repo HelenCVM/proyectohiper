@@ -1,10 +1,6 @@
 <?php
 session_start();
 if (isset($_SESSION['isLogin'])) {
-    if ($_SESSION['rol'] == 'admin') {
-        header("Location: ../../admin/view/index.php");
-    }
-} else {
     header("Location: ../../../index.php");
 }
 ?>
@@ -37,7 +33,7 @@ if (isset($_SESSION['isLogin'])) {
             ?>
         </header>
         <section>
-            <h2>Perfil</h2>
+            <h2>MI CUENTA</h2>
             <div class="cardContent">
                 <h2>Datos personales</h2>
                 <div class="formData">

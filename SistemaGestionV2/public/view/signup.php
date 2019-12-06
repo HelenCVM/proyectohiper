@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['isLogin'])) {
- 
+    
         header("Location:index.php");
     
 }
@@ -18,7 +18,8 @@ if (isset($_SESSION['isLogin'])) {
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="../css/globalStyle.css">
     <link rel="stylesheet" href="../css/generalStyle.css">
-    <title>Login</title>
+    <script src="../js/validaciones.js"></script>
+    <title>Registro</title>
 </head>
 
 <body>
@@ -30,20 +31,28 @@ if (isset($_SESSION['isLogin'])) {
 
     <div class="content">
         <div class="form">
-            <form action="../controller/login.php" method="post">
-                <h2>IMPORTMANGUERAS</h2>
+            <form action="../controller/signup.php"
+                onsubmit="return validarCamposObligatorios()" method="POST">
+                <h2>IMPORTMANGUERASIV</h2>
                 <p>Bienvenido! Por favor, ingrese sus datos.</p>
+                <input type="text" name="cedula" id="cedula" placeholder="Cedula" required>
+                <div class="nombres">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre"
+                        onkeyup="validarLetras(event,this)" required>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido"
+                        onkeyup="validarLetras(event,this)" required>
+                </div>
+                <input type="date" name="fechaNac" id="fechaNac" placeholder="Fecha de Nacimiento" required>
+                <input type="text" name="telefono" id="telefono" placeholder="Telefono o Celular" required>
                 <input type="email" name="email" id="email" placeholder="Correo" required>
                 <input type="password" name="pass" id="pass" placeholder="Contraseña" required>
-                <!-- <div class="remember">
-                    <input type="checkbox" name="recordar" id="recordar">
-                    <label for="recordar">Recordarme contraseña</label>
-                    <a href="#">Olvide la contraseña</a>
-                </div> -->
+                <input type="password" name="epass" id="epass" placeholder="Confirmar contraseña"
+                    onkeyup="validarPass('errorCPass')" required>
+                <span class="error" id="errorCPass">Las contraseñas no coinciden</span>
                 <div class="btns">
-                    <input type="submit" value="Iniciar Sesión">
-                    <input type="button" value="Registro" onclick="window.location.href = 'signup.php'">
+                    <input type="submit" value="Crear">
                 </div>
+                <a href="login.php">Ya tienes? Inicia sesión</a>
             </form>
         </div>
     </div>
