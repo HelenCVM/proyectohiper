@@ -14,12 +14,7 @@
                     <li><a href="categoria.php?categoria=12">Alta Temperatura</a></li>
                 </ul>
             </li>
-<<<<<<< HEAD
-            <li><span>MISION Y VISION </span></li>
-            <li><a href="contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
-=======
             <li><a href="../../public/view/contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
->>>>>>> 97ec136566e599f2d440f02de8e19422430f8c84
                 <li><a href="login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
                 <li><a href="signup.php"> <img id ="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>     
                 
