@@ -2,9 +2,7 @@
 session_start();
 if (!isset($_SESSION['isLogin'])) {
     header("Location: ../index.php");
-} elseif ($_SESSION['rol'] == 'user') {
-    //header("Location: ../usuario/index.php");
-}
+} 
 ?>
 <?php
 if(!empty($_POST)){

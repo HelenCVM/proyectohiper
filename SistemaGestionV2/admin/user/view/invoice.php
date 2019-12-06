@@ -1,9 +1,6 @@
 <?php
 session_start();
 if (isset($_SESSION['isLogin'])) {
-    if ($_SESSION['rol'] == 'admin') {
-        header("Location: ../../admin/view/index.php");
-    }
     if (!isset($_GET['fac_cab_id'])) {
         header("Location: shoppinghistory.php");
     }

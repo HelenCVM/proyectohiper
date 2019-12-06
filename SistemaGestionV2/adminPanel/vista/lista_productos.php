@@ -2,9 +2,7 @@
 session_start();
 if (!isset($_SESSION['isLogin'])) {
     header("Location: admin_login.php");
-} elseif ($_SESSION['rol'] == 'user') {
-    header("Location: #");
-}
+} 
 ?>
 
 <!DOCTYPE html>

@@ -12,22 +12,18 @@
                     
                 </ul>
             </li>
-<li><span>Mision y Vision </span></li>
-<li><span>¿Quienes somo?</span></li>
-<li><span>Contactanos</span></li>
+<li><a href=""></a><span>Mision y Vision </span></li>
+<li><a href="nosotro.php"></a><span>¿Quienes somos?</span></li>
+<li><a href="contac.php"></a><span>Contactanos</span></li>
 
         </ul>
     </nav>
     <div class="search">
         <div class="barSearch">
-            <input type="search" name="search" id="search" placeholder="Buscar">
-            <i class="fas fa-search"></i>
+            
         </div>
-        <a onclick="searchBtn('../../../public/view/search.php')">Buscar</a>
+      
     </div>
-    <!-- <div class="buyCar itemsUser">
-        <a href="../../../public/view/shoppingcart.php"><i class="fas fa-shopping-cart"></i></a>
-    </div> -->
     <div class="sessionItems">
         <?php
         if (isset($_SESSION['isLogin'])) {
@@ -44,12 +40,12 @@
                 <li><span><?php echo $_SESSION['nombre'] . ' ' . $_SESSION['apellido']; ?></span> <i
                         class="fas fa-sort-down"></i>
                     <ul>
-                        <li><a href="index.php">Perfil</a>
+                        <li><a href="index.php">MI CUENTA</a>
                         </li>
-                        <li><a href="shoppinghistory.php">Historial</a>
+                        <li><a href="shoppinghistory.php">PEDIDOS</a>
                         </li>
-                        <li><a href="settings.php">Opciones</a></li>
-                        <li><a href="../../../config/signout.php">Salir</a></li>
+                        <li><a href="settings.php">CONFIGURACIONES</a></li>
+                        <li><a href="../../../config/signout.php">SALIR</a></li>
                     </ul>
                 </li>
             </ul>
@@ -57,8 +53,7 @@
 
         <?php
     } else {
-        echo '<a href="login.php">Iniciar Sesión</a>';
-        echo '<a href="signup.php">Registrarse</a>';
+
     }
     ?>
     </div>

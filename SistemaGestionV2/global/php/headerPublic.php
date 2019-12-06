@@ -1,5 +1,5 @@
 <script src="../js/funciones.js"></script>
-<center><a href="index.php" ><img src="../../img/banner-imi.png"  alt="Import Mangueras"/></a></center>
+<a href="index.php" ><img src="../../img/banner-imi.png"  id="imagenPri" alt="Import Mangueras"/></a>
 
 <div class="content">
     <a href="../../index.php"></a>   
@@ -17,14 +17,11 @@
             <li><span>Mision y Vision </span></li>
             <li><a href="contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
                 <li><a href="login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
-                <li><a href="formulario.php"> <img id ="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>     
+                <li><a href="signup.php"> <img id ="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>     
                 
         </ul>
     </nav>
    
-    <!-- <div class="buyCar itemsUser">
-        <a href="../../public/view/shoppingcart.php"><i class="fas fa-shopping-cart"></i></a>
-    </div> -->
     <div class="sessionItems">
         <?php
         if (isset($_SESSION['isLogin'])) {
@@ -53,8 +50,6 @@
 
         <?php
     } else {
-        echo '<a href="login.php">Iniciar Sesión</a>';
-        echo '<a href="signup.php">Registrarse</a>';
     }
     ?>
 
