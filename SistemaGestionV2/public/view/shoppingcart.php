@@ -149,13 +149,13 @@ if (isset($_SESSION['isLogin'])) {
                         $sqlUser = $conn->query($sqlUser);
 
                         $sqlUser = $sqlUser->fetch_assoc();
-                        if ($sqlUser['usu_nombres'] != '' && $sqlUser['usu_apellidos'] != '' && $sqlUser['usu_cedula'] != '' && $sqlUser['dir_calle_principal'] != '' && $sqlUser['dir_calle_secundaria'] != '' && $sqlUser['can_codigo'] != '') {
+                        if ($sqlUser['usu_nombres'] != '' && $sqlUser['usu_apellidos'] != '' && $sqlUser['usu_cedula'] != '' && $sqlUser['dir_calle_principal'] != '' && $sqlUser['dir_calle_secundaria'] != '' && $sqlUser['ciu_nombre'] != '') {
                             ?>
                         <h2>Factura</h2>
                         <p><?php echo $sqlUser['usu_nombres'] . ' ' . $sqlUser['usu_apellidos'] ?></p>
                         <span><?php echo  $sqlUser['dir_calle_principal'] . ' ' . $sqlUser['dir_calle_secundaria'] ?></span>
                         <span
-                            class="data"><?php echo $sqlUser['usu_cedula'] . ', ' . $sqlUser['can_codigo'] . ', ' . $sqlUser['can_codigo'] ?></span>
+                            class="data"><?php echo $sqlUser['usu_cedula'] . ', ' . $sqlUser['ciu_nombre'] . ', ' . $sqlUser['pro_nombre'] ?></span>
 
                         <?php
                             $usuDates = true;

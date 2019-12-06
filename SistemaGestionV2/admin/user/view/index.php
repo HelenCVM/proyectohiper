@@ -62,17 +62,16 @@ if (isset($_SESSION['isLogin'])) {
                         $correo = $row["usu_correo"];
                         $dirCP = $row["dir_calle_principal"];
                         $dirCS = $row["dir_calle_secundaria"];
-                        $ciudad = $row["can_codigo"];
-                        $provincia = $row["can_codigo"];
+                        $ciudad = $row["ciu_nombre"];
+                        $provincia = $row["pro_nombre"];
                     } else {
-                        $sql = "SELECT * FROM usuario user, imagen img 
-                            WHERE user.usu_id = img.USUARIO_usu_id and
-                            user.usu_id=" . $_SESSION['codigo'] . ";";
+                        $sql = "SELECT * FROM Usuario user WHERE 
+                        user.usu_codigo=" . $_SESSION['codigo'] . ";";
 
                         $result = $conn->query($sql);
                         $row = $result->fetch_assoc();
 
-                        $codigo = $row["usu_id"];
+                        $codigo = $row["usu_codigo"];
                         $nombre = $row["usu_nombres"];
                         $apellido = $row["usu_apellidos"];
                         $cedula = $row["usu_cedula"];
@@ -84,8 +83,6 @@ if (isset($_SESSION['isLogin'])) {
                         $dirCS = '';
                         $ciudad = '';
                         $provincia = '';
-                        $codPost = '';
-                        $img = $row["img_nombre"];
                     }
 
                     $conn->close();

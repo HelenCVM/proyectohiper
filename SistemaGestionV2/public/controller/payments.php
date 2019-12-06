@@ -92,7 +92,7 @@ if (isset($_SESSION['isLogin'])) {
                         $subIva,
                         $total,
                         'Tarjeta', 
-                        $cardUser
+                        $cardUser,'N','creado'
                         );";
                 echo"$sqlCabFact";
                 //echo 'Codigo de la cabecera.' . $codigoNewFacCab;
