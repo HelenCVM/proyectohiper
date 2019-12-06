@@ -13,9 +13,7 @@ if(!empty($_POST)){
     $categoria_codigo=$_POST['categoria'];
     $pro_nombre=$_POST['nombreP'];
     $pro_marca=$_POST['marca'];
-    $pro_caracteristicas=$_POST['Caracteristicas'];
     $pro_descripcion=$_POST['Descripcion'];
-    $pro_aplicaciones=$_POST['Aplicaciones'];
     $pro_diametro=$_POST['diamtreo'];
     $pro_peso=$_POST['peso'];
     $pro_presion=$_POST['presion'];
@@ -37,7 +35,8 @@ if(!empty($_POST)){
     }
     
     include '../config/conexionDB.php';
-    $sql="INSERT INTO Producto VALUES (0,$categoria_codigo,'$pro_nombre','$img_producto','$pro_marca','$pro_caracteristicas','$pro_descripcion','$pro_aplicaciones',$pro_diametro,$pro_peso,$pro_presion,$pro_longitud,$pro_precio,$pro_stock,'N')";
+    $sql="INSERT INTO Producto VALUES (0,$categoria_codigo,'$pro_nombre','$img_producto',
+    '$pro_marca','$pro_descripcion',$pro_diametro,$pro_peso,$pro_presion,$pro_longitud,$pro_precio,$pro_stock,'N')";
 
     if ($conn->query($sql) == true) {
         if($nombre_foto!=''){
