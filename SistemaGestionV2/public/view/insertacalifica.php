@@ -15,8 +15,9 @@ color: red;
 include '../../config/configDB.php';
 $radio = isset($_POST["radio"]) ? trim($_POST["radio"]) : null;
 $codigo = $_GET["codigo"];
-$mensaje = isset($_POST["mensaje"]) ? trim($_POST["mensaje"]) : null;
-$sql = "INSERT INTO Calificaciones VALUES (0, '$codigo','$radio','$mensaje')";
+$codigoo = $_GET["codigo"];
+$mensaje = isset($_POST["mensaje"]) ? trims($_POST["mensaje"]) : null;
+$sql = "INSERT INTO Calificaciones VALUES (0, '$codigo','$radio','$mensaje','$codigoo','N')";
 if ($conn->query($sql) === TRUE) {
 header("Location:product.php");
 echo "<p>Se ha creado los datos personales correctamemte!!!</p>";

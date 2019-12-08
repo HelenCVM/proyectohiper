@@ -165,7 +165,7 @@ if (!isset($_GET['producto'])) {
                 <div class="productBtns">
                     <div class="valoration" id="valoration" onmousemove="elemento(event)">
                     <?php                         
-                      echo " <form id='formulario0' method='POST' action='insertacalifica.php?codigo=" . $row['pro_codigo'] . "'>";
+                      echo " <form id='formulario0' method='POST' action='insertacalifica.php?codigo=" . $row['pro_codigo'] . $_SESSION['codigo'] . ">";
                       echo" <div class='valoracio'>";
                       echo" <input id='radio' type='radio' name='radio' value='1'>";
                       echo " <label for='radio1'></label>";

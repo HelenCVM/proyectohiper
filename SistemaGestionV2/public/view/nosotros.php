@@ -8,10 +8,19 @@
         <!--<link type="text/css" rel="stylesheet" href="../../css/estilos.css">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="../../css/estiloresu.css">-->
+<<<<<<< HEAD
+
+        <link type="text/css" rel="stylesheet" href="css/pagina.css">
+        <link rel="stylesheet" href="../css/globalStyle.css">
+    <link rel="stylesheet" href="../css/generalStyle.css">
+
+        <link type="text/css" rel="stylesheet" href="../css/pagina.css">
+=======
         <link type="text/css" rel="stylesheet" href="css/pagina.css">
         <link rel="stylesheet" href="../css/globalStyle.css">
     <link rel="stylesheet" href="../css/generalStyle.css">
   
+>>>>>>> 33bb18d496d88077d36200299078bff86b52f8f1
     </head>
     <body>
     
