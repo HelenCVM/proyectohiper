@@ -671,3 +671,40 @@ body .pageSuccess .contentSucce i.fa-times-circle{
       width: 100%;
       height: 10%;
   }
+
+  .columna1{
+    float: left;
+    width: 100%;
+    padding: 20px 200px;
+	border-bottom: 2px solid rgba(70, 66, 66, 0.16);
+	margin-bottom: 20px
+    
+}
+    
+    .columna22{
+    float: initial;
+        width: 35%;
+        padding: 20px 100px;
+        border-bottom: 2px solid rgba(70, 66, 66, 0.16);
+        margin-bottom: 20px
+    }
+    
+    #formularioc{
+        text-align: center;
+        background-image: url("../../img/img6.jpg");
+
+        width: 150%;
+    }
+
+    #Contactanos{
+        padding: 20px 0px;
+        border-bottom: 2px solid rgba(70, 66, 66, 0.16);
+        margin-bottom: 20px
+    }
+    
+    #localM{
+        padding: 20px 0px;
+        border-bottom: 2px solid rgba(70, 66, 66, 0.16);
+        margin-bottom: 20px
+        
+    }
