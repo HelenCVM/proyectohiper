@@ -44,7 +44,7 @@
                         </li>
                         <li><a href="shoppinghistory.php">PEDIDOS</a>
                         </li>
-                        <li><a href="settings.php">CONFIGURACIONES</a></li>
+                        <li><a href="settings.php">CONFIGURACIONESSS</a></li>
                         <li><a href="../../../config/signout.php">SALIR</a></li>
                     </ul>
                 </li>

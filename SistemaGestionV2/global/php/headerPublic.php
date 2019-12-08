@@ -1,6 +1,5 @@
 <script src="../js/funciones.js"></script>
 <a href="index.php" ><img src="../../img/banner-imi.png"  id="imagenPri" alt="Import Mangueras"/></a>
-
 <div class="content">
     <a href="../../index.php"></a>   
     <nav class="menu">
@@ -43,11 +42,11 @@
                 <li><span><?php echo $_SESSION['nombre'] . ' ' . $_SESSION['apellido']; ?></span> <i
                         class="fas fa-sort-down"></i>
                     <ul>
-                        <li><a href="../../admin/user/view/index.php">Perfil</a>
+                        <li><a href="../../admin/user/view/index.php">Mi Cuenta</a>
                         </li>
-                        <li><a href="../../admin/user/view/shoppinghistory.php">Historial</a>
+                        <li><a href="../../admin/user/view/shoppinghistory.php">Pedidos</a>
                         </li>
-                        <li><a href="../../admin/user/view/settings.php">Opciones</a></li>
+                        <li><a href="../../admin/user/view/settings.php">Configuraciones</a></li>
                         <li><a href="../../config/signout.php">Salir</a></li>
                     </ul>
                 </li>
