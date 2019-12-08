@@ -7,10 +7,8 @@ if (isset($_SESSION['isLogin'])) {
 } else {
     header("Location: ../../../index.php");
 }
-
 $usuario=$_SESSION['codigo'];
 $fac=$_GET['fac_cab_id'];
-
 ?>
 
 
@@ -165,7 +163,7 @@ $fac=$_GET['fac_cab_id'];
 
                                     <td>$ <?php echo round($subTotal, 2); ?></td>
 
-                                    <td><a onclick="mapDirection(<?php echo $row['suc_id'] ?>)">Ver ruta</a>
+                                    <td><a onclick="mapDirection()">Ver ruta</a>
                                     </td>
                                 </tr>
 
@@ -218,7 +216,7 @@ $fac=$_GET['fac_cab_id'];
         ?>
     </footer>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWSPPYtqD1tZgvQ-pPzLRXttQoVCOM9Jc&callback&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf5KFvi9htNXOs4ov2TmNyxEonww9rAVM&callback=initMap">
     </script>
     <script src="../js/map.js"></script>
 

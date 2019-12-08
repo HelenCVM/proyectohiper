@@ -6,6 +6,25 @@ if (!isset($_GET['producto'])) {
     header("Location: index.php");
 }
 ?>
+<?php
+	if(isset($_POST['comentar'])) {
+        include '../../config/configDB.php';
+        $comentario=$_POST['comentario'];
+        $usuario=$_POST['usu_codigo'];
+        $producto=$_POST['pro_codigo'];
+    
+        $date = date(date("Y-m-d H:i:s"));
+        $SqlCo="INSERT INTO Comentarios  VALUES (0,$usuario,$producto,'$comentario','$date','N')";	
+        echo "$SqlCo";
+        if($conn->query($SqlCo) == true){
+        echo"Comentario Insertado";
+        }else{
+            echo"Coemnatrio no insertado";
+        }
+		
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -270,6 +289,49 @@ if (!isset($_GET['producto'])) {
 
             </div>
         </section>
+<section>
+<form name="form1" method="POST" >
+  <label for="textarea"></label>
+  <center>
+    <p>
+      <textarea name="comentario" cols="80" rows="5" id="textarea" placeholder="Escriba su comentario"></textarea>
+      <input type="hidden" name="usu_codigo" id="usu_codigo" value="<?php echo ($_SESSION['codigo']); ?>">
+      <input type="hidden" name="pro_codigo" id="pro_codigo" value="<?php echo ($_GET['producto']); ?>">
+    </p>
+    <p>
+      <input type="submit" name="comentar" value="Comentar">
+    </p>
+  </center>
+</form>
+<br>
+<div id="container">
+    	<ul id="comments">
+        <?php
+        $codPro=$_GET['producto'];
+         include '../../config/configDB.php';
+        $sqlC = "SELECT * FROM Comentarios c INNER JOIN Usuario us WHERE c.usu_codigo= us.usu_codigo AND c.com_eliminado='N' AND c.pro_codigo=$codPro;";
+        $resultC = $conn->query($sqlC);
+        if ($resultC->num_rows > 0) {
+            while ($row = $resultC->fetch_assoc()) {
+		?>
+        	<li class="cmmnt">
+                <div class="cmmnt-content">
+                	<header>
+                   <p> <?php echo $row['usu_nombres'].' '.$row['usu_apellidos']; ?></p> <span class="pubdate"><?php echo $row['com_fecha']; ?></span>
+                    </header>
+                    <p>
+                    <?php echo $row['com_comentario']; ?>
+                </div>  
+            </li>        
+        <?php
+            }
+        }
+        ?>
+        </ul>
+    </div>
+       
+</section>
+
     </div>
 
     <footer>
