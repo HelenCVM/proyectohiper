@@ -143,10 +143,12 @@ if (!isset($_GET['producto'])) {
                     <p><span id="shopTotal">Total: </span>$<?php 
                                                             echo $precio; ?></p>
                 </div>
+                
                 <div class="productBtns">
                     <div class="valoration" id="valoration" onmousemove="elemento(event)">
-                    <?php                         
-                      echo " <form id='formulario0' method='POST' action='insertacalifica.php?codigo=" . $row['pro_codigo'] . $_SESSION['codigo'] . ">";
+                    <?php       
+                             
+                      echo " <form id='formulario0' method='POST' action='insertacalifica.php?codigo=" . $row['pro_codigo'];">";
                       echo" <div class='valoracio'>";
                       echo" <input id='radio' type='radio' name='radio' value='1'>";
                       echo " <label for='radio1'></label>";
@@ -167,7 +169,7 @@ if (!isset($_GET['producto'])) {
                       echo "<p><input type='submit' value='Enviar datos'></p>";
                       echo"</div>";
                       echo"</form>";
-                     
+                    
                         
                        
                        /* if (isset($_SESSION['codigo'])) {
