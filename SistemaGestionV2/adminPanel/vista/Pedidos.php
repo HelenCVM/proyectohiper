@@ -29,7 +29,6 @@ if (!isset($_SESSION['isLogin'])) {
                     <th>Fecha / Hora</th>
                     <th>Cliente</th>
                     <th>Estado</th>
-                    <th class="textrigth">Total Factura</th>
                     <th class="textrigth">Acciones</th>
                 </tr>
             </thead>
@@ -56,16 +55,15 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["fac_fecha"] . "</td>";
         echo "<td>" . $row["usu_nombres"] .' '.$row["usu_apellidos"]. "</td>";
         echo "<td>" . $estado . "</td>";
-        echo "<td>$ " . $row["fac_total"] . "</td>";
         echo '<td>
-        <a class="link_edit" href="editar_usuario.php?user= "><i class="fas fa-user-edit"></i> Ver </a> <br>
-        <a class="link_delete" href="confirmar_anular_factura.php?fac_codigo="><i class="fas fa-trash-alt"></i> Anular </a> <br>
+        <a class="link_edit" href="editar_usuario.php?user= "><i class="fas fa-map-marked-alt"></i> Generar Ruta </a> <br>
+        <a class="link_delete" href="confirmar_anular_factura.php?fac_codigo="><i class="fas fa-edit"></i> Cambiar Estado </a> <br>
         </td>';
         echo "</tr>";
     }
 } else {
     echo "<tr>";
-    echo '<td colspan="12" class="db_null"><p>No existen usuarios registrados en el sistema</p><i class="fas fa-exclamation-circle"></i></td>';
+    echo '<td colspan="12" class="db_null"><p>No Existen Pedidos</p><i class="fas fa-exclamation-circle"></i></td>';
     echo "</tr>";
 }
 $conn->close();
