@@ -40,8 +40,7 @@
 					<a href="#"><i class="fas fa-thumbs-up"></i> Review</a>
 					<ul>
 						<li><a href="lista_calificaciones.php"><i class="fas fa-star"></i> Lista de Calificaciones</a></li>
-						<li><a href="lista_comentarios.php"><i class="fas fa-comment"></i> Lista de Comentarios</a></li>
-					</ul>
+						</ul>
 				</li>
 
 				<li class="principal">

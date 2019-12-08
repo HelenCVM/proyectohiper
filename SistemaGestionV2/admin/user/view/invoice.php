@@ -7,6 +7,10 @@ if (isset($_SESSION['isLogin'])) {
 } else {
     header("Location: ../../../index.php");
 }
+
+$usuario=$_SESSION['codigo'];
+$fac=$_GET['fac_cab_id'];
+
 ?>
 
 
@@ -22,7 +26,7 @@ if (isset($_SESSION['isLogin'])) {
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../../../public/css/globalStyle.css">
-
+    <script src="gene.js"></script>
     <title>Factura</title>
 </head>
 
@@ -48,9 +52,10 @@ if (isset($_SESSION['isLogin'])) {
                         <p>Cuenca, Azuay</p>
                         <p>Tel. 0978781341</p>
                     </div>
+                    
                     <div class="invoicePrint">
                         <h2>Factura</h2>
-                        <button><i class="fas fa-print"></i> Imprimir</button>
+                        <button onclick="generarFactura(<?php echo $usuario; ?>,<?php echo $fac; ?>)"><i class="fas fa-print"></i> Imprimir</button>
                     </div>
                 </div>
                 <div class="invoiceBody">

@@ -7,7 +7,7 @@
             <li><a href="nosotros.php"><img id ="iconmenu" src="../../img/icon2.png"> NOSOTROS</a></li>
             <li> <span><img id ="iconmenu" src="../../img/icon3.png"> PRODUCTOS</span> <i class="fas fa-sort-down"></i>
                 <ul>
-                    <li><a href="categoria.php?categoria=10">Industriales</a></li>
+                    <li><a href="../../../categoria.php?categoria=10">Industriales</a></li>
                     <li><a href="categoria.php?categoria=11">Hidraulicas</a></li>
                     <li><a href="categoria.php?categoria=12">Alta Temperatura</a></li>
                 </ul>
@@ -44,7 +44,7 @@
                         </li>
                         <li><a href="shoppinghistory.php">PEDIDOS</a>
                         </li>
-                        <li><a href="settings.php">CONFIGURACIONES</a></li>
+                        <li><a href="settings.php">CONFIGURACIONESSS</a></li>
                         <li><a href="../../../config/signout.php">SALIR</a></li>
                     </ul>
                 </li>
