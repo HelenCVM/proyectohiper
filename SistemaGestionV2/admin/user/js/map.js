@@ -33,7 +33,7 @@ function cluseWindow() {
     windowFloat.style.display = "none"
 }
 
-function mapDirection(storeID) {
+function mapDirection() {
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
     } else {
@@ -47,6 +47,6 @@ function mapDirection(storeID) {
             windowFloat.style.display = "flex"
         }
     };
-    xmlhttp.open("GET", "../controller/mapDirection.php?storeId=" + storeID, true)
+    xmlhttp.open("GET", "../controller/mapDirection.php", true)
     xmlhttp.send()
 }
