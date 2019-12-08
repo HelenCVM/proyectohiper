@@ -9,7 +9,7 @@ if (!isset($_SESSION['isLogin'])) {
 <head>
 	<meta charset="UTF-8">
 <?php include "../controladores/scripts.php";?>
-	<title>Sisteme Ventas</title>
+	<title>Sistema Ventas</title>
 </head>
 <body>
 <?php include "../controladores/header.php";?>
