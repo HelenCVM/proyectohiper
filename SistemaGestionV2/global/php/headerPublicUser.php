@@ -1,21 +1,18 @@
 <script src="../../../public/js/funciones.js"></script>
 <div class="content">
-    <a href="../../../index.php"></a>
+    <a href="../../index.php"></a>
     <nav class="menu">
         <ul>
-            <li><a href="../../index.php"><img id ="iconmenu" src="../../img/icon1.png">INICIO</a></li>
-            <li><a href="nosotros.php"><img id ="iconmenu" src="../../img/icon2.png"> NOSOTROS</a></li>
-            <li> <span><img id ="iconmenu" src="../../img/icon3.png"> PRODUCTOS</span>
+            <li><a href="../../../index.php"><img id ="iconmenu" src="../../../img/icon1.png">INICIO</a></li>
+            <li><a href="../../../public/view/nosotros.php"><img id ="iconmenu" src="../../../img/icon2.png"> NOSOTROS</a></li>
+            <li> <span><img id ="iconmenu" src="../../../img/icon3.png"> PRODUCTOS</span>
                 <ul>
-                    <li><a href="../../../categoria.php?categoria=10">Industriales</a></li>
-                    <li><a href="categoria.php?categoria=11">Hidraulicas</a></li>
-                    <li><a href="categoria.php?categoria=12">Alta Temperatura</a></li>
+                    <li><a href="../../../public/view/categoria.php?categoria=10">Industriales</a></li>
+                    <li><a href="../../../public/view/categoria.php?categoria=11">Hidraulicas</a></li>
+                    <li><a href="../../../public/view/categoria.php?categoria=12">Alta Temperatura</a></li>
                 </ul>
             </li>
-            <li><a href="../../public/view/contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
-                <li><a href="../../public/view/login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
-                <li><a href="signup.php"> <img id ="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>     
-                
+            <li><a href="../../../public/view/contacto.php"><img id ="iconmenu" src="../../../img/icon4.png"> CONTACTOS </a></li>       
         </ul>
     </nav>
     <div class="search">

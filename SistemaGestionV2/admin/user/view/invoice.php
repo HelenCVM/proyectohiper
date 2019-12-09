@@ -50,10 +50,11 @@ $fac=$_GET['fac_cab_id'];
                         <p>Cuenca, Azuay</p>
                         <p>Tel. 0978781341</p>
                     </div>
-                    
+
                     <div class="invoicePrint">
                         <h2>Factura</h2>
-                        <button onclick="generarFactura(<?php echo $usuario; ?>,<?php echo $fac; ?>)"><i class="fas fa-print"></i> Imprimir</button>
+                        <button onclick="generarFactura(<?php echo $usuario; ?>,<?php echo $fac; ?>)"><i
+                                class="fas fa-print"></i> Imprimir</button>
                     </div>
                 </div>
                 <div class="invoiceBody">
@@ -98,28 +99,12 @@ $fac=$_GET['fac_cab_id'];
                             <thead>
                                 <tr>
                                     <td>#</td>
-                                    <td>Producto</td>
+                                    <td>Producto Codigo</td>
                                     <td>Descripcion</td>
                                     <td>Cantidad</td>
                                     <td>Precio</td>
-                                    <td>Rutas</td>
                                 </tr>
                             </thead>
-
-                            <tfoot>
-                                <tr>
-                                    <td colspan="10">
-                                        <div class="links">
-                                            <a href="#"><i class="fas fa-angle-left"></i></a>
-                                            <a class="active" href="#">1</a>
-                                            <a href="#">2</a>
-                                            <a href="#">3</a>
-                                            <a href="#">4</a>
-                                            <a href="#"><i class="fas fa-chevron-right"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tfoot>
 
                             <div id="floatWindow">
                                 <div class="contentMap">
@@ -144,15 +129,12 @@ $fac=$_GET['fac_cab_id'];
                                 <tr>
                                     <td><?php echo $i ?></td>
                                     <td>
-
                                         <a
                                             href="../../../public/view/product.php?producto=<?php echo $row['pro_id']; ?>">
-                                            <img src="../../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>"
-                                                alt="<?php echo $resultIMG['pro_nombre']; ?>">
-                                            <p><?php echo $row['pro_nombre']; ?></p>
+                                            <p><?php echo $row['pro_codigo']; ?></p>
                                         </a>
                                     </td>
-                                    <td><?php echo $row['pro_descripcion']; ?></td>
+                                    <td><?php echo $row['pro_nombre']; ?></td>
 
                                     <td><?php echo $row['facd_cantidad']; ?></td>
 
@@ -162,8 +144,6 @@ $fac=$_GET['fac_cab_id'];
                                             ?>
 
                                     <td>$ <?php echo round($subTotal, 2); ?></td>
-
-                                    <td><a onclick="mapDirection()">Ver ruta</a>
                                     </td>
                                 </tr>
 
@@ -174,27 +154,6 @@ $fac=$_GET['fac_cab_id'];
                                     //error redirigir
                                 }
                                 ?>
-                                <div id="mapDir">
-                                    <input id="start" type="hidden" name="" value="Gualaceo">
-                                    <input id="end" type="hidden" name="" value="Cuenca">
-                                </div>
-
-                                <!-- <tr>
-                                    <td>1</td>
-                                    <td><a href="">
-                                            <img src="../../../img/product/producto.jpg" alt="">
-                                            <p>Lorem</p>
-                                        </a>
-                                    </td>
-                                    <td>Este es el de la prueba de mapa.</td>
-                                    <td><a href="">Guayaquil</a></td>
-                                    <td>4</td>
-                                    <td>$700.00</td>
-                                    <td><a onclick="openWindow()">Ver ruta</a>
-                                    </td>
-
-                                </tr> -->
-
                             </tbody>
                         </table>
                     </article>
@@ -215,11 +174,6 @@ $fac=$_GET['fac_cab_id'];
         include("../../../global/php/footerPublic.php");
         ?>
     </footer>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf5KFvi9htNXOs4ov2TmNyxEonww9rAVM&callback=initMap">
-    </script>
-    <script src="../js/map.js"></script>
-
 </body>
 
 </html>
