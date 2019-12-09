@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['isLogin'])) {
-    header("Location: admin_login.php");
+   // header("Location: admin_login.php");
 } 
 ?>
 
@@ -35,24 +35,24 @@ if (!isset($_SESSION['isLogin'])) {
             <tbody id="data">
                 <?php
 include '../config/conexionDB.php';
-$sql = "SELECT cali_codigo, pro_nombre,cali_valor,cali_comentario FROM Calificaciones c,Producto p 
-WHERE c.pro_codigo=p.pro_codigo;";
+$sql = "SELECT * FROM Comentarios c INNER JOIN Producto p ON c.pro_codigo=p.pro_codigo;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         
-        echo "<td>" . $row["cali_codigo"] . "</td>";
+        echo "<td>" . $row["com_codigo"] . "</td>";
         echo "<td>" . $row["pro_nombre"] . "</td>";
-        echo "<td>" . $row["cali_valor"] . "</td>";
-        echo "<td>" . $row["cali_comentario"] . "</td>";
+        
+        echo "<td>" . $row["com_cali"] . "</td>";
+        echo "<td>" . $row["com_comentario"] . "</td>";
 
         $user = serialize($row);
         $user = urlencode($user);
 
         echo '<td>
         <a class="link_delete" href="confirmar_eliminar_comentario.php?comentario_codigo=' 
-        . $row["cali_codigo"] . '"><i class="fas fa-trash-alt"></i> Delete </a> <br>
+        . $row["com_codigo"] . '"><i class="fas fa-trash-alt"></i> Delete </a> <br>
         </td>';
     
 
@@ -61,7 +61,7 @@ if ($result->num_rows > 0) {
     }
 } else {
     echo "<tr>";
-    echo '<td colspan="3" class="db_null"><p>No existen usuarios registrados en el sistema</p><i class="fas fa-exclamation-circle"></i></td>';
+    echo '<td colspan="3" class="db_null"><p>No existen Comentarios</p><i class="fas fa-exclamation-circle"></i></td>';
     echo "</tr>";
 }
 $conn->close();
