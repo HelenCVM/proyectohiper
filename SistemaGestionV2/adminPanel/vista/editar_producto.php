@@ -35,18 +35,16 @@ if(!empty($_POST)){
     }
     
     include '../config/conexionDB.php';
-    $sql="INSERT INTO Producto VALUES (0,$categoria_codigo,'$pro_nombre','$img_producto','$pro_marca','$pro_caracteristicas','$pro_descripcion','$pro_aplicaciones',$pro_diametro,$pro_peso,$pro_presion,$pro_longitud,$pro_precio,$pro_stock,'N')";
 
+    $sql = "UPDATE Producto " .
+    "SET pro_nombre = '$pro_nombre', " .
+    "pro_categoria = '$categoria_codigo', " .
+    "pro_img = '$telefono', " .
+    "WHERE pro_codigo = $codigo";
     if ($conn->query($sql) == true) {
-        if($nombre_foto!=''){
-            move_uploaded_file($url_temp,$src);
-            $alert='<p class="msg_save"> Producto Agregado!</p>';
-            echo "Prodcuto guardado";
-        }
-        $alert='<p class="msg_save"> Producto Agregado!</p>';
-    //header("Location:../lista_usuarios.php"); 
-    
-    }
+        //header("Location:../lista_usuarios.php"); 
+        $alert='<p class="msg_save"> Producto Actualizado!</p>';
+        } 
 }
 
 
