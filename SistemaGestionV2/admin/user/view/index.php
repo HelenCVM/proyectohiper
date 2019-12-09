@@ -20,6 +20,9 @@ if (!isset($_SESSION['isLogin'])) {
 </head>
 
 <body>
+<!-- redirigimos a la pagina del encabezado pero esta ves nos aparecera el carrito de compras 
+ya que el usuario esta registrado -->
+
     <header>
         <?php
         include("../../../global/php/headerPublicUser.php");
@@ -76,6 +79,7 @@ if (!isset($_SESSION['isLogin'])) {
 
                     $conn->close();
                     ?>
+                    <!-- Hacemos el metodo para actualizar el usuario-->
                     <form enctype="multipart/form-data" action="../controller/updateUser.php" method="POST">
                         <input type="hidden" name="codigo" value="<?php echo ($codigo); ?>">
                         <label for="nombre">Nombre:</label>
