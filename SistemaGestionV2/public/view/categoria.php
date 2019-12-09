@@ -49,13 +49,7 @@ if (isset($_SESSION['isLogin'])) {
                 $categoria=$_GET['categoria'];
                 $sql="SELECT pro.pro_nombre,pro.pro_codigo,pro.pro_descripcion, pro.pro_precio,
                 pro.pro_img FROM Producto pro WHERE pro.cate_codigo=$categoria AND pro.pro_eliminado='N' 
-                 GROUP BY pro.pro_codigo ORDER BY 1 DESC limit 8;";
-                /*$sql = "SELECT pro.pro_fecha_creacion, pro.pro_id, pro.pro_nombre, pro.pro_descripcion, pro.pro_precio, img.img_nombre
-                            FROM producto pro, imagen img 
-                            WHERE pro.pro_id = img.PRODUCTO_pro_id AND
-                                pro.pro_estado=0 
-                            GROUP BY pro.pro_id
-                            ORDER BY 1 DESC limit 8;";*/
+                 GROUP BY pro.pro_codigo ORDER BY 1 DESC limit 10;";
 
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
@@ -68,19 +62,6 @@ if (isset($_SESSION['isLogin'])) {
                                     src="../../adminPanel/img/uploads/<?php echo $row['pro_img']; ?>"
                                     alt="<?php echo $row['pro_nombre']; ?>"></a>
                         </div>
-                        <!--<span>Nuevo</span>
-                        <div class="ranking">
-                            <i class="fas fa-star"></i>
-                            <?php
-                                  /*  $sqlRating = "SELECT COALESCE(AVG(rat.rat_calificacion),0) AS rat_calificacion FROM producto pro, rating rat 
-                                            WHERE rat.PRODUCTO_pro_id = pro.pro_id AND
-                                            pro.pro_id=" . $row['pro_id'] . ";";
-
-                                    $resultRating = $conn->query($sqlRating);
-                                    $rowRating = $resultRating->fetch_assoc();
-                                    echo '<span>' . $rowRating['rat_calificacion'] . '</span>';*/
-                                    ?>
-                        </div>-->
                     </div>
                     <div class="contentDescription">
                         <div class="descripProduct">
@@ -97,11 +78,8 @@ if (isset($_SESSION['isLogin'])) {
             }
             $conn->close();
             ?>
-
             </div>
         </section>
-
-      
     </div>
 
     <footer>

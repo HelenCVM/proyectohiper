@@ -1,30 +1,27 @@
 <script src="../js/funciones.js"></script>
-<a href="index.php" ><img src="../../img/banner-imi.png"  id="imagenPri" alt="Import Mangueras"/></a>
-<div class="content">
-    <a href="../../index.php"></a>   
-    <nav class="menu">
-        <ul>
-            <li><a href="../../index.php"><img id ="iconmenu" src="../../img/icon1.png">INICIO</a></li>
-            <li><a href="nosotros.php"><img id ="iconmenu" src="../../img/icon2.png"> NOSOTROS</a></li>
-            <li> <span><img id ="iconmenu" src="../../img/icon3.png"> PRODUCTOS</span> <i class="fas fa-sort-down"></i>
-                <ul>
-                    <li><a href="categoria.php?categoria=10">Industriales</a></li>
-                    <li><a href="categoria.php?categoria=11">Hidraulicas</a></li>
-                    <li><a href="categoria.php?categoria=12">Alta Temperatura</a></li>
-                </ul>
-            </li>
-            <li><a href="../../public/view/contacto.php"><img id ="iconmenu" src="../../img/icon4.png"> CONTACTOS </a></li>
-                <li><a href="login.php"><img id ="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>                
+<a href="index.php"><img src="../../img/banner-imi.png" id="imagenPri" alt="ImportManguerasIV" /></a>
 
-                <li><a href="signup.php"> <img id ="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>     
-                
-        </ul>
-    </nav>
-   
+<div class="content">
     <div class="sessionItems">
         <?php
-        if (isset($_SESSION['isLogin'])) {
+        if (isset($_SESSION['isLogin'])) {  
             ?>
+        <a href="../../index.php"></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="../../index.php"><img id="iconmenu" src="../../img/icon1.png">INICIO</a></li>
+                <li><a href="nosotros.php"><img id="iconmenu" src="../../img/icon2.png"> NOSOTROS</a></li>
+                <li> <span><img id="iconmenu" src="../../img/icon3.png"> PRODUCTOS</span>
+                    <ul>
+                        <li><a href="categoria.php?categoria=10">Industriales</a></li>
+                        <li><a href="categoria.php?categoria=11">Hidraulicas</a></li>
+                        <li><a href="categoria.php?categoria=12">Alta Temperatura</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../public/view/contacto.php"><img id="iconmenu" src="../../img/icon4.png"> CONTACTOS
+                    </a></li>
+            </ul>
+        </nav>
         <script>
         carNot('../controller/updateNotCart.php')
         </script>
@@ -49,6 +46,27 @@
 
         <?php
     } else {
+        ?>
+        <a href="../../index.php"></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="../../index.php"><img id="iconmenu" src="../../img/icon1.png">INICIO</a></li>
+                <li><a href="nosotros.php"><img id="iconmenu" src="../../img/icon2.png"> NOSOTROS</a></li>
+                <li> <span><img id="iconmenu" src="../../img/icon3.png"> PRODUCTOS</span>
+                    <ul>
+                        <li><a href="categoria.php?categoria=10">Industriales</a></li>
+                        <li><a href="categoria.php?categoria=11">Hidraulicas</a></li>
+                        <li><a href="categoria.php?categoria=12">Alta Temperatura</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../public/view/contacto.php"><img id="iconmenu" src="../../img/icon4.png"> CONTACTOS
+                    </a></li>
+                <li><a href="login.php"><img id="iconmenu" src="../../img/icon5.png"> LOGIN</a></li>
+                <li><a href="signup.php"> <img id="iconmenu" src="../../img/icon6.png"> REGISTRATE</a></li>
+
+            </ul>
+        </nav>
+        <?php
     }
     ?>
 

@@ -38,9 +38,7 @@ if (!isset($_SESSION['isLogin'])) {
                 <h2>Datos personales</h2>
                 <div class="formData">
                     <?php
-                    //" . $_SESSION['codigo'] . "
                     include '../../../config/configDB.php';
-                    //session_start();
 
                     $sql = "SELECT * FROM Usuario user, Direccion dir 
                             WHERE user.usu_codigo = dir.usu_codigo and

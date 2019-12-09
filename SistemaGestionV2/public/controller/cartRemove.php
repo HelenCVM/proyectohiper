@@ -5,7 +5,7 @@ if (isset($_SESSION['isLogin'])) {
         header("Location: ../../admin/admin/view/index.php");
     }
 }
-//Pendiente query para la tienda 
+
 if (isset($_GET['carId'])) {
     include '../../config/configDB.php';
     $sql = "SELECT * FROM carrito WHERE 
@@ -30,7 +30,6 @@ if (isset($_GET['carId'])) {
 
 function writeContent()
 {
-    //Pendiente query para la tienda 
     include '../../config/configDB.php';
     $sql = "SELECT * FROM carrito WHERE
             USUARIO_usu_id=" . $_SESSION['codigo'] . ";";
@@ -64,14 +63,12 @@ function writeContent()
         </div>
     </div>
     <span>$<?php echo $rowP['pro_precio'] ?></span>
-    <!--Parametro para eliminar -->
     <i class="fas fa-times" onclick="cartDelete(<?php echo $row['car_id'] ?>)"></i>
 </article>
 
 <?php
 
     }
-    //echo '<h2>Si hay productos.</h2>';
 } else {
     echo '<h2 style="color: #FF6565">No hay productos.</h2>';
 }

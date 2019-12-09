@@ -26,7 +26,7 @@ if (isset($_SESSION['isLogin'])) {
 <body>
     <header>
         <?php
-        //echo (getcwd());
+
         include("../../global/php/headerPublic.php");
         ?>
     </header>
@@ -42,7 +42,6 @@ if (isset($_SESSION['isLogin'])) {
         $countryCard = isset($_POST["countryCard"]) ? mb_strtolower(trim($_POST["countryCard"]), 'UTF-8') : null;
         $date = date(date("Y-m-d H:i:s"));
 
-        //echo 'NUMERO DE TARJETA' . $cardNumber . '<br>';
 
         $sql = "SELECT * FROM Tarjeta WHERE
             usu_codigo=" . $_SESSION['codigo'] . ";";
@@ -66,7 +65,7 @@ if (isset($_SESSION['isLogin'])) {
                         USUARIO_usu_id=" . $_SESSION['codigo'] . ";";
 
             $resultCart = $conn->query($sqlCart);
-            //echo 'Datos del carrito. ' . $resultCart->num_rows;
+
             if ($resultCart->num_rows > 0) {
 
                 $sqlTarUsu = "SELECT * FROM Tarjeta WHERE
@@ -74,7 +73,7 @@ if (isset($_SESSION['isLogin'])) {
                 $sqlTarUsu = $conn->query($sqlTarUsu);
                 $sqlTarUsu = $sqlTarUsu->fetch_assoc();
                 $cardUser = $sqlTarUsu['tar_codigo'];
-                //echo 'Tarjeta usuario' . $cardUser;
+  
 
                 $sqlSubTot = "SELECT SUM(c.car_cantidad*(p.pro_precio)) AS sub_total FROM carrito c, Producto p WHERE 
                         c.PRODUCTO_pro_id = p.pro_codigo AND 
@@ -83,9 +82,9 @@ if (isset($_SESSION['isLogin'])) {
                 $subTot = $sqlSubTot->fetch_assoc();
                 $subTotal = round($subTot['sub_total'], 2);
                 $subIva=round($subTotal*0.12);
-                // echo 'SUBTOTAL: ' . $subTotal . '<br>';
+  
                 $total = round(($subTotal * 1.12));
-                // echo 'TOTAL: ' . $total . '<br>';
+
 
                 $sqlCabFact = "INSERT INTO Factura VALUES ( 0, " . $_SESSION['codigo'] . ",'$date', 
                         $subTotal, 
@@ -94,8 +93,6 @@ if (isset($_SESSION['isLogin'])) {
                         'Tarjeta', 
                         $cardUser,'N','creado'
                         );";
-                echo"$sqlCabFact";
-                //echo 'Codigo de la cabecera.' . $codigoNewFacCab;
 
                 if ($conn->query($sqlCabFact)) {
                     $sql = "SELECT MAX(fac_codigo) AS codigo  
@@ -115,9 +112,6 @@ if (isset($_SESSION['isLogin'])) {
 
                             $sqlDropCart = "DELETE FROM carrito WHERE USUARIO_usu_id =" . $_SESSION['codigo'] . ";";
                             $conn->query($sqlDropCart);
-
-
-                            //echo 'Detalle agregado stok en: ' . $rowStok . '<br>';
                         } else {
                             ?>
         <div class="contentSucce">
@@ -134,9 +128,10 @@ if (isset($_SESSION['isLogin'])) {
                 ?>
         <div class="contentSucce">
             <h2>Pago realizado con exito</h2>
-            <p>Gracias por su compra..</p>
+            <p>Gracias por su compra.. </p>
+            <p>Enseguida sera redirigido a sus pedidos</p>
             <i class="far fa-check-circle"></i>
-            <button onclick="window.location.href = '../view/index.php'">Inicio</button>
+           <?php header("Refresh:2; url=../../admin/user/view/shoppinghistory.php");?>
         </div>
         <?php
             } else {
@@ -148,8 +143,7 @@ if (isset($_SESSION['isLogin'])) {
             <button onclick="window.location.href = '../view/shoppingcart.php'">Inicio</button>
         </div>
         <?php
-                //echo 'error al introducir la cabecera';
-                //echo mysqli_error($conn);
+
             }
         } else {
             ?>
@@ -176,7 +170,6 @@ if (isset($_SESSION['isLogin'])) {
     </div>
     <footer>
         <?php
-        //echo (getcwd());
         include("../../global/php/footerPublic.php");
         ?>
     </footer>

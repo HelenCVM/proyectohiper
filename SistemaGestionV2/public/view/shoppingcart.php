@@ -31,7 +31,6 @@ if (isset($_SESSION['isLogin'])) {
 
     <div id="floatWindow">
         <div class="contentWindow" id="payWindow">
-            <!-- FORMULARIO  -->
             <div class="form">
                 <form action="../controller/payments.php" method="post">
                     <h2>Pagar con tarjeta</h2>
@@ -49,22 +48,6 @@ if (isset($_SESSION['isLogin'])) {
                     </div>
                 </form>
             </div>
-
-            <!-- ESTADOS DEL PAGO -->
-            <!-- <div class="confirmVtn">
-                <h2>Gracias por su compra.</h2>
-                <p>Pago realizado con exito</p>
-                <i class="far fa-check-circle"></i>
-
-                <h2>No se pudo realizar el pago.</h2>
-                <i class="far fa-times-circle"></i>
-
-                <div class="btns">
-                    <input type="button" value="Inicio" onclick="window.location.href = 'index.html'">
-                    <input type="button" value="Ver Compras"
-                        onclick="window.location.href = '../../admin/user/view/shoppinghistory.html'">
-                </div>
-            </div> -->
             <i class=" fas fa-times" onclick="cluseWindow()"></i>
         </div>
 
@@ -75,7 +58,6 @@ if (isset($_SESSION['isLogin'])) {
             <div class="productSlide cart" id="cart">
 
                 <?php
-                //Pendiente query para la tienda 
                 include '../../config/configDB.php';
                 $sql = "SELECT * FROM carrito WHERE
                         USUARIO_usu_id=" . $_SESSION['codigo'] . ";";
@@ -102,29 +84,16 @@ if (isset($_SESSION['isLogin'])) {
                         <p><?php echo $rowP['pro_descripcion'] ?></p>
                         <div class="inf">
                             <div>
-                               <!-- <h3>Tienda:</h3>-->
-                                <?php
-                                       /* $sqlSuc = 'SELECT suc_nombre FROM sucursal WHERE suc_id=' . $row['SUCURSAL_suc_id'] . ';';
-                                        $resultSuc = $conn->query($sqlSuc);
-                                        $rowSuc = $resultSuc->fetch_assoc();
-                                        echo '<span>' . $rowSuc['suc_nombre'] . '</span>';*/
-                                        ?>
-                            </div>
-                            <div>
                                 <h3>Cantidad:</h3>
                                 <span><?php echo $row['car_cantidad'] ?></span>
                             </div>
                         </div>
                     </div>
                     <span>$<?php echo $rowP['pro_precio'] ?></span>
-                    <!--Parametro para eliminar -->
                     <i class="fas fa-times" onclick="cartDelete(<?php echo $row['car_id'] ?>)"></i>
                 </article>
-
                 <?php
-
                 }
-                //echo '<h2>Si hay productos.</h2>';
             } else {
                 echo '<h2 style="color: #FF6565">No hay productos.</h2>';
             }
@@ -136,11 +105,6 @@ if (isset($_SESSION['isLogin'])) {
                 <div class="billInfo">
                     <div class="nameBill">
                         <?php
-                        /*
-  $sqlUser = "SELECT * FROM Usuario, D 
-                        WHERE Usuario.usu_codigo=Direccion.usu_codigo AND 
-                        Usuario.usu_codigo = " . $_SESSION['codigo'] . ";";
-                        */
                         $sqlUser = "SELECT * FROM Usuario, Direccion 
                         WHERE Usuario.usu_codigo=Direccion.usu_codigo AND 
                         Usuario.usu_codigo = " . $_SESSION['codigo'] . ";";

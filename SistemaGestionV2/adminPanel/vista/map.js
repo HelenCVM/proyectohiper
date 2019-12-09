@@ -14,7 +14,8 @@ function initMap() {
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-
+console.log(document.getElementById('start').value);
+console.log(document.getElementById('end').value);
     directionsService.route({
         origin: document.getElementById('start').value,
         destination: document.getElementById('end').value,
@@ -33,7 +34,8 @@ function cluseWindow() {
     windowFloat.style.display = "none"
 }
 
-function mapDirection() {
+function mapDirection(fac) {
+    console.log(fac);
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
     } else {
@@ -47,6 +49,6 @@ function mapDirection() {
             windowFloat.style.display = "flex"
         }
     };
-    xmlhttp.open("GET", "../controller/mapDirection.php", true)
+    xmlhttp.open("GET", "../controladores/mapDirection.php?fac="+fac, true)
     xmlhttp.send()
 }

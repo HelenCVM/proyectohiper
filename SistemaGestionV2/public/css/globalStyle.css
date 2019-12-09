@@ -479,49 +479,7 @@ body .headerImg .bg{
     justify-content: center;
     align-items: center;
 }
-body .headerImg.storeImg.storeGuayaqil{
-    background-image: url("../../img/store/tienda1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 90vh;
-}
-body .storeInf {
-    display: flex;
-    margin-top: 20px;
-}
-body .storeInf h3{
-    color: var(--colorDark);
-    margin: 15px 0;
-    font-size: 1.5em;
-}
-body .storeInf .storeDescription{
-    width: 50%;
-}
-body .storeInf .storeAbout p{
-    text-align: justify;
-    margin-top: 30px;
-}
-body .storeInf .storeContact{
-    margin-top: 50px;
-}
-body .storeInf .storeContact p{
-    opacity: .8;
-    margin: 5px 0;
-}
-body .storeInf .storeContact p a{
-    color: var(--colorAzul);
-    text-decoration: none;
-}
-body .storeInf .storeContact p i{
-    color: var(--color1);
-    opacity: 1;
-}
-body .storeInf .storeContact p:nth-child(2){
-    margin: 15px 0 40px 0;
-    font-size: 1.2em;
-    opacity: .7;
-}
+
 body .storeInf .storeMap{
     margin-left: 50px;
     width: 50%;
@@ -530,17 +488,6 @@ body .storeInf .storeMap{
 body .storeInf .storeMap #map{
     height: 100%;
     width: 100%;
-}
-
-body .headerImg.storeImg.storeQuito{
-    background-image: url("../../img/store/tienda2.jpg");
-}
-body .headerImg.storeImg.storeCuenca{
-    background-image: url("../../img/store/tienda3.jpg");
-}
-body .headerImg.storeImg.storeIndex{
-    background-image: url("../../img/store/apple_logo_10-wallpaper-7680x4800.jpg");
-    background-attachment: scroll;
 }
 body .headerImg.pageError{
     background-color: var(--bgColor);

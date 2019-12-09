@@ -54,7 +54,7 @@
 				<li class="principal">
 					<a href="#"><i class="fas fa-shopping-basket"></i> Pedidos</a>
 					<ul>
-						<li><a href="lista_pedidos.php"><i class="fas fa-th-list"></i> Lista de Pedidos</a></li>
+						<li><a href="pedidos.php"><i class="fas fa-th-list"></i> Lista de Pedidos</a></li>
 						<li><a href="generar_ruta.php"><i class="fas fa-map-marked"></i> Generar Ruta</a></li>
 					</ul>
 				</li>
