@@ -1,8 +1,8 @@
 <?php
 session_start();
-if (!isset($_GET['register']) || !isset($_GET['login'])) {
+/*if (!isset($_GET['register']) || !isset($_GET['login'])) {
     header("Location:index.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="es">

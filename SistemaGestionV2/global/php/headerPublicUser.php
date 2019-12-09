@@ -5,7 +5,7 @@
         <ul>
             <li><a href="../../index.php"><img id ="iconmenu" src="../../img/icon1.png">INICIO</a></li>
             <li><a href="nosotros.php"><img id ="iconmenu" src="../../img/icon2.png"> NOSOTROS</a></li>
-            <li> <span><img id ="iconmenu" src="../../img/icon3.png"> PRODUCTOS</span> <i class="fas fa-sort-down"></i>
+            <li> <span><img id ="iconmenu" src="../../img/icon3.png"> PRODUCTOS</span>
                 <ul>
                     <li><a href="../../../categoria.php?categoria=10">Industriales</a></li>
                     <li><a href="categoria.php?categoria=11">Hidraulicas</a></li>

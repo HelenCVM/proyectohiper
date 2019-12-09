@@ -1,7 +1,3 @@
-<?php
-//echo (dirname(__FILE__) . '../../admin/user/view/index.php');
-//echo $_SERVER['DOCUMENT_ROOT'];
-?>
 <div class="content">
     <div class="listFooter">
         <h3>Categorias</h3>

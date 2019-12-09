@@ -1,11 +1,12 @@
 <?php
 session_start();
 if (isset($_SESSION['isLogin'])) {
-    if ($_SESSION['rol'] == 'admin') {
+   /* if ($_SESSION['rol'] == 'admin') {
         header("Location: ../../admin/admin/view/index.php");
     } else {
         //header("Location: ../../index.php");
-    }
+    }*/
+    header("Location: ../../index.php");
 }
 include '../../config/configDB.php';
 
