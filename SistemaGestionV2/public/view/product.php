@@ -7,20 +7,28 @@ if (!isset($_GET['producto'])) {
 }
 ?>
 <?php
-	if(isset($_POST['comentar'])) {
+	if(isset($_POST['comentar']) && isset($_SESSION['isLogin'])) {
         include '../../config/configDB.php';
+        $califiacion=$_POST['radio'];
         $comentario=$_POST['comentario'];
         $usuario=$_POST['usu_codigo'];
         $producto=$_POST['pro_codigo'];
         $date = date(date("Y-m-d H:i:s"));
-        $SqlCo="INSERT INTO Comentarios  VALUES (0,$usuario,$producto,'$comentario','$date','N')";	
+        $SqlCo="INSERT INTO Comentarios  VALUES (0,$usuario,$producto,'$comentario','$date','N',$califiacion)";	
         if($conn->query($SqlCo) == true){
-        echo"Comentario Insertado";
+    
         }else{
-            echo"Comentaio no insertado";
+ 
         }
 		
-	}
+	}elseif(isset($_POST['comentar']) && !isset($_SESSION['isLogin'])){
+        ?>
+        <div class="cartAdd" id="cartAdd" style="background-color: #FF6565;">
+        <p>Debe Iniciar Sesion para poder calificar este producto.</p>
+        <i class=" fas fa-times" style="color: #FFF;" onclick="cluseWindowCart()"></i>
+        </div>
+    <?php
+    }
 ?>
 
 <!DOCTYPE html>
@@ -133,11 +141,30 @@ if (!isset($_GET['producto'])) {
                 </div>
             </div>
         </section>
+       
 
         <section>
             <form name="form1" method="POST">
                 <label for="textarea"></label>
                 <center>
+                    <?php
+                      echo" <div class='valoracio'>";
+                      echo" <input id='radio' type='radio' name='radio' value='1'>";
+                      echo " <label for='radio1'> <i class='fas fa-star' style='color: yellow;'></i> </label> <br> ";
+                      
+                      echo" <input id='radio' type='radio' name='radio' value='2'>";
+                      echo "<label for='radio2'><i class='fas fa-star' style='color: yellow;'></i> <i class='fas fa-star' style='color: yellow;'></i> </label>  <br>";
+                      
+                      echo" <input id='radio' type='radio' name='radio' value='3'>";
+                      echo"<label for='radio3'> <i class='fas fa-star' style='color: yellow;'></i> <i class='fas fa-star' style='color: yellow;'></i> <i class='fas fa-star' style='color: yellow;'></i>  </label> <br>";
+                      
+                      echo"<input id='radio' type='radio' name='radio' value='4'>";
+                      echo"<label for='radio4'> <i class='fas fa-star' style='color: yellow;'></i> <i class='fas fa-star' style='color: yellow;'></i><i class='fas fa-star' style='color: yellow;'></i> <i class='fas fa-star' style='color: yellow;'></i> </label> <br>";
+                      
+                      echo"<input id='radio' type='radio' name='radio' value='5'>";
+                      echo" <label for='radio5'> <i class='fas fa-star' style='color: yellow;'></i> <i class='fas fa-star' style='color: yellow;'></i> <i class='fas fa-star' style='color: yellow;'></i> <i class='fas fa-star' style='color: yellow;'></i><i class='fas fa-star' style='color: yellow;'></i></label>";
+                     ?>
+
                     <p>
                         <textarea name="comentario" cols="80" rows="5" id="textarea"
                             placeholder="Escriba su comentario"></textarea>
@@ -165,8 +192,18 @@ if (!isset($_GET['producto'])) {
                     <li class="cmmnt">
                         <div class="cmmnt-content">
                             <header>
-                                <p> <?php echo $row['usu_nombres'].' '.$row['usu_apellidos']; ?></p> <span
-                                    class="pubdate"><?php echo $row['com_fecha']; ?></span>
+                                <p> <?php echo $row['usu_nombres'].' '.$row['usu_apellidos']; ?></p>
+                                <?php  for($i="0"; $i<$row['com_cali']; $i=$i+1){
+                                  
+                                    ?>
+                                        <i class="fas fa-star" style="color: yellow;"></i>
+                                        <?php
+                                    }
+
+                                                ?>
+                                
+
+                                 <span class="pubdate"><?php echo $row['com_fecha']; ?></span>
                             </header>
                             <p>
                                 <?php echo $row['com_comentario']; ?>

@@ -62,6 +62,7 @@
 					<a href="#"><i class="fas fa-receipt"></i> Facturas</a>
 					<ul>
 						<li><a href="lista_facturas.php"><i class="fas fa-archive"></i> Lista de Facturas</a></li>
+						<li><a href="lista_facturas_eliminadas.php"><i class="fas fa-archive"></i> Lista de Facturas Eliminadas</a></li>
 					</ul>
 				</li>
 			</ul>

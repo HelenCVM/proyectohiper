@@ -8,10 +8,6 @@ if (isset($_SESSION['isLogin'])) {
 if (isset($_GET['codProd'])&&isset($_SESSION['isLogin'])) {
 
     include '../../config/configDB.php';
-    /*$sql = "SELECT * FROM carrito WHERE 
-    PRODUCTO_pro_id=" . $_GET['codProd'] . " AND
-    USUARIO_usu_id=" . $_SESSION['codigo'] . " AND
-    SUCURSAL_suc_id=" . $_GET['storeID'] . ";";*/
     $sql = "SELECT * FROM carrito WHERE 
     PRODUCTO_pro_id=" . $_GET['codProd'] . " AND
     USUARIO_usu_id=" . $_SESSION['codigo'] . " ;";

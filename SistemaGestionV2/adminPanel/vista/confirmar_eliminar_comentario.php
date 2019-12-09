@@ -1,16 +1,16 @@
 <?php
 session_start();
 if (!isset($_SESSION['isLogin'])) {
-    header("Location: ../../../public/vista/login.php");
+ 
 } 
 ?>
 <?php
 if(!empty($_POST)){
 	include '../config/conexionDB.php';
-	$cod = $_POST["comentario_codigo"];
+	$cod = $_POST["com_codigo"];
 	$date = date(date("Y-m-d H:i:s"));
-	$sql = "UPDATE Calificaciones " .
-                "SET cali_estado ='S' " .
+	$sql = "UPDATE Comentario " .
+                "SET com_eliminado ='S' " .
                 "WHERE cali_codigo = $cod";
 	$resu = $conn->query($sql);
     header("Location:lista_calificaciones.php");

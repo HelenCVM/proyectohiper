@@ -34,31 +34,14 @@
 		INNER JOIN Direccion dir 
 		ON f.usu_codigo=dir.usu_codigo
 		WHERE f.fac_codigo = $noFactura AND f.usu_codigo =$codCliente AND f.fac_eliminado='N'";
-		/*$query = mysqli_query($conection,"SELECT f.nofactura, DATE_FORMAT(f.fecha, '%d/%m/%Y') as fecha, DATE_FORMAT(f.fecha,'%H:%i:%s') as  hora, f.codcliente, f.estatus,
-												 v.nombre as vendedor,
-												 cl.nit, cl.nombre, cl.telefono,cl.direccion
-											FROM factura f
-											INNER JOIN usuario v
-											ON f.usuario = v.idusuario
-											INNER JOIN cliente cl
-											ON f.codcliente = cl.idcliente
-											WHERE f.nofactura = $noFactura AND f.codcliente = $codCliente  AND f.estatus != 10 ");*/
+
 		$result1 = $conn->query($sqlF);
 		if ($result1->num_rows > 0) {
 			$factura = $result1->fetch_assoc();							
 
-			if($factura['fac_estado'] == 'anulado'){
+			if($factura['fac_eliminado'] == 'S'){
 				$anulada = '<img class="anulada" src="img/anulado.png" alt="Anulada">';
 			}
-
-			/*$query_productos = mysqli_query($conection,"SELECT p.descripcion,dt.cantidad,dt.precio_venta,(dt.cantidad * dt.precio_venta) as precio_total
-														FROM factura f
-														INNER JOIN detallefactura dt
-														ON f.nofactura = dt.nofactura
-														INNER JOIN producto p
-														ON dt.codproducto = p.codproducto
-														WHERE f.nofactura = $no_factura ");
-			$result_detalle = mysqli_num_rows($query_productos);*/
 
 			$sqlPro="SELECT p.pro_nombre,dt.facd_cantidad,p.pro_precio,(dt.facd_cantidad * p.pro_precio) as precio_total
 			FROM Factura f
