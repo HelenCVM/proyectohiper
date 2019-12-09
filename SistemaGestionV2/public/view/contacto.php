@@ -27,6 +27,7 @@ if (isset($_SESSION['isLogin'])) {
     <br>
     <br>
     <br>
+    <!-- Mapa en donde se muestra la ubicacion del local -->
     <center>
         <section class="columna1">
             <h1 id="localM">&#128205;LOCALIZACION :</h1>
@@ -41,6 +42,7 @@ if (isset($_SESSION['isLogin'])) {
     <br>
     <br>
     <br>
+    <!-- Contactanos formulario-->
     <center>
         <section class="columna22">
             <h2 id="Contactanos"> &#128222 Contactanos :</h2>

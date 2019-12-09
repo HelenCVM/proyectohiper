@@ -5,7 +5,7 @@
 			<div class="optionsBar">
                 <span class="user"><?php echo ($_SESSION['nombre'] . ' ' . $_SESSION['apellido']) ?></span>
 				<img class="photouser" src="../img/user.png" alt="Usuario">
-				<a href="#"><img class="close" src="../img/salir.png" alt="Salir del sistema" title="Salir"></a>
+				<a href="../../config/signoutAdmin.php"><img class="close" src="../img/salir.png" alt="Salir del sistema" title="Salir"></a>
 			</div>
 		</div>
 		<nav>
