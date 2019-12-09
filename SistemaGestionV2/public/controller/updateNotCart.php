@@ -1,9 +1,6 @@
 <?php
 session_start();
 if (isset($_SESSION['isLogin'])) {
-    if ($_SESSION['rol'] == 'admin') {
-        header("Location: ../../admin/admin/view/index.php");
-    }
 }
 include '../../config/configDB.php';
 $sql = "SELECT SUM(car_cantidad) AS car_cantidad FROM carrito WHERE 
