@@ -27,12 +27,7 @@ if (!isset($_SESSION['isLogin'])) {
     </header>
 
     <div class="container">
-        <header>
-            <?php
-            include("../../../global/php/headerUser.php");
-            ?>
-        </header>
-        <section>
+            <section>
             <h2>MI CUENTA</h2>
             <div class="cardContent">
                 <h2>Datos personales</h2>

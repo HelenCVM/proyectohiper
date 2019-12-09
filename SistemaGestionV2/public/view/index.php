@@ -20,7 +20,7 @@ if (isset($_SESSION['isLogin'])) {
 
 <body>
     <header>
-        
+    <!--Reutilizamos llamamos al metodo header de un archivo php para optimizar el sitio web-->        
         <?php
         include_once("../../global/php/headerPublic.php");
         ?>
