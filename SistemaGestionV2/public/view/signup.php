@@ -26,7 +26,7 @@ if (isset($_SESSION['isLogin'])) {
         include("../../global/php/headerPublic.php");
         ?>
     </header>
-
+<!-- En este formulario vamos solo a iniciar sesion los usuarios una ves logeado no redigira a la pagina del User view index.php-->
     <div class="content">
         <div class="form">
             <form action="../controller/signup.php"
