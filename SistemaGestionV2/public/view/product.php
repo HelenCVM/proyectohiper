@@ -12,10 +12,8 @@ if (!isset($_GET['producto'])) {
         $comentario=$_POST['comentario'];
         $usuario=$_POST['usu_codigo'];
         $producto=$_POST['pro_codigo'];
-    
         $date = date(date("Y-m-d H:i:s"));
         $SqlCo="INSERT INTO Comentarios  VALUES (0,$usuario,$producto,'$comentario','$date','N')";	
-        echo "$SqlCo";
         if($conn->query($SqlCo) == true){
         echo"Comentario Insertado";
         }else{
