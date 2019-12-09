@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <?php
 session_start();
 if (!isset($_SESSION['isLogin'])) {
@@ -81,4 +80,3 @@ $conn->close();
 </body>
 
 </html>
->>>>>>> 36b45c1c0eb63f868ac91842743337909247289e
