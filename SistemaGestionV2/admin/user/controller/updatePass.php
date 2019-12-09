@@ -1,9 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['isLogin'])) {
-    if ($_SESSION['rol'] == 'admin') {
-        header("Location: ../../admin/view/index.php");
-    }
+  
 } else {
     header("Location: ../../../index.php");
 }
@@ -107,7 +105,8 @@ if (isset($_SESSION['isLogin'])) {
         <div class="contentSucce">
             <h2>Contraseña actualizada con exito.</h2>
             <i class="far fa-check-circle"></i>
-            <button onclick="window.location.href = '../view/settings.php'">Regresar</button>
+            <?php header("Refresh:2; url=../view/settings.php");?>
+          
         </div>
         <?php
             } else {
@@ -117,7 +116,7 @@ if (isset($_SESSION['isLogin'])) {
             <p><?php echo mysqli_error($conn) ?></p>
             <p>Intente de nuevo...</p>
             <i class="far fa-times-circle"></i>
-            <button onclick="window.location.href = '../view/settings.php'">Regresar</button>
+            <?php header("Refresh:2; url=../view/settings.php");?>
         </div>
         <?php
             }
@@ -127,7 +126,7 @@ if (isset($_SESSION['isLogin'])) {
             <h2>Las contraseñas no coinciden.</h2>
             <p>Intente de nuevo...</p>
             <i class="far fa-times-circle"></i>
-            <button onclick="window.location.href = '../view/settings.php'">Regresar</button>
+            <?php header("Refresh:2; url=../view/settings.php");?>
         </div>
         <?php
         }
@@ -137,7 +136,7 @@ if (isset($_SESSION['isLogin'])) {
             <h2>La contraseña no existe en el sistema.</h2>
             <p>Intente de nuevo...</p>
             <i class="far fa-times-circle"></i>
-            <button onclick="window.location.href = '../view/settings.php'">Regresar</button>
+            <?php header("Refresh:2; url=../view/settings.php");?>
         </div>
         <?php
     }
