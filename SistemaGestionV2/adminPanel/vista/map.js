@@ -14,7 +14,8 @@ function initMap() {
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-
+console.log(document.getElementById('start').value);
+console.log(document.getElementById('end').value);
     directionsService.route({
         origin: document.getElementById('start').value,
         destination: document.getElementById('end').value,
@@ -34,6 +35,7 @@ function cluseWindow() {
 }
 
 function mapDirection(fac) {
+    console.log(fac);
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
     } else {

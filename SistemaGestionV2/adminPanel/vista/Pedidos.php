@@ -21,7 +21,12 @@ if (!isset($_SESSION['isLogin'])) {
         <form action="" method="GET" class="form_search">
         <input type="search" id="busqueda" placeholder="Buscar por # Factura" onkeyup="buscar(this, 'index')">
         </form>
-
+        <div id="floatWindow">
+                                <div class="contentMap">
+                                    <i class="fas fa-times" onclick="cluseWindow()"></i>
+                                    <div id="map"></div>
+                                </div>
+                            </div>
         <table>
             <thead>
                 <tr>
@@ -56,7 +61,8 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["usu_nombres"] .' '.$row["usu_apellidos"]. "</td>";
         echo "<td>" . $estado . "</td>";
         echo '<td>
-        <a class="link_edit" href="editar_usuario.php?user= "><i class="fas fa-map-marked-alt"></i> Generar Ruta </a> <br>
+        <button onclick="mapDirection('. $row["fac_codigo"] .')"><i class="fas fa-map-marked-alt"></i> Generar Ruta</button>
+    
         <a class="link_delete" href="confirmar_anular_factura.php?fac_codigo="><i class="fas fa-edit"></i> Cambiar Estado </a> <br>
         </td>';
         echo "</tr>";
@@ -71,7 +77,16 @@ $conn->close();
 
             </tbody>
         </table>
+        <div id="mapDir">
+                                    <input id="start" type="hidden" name="" value="Gualaceo">
+                                    <input id="end" type="hidden" name="" value="Cuenca">
+                                </div>
     </section>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf5KFvi9htNXOs4ov2TmNyxEonww9rAVM&callback=initMap">
+    </script>
+    <script src="map.js"></script>
 
 </body>
 
