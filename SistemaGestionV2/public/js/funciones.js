@@ -33,23 +33,7 @@ function galeria(img, i) {
     imag[i] = img
 }
 
-function cambiarImagen(int) {
 
-    if (int == 1) {
-        if (indice < imag.length - 1) {
-            indice++
-        } else {
-            indice = 0
-        }
-    } else {
-        if (indice > 0) {
-            indice--
-        } else {
-            indice = 0
-        }
-    }
-    document.getElementById("galeria").src = imag[indice]
-}
 
 function cartDelete(carId) {
 
@@ -108,25 +92,8 @@ function cluseWindow() {
     let windowFloat = document.getElementById("floatWindow")
     windowFloat.style.display = "none"
 }
-//PENDIENTE
-function elemento(e) {
-    let elements = document.getElementById('valoration')
-
-    for (let i = 0; i < elements.length; i++) {
-        console.log(elements[i].srcElement)
-
-    }
-
-    if (e.srcElement)
-        tag = e.srcElement.tagName;
-    else if (e.target)
-        tag = e.target.tagName;
-    //console.log("El elemento selecionado ha sido " + tag);
-}
 
 function stock(elemnt) {
-    //console.log(elemnt.selectedIndex)
-    //console.log(text)
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
     } else {
@@ -141,36 +108,9 @@ function stock(elemnt) {
     xmlhttp.send()
 }
 
-function searchBtn(url) {
-    //console.log('hola')
-    let txtSearch = document.getElementById('search').value
-    txtSearch = txtSearch.toUpperCase()
-    window.location.href = url + '?searchName=' + txtSearch
-}
-
-function searchBox(elemnt) {
-    let text = elemnt.value.trim()
-    text = text.toUpperCase()
-    //console.log(text)
-    if (window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest()
-    } else {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
-    }
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("contentCards").innerHTML = this.responseText
-        }
-    };
-    xmlhttp.open("GET", "../controller/search.php?searchName=" + text, true)
-    xmlhttp.send()
-}
 
 function cartAdd(cod) {
     console.log(cod);
-    //console.log(precioTotal)
-    //let storeId = (document.getElementById('selectStore').selectedIndex + 1)
-    //console.log("IDX STORE" + storeId)
     console.log(cod);
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
@@ -185,7 +125,6 @@ function cartAdd(cod) {
             } else {
                 openWindowCart();
             }
-            //document.getElementById('body').innerHTML = this.responseText
         }
     };
     xmlhttp.open("GET", "../controller/cartAdd.php?codProd=" + cod , true)

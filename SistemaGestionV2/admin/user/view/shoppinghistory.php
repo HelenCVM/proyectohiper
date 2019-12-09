@@ -57,21 +57,6 @@ if (!isset($_SESSION['isLogin'])) {
                             </tr>
                         </thead>
 
-                        <tfoot>
-                            <tr>
-                                <td colspan="10">
-                                    <div class="links">
-                                        <a href="#"><i class="fas fa-angle-left"></i></a>
-                                        <a class="active" href="#">1</a>
-                                        <a href="#">2</a>
-                                        <a href="#">3</a>
-                                        <a href="#">4</a>
-                                        <a href="#"><i class="fas fa-chevron-right"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tfoot>
-
                         <tbody id="tableHistory">
                             <?php
                             include '../../../config/configDB.php';
@@ -106,7 +91,7 @@ if (!isset($_SESSION['isLogin'])) {
                                     $i = $i + 1;
                                 }
                             } else {
-                                echo '<td colspan="7"><h2>No hay facturas que mostrar</h2></td>';
+                                echo '<td colspan="6"><h2>No hay facturas que mostrar</h2></td>';
                             }
                             ?>
 

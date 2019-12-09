@@ -106,13 +106,6 @@ $fac=$_GET['fac_cab_id'];
                                 </tr>
                             </thead>
 
-                            <div id="floatWindow">
-                                <div class="contentMap">
-                                    <i class="fas fa-times" onclick="cluseWindow()"></i>
-                                    <div id="map"></div>
-                                </div>
-                            </div>
-
                             <tbody>
                                 <?php
                                 $sql = "SELECT * FROM FacturaDetalle fd, Factura fc, Producto pro
@@ -161,8 +154,6 @@ $fac=$_GET['fac_cab_id'];
                         <p><span>Sub-total: </span> $<?php echo round($result['fac_subtotal'], 2) ?></p>
                         <p><span>IVA: </span> 12%</p>
                         <h2>USD <?php echo round($result['fac_total'], 2) ?></h2>
-                        <button id="cancelar"
-                            onclick="window.location.href = '../controller/deleteInvoice.php?fac_cab_id=<?php echo $_GET['fac_cab_id'] ?>'">Eliminar</button>
                     </div>
                 </div>
             </div>
